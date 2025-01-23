@@ -4,7 +4,7 @@ import TitleTwo from "./TitleTwo";
 import Image from "next/image";
 import SocialLinks from "../../SocialLinks";
 import PrimaryButton from "../../Buttons/PrimaryButton";
-import style from "./index.module.scss"
+import style from "./index.module.scss";
 
 const HomeBanner = () => {
   return (
@@ -18,23 +18,23 @@ const HomeBanner = () => {
             loop={true}
           ></video>
         </div>
-        <div className={style.homeBanner__badge}>
+        {/* <div className={style.homeBanner__badge}>
           <Image
             src={"/assets/images/header-badge.png"}
             width={103}
             height={332}
             alt="badge"
           />
-        </div>
+        </div> */}
       </div>
-      <TitleOne />
-      <TitleTwo />
-      <div className={`${style.socialLinksWrapper}`}>
+      {/* <TitleOne />
+      <TitleTwo /> */}
+      {/* <div className={`${style.socialLinksWrapper}`}>
         <SocialLinks isVertical={true} />
       </div>
       <div className={style.stickyAnchor}>
         <PrimaryButton title={"Get A Call Back"} link={"/"} />
-      </div>
+      </div> */}
     </>
   );
 };

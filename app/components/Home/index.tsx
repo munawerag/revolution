@@ -13,7 +13,7 @@ const Homepage = () => {
   return (
     <>
       <HomeBanner />
-      <TrophyForRealCollectors />
+      {/* <TrophyForRealCollectors />
       <Residencies />
       <Experience />
       <CrystalPyramid />
@@ -21,7 +21,7 @@ const Homepage = () => {
       <Essentials />
       <Map />
       <Landmark />
-      <Enquire />
+      <Enquire /> */}
     </>
   );
 };
