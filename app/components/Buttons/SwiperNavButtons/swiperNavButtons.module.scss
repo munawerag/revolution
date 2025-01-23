@@ -1,0 +1,33 @@
+.wrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.9375em;
+}
+
+.btn {
+  position: relative !important;
+  width: 2.5em !important;
+  height: 2.5em !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  cursor: pointer;
+  overflow: hidden;
+  transition: 0.25s;
+  left: initial !important;
+  right: initial !important;
+  top: initial !important;
+  margin-top: 0 !important;
+
+  &::after {
+    display: none;
+  }
+  img {
+    width: 100%;
+    z-index: 1;
+  }
+}
+
+.prevBtn {
+  transform: rotate(180deg);
+}

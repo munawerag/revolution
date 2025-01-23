@@ -1,0 +1,57 @@
+@import "../../styles/abstract/variable";
+.socialLinks {
+  display: flex;
+  align-items: center;
+  gap: 1.25em;
+}
+
+.socialLink {
+  margin: 0;
+  a {
+    position: relative;
+    margin: 0;
+    width: 3.125em;
+    height: 3.125em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid var(--color-whitecol);
+    border-radius: 50%;
+    transition: $transition;
+    &::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 50%;
+      left: 50%;
+      border-radius: 50%;
+      transform: translate(-50%, -50%) scale(0);
+      transition: $transition;
+      background-color: var(--color-primarycol);
+    }
+    img {
+      width: auto;
+      max-width: 45%;
+      z-index: 1;
+    }
+    @media #{$desktop} {
+      &:hover {
+        border-color: transparent;
+        transition: $transition;
+        &::before {
+          transform: translate(-50%, -50%) scale(1);
+          transition: $transition;
+        }
+      }
+    }
+  }
+}
+
+.isVertical {
+  flex-direction: column;
+  gap: 0;
+  a {
+    border-color: transparent;
+  }
+}

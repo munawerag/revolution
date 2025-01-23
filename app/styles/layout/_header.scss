@@ -1,0 +1,240 @@
+.header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 99999;
+  background: #fff;
+  &::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: #fff;
+    transition: $transitionSlow;
+    transition-delay: 1s;
+  }
+  .wrapper {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.875em 0;
+    transition: $transitionSlow;
+    .nav-button {
+      width: 1.5625em;
+      cursor: pointer;
+      transition: $transitionSlow;
+      transition-delay: 1s;
+      img {
+        width: 100%;
+      }
+    }
+    .menuOne,
+    .menuTwo {
+      display: flex;
+      align-items: center;
+      gap: 3.125em;
+      transition: $transitionSlow;
+      transition-delay: 1s;
+      .menuOne__item,
+      .menuTwo__item {
+        a {
+          font-size: 1em;
+          color: #000000;
+          text-transform: capitalize;
+        }
+      }
+    }
+    .logo {
+      opacity: 0;
+      pointer-events: none;
+      transition: $transitionSlow;
+      width: 9.1875em;
+      img {
+        width: 100%;
+      }
+    }
+    .sticky-logo {
+      position: fixed;
+      top: 1.875em;
+      left: 50%;
+      transform: translate(-50%, 0);
+      width: 9.1875em;
+      transition: $transitionSlow;
+      img {
+        width: 100%;
+      }
+    }
+    .langWrapper {
+      display: flex;
+      align-items: center;
+      gap: 1.875em;
+      transition: $transitionSlow;
+      transition-delay: 1s;
+    }
+    .language {
+      width: 6.5em;
+      img {
+        width: 100%;
+      }
+    }
+    .search {
+      width: 1em;
+      img {
+        width: 100%;
+      }
+    }
+    &.sticky {
+      padding: 0.5625em 0;
+      transition: $transitionSlow;
+      .logo {
+        width: 5.75em;
+        transition: $transitionSlow;
+      }
+      .sticky-logo {
+        width: 5.75em;
+        transition: $transitionSlow;
+        top: 0.5625em;
+      }
+    }
+  }
+  &.onLoad {
+    .sticky-logo {
+      width: 11em;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      transition: $transitionSlow;
+    }
+    &::before {
+      height: 100vh;
+      transition: $transitionSlow;
+      transition-delay: 1s;
+    }
+    .menuOne,
+    .menuTwo,
+    .langWrapper,
+    .nav-button {
+      transform: translateY(-9em);
+      transition: $transitionSlow;
+      transition-delay: 1s;
+    }
+  }
+}
+
+// .headerTwo {
+//   position: fixed;
+//   width: 100%;
+//   top: 0;
+//   left: 0;
+//   z-index: 99;
+//   background: #fff;
+//   border-bottom: 1px solid rgba($color: #bebebe, $alpha: 0.4);
+//   opacity: 0;
+//   pointer-events: none;
+//   .wrapper {
+//     width: 100%;
+//     display: flex;
+//     align-items: center;
+//     justify-content: space-between;
+//     padding: 0.8125em 0;
+
+//     .nav-button {
+//       width: 1.5625em;
+//       cursor: pointer;
+//       img {
+//         width: 100%;
+//       }
+//     }
+//     .menuOne,
+//     .menuTwo {
+//       display: flex;
+//       align-items: center;
+//       gap: 3.125em;
+//       .menuOne__item,
+//       .menuTwo__item {
+//         a {
+//           font-size: 1em;
+//           color: #000000;
+//           text-transform: capitalize;
+//         }
+//       }
+//     }
+//     .logo {
+//       width: 5.75em;
+//       img {
+//         width: 100%;
+//       }
+//     }
+//     .langWrapper {
+//       display: flex;
+//       align-items: center;
+//       gap: 1.875em;
+//     }
+//     .language {
+//       width: 6.5em;
+//       img {
+//         width: 100%;
+//       }
+//     }
+//     .search {
+//       width: 1em;
+//       img {
+//         width: 100%;
+//       }
+//     }
+//   }
+// }
+
+.slide-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 87.1875em;
+  height: 100vh;
+  z-index: 99999;
+  border-right: 1px solid rgba($color: #bebebe, $alpha: 0.4);
+  transform: translateX(-100%);
+  transition: 0.85s;
+  &.active {
+    transform: translateX(0%);
+    transition: 0.85s;
+  }
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top left;
+  }
+}
+
+.menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 999;
+  background: rgba($color: #000000, $alpha: 0.65);
+  transition: 0.85s;
+  opacity: 0;
+  pointer-events: none;
+  &.active {
+    transition: 0.85s;
+    opacity: 1;
+    pointer-events: auto;
+  }
+}
+
+.menu-close-btn {
+  width: 2.125em;
+  height: 2.125em;
+  position: absolute;
+  top: 2em;
+  right: 3em;
+  z-index: 1;
+  background: transparent;
+  cursor: pointer;
+}

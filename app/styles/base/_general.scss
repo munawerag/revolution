@@ -1,0 +1,203 @@
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.d-none {
+  display: none;
+}
+
+.m-auto {
+  margin: 0 auto !important;
+}
+
+.m-0 {
+  margin: 0 !important;
+}
+
+.m-0-desktop {
+  @media #{$desktop} {
+    margin: 0 !important;
+  }
+}
+
+.mb-0 {
+  margin-bottom: 0;
+}
+
+.text-lower {
+  text-transform: lowercase !important;
+}
+
+.text-upper {
+  text-transform: uppercase !important;
+}
+
+.text-capitalize {
+  text-transform: capitalize !important;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.justify-around {
+  justify-content: space-around;
+}
+
+.justify-end {
+  justify-content: flex-end !important;
+}
+
+.justify-start {
+  justify-content: flex-start !important;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.space-between {
+  justify-content: space-between;
+}
+
+.align-item-center {
+  align-items: center;
+}
+
+.align-self-center {
+  align-self: center;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.h-100 {
+  height: 100%;
+}
+
+.mobile-only {
+  @media #{$tab} {
+    display: none;
+  }
+}
+
+.desktop-only {
+  @media #{$mob} {
+    display: none;
+  }
+}
+
+.img-hack {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.img-hack-contain {
+  @extend .img-hack;
+  object-fit: contain;
+}
+
+.relative {
+  position: relative;
+}
+
+.container-right-zero {
+  @media #{$desktop} {
+    padding-right: 0;
+  }
+}
+
+.container-right-zero-always {
+  padding-right: 0;
+
+  @media #{$mob} {
+    padding-right: 2em;
+  }
+}
+
+.wrap-column-text {
+  text-wrap: balance !important;
+  line-height: 1.2 !important;
+}
+
+// line clamps
+.line-clamp-1 {
+  @include clamp;
+  -webkit-line-clamp: 1;
+}
+
+.line-clamp-2 {
+  @include clamp;
+  -webkit-line-clamp: 2;
+}
+
+.line-clamp-3 {
+  @include clamp;
+  -webkit-line-clamp: 3;
+}
+
+.line-clamp-4 {
+  @include clamp;
+  -webkit-line-clamp: 4;
+}
+
+.line-clamp-5 {
+  @include clamp;
+  -webkit-line-clamp: 5;
+}
+
+.line-clamp-6 {
+  @include clamp;
+  -webkit-line-clamp: 6;
+}
+
+// font weights
+$fonts-w: (
+  "200": 200,
+  "300": 300,
+  "400": 400,
+  "500": 500,
+  "600": 600,
+  "700": 700,
+  "800": 800,
+);
+
+@each $fontname, $fontvalue in $fonts-w {
+  .fw-#{$fontname} {
+    font-weight: $fontvalue;
+  }
+}
+
+.fullCoverAnchor {
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 10;
+  }
+}
