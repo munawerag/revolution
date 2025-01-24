@@ -6,6 +6,7 @@
   z-index: 99999;
   height: 14.0625em;
   background: #fff;
+  transition: $transitionSlow;
   &::before {
     content: "";
     position: absolute;
@@ -35,6 +36,7 @@
       flex-direction: row;
       align-items: center;
       column-gap: 3.85em;
+      transition: $transitionSlow;
 
       @media #{$ipad} {
         position: relative;
@@ -148,18 +150,34 @@
       }
     }
     &.sticky {
-      padding: 0.5625em 0;
       transition: $transitionSlow;
-      .logo {
-        width: 5.75em;
-        transition: $transitionSlow;
-      }
+
       .sticky-logo {
-        width: 5.75em;
+        width: 9.75em;
         transition: $transitionSlow;
-        top: 0.5625em;
+        top: 1.25em;
+      }
+
+      .left-area {
+        @media #{$ipad} {
+          top: 1em;
+          transition: $transitionSlow;
+        }
+      }
+
+      .langWrapper {
+        @media #{$ipad} {
+          transition: $transitionSlow;
+          position: relative;
+          top: 1.5em;
+        }
       }
     }
+  }
+
+  &.sticky-header {
+    height: 5.75em;
+    transition: $transitionSlow;
   }
 
   .menuOne {

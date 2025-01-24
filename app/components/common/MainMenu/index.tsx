@@ -69,7 +69,14 @@ const MainMenu = ({ setMenuActive }: any) => {
                       active === item.id ? "active" : ""
                     } `}
                     onMouseEnter={() => setActive(item.id)}
-                    onMouseLeave={() => setActive(1)}
+                    onMouseLeave={() => setActive(null)}
+                    onClick={() => {
+                      if (active) {
+                        setActive(null);
+                        return;
+                      }
+                      setActive(item.id);
+                    }}
                   >
                     <div className="menu__label">
                       {item.label}
