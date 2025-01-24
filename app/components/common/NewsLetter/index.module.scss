@@ -1,44 +1,44 @@
 @import "../../../styles/abstract/variable";
 
 .newsLetter {
-    border-bottom: 1px solid var(--color-graycol);
+  border-bottom: 1px solid var(--color-graycol);
 
-    @media #{$desktop} {
-        padding-top: 8.75em;
-    }
+  @media #{$desktop} {
+    padding-top: 8.75em;
+  }
 
-    h3,
-    p {
-        color: var(--color-primarycol);
-    }
+  h3,
+  p {
+    color: var(--color-primarycol);
+  }
 }
 
 .row {
-    @media #{$ipadpro} {
-        gap: 2em 0;
-    }
+  @media #{$ipadpro} {
+    gap: 2em 0;
+  }
 
-    @media #{$ipad} {
-        gap: 0;
-        text-align: center;
-    }
+  @media #{$ipad} {
+    gap: 0;
+    text-align: center;
+  }
 }
 
 .subscribe {
-    display: flex;
-    justify-content: flex-end;
-    gap: 3em;
-    flex-wrap: wrap;
+  display: flex;
+  justify-content: flex-end;
+  gap: 3em;
+  flex-wrap: wrap;
 
-    @media #{$ipadpro} {
-        justify-content: center;
-    }
+  @media #{$ipadpro} {
+    justify-content: center;
+  }
 
-    @media #{$mob} {
-        gap: 2em;
-    }
+  @media #{$mob} {
+    gap: 2em;
+  }
 
-    input {
-        width: 21.5em;
-    }
+  input {
+    width: 21.5em;
+  }
 }
