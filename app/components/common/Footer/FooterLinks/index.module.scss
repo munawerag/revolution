@@ -1,0 +1,27 @@
+@import '../../../../styles/abstract/variable';
+
+.linksHead {
+    font-size: 1.25em;
+    color: var(--color-primarycol);
+    margin: 0 0 1.8em 0;
+}
+
+.listWrapper {
+    a {
+        font-size: 1.125em;
+        color: var(--color-primarycol);
+    }
+}
+
+.dropdownArrow {
+    @media #{$tab} {
+        display: none;
+    }
+
+    transition: .25s;
+
+    &.active {
+        transform: rotate(180deg);
+        transition: .25s;
+    }
+}

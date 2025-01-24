@@ -1,0 +1,28 @@
+@import "../../../styles/abstract/variable";
+
+.unique {
+    background: rgba($color: #bebebe, $alpha: .4);
+}
+
+.anchor {
+    font-size: 1.125em;
+    color: var(--color-secondarycol);
+    text-transform: capitalize;
+}
+
+.contentWrapper {
+    padding: 0 0 0 6em;
+
+    @media #{$ipadpro} {
+        padding: 0 0 0 2em;
+    }
+
+    @media #{$ipad} {
+        padding: 1.5em 0 0 0;
+    }
+
+    h3,
+    p {
+        color: var(--color-primarycol);
+    }
+}
