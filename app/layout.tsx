@@ -7,33 +7,13 @@ import Header from "./components/common/Header";
 const Sans = localFont({
   src: [
     {
-      path: "../public/assets/fonts/light.otf",
-      weight: "200",
-      style: "normal",
-    },
-    {
-      path: "../public/assets/fonts/light.otf",
+      path: "../public/assets/fonts/ultralight.ttf",
       weight: "300",
       style: "normal",
     },
     {
       path: "../public/assets/fonts/regular.ttf",
       weight: "400",
-      style: "normal",
-    },
-    {
-      path: "../public/assets/fonts/medium.ttf",
-      weight: "500",
-      style: "normal",
-    },
-    {
-      path: "../public/assets/fonts/bold.ttf",
-      weight: "600",
-      style: "normal",
-    },
-    {
-      path: "../public/assets/fonts/bold.ttf",
-      weight: "700",
       style: "normal",
     },
   ],
