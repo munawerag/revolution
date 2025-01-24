@@ -14,7 +14,6 @@ const HomeBanner = () => {
             loop={true}
           ></video>
         </div>
-
         <div className={style.chat}>
           <SvgComp src="/assets/svgs/chat.svg" />
         </div>

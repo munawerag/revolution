@@ -8,6 +8,7 @@
   background: #fff;
   transition: $transitionSlow;
 
+  // border-bottom: 1px solid rgba($color: #bebebef0, $alpha: 0.94);
   &::before {
     content: "";
     position: absolute;
