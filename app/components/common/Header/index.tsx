@@ -96,15 +96,7 @@ const Header = () => {
         </div>
       </header>
       <div className={`slide-menu ${menuActive ? "active" : ""}`}>
-        <MainMenu />
-        <div className="menu-close-btn" onClick={() => setMenuActive(false)}>
-          <Image
-            src={"/assets/svgs/cross.svg"}
-            width={19}
-            height={19}
-            alt="close"
-          />
-        </div>
+        <MainMenu setMenuActive={setMenuActive} />
       </div>
       <div className={`menu-overlay ${menuActive ? "active" : ""}`}></div>
     </>

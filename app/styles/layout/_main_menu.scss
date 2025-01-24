@@ -9,6 +9,14 @@
   transition: 0.85s;
   background-color: var(--color-whitecol);
 
+  @media #{$ipadpro} {
+    width: 100%;
+  }
+
+  // @media #{$ipad} {
+  //   overflow-y: auto;
+  // }
+
   &.active {
     transform: translateX(0%);
     transition: 0.85s;
@@ -18,16 +26,143 @@
     display: grid;
     grid-template-columns: 55.8125em 31.25em;
     height: 100%;
+
+    @media #{$ipad} {
+      display: block;
+    }
+
+    @media #{$ipadpro} {
+      grid-template-columns: repeat(2, 1fr);
+    }
   }
 
   .col-1 {
-    padding: 1.3125em 4.6875em;
+    padding: 1.3125em 4.6875em 4.6875em 4.6875em;
 
     .menu__logo {
       width: 17.375em;
       img {
         width: 100%;
       }
+    }
+
+    .nav__menu {
+      margin-top: 7.6875em;
+
+      &__leftCol {
+        width: 22.5625em;
+        border-right: 1px solid rgba($color: var(--rgb-graycol), $alpha: 0.5);
+        height: 100%;
+        position: relative;
+        padding-bottom: 5.375em;
+
+        @media #{$ipadpro} {
+          width: 100%;
+          border-right: 0;
+        }
+      }
+
+      &__item {
+        cursor: pointer;
+        margin-bottom: 2.875em;
+        padding-right: 3.375em;
+
+        &.active,
+        &:hover {
+          .menu__label {
+            color: var(--color-primarycol);
+            svg {
+              path {
+                fill: var(--color-primarycol);
+              }
+            }
+          }
+
+          .submenu {
+            display: block;
+          }
+        }
+
+        @media #{$ipadpro} {
+          padding-right: 0;
+          padding-bottom: 0;
+          margin-bottom: 2.5em;
+        }
+      }
+
+      .menu__label {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: var(--color-graycol);
+        font-size: 1.625em;
+        font-style: normal;
+        font-weight: 400;
+        letter-spacing: 0.01625em;
+
+        @media #{$ipadpro} {
+          margin-bottom: 1em;
+          svg {
+            rotate: 90deg;
+          }
+        }
+      }
+
+      .submenu {
+        display: none;
+        position: absolute;
+        top: 0;
+        right: -25em;
+        width: 25em;
+        padding-left: 5.5em;
+        padding-top: 1.25em;
+        padding-bottom: 1.25em;
+
+        .submenu__item {
+          color: var(--color-primarycol);
+          font-size: 1.25em;
+          font-style: normal;
+          font-weight: 200;
+          letter-spacing: 1px;
+          margin-bottom: 2.5625em;
+
+          a {
+            color: var(--color-primarycol);
+          }
+
+          @media #{$ipadpro} {
+            margin-bottom: 1em;
+          }
+        }
+
+        @media #{$ipadpro} {
+          position: relative;
+          top: 0;
+          left: 0;
+          padding: 0;
+        }
+      }
+
+      .additional__links {
+        margin-top: 5.1875em;
+
+        &__item {
+          color: var(--color-primarycol);
+          font-size: 1.125em;
+          font-style: normal;
+          font-weight: 400;
+          letter-spacing: 0.01125em;
+
+          a {
+            color: var(--color-primarycol);
+          }
+        }
+      }
+    }
+
+    @media #{$ipad} {
+      height: 100%;
+      overflow-y: auto;
     }
   }
 
@@ -57,6 +192,40 @@
         text-align: center;
         border: 1px solid var(--color-graycol);
       }
+    }
+
+    @media #{$ipad} {
+      display: none;
+
+      &.isActive {
+        display: flex;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: #e4e4e4;
+
+        .back__icon {
+          rotate: 180deg;
+          position: absolute;
+          top: 2.2em;
+          left: 3em;
+
+          svg {
+            path {
+              fill: var(--color-blackcol);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .col-2-mob-opener {
+    display: none;
+
+    @media #{$ipad} {
+      display: block;
     }
   }
 }
