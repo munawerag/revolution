@@ -15,7 +15,7 @@ const LanguageSelector = () => {
         className="select"
         classNamePrefix="react-select"
         options={options}
-        defaultValue={options[1]}
+        defaultValue={options[0]}
         instanceId="language-selector"
         onChange={(selectedOption) => {
           console.log(selectedOption);

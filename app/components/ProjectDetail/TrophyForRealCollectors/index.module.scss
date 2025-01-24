@@ -1,0 +1,102 @@
+@import "../../../styles/abstract/variable";
+.realCollectionTitleWrapper {
+  position: relative;
+  display: block;
+  padding: 10em 0 7.5em 0;
+  background-color: #fff;
+  @media #{$ipadpro} {
+    padding: 5em 0;
+  }
+  @media #{$mob} {
+    padding: 3em 0;
+  }
+}
+
+.realCollectionTitle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 39.875em;
+  padding: 0 2em;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.realCollection__img {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: #fff;
+  @media #{$ipadpro} {
+    height: 50vh;
+  }
+  &:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0) 43.1%,
+      #000000 102.21%
+    );
+    z-index: 0;
+  }
+
+  // > img {
+  //   clip-path: inset(0% 10% 50% 10%);
+  //   transition: 1s all ease;
+  // }
+
+  // &.inView {
+  //   img {
+  //     clip-path: inset(0 0 0 0);
+  //     transition: 1s all ease;
+  //   }
+  // }
+
+  .textWrapper {
+    position: absolute;
+    left: 50%;
+    bottom: 4.125em;
+    transform: translate(-50%, 0);
+    color: var(--color-whitecol);
+    z-index: 1;
+    width: 100%;
+    max-width: 64em;
+    padding: 0 2em;
+    @media #{$ipad} {
+      max-width: 45em;
+    }
+    @media #{$mob} {
+      bottom: 6.5em;
+    }
+    .title {
+      font-size: 2.375em;
+      margin-bottom: 1.25em;
+    }
+  }
+
+  a {
+    position: absolute;
+    bottom: 5em;
+    right: 5em;
+    z-index: 1;
+    width: 3.5625em;
+    height: 3.5625em;
+    @media #{$ipad} {
+      right: 3em;
+      bottom: 3em;
+    }
+    @media #{$mob} {
+      right: 2em;
+      bottom: 2em;
+      width: 2.5em;
+      height: 2.5em;
+    }
+    img {
+      width: 100%;
+    }
+  }
+}

@@ -40,4 +40,23 @@
       }
     }
   }
+
+  .chat {
+    background-color: var(--color-whitecol);
+    width: 3.125em;
+    height: 3.125em;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 5.625em;
+    right: 1.5em;
+    z-index: 10;
+
+    svg {
+      width: 1.25em;
+      height: 1.25em;
+    }
+  }
 }

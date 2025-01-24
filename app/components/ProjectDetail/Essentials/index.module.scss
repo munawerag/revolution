@@ -1,0 +1,112 @@
+@import "../../../styles/abstract/variable";
+.essentialsTitleWrapper {
+  position: relative;
+  display: block;
+  padding: 10em 0 7.5em 0;
+  background-color: #fff;
+  @media #{$ipad} {
+    padding: 5em 0;
+  }
+  @media #{$mob} {
+    padding: 5em 0 3em 0;
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba($color: #efc8a2, $alpha: 0.2);
+    pointer-events: none;
+  }
+}
+
+.essentialsTitle {
+  width: 100%;
+  max-width: 60em;
+  margin: 0 auto;
+  padding: 0 2em;
+}
+
+.essentialsSlider {
+  position: relative;
+  background-color: #fff;
+  padding: 0 0 0 4.6875em;
+  @media #{$ipad} {
+    padding-left: 3em;
+  }
+  @media #{$mob} {
+    padding: 0 2em;
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba($color: #efc8a2, $alpha: 0.2);
+    pointer-events: none;
+  }
+
+  .essentials__slide {
+    width: 63.75em;
+
+    .card {
+      display: flex;
+      @media #{$mob} {
+        flex-direction: column;
+      }
+      .imgWrapper {
+        width: calc(100% - 26.25em);
+        @media #{$ipad} {
+          width: 50%;
+        }
+        @media #{$mob} {
+          width: 100%;
+        }
+      }
+
+      .textWrapper {
+        width: calc(100% - 37.5em);
+        background: var(--color-whitecol);
+        padding: 3.125em 1.875em 0 3.125em;
+        @media #{$ipad} {
+          width: 50%;
+          padding: 2.5em;
+        }
+        @media #{$mob} {
+          width: 100%;
+        }
+        .title {
+          color: #212121;
+        }
+
+        .desc {
+          color: #212121;
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+
+  .essentials__nav {
+    position: absolute;
+    right: 4.6875em;
+    bottom: 6.5em;
+    z-index: 2;
+    @media #{$ipad} {
+      bottom: 3em !important;
+    }
+    @media #{$mob} {
+      left: 50% !important;
+      transform: translateX(-50%);
+      right: auto;
+      bottom: 1em !important;
+    }
+    img {
+      filter: invert(1);
+    }
+  }
+}
