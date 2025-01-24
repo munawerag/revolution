@@ -65,7 +65,6 @@
       }
 
       &__item {
-        cursor: pointer;
         margin-bottom: 2.875em;
         padding-right: 3.375em;
 
@@ -95,6 +94,7 @@
       }
 
       .menu__label {
+        cursor: pointer;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -198,6 +198,13 @@
         font-weight: 400;
         text-align: center;
         border: 1px solid var(--color-graycol);
+      }
+    }
+
+    .back__icon {
+      display: none;
+      @media #{$ipad} {
+        display: block;
       }
     }
 

@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import PrimaryButton from "../../Buttons/PrimaryButton";
 import MainMenu from "../MainMenu";
+import LanguageSelector from "./LanguageSelector";
 
 const Header = () => {
   const [menuActive, setMenuActive] = useState(false);
@@ -71,7 +72,7 @@ const Header = () => {
             </Link>
             <div className="langWrapper">
               <div className="lang">
-                <select
+                {/* <select
                   className="select"
                   value="en"
                   onChange={() => {
@@ -89,7 +90,8 @@ const Header = () => {
                     height={9}
                     alt="arrow down"
                   />
-                </div>
+                </div> */}
+                <LanguageSelector />
               </div>
               <PrimaryButton
                 title="Enquire Now"

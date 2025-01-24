@@ -1,12 +1,22 @@
 import Link from "next/link";
 import Image from "next/image";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import SvgComp from "@/app/components/common/SvgComp";
-import PrimaryButton from "../../Buttons/PrimaryButton";
+import PrimaryButton from "@/app/components/Buttons/PrimaryButton";
 
 const MainMenu = ({ setMenuActive }: any) => {
   const [active, setActive] = useState<number | null>(1);
   const [locationsActive, setLocationsActive] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 1025);
+    };
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   const navigation = [
     {
@@ -69,9 +79,8 @@ const MainMenu = ({ setMenuActive }: any) => {
                       active === item.id ? "active" : ""
                     } `}
                     onMouseEnter={() => setActive(item.id)}
-                    onMouseLeave={() => setActive(null)}
                     onClick={() => {
-                      if (active) {
+                      if (active && active === item.id && isMobile) {
                         setActive(null);
                         return;
                       }
@@ -150,7 +159,7 @@ const MainMenu = ({ setMenuActive }: any) => {
         <div className={`col-2 ${locationsActive ? "isActive" : ""}`}>
           <div className="locations__wrapper">
             <div
-              className="back__icon"
+              className="back__icon "
               onClick={() => {
                 setLocationsActive(false);
               }}

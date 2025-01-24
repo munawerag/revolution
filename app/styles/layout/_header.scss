@@ -40,7 +40,7 @@
 
       @media #{$ipad} {
         position: relative;
-        top: 1.5em;
+        top: 1em;
         column-gap: 1.5em;
       }
     }
@@ -109,28 +109,69 @@
       @media #{$ipad} {
         font-size: 9px;
         position: relative;
-        top: 2.25em;
+        top: 1em;
       }
     }
     .lang {
       position: relative;
       width: 6.5em;
     }
-    .select {
-      all: unset;
-      appearance: none;
-      -webkit-appearance: none;
-      -moz-appearance: none;
-      width: 100%;
-      border-bottom: 1px solid var(--color-primarycol);
-      padding-bottom: 0.375em;
-      font-size: 1.25em;
-      font-weight: 200;
 
-      option {
-        font-size: 0.75em;
+    .react-select {
+      &__control {
+        cursor: pointer;
+        width: 100%;
+        border: 0;
+        color: var(--color-primarycol);
+        border-bottom: 1px solid var(--color-primarycol);
+        font-size: 1.25em;
+        font-weight: 200;
+        border-radius: 0;
+
+        &.css-t3ipsp-control {
+          box-shadow: none;
+        }
+      }
+
+      &__single-value {
+        margin: 0;
+      }
+
+      &__value-container {
+        padding: 0;
+      }
+
+      &__indicators {
+        display: none;
+      }
+
+      &__menu {
+        width: 8.5em;
+        overflow: hidden;
+        border-radius: 0;
+      }
+
+      &__menu-list {
+        padding: 0;
+        overflow: hidden;
+        border-radius: 0;
+      }
+
+      &__option {
+        &--is-focused,
+        &:active,
+        &:hover {
+          color: var(--color-blackcol);
+          background-color: rgba($color: var(--rgb-primarycol), $alpha: 0.25);
+        }
+      }
+
+      &__option--is-selected {
+        color: var(--color-whitecol);
+        background-color: var(--color-primarycol);
       }
     }
+
     .arrow-down {
       width: 0.75em;
       height: 0.75em;
@@ -160,7 +201,7 @@
 
       .left-area {
         @media #{$ipad} {
-          top: 1em;
+          top: 0;
           transition: $transitionSlow;
         }
       }
@@ -169,7 +210,7 @@
         @media #{$ipad} {
           transition: $transitionSlow;
           position: relative;
-          top: 1.5em;
+          top: -0.5em;
         }
       }
     }
