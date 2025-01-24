@@ -17,7 +17,7 @@ const Sans = localFont({
       style: "normal",
     },
     {
-      path: "../public/assets/fonts/regular.otf",
+      path: "../public/assets/fonts/regular.ttf",
       weight: "400",
       style: "normal",
     },
