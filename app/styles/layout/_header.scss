@@ -7,6 +7,7 @@
   height: 14.0625em;
   background: #fff;
   transition: $transitionSlow;
+
   // border-bottom: 1px solid rgba($color: #bebebef0, $alpha: 0.94);
   &::before {
     content: "";
@@ -31,6 +32,7 @@
     justify-content: space-between;
     padding: 1.3125em 0 0 0;
     transition: $transitionSlow;
+
     .left-area {
       display: flex;
       justify-content: flex-start;
@@ -45,6 +47,7 @@
         column-gap: 1.5em;
       }
     }
+
     .nav-button {
       display: flex;
       justify-content: flex-start;
@@ -83,6 +86,7 @@
         width: auto;
       }
     }
+
     .sticky-logo {
       position: absolute;
       left: 50%;
@@ -91,6 +95,7 @@
       flex-shrink: 0;
       width: 17.3125em;
       transition: $transitionSlow;
+
       img {
         width: 100%;
       }
@@ -100,6 +105,7 @@
         width: 12.3125em;
       }
     }
+
     .langWrapper {
       display: flex;
       align-items: center;
@@ -113,6 +119,7 @@
         top: 1em;
       }
     }
+
     .lang {
       position: relative;
       width: 6.5em;
@@ -159,6 +166,7 @@
       }
 
       &__option {
+
         &--is-focused,
         &:active,
         &:hover {
@@ -184,13 +192,16 @@
         width: 100%;
       }
     }
+
     .search {
       width: 1.4375em;
       cursor: pointer;
+
       img {
         width: 100%;
       }
     }
+
     &.sticky {
       transition: $transitionSlow;
 
@@ -217,9 +228,54 @@
     }
   }
 
+
   &.sticky-header {
     height: 5.75em;
     transition: $transitionSlow;
+
+    &.detailMenu {
+      height: 10em;
+    }
+  }
+
+  .extraMenu {
+    display: none;
+
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6.25em;
+      justify-content: center;
+
+      @media #{$mob} {
+        gap: 1.5em;
+      }
+
+      a {
+        font-size: 1.25em;
+        color: var(--color-primarycol);
+      }
+    }
+  }
+
+  &.detailMenu {
+    @media #{$ipad} {
+      height: 10em;
+    }
+
+    @media #{$mob} {
+      height: 11em;
+    }
+
+    .extraMenu {
+      display: flex;
+      justify-content: center;
+      position: absolute;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      bottom: 1.5em;
+    }
   }
 
   .menuOne {
@@ -234,6 +290,7 @@
 
       .menuOne__item {
         margin: 0;
+
         a {
           color: var(--color-primarycol);
           font-size: 1.25em;

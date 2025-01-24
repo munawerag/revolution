@@ -5,14 +5,12 @@ import { useEffect, useState } from "react";
 import PrimaryButton from "../../Buttons/PrimaryButton";
 import MainMenu from "../MainMenu";
 import LanguageSelector from "./LanguageSelector";
+import { usePathname } from "next/navigation";
 
 const Header = () => {
   const [menuActive, setMenuActive] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [lastScrollTop, setLastScrollTop] = useState<number>(0);
-  // useEffect(() => {
-  //   document.getElementsByTagName("header")[0].classList.remove("onLoad");
-  // }, []);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -35,9 +33,21 @@ const Header = () => {
     };
   }, [lastScrollTop]);
 
+  const pathname = usePathname();
+
+  // Log the pathname to see what it's returning
+  console.log("pathname:", pathname);
+
+  // Check if the pathname contains "/project-list/"
+  const hasProjectList = pathname.includes("/project-list/");
+
   return (
     <>
-      <header className={`header ${scrolled ? "sticky-header" : ""}`}>
+      <header
+        className={`header ${scrolled ? "sticky-header" : ""} ${
+          hasProjectList ? "detailMenu" : ""
+        }`}
+      >
         <div className="container-s">
           <div className={`wrapper ${scrolled ? "sticky" : ""}`}>
             <div className="left-area">
@@ -50,7 +60,6 @@ const Header = () => {
                     alt="img"
                   />
                 </div>
-
                 <p>Menu</p>
               </div>
               <div className="search">
@@ -72,25 +81,6 @@ const Header = () => {
             </Link>
             <div className="langWrapper">
               <div className="lang">
-                {/* <select
-                  className="select"
-                  value="en"
-                  onChange={() => {
-                    return;
-                  }}
-                >
-                  <option value="">Select Language</option>
-                  <option value="en">English</option>
-                  <option value="ar">عربى</option>
-                </select>
-                <div className="arrow-down">
-                  <Image
-                    src={"/assets/svgs/arrow-down.svg"}
-                    width={6}
-                    height={9}
-                    alt="arrow down"
-                  />
-                </div> */}
                 <LanguageSelector />
               </div>
               <PrimaryButton
@@ -100,12 +90,36 @@ const Header = () => {
               />
             </div>
           </div>
+          <div className="extraMenu">
+            <ul>
+              <li>
+                <Link href={"/"} className="w-uline">
+                  Overview
+                </Link>
+              </li>
+              <li>
+                <Link href={"/"} className="w-uline">
+                  Residences
+                </Link>
+              </li>
+              <li>
+                <Link href={"/"} className="w-uline">
+                  Amenities
+                </Link>
+              </li>
+              <li>
+                <Link href={"/"} className="w-uline">
+                  Location
+                </Link>
+              </li>
+            </ul>
+          </div>
         </div>
       </header>
       <div className={`slide-menu ${menuActive ? "active" : ""}`}>
         <MainMenu setMenuActive={setMenuActive} />
       </div>
-      <div className={`menu-overlay ${menuActive ? "active" : ""}`}></div>
+      <div className={`menu-overlay ${menuActive ? "active" : ""}`}>dsd</div>
     </>
   );
 };
