@@ -54,23 +54,41 @@ const Footer = () => {
         <Link href={"/"} className={`${style.logoWrapper}`}>
           <SvgComp src="/assets/svgs/footer-logo.svg" />
         </Link>
-        <div className="custom-row justify-between">
-          {data.map((item: any, index: number) => {
-            return (
-              <div className="col_12 col_lg_2" key={index}>
-                <FooterLinks data={item?.items} title={item?.title} />
-              </div>
-            );
-          })}
+        <div className={style.footerWrapper}>
+          <div className={`custom-row ${style.row}`}>
+            {data.map((item: any, index: number) => {
+              return (
+                <div className="col_12 col_sm_4 col_lg_2" key={index}>
+                  <FooterLinks data={item?.items} title={item?.title} />
+                </div>
+              );
+            })}
+          </div>
         </div>
         <div className={style.bottomWrapper}>
           <div className={style.left}>
-            <p>
+            <p className="mb-0">
               © 2025 RVL REAL ESTATE L.L.C. . All Rights Reserved. Web by DG
             </p>
           </div>
           <div className={style.right}>
-            
+            <div className={style.terms}>
+              <ul>
+                <li>
+                  <Link href={"/"} target={"_self"} className="w-uline">
+                    Privacy Policies
+                  </Link>
+                </li>
+                <li>
+                  <Link href={"/"} target={"_self"} className="w-uline">
+                    Terms & Condition
+                  </Link>
+                </li>
+              </ul>
+            </div>
+            <div className="">
+              <p className="mb-0">Social</p>
+            </div>
           </div>
         </div>
       </div>

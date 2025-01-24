@@ -1,3 +1,4 @@
+import NewsLetter from "@/app/components/common/NewsLetter";
 import SectionHeading from "@/app/components/common/SectionHeading";
 import OurUnique from "@/app/components/ProjectListing/OurUnique";
 import ProjectsList from "@/app/components/ProjectListing/ProjectsList";
@@ -15,6 +16,7 @@ const ProjectList = () => {
       <ProjectVideo />
       <ProjectsList />
       <OurUnique />
+      <NewsLetter />
     </>
   );
 };
