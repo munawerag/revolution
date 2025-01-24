@@ -1,4 +1,9 @@
 import React from "react";
+import TitleOne from "./TitleOne";
+import TitleTwo from "./TitleTwo";
+import Image from "next/image";
+import SocialLinks from "../../SocialLinks";
+import PrimaryButton from "../../Buttons/PrimaryButton";
 import style from "./index.module.scss";
 
 const HomeBanner = () => {

@@ -72,13 +72,13 @@ button {
   display: flex;
   align-items: center;
   width: max-content;
-  font-size: 1.125em;
+  font-size: 1.25em;
   color: #fff;
-  background: #5a7f70;
-  padding: 1.0625em 1.125em;
+  background: var(--color-primarycol);
+  padding: 0.8125em 2.25em;
   gap: 0.75em;
   font-family: inherit;
-  font-weight: 300;
+  font-weight: 400;
   font-size: 1em;
   span {
     font-size: 1.125em;
