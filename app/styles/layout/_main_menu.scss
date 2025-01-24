@@ -13,10 +13,6 @@
     width: 100%;
   }
 
-  // @media #{$ipad} {
-  //   overflow-y: auto;
-  // }
-
   &.active {
     transform: translateX(0%);
     transition: 0.85s;
@@ -59,6 +55,12 @@
         @media #{$ipadpro} {
           width: 100%;
           border-right: 0;
+        }
+
+        @media #{$mob} {
+          width: 100%;
+          height: calc(100vh - 236px);
+          overflow-y: auto;
         }
       }
 
@@ -103,6 +105,8 @@
         @media #{$ipadpro} {
           margin-bottom: 1em;
           svg {
+            position: relative;
+            right: 0.75em;
             rotate: 90deg;
           }
         }
@@ -161,6 +165,7 @@
     }
 
     @media #{$ipad} {
+      padding: 2em;
       height: 100%;
       overflow-y: auto;
     }

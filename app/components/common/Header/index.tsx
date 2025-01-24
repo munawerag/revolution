@@ -13,26 +13,27 @@ const Header = () => {
   //   document.getElementsByTagName("header")[0].classList.remove("onLoad");
   // }, []);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      const currentScroll =
-        window.pageYOffset || document.documentElement.scrollTop;
+  // useEffect(() => {
+  //   const handleScroll = () => {
+  //     const currentScroll =
+  //       window.pageYOffset || document.documentElement.scrollTop;
 
-      setLastScrollTop(currentScroll <= 0 ? 0 : currentScroll);
-    };
+  //     setLastScrollTop(currentScroll <= 0 ? 0 : currentScroll);
+  //   };
 
-    if (window.pageYOffset > 1) {
-      setScrolled(true);
-    } else {
-      setScrolled(false);
-    }
+  //   if (window.pageYOffset > 1) {
+  //     setScrolled(true);
+  //   } else {
+  //     setScrolled(false);
+  //   }
 
-    window.addEventListener("scroll", handleScroll);
+  //   window.addEventListener("scroll", handleScroll);
 
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, [lastScrollTop]);
+  //   return () => {
+  //     window.removeEventListener("scroll", handleScroll);
+  //   };
+  // }, [lastScrollTop]);
+
   return (
     <>
       <header className={`header`}>
@@ -90,7 +91,11 @@ const Header = () => {
                   />
                 </div>
               </div>
-              <PrimaryButton title="Enquire Now" link="/" />
+              <PrimaryButton
+                title="Enquire Now"
+                link="/"
+                className="desktop-only"
+              />
             </div>
           </div>
         </div>

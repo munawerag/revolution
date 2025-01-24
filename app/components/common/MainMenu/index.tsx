@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
 import SvgComp from "@/app/components/common/SvgComp";
+import PrimaryButton from "../../Buttons/PrimaryButton";
 
 const MainMenu = ({ setMenuActive }: any) => {
   const [active, setActive] = useState<number | null>(1);
@@ -132,6 +133,12 @@ const MainMenu = ({ setMenuActive }: any) => {
               </li>
             </ul>
           </nav>
+
+          <PrimaryButton
+            title="Enquire Now"
+            link="/"
+            className="mobile-only w-100 justify-center"
+          />
         </div>
         <div className={`col-2 ${locationsActive ? "isActive" : ""}`}>
           <div className="locations__wrapper">
