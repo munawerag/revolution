@@ -1,0 +1,158 @@
+.residencies-slider {
+  .swiper-pagination {
+    width: 20.25em !important;
+    bottom: 7.8125em !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    z-index: 1 !important;
+    top: auto !important;
+    background: rgba($color: #bebebe, $alpha: 0.2) !important;
+
+    @media #{$mob} {
+      max-width: 10em !important;
+    }
+    .swiper-pagination-progressbar-fill {
+      background: rgba($color: #d9d9d9, $alpha: 1) !important;
+    }
+  }
+}
+
+.amenities-slider {
+  &.swiper {
+    padding-bottom: 11.75em;
+    @media #{$ipad} {
+      padding-bottom: 7.5em;
+    }
+    @media #{$mob} {
+      padding-bottom: 9em;
+    }
+  }
+
+  .swiper-wrapper {
+    .swiper-slide {
+      position: relative;
+      width: 55.4375em !important;
+      @media #{$ipad} {
+        width: 35em !important;
+      }
+      @media #{$mob} {
+        width: 100% !important;
+      }
+      &:nth-child(even) {
+        width: 32.6875em !important;
+        @media #{$ipad} {
+          width: 35em !important;
+        }
+        @media #{$mob} {
+          width: 100% !important;
+        }
+      }
+    }
+  }
+
+  .swiper-pagination {
+    width: 20.25em !important;
+    bottom: 7.8125em !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    z-index: 1 !important;
+    top: auto !important;
+    background: rgba($color: #bebebe, $alpha: 0.2) !important;
+    @media #{$ipad} {
+      bottom: 4em !important;
+    }
+    @media #{$mob} {
+      max-width: 10em !important;
+      bottom: 5em !important;
+    }
+    .swiper-pagination-progressbar-fill {
+      background: rgba($color: #000000, $alpha: 1) !important;
+    }
+  }
+}
+
+.essentials-slider {
+  &.swiper {
+    padding-bottom: 11.75em;
+    @media #{$ipad} {
+      padding-bottom: 8em;
+    }
+  }
+
+  .swiper-wrapper {
+    .swiper-slide {
+      position: relative;
+      width: 63.75em !important;
+      @media #{$ipad} {
+        width: 40em !important;
+      }
+      @media #{$mob} {
+        width: 100% !important;
+      }
+    }
+  }
+
+  .swiper-pagination {
+    width: 100% !important;
+    max-width: 35em !important;
+    bottom: 7.8125em !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    z-index: 1 !important;
+    top: auto !important;
+    background: rgba($color: #bebebe, $alpha: 0.2) !important;
+
+    @media #{$ipad} {
+      bottom: 4em !important;
+      max-width: 20em !important;
+    }
+    @media #{$mob} {
+      max-width: 10em !important;
+      bottom: 5em !important;
+    }
+    .swiper-pagination-progressbar-fill {
+      background: rgba($color: #000000, $alpha: 1) !important;
+    }
+  }
+}
+
+.landmark-slider {
+  &.swiper {
+    padding-bottom: 11.75em;
+    @media #{$ipad} {
+      padding-bottom: 8em;
+    }
+  }
+
+  .swiper-wrapper {
+    .swiper-slide {
+      position: relative;
+      width: 54.375em !important;
+      @media #{$ipad} {
+        width: 100% !important;
+      }
+    }
+  }
+
+  .swiper-pagination {
+    width: 100% !important;
+    max-width: 35em !important;
+    bottom: 7.8125em !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    z-index: 1 !important;
+    top: auto !important;
+    background: rgba($color: #bebebe, $alpha: 0.2) !important;
+    @media #{$ipad} {
+      bottom: 4em !important;
+      max-width: 20em !important;
+    }
+    @media #{$mob} {
+      max-width: 10em !important;
+      bottom: 5em !important;
+    }
+    .swiper-pagination-progressbar-fill {
+      background: rgba($color: #000000, $alpha: 1) !important;
+    }
+  }
+}

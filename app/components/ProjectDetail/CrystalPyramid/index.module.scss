@@ -1,0 +1,195 @@
+@import "../../../styles/abstract/variable";
+.section {
+  background: var(--color-whitecol);
+  padding: 8.75em 0 0;
+  @media #{$ipad} {
+    padding: 5em 0 0;
+  }
+  .wrapper {
+    width: 100%;
+    max-width: 54.6875em;
+    margin: auto;
+    padding: 0 2em 7.25em 2em;
+  }
+
+  .imgContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 3.75em;
+    @media #{$ipad} {
+      justify-content: center;
+    }
+    .imgWrapper {
+      width: 14.4375em;
+      height: 26.375em;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    .imgWrapper2 {
+      width: 26.75em;
+      height: 26.375em;
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+  .stoneWrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2em;
+    img {
+      width: 100%;
+      max-width: 50em;
+      height: 7.6875em;
+    }
+  }
+
+  .heading {
+    font-size: 2.375em;
+    margin-bottom: 1.575em;
+  }
+
+  .locationContainer {
+    position: relative;
+    padding: 8.75em 0;
+    background: rgba(var(--color-secondary-rgb-color), 0.2);
+    z-index: 1;
+    @media #{$ipad} {
+      padding: 5em 0;
+    }
+    .locationWrapper {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      row-gap: 3.125em;
+    }
+
+    .titleWrapper {
+      max-width: 20%;
+      flex: 0 0 20%;
+      display: flex;
+      align-items: center;
+      column-gap: 1.25em;
+      @media #{$ipad} {
+        max-width: 33.33%;
+        flex: 0 0 33.33%;
+      }
+      @media #{$mob} {
+        max-width: 50%;
+        flex: 0 0 50%;
+      }
+      .tile {
+        max-width: 4.375em;
+        flex: 0 0 4.375em;
+        height: 4.375em;
+        border-radius: 100%;
+      }
+
+      .title {
+        color: var(--color-primarycol);
+        text-transform: uppercase;
+        margin-bottom: 1.111em;
+        line-height: 1;
+      }
+
+      .category {
+        color: var(--color-primarycol);
+        text-transform: capitalize;
+        margin-bottom: 0;
+        line-height: 1;
+      }
+
+      .lightBlue {
+        background: #68cef6;
+      }
+
+      .green {
+        background: #72b37c;
+      }
+
+      .yellow {
+        background: #ede9ab;
+      }
+
+      .blue {
+        background: #647cb5;
+      }
+
+      .brown {
+        background: #c9835c;
+      }
+
+      .orange {
+        background: #e7927a;
+      }
+
+      .pink {
+        background: #f0cedd;
+      }
+
+      .purple {
+        background: #947ab6;
+      }
+
+      .red {
+        background: #b70000;
+      }
+    }
+  }
+
+  .systemAllow {
+    padding: 8.75em 2em 7.25em 2em;
+    max-width: 66.875em;
+    width: 100%;
+    margin: auto;
+    @media #{$ipad} {
+      padding: 5em 3em;
+    }
+    .heading {
+      margin-bottom: 1.315em;
+    }
+
+    .textWrapper {
+      display: flex;
+      flex-wrap: wrap;
+      column-gap: 3.75em;
+      list-style: disc;
+      row-gap: 3.125em;
+      justify-content: center;
+      @media #{$ipad} {
+        column-gap: 2em;
+        row-gap: 2em;
+      }
+
+      .item {
+        // width: 18.75em;
+        max-width: 28%;
+        flex: 0 0 28%;
+        font-size: 1.125em;
+        font-weight: 300;
+        margin-bottom: 0;
+        line-height: 1;
+        @media #{$mob} {
+          max-width: 100%;
+          flex: 0 0 100%;
+        }
+      }
+    }
+  }
+
+  .fullImg {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    @media #{$ipadpro} {
+      height: 50vh;
+    }
+  }
+}

@@ -1,0 +1,73 @@
+@import "../../../styles/abstract/variable";
+.enquireWrapper {
+  position: relative;
+  background: #fff;
+}
+
+.enquireTitleWrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  display: block;
+  transition: 1s all ease;
+  opacity: 1;
+}
+
+.enquireTitle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 32.875em;
+  text-align: center;
+  margin: 0 auto;
+
+  .title1 {
+    color: #fff;
+    font-weight: 500;
+    text-transform: uppercase;
+  }
+
+  .title2 {
+    color: #fff;
+  }
+}
+
+.enquire__btnWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.25em;
+  margin-top: 1.125em;
+}
+
+.enquire__img {
+  position: relative;
+  width: 100%;
+  height: 54.625em;
+  @media #{$ipad} {
+    height: 40em;
+  }
+  img {
+    //  clip-path: inset(0 10% 30% 10%);
+    transition: 1s all ease;
+  }
+}
+
+// .enquireWrapper {
+//     &.inView {
+//         .enquireTitleWrapper {
+//             top: 50%;
+//             transition: 1s all ease;
+//             opacity: 1;
+//         }
+
+//         .enquire__img {
+//             img {
+//                 clip-path: inset(0 0% 0% 0%);
+//                 transition: 1s all ease;
+//             }
+//         }
+//     }
+// }
