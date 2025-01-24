@@ -1,10 +1,6 @@
 import React from "react";
-import TitleOne from "./TitleOne";
-import TitleTwo from "./TitleTwo";
-import Image from "next/image";
-import SocialLinks from "../../SocialLinks";
-import PrimaryButton from "../../Buttons/PrimaryButton";
 import style from "./index.module.scss";
+import SvgComp from "../../common/SvgComp";
 
 const HomeBanner = () => {
   return (
@@ -17,6 +13,10 @@ const HomeBanner = () => {
             muted
             loop={true}
           ></video>
+        </div>
+
+        <div className={style.chat}>
+          <SvgComp src="/assets/svgs/chat.svg" />
         </div>
       </div>
     </>
