@@ -2,14 +2,17 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import PrimaryButton from "../../Buttons/PrimaryButton";
+import MainMenu from "../MainMenu";
+import LanguageSelector from "./LanguageSelector";
 
 const Header = () => {
   const [menuActive, setMenuActive] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [lastScrollTop, setLastScrollTop] = useState<number>(0);
-  useEffect(() => {
-    document.getElementsByTagName("header")[0].classList.remove("onLoad");
-  }, []);
+  // useEffect(() => {
+  //   document.getElementsByTagName("header")[0].classList.remove("onLoad");
+  // }, []);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -31,176 +34,76 @@ const Header = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, [lastScrollTop]);
+
   return (
     <>
-      <header className={`header onLoad`}>
+      <header className={`header ${scrolled ? "sticky-header" : ""}`}>
         <div className="container-s">
           <div className={`wrapper ${scrolled ? "sticky" : ""}`}>
-            <div className="nav-button" onClick={() => setMenuActive(true)}>
-              <Image
-                src={"/assets/svgs/header-nav.svg"}
-                width={25}
-                height={17}
-                alt="img"
-              />
-            </div>
-            <div className="menuOne">
-              <div className="menuOne__item">
-                <Link href={"#overview"} className="w-uline">
-                  Overview
-                </Link>
-              </div>
-              <div className="menuOne__item">
-                <Link href={"#treeOfLife"} className="w-uline">
-                  Tree of life
-                </Link>
-              </div>
-              <div className="menuOne__item">
-                <Link href={"#residencies"} className="w-uline">
-                  residencies
-                </Link>
-              </div>
-            </div>
-            <Link href={"/"} className="logo">
-              <Image
-                src={"/assets/svgs/logo.svg"}
-                width={147}
-                height={123}
-                alt="logo"
-              />
-            </Link>
-            <Link href={"/"} className="sticky-logo">
-              <Image
-                src={"/assets/svgs/logo.svg"}
-                width={147}
-                height={123}
-                alt="logo"
-              />
-            </Link>
-            <div className="menuTwo">
-              <div className="menuTwo__item">
-                <Link href={"#amenities"} className="w-uline">
-                  amenities
-                </Link>
-              </div>
-              <div className="menuTwo__item">
-                <Link href={"#location"} className="w-uline">
-                  location
-                </Link>
-              </div>
-              <div className="menuTwo__item">
-                <Link href={"#contact"} className="w-uline">
-                  Contact
-                </Link>
-              </div>
-            </div>
-            <div className="langWrapper">
-              <div className="lang">
-                <Image
-                  src={"/assets/svgs/language.svg"}
-                  width={104}
-                  height={27}
-                  alt="logo"
-                />
-              </div>
-              {/* <div className="search">
-                <Image
-                  src={"/assets/svgs/search.svg"}
-                  width={16}
-                  height={17}
-                  alt="logo"
-                />
-              </div> */}
-            </div>
-          </div>
-        </div>
-      </header>
-      {/* <div className="headerTwo">
-        <div className="container-s">
-          <div className="wrapper">
-            <div className="nav-button" onClick={() => setMenuActive(true)}>
-              <Image
-                src={"/assets/svgs/header-nav.svg"}
-                width={25}
-                height={17}
-                alt="img"
-              />
-            </div>
-            <div className="menuOne">
-              <div className="menuOne__item">
-                <Link href={"/"} className="w-uline">
-                  Overview
-                </Link>
-              </div>
-              <div className="menuOne__item">
-                <Link href={"/"} className="w-uline">
-                  Tree of life
-                </Link>
-              </div>
-              <div className="menuOne__item">
-                <Link href={"/"} className="w-uline">
-                  residencies
-                </Link>
-              </div>
-            </div>
-            <Link href={"/"} className="logo">
-              <Image
-                src={"/assets/svgs/logo.svg"}
-                width={147}
-                height={123}
-                alt="logo"
-              />
-            </Link>
+            <div className="left-area">
+              <div className="nav-button" onClick={() => setMenuActive(true)}>
+                <div className="menu-icon">
+                  <Image
+                    src={"/assets/svgs/header-nav.svg"}
+                    width={25}
+                    height={17}
+                    alt="img"
+                  />
+                </div>
 
-            <div className="menuTwo">
-              <div className="menuTwo__item">
-                <Link href={"/"} className="w-uline">
-                  amenities
-                </Link>
-              </div>
-              <div className="menuTwo__item">
-                <Link href={"/"} className="w-uline">
-                  location
-                </Link>
-              </div>
-              <div className="menuTwo__item">
-                <Link href={"/"} className="w-uline">
-                  Contact
-                </Link>
-              </div>
-            </div>
-            <div className="langWrapper">
-              <div className="lang">
-                <Image
-                  src={"/assets/svgs/language.svg"}
-                  width={104}
-                  height={27}
-                  alt="logo"
-                />
+                <p>Menu</p>
               </div>
               <div className="search">
                 <Image
                   src={"/assets/svgs/search.svg"}
-                  width={16}
-                  height={17}
+                  width={23}
+                  height={23}
                   alt="logo"
                 />
               </div>
             </div>
+            <Link href={"/"} className="sticky-logo">
+              <Image
+                src={"/assets/svgs/logo.svg"}
+                width={277}
+                height={88}
+                alt="logo"
+              />
+            </Link>
+            <div className="langWrapper">
+              <div className="lang">
+                {/* <select
+                  className="select"
+                  value="en"
+                  onChange={() => {
+                    return;
+                  }}
+                >
+                  <option value="">Select Language</option>
+                  <option value="en">English</option>
+                  <option value="ar">عربى</option>
+                </select>
+                <div className="arrow-down">
+                  <Image
+                    src={"/assets/svgs/arrow-down.svg"}
+                    width={6}
+                    height={9}
+                    alt="arrow down"
+                  />
+                </div> */}
+                <LanguageSelector />
+              </div>
+              <PrimaryButton
+                title="Enquire Now"
+                link="/"
+                className="desktop-only"
+              />
+            </div>
           </div>
         </div>
-      </div> */}
+      </header>
       <div className={`slide-menu ${menuActive ? "active" : ""}`}>
-        <Image
-          src={"/assets/images/slide-menu-new.jpg"}
-          width={1395}
-          height={980}
-          alt="menu"
-        />
-        <div
-          className="menu-close-btn"
-          onClick={() => setMenuActive(false)}
-        ></div>
+        <MainMenu setMenuActive={setMenuActive} />
       </div>
       <div className={`menu-overlay ${menuActive ? "active" : ""}`}></div>
     </>

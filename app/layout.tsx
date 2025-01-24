@@ -39,8 +39,8 @@ const Sans = localFont({
   ],
 });
 export const metadata: Metadata = {
-  title: "Eywa",
-  description: "Eywa",
+  title: "Revolution",
+  description: "Revolution",
 };
 
 export default function RootLayout({

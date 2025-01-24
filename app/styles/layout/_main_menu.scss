@@ -1,0 +1,278 @@
+.slide-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 87.1875em;
+  height: 100vh;
+  z-index: 999999;
+  transform: translateX(-100%);
+  transition: 0.85s;
+  background-color: var(--color-whitecol);
+
+  @media #{$ipadpro} {
+    width: 100%;
+  }
+
+  &.active {
+    transform: translateX(0%);
+    transition: 0.85s;
+  }
+
+  .main__menu {
+    display: grid;
+    grid-template-columns: 55.8125em 31.25em;
+    height: 100%;
+
+    @media #{$ipad} {
+      display: block;
+    }
+
+    @media #{$ipadpro} {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  .col-1 {
+    padding: 1.3125em 4.6875em 4.6875em 4.6875em;
+
+    .menu__logo {
+      width: 17.375em;
+      img {
+        width: 100%;
+      }
+    }
+
+    .nav__menu {
+      margin-top: 7.6875em;
+
+      &__leftCol {
+        width: 22.5625em;
+        border-right: 1px solid rgba($color: var(--rgb-graycol), $alpha: 0.5);
+        height: 100%;
+        position: relative;
+        padding-bottom: 5.375em;
+
+        @media #{$ipadpro} {
+          width: 100%;
+          border-right: 0;
+        }
+
+        @media #{$mob} {
+          width: 100%;
+          height: calc(100vh - 236px);
+          overflow-y: auto;
+        }
+      }
+
+      &__item {
+        margin-bottom: 2.875em;
+        padding-right: 3.375em;
+
+        &.active,
+        &:hover {
+          .menu__label {
+            color: var(--color-primarycol);
+            svg {
+              path {
+                fill: var(--color-primarycol);
+              }
+            }
+          }
+        }
+
+        &.active {
+          .submenu {
+            display: block;
+          }
+        }
+
+        @media #{$ipadpro} {
+          padding-right: 0;
+          padding-bottom: 0;
+          margin-bottom: 2.5em;
+        }
+      }
+
+      .menu__label {
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: var(--color-graycol);
+        font-size: 1.625em;
+        font-style: normal;
+        font-weight: 400;
+        letter-spacing: 0.01625em;
+
+        @media #{$ipadpro} {
+          margin-bottom: 1em;
+          svg {
+            position: relative;
+            right: 0.75em;
+            rotate: 90deg;
+          }
+        }
+      }
+
+      .submenu {
+        display: none;
+        position: absolute;
+        top: 0;
+        right: -25em;
+        width: 25em;
+        padding-left: 5.5em;
+        padding-top: 1.25em;
+        padding-bottom: 1.25em;
+
+        .submenu__item {
+          color: var(--color-primarycol);
+          font-size: 1.25em;
+          font-style: normal;
+          font-weight: 200;
+          letter-spacing: 1px;
+          margin-bottom: 2.5625em;
+
+          a {
+            color: var(--color-primarycol);
+          }
+
+          @media #{$ipadpro} {
+            margin-bottom: 1em;
+          }
+        }
+
+        @media #{$ipadpro} {
+          position: relative;
+          top: 0;
+          left: 0;
+          padding: 0;
+        }
+      }
+
+      .additional__links {
+        margin-top: 5.1875em;
+
+        &__item {
+          color: var(--color-primarycol);
+          font-size: 1.125em;
+          font-style: normal;
+          font-weight: 400;
+          letter-spacing: 0.01125em;
+
+          a {
+            color: var(--color-primarycol);
+          }
+        }
+      }
+    }
+
+    @media #{$ipad} {
+      padding: 2em;
+      height: 100%;
+      overflow-y: auto;
+    }
+  }
+
+  .col-2 {
+    height: 100%;
+    background-color: rgba($color: var(--rgb-graycol), $alpha: 0.4);
+    padding: 0 5.6875em 0 4.125em;
+    display: flex;
+    align-items: center;
+
+    .locations__wrapper {
+      width: 100%;
+    }
+
+    .locations {
+      &__title {
+        font-size: 1.25em;
+        font-weight: 200;
+        letter-spacing: 1px;
+        color: var(--color-primarycol);
+      }
+      &__item {
+        color: var(--color-primarycol);
+        padding: 0.8125em;
+        font-size: 1.125em;
+        font-weight: 400;
+        text-align: center;
+        border: 1px solid var(--color-graycol);
+      }
+    }
+
+    .back__icon {
+      display: none;
+      @media #{$ipad} {
+        display: block;
+      }
+    }
+
+    @media #{$ipad} {
+      display: none;
+
+      &.isActive {
+        display: flex;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: #e4e4e4;
+
+        .back__icon {
+          rotate: 180deg;
+          position: absolute;
+          top: 2.2em;
+          left: 3em;
+
+          svg {
+            path {
+              fill: var(--color-blackcol);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .col-2-mob-opener {
+    display: none;
+
+    @media #{$ipad} {
+      display: block;
+    }
+  }
+}
+
+.menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 999998;
+  background: rgba($color: #000000, $alpha: 0.65);
+  transition: 0.85s;
+  opacity: 0;
+  pointer-events: none;
+  &.active {
+    transition: 0.85s;
+    opacity: 1;
+    pointer-events: auto;
+  }
+}
+
+.menu-close-btn {
+  width: 1.1875em;
+  height: 1.1875em;
+  position: absolute;
+  top: 2.2em;
+  right: 3em;
+  z-index: 1;
+  background: transparent;
+  cursor: pointer;
+
+  img {
+    width: 100%;
+  }
+}
