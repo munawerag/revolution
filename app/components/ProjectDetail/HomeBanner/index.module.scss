@@ -29,7 +29,21 @@
       object-fit: cover;
     }
   }
-
+  &__descripWrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 20.625em 0 7.75em 0;
+    background-color: var(--color-whitecol);
+    width: 100%;
+  }
+  &__descrip {
+    width: 100%;
+    max-width: 33.125em;
+    padding: 0 2em;
+    margin: 0 auto;
+    text-align: center;
+  }
   &__badge {
     position: absolute;
     width: 6.4375em;

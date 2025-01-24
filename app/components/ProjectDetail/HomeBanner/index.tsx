@@ -18,6 +18,12 @@ const HomeBanner = () => {
             loop={true}
           ></video>
         </div>
+        <div className={style.homeBanner__descripWrapper}>
+          <div className={style.homeBanner__descrip}>
+            <h5 className="h5">22Palms</h5>
+            <h2 className="h2">The Place For Pioneering Tomorrow</h2>
+          </div>
+        </div>
       </div>
       <TitleOne />
       <TitleTwo />
