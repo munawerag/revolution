@@ -1,89 +1,93 @@
-import Image from "next/image";
-import style from "./index.module.scss"
+import style from "./index.module.scss";
 import SvgComp from "../SvgComp";
 import Link from "next/link";
+import FooterLinks from "./FooterLinks";
+
+const data = [
+  {
+    title: "Links",
+    items: [
+      { title: "Our Uniqueness" },
+      { title: "Partners" },
+      { title: "Careers" },
+      { title: "Properties Names" },
+      { title: "Blogs" },
+    ],
+  },
+  {
+    title: "Our Destinations",
+    items: [
+      { title: "Dubai" },
+      { title: "Riga" },
+      { title: "Barcelona" },
+      { title: "Berlin" },
+    ],
+  },
+  {
+    title: "Our Story",
+    items: [
+      { title: "Revolution History" },
+      { title: "Values, Vision & Mission" },
+      { title: "Property Stories" },
+      { title: "Awards & Partners" },
+      { title: "Our Team" },
+    ],
+  },
+  {
+    title: "Our Landmarks",
+    items: [
+      { title: "Completed Projects" },
+      { title: "Rising Brilliance" },
+      { title: "Eywa" },
+    ],
+  },
+  {
+    title: "Contact",
+    items: [{ title: "Contact Us" }],
+  },
+];
 
 const Footer = () => {
   return (
     <div className={style.footer}>
       <div className="container-s">
-        <div className="custom-row">
-          <div className="col_12 col_lg_offset_5 col_lg_2">
-            <Link href={"/"} className={`${style.logoWrapper}`}>
-              <SvgComp src="/assets/svgs/footer-logo.svg" />
-            </Link>
-          </div>
-          <div className="col_12 col_lg_offset_3 col_lg_2">
-            <div className={style.phoneWrapper}>
-              <p className={`sm-font ${style.title}`}>Enquire Now</p>
-              <Link href={"tel:+971 54 308 6000"} className={style.phone}>+971 54 308 6000</Link>
-            </div>
+        <Link href={"/"} className={`${style.logoWrapper}`}>
+          <SvgComp src="/assets/svgs/footer-logo.svg" />
+        </Link>
+        <div className={style.footerWrapper}>
+          <div className={`custom-row ${style.row}`}>
+            {data.map((item: any, index: number) => {
+              return (
+                <div className="col_12 col_sm_4 col_lg_2" key={index}>
+                  <FooterLinks data={item?.items} title={item?.title} />
+                </div>
+              );
+            })}
           </div>
         </div>
-        <div className="custom-row">
-          <div className="col_12 col_lg_2">
-            <div className={style.trademarkWrapper}>
-              <SvgComp src="/assets/svgs/trademark-1.svg" />
-              <SvgComp src="/assets/svgs/trademark-2.svg" />
-              <SvgComp src="/assets/svgs/trademark-3.svg" />
-            </div>
+        <div className={style.bottomWrapper}>
+          <div className={style.left}>
+            <p className="mb-0">
+              © 2025 RVL REAL ESTATE L.L.C. . All Rights Reserved. Web by DG
+            </p>
           </div>
-          <div className="col_12 col_lg_offset_1 col_lg_6">
-            <div className={`${style.wrapper}`}>
-              <ul className={`${style.menu}`}>
-                <li className={style.menuItem}>
-                  <Link href={"#"}>
-                    Eywa Story
+          <div className={style.right}>
+            <div className={style.terms}>
+              <ul>
+                <li>
+                  <Link href={"/"} target={"_self"} className="w-uline">
+                    Privacy Policies
                   </Link>
                 </li>
-                <li className={style.menuItem}>
-                  <Link href={"#"}>
-                    Revolution
-                  </Link>
-                </li>
-                <li className={style.menuItem}>
-                  <Link href={"#"}>
-                    Privacy Policy
-                  </Link>
-                </li>
-                <li className={style.menuItem}>
-                  <Link href={"#"}>
-                    Terms & Conditions
+                <li>
+                  <Link href={"/"} target={"_self"} className="w-uline">
+                    Terms & Condition
                   </Link>
                 </li>
               </ul>
             </div>
-          </div>
-          <div className="col_12 col_lg_offset_1 col_lg_2">
-            <div className={style.socialContainer}>
-              <p>Follow Us</p>
-              <ul className={style.socialWrapper}>
-                <li className={style.socialItem}>
-                  <Link href={"#"}>
-                    <SvgComp src="/assets/svgs/facebook.svg" />
-                  </Link>
-                </li>
-                <li className={style.socialItem}>
-                  <Link href={"#"}>
-                    <SvgComp src="/assets/svgs/instagram.svg" />
-                  </Link>
-                </li>
-                <li className={style.socialItem}>
-                  <Link href={"#"}>
-                    <SvgComp src="/assets/svgs/twitter.svg" />
-                  </Link>
-                </li>
-                <li className={style.socialItem}>
-                  <Link href={"#"}>
-                    <SvgComp src="/assets/svgs/linkedin.svg" />
-                  </Link>
-                </li>
-                <li className={style.socialItem}>
-                  <Link href={"#"}>
-                    <SvgComp src="/assets/svgs/youtube.svg" />
-                  </Link>
-                </li>
-              </ul>
+            <div className="">
+              <p className="mb-0">Social</p>
             </div>
           </div>
         </div>
