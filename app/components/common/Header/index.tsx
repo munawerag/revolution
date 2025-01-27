@@ -35,9 +35,6 @@ const Header = () => {
 
   const pathname = usePathname();
 
-  // Log the pathname to see what it's returning
-  console.log("pathname:", pathname);
-
   // Check if the pathname contains "/project-list/"
   const hasProjectList = pathname.includes("/project-list/");
 
