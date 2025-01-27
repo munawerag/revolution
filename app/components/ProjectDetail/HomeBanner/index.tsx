@@ -5,6 +5,7 @@ import Image from "next/image";
 import SocialLinks from "../../SocialLinks";
 import PrimaryButton from "../../Buttons/PrimaryButton";
 import style from "./index.module.scss";
+import BannerLogo from "./BannerLogo";
 
 const HomeBanner = () => {
   return (
@@ -25,6 +26,7 @@ const HomeBanner = () => {
           </div>
         </div>
       </div>
+      <BannerLogo />
       <TitleOne />
       <TitleTwo />
     </>

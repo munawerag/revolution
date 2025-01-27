@@ -51,11 +51,11 @@
     right: 4.6875em;
   }
 
-  &__titleOneSpace {
+  &__logoOneSpace {
     padding-top: 100vh;
   }
 
-  &__titleOne {
+  &__logo {
     color: var(--color-whitecol);
     position: fixed;
     top: 55%;
@@ -91,6 +91,60 @@
       }
     }
 
+    .logo {
+      width: 22.3125em;
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+  &__titleOneSpace {
+    padding-top: 100vh;
+  }
+
+  &__titleOne {
+    color: var(--color-whitecol);
+    position: fixed;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    pointer-events: none;
+    transition: $transition;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 43.875em;
+    text-align: center;
+    margin: 0 auto;
+    @media #{$ipadpro} {
+      top: 50%;
+    }
+    @media #{$ipad} {
+      top: 55%;
+      padding: 0 2em;
+    }
+    &.active {
+      opacity: 1;
+      pointer-events: auto;
+      transition: $transition;
+      top: 50%;
+      @media #{$ipadpro} {
+        top: 45%;
+      }
+      @media #{$ipad} {
+        top: 50%;
+      }
+    }
+    .logo {
+      width: 13.5em;
+      margin-bottom: 2em;
+      img {
+        width: 100%;
+      }
+    }
     .title1 {
       text-transform: uppercase;
     }
@@ -151,7 +205,7 @@
         display: flex;
         flex-direction: column;
         align-items: flex-start;
-        gap: 1.875em;
+        gap: 0.5em;
         @media #{$ipad} {
           gap: 0;
           width: 25%;
@@ -161,16 +215,15 @@
           width: 50%;
         }
         .title1 {
-          font-weight: 500;
+          font-weight: 300;
           color: var(--color-whitecol);
-          text-transform: uppercase;
+          margin-bottom: 0;
         }
 
         .title2 {
           color: var(--color-whitecol);
-          span {
-            font-size: 0.5em;
-          }
+          font-weight: 300;
+          font-size: 1.125em;
         }
       }
     }
