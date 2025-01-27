@@ -2,6 +2,7 @@
 import { useInView } from "react-intersection-observer";
 
 import style from "../index.module.scss";
+import Image from "next/image";
 
 const TitleOne = () => {
   const { ref, inView } = useInView({
@@ -20,15 +21,22 @@ const TitleOne = () => {
           inView ? style.active : ""
         }`}
       >
-        <h5 className={`${style.title1}`}>overview</h5>
-        <h2 className={`${style.title2}`}>
-          Harnessing Ancient Wisdom And Energy In Modern Living
-        </h2>
+        <h5 className={`${style.logo}`}>
+          <Image
+            src={"/assets/svgs/banner-logo.svg"}
+            width={216}
+            height={52}
+            alt="logo"
+          />
+        </h5>
+        <h3 className={`${style.title2} fw-400`}>
+          22Palms embodies sustainability by reimagining an existing industrial
+          building
+        </h3>
         <p>
-          Our sages and seers knew the secrets of using all five elements of
-          nature and their special characteristics and influences for the
-          benefit of people for the development of real estate for living,
-          prayer, entertainment, education, work, production and other purposes.
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua the enim ad
+          minim veniam, quis nostrud exercitation ullamco
         </p>
       </div>
     </>
