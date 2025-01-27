@@ -8,14 +8,14 @@ import ProjectCard from "../../ProjectListing/ProjectCard";
 
 const projectsData = [
   {
-    img: "/assets/images/project-list/project1.jpg",
+    img: "/assets/images/project-detail/landmark-1.jpg",
     title: "BAC DE RODA",
     ctaLink: "/",
     ctaTitle: "Discover More",
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua the enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut.",
   },
   {
-    img: "/assets/images/project-list/project2.jpg",
+    img: "/assets/images/project-detail/landmark-2.jpg",
     title: "CHOCOLATE",
     ctaLink: "/",
     ctaTitle: "Discover More",

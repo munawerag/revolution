@@ -19,7 +19,7 @@ const Overview = () => {
       </div>
       <div className={`${style.realCollection__img} `}>
         <Image
-          src={"/assets/images/home/residencies-2.jpg"}
+          src={"/assets/images/project-detail/overview.jpg"}
           fill
           alt="img"
           className="img-hack"

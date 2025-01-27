@@ -55,7 +55,7 @@ const Masterpieces = () => {
         >
           <SwiperSlide className={`${style.residenciesSlider__slide}`}>
             <Image
-              src={"/assets/images/home/residencies-1.jpg"}
+              src={"/assets/images/project-detail/masterpiece-1.jpg"}
               fill
               alt="img"
               className="img-hack"
@@ -66,7 +66,7 @@ const Masterpieces = () => {
           </SwiperSlide>
           <SwiperSlide className={`${style.residenciesSlider__slide}`}>
             <Image
-              src={"/assets/images/home/residencies-2.jpg"}
+              src={"/assets/images/project-detail/masterpiece-2.jpg"}
               fill
               alt="img"
               className="img-hack"

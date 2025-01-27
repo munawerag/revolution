@@ -16,22 +16,22 @@ import SvgComp from "../../common/SvgComp";
 const data = [
   {
     title: "Lorem Ipsum Dolor",
-    img: "/assets/images/home/amenities-1.jpg",
+    img: "/assets/images/project-detail/amenities-1.jpg",
     ctaLink: "#",
   },
   {
     title: "Lorem Ipsum Dolor",
-    img: "/assets/images/home/amenities-2.jpg",
+    img: "/assets/images/project-detail/amenities-2.jpg",
     ctaLink: "#",
   },
   {
     title: "Lorem Ipsum Dolor",
-    img: "/assets/images/home/amenities-3.jpg",
+    img: "/assets/images/project-detail/amenities-3.jpg",
     ctaLink: "#",
   },
   {
     title: "Lorem Ipsum Dolor",
-    img: "/assets/images/home/amenities-4.jpg",
+    img: "/assets/images/project-detail/amenities-4.jpg",
     ctaLink: "#",
   },
 ];

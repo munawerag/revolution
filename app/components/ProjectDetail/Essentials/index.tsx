@@ -15,17 +15,12 @@ const data = [
   {
     title: "Lorem ipsum dolor",
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore. quat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.",
-    img: "/assets/images/home/essentials-1.jpg",
+    img: "/assets/images/project-detail/essential-1.jpg",
   },
   {
     title: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore. quat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.",
-    img: "/assets/images/home/essentials-2.jpg",
-  },
-  {
-    title: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore. quat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.",
-    img: "/assets/images/home/essentials-3.jpg",
+    img: "/assets/images/project-detail/essential-2.jpg",
   },
 ];
 
