@@ -44,40 +44,6 @@
     z-index: 0;
   }
 
-  // > img {
-  //   clip-path: inset(0% 10% 50% 10%);
-  //   transition: 1s all ease;
-  // }
-
-  // &.inView {
-  //   img {
-  //     clip-path: inset(0 0 0 0);
-  //     transition: 1s all ease;
-  //   }
-  // }
-
-  .textWrapper {
-    position: absolute;
-    left: 50%;
-    bottom: 4.125em;
-    transform: translate(-50%, 0);
-    color: var(--color-whitecol);
-    z-index: 1;
-    width: 100%;
-    max-width: 64em;
-    padding: 0 2em;
-    @media #{$ipad} {
-      max-width: 45em;
-    }
-    @media #{$mob} {
-      bottom: 6.5em;
-    }
-    .title {
-      font-size: 2.375em;
-      margin-bottom: 1.25em;
-    }
-  }
-
   a {
     position: absolute;
     bottom: 5em;

@@ -1,98 +1,46 @@
 "use client";
-import { useState } from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination } from "swiper/modules";
-import Image from "next/image";
-import SwiperNavButtons from "../../Buttons/SwiperNavButtons";
-import Heading from "../../common/Heading";
-import Link from "next/link";
 
 import style from "./index.module.scss";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+import ProjectCard from "../../ProjectListing/ProjectCard";
 
-const data = [
+const projectsData = [
   {
-    title: "Philosophers Residence",
-    ctaText: "Discover",
-    ctaLink: "#",
-    img: "/assets/images/home/landmark-1.jpg",
+    img: "/assets/images/project-list/project1.jpg",
+    title: "BAC DE RODA",
+    ctaLink: "/",
+    ctaTitle: "Discover More",
+    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua the enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut.",
   },
   {
-    title: "Villa Milia",
-    ctaText: "Discover",
-    ctaLink: "#",
-    img: "/assets/images/home/landmark-2.jpg",
-  },
-  {
-    title: "HOFT",
-    ctaText: "Discover",
-    ctaLink: "#",
-    img: "/assets/images/home/landmark-3.jpg",
+    img: "/assets/images/project-list/project2.jpg",
+    title: "CHOCOLATE",
+    ctaLink: "/",
+    ctaTitle: "Discover More",
+    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua the enim.",
   },
 ];
 
 const Landmark = () => {
-  const [prevEl, setPrevEl] = useState<HTMLElement | null>(null);
-  const [nextEl, setNextEl] = useState<HTMLElement | null>(null);
   return (
-    <>
-      <div className={`${style.landmarkTitleWrapper}`}>
-        <div className={style.landmarkTitle}>
-          <Heading
-            title="DISCOVER OUR Landmarks"
-            title2="Explore More Projects Developed By R.Evolution"
+    <div className={style.wrapper}>
+      <h3 className="text-center">Discover Our Landmarks</h3>
+      <div className={style.projectWrapper}>
+        {projectsData?.map((project, index) => (
+          <ProjectCard
+            key={index}
+            img={project.img}
+            title={project.title}
+            ctaLink={project.ctaLink}
+            ctaTitle={project.ctaTitle}
+            desc={project.desc}
+            customclass={style.customProjectCard}
           />
-        </div>
+        ))}
       </div>
-      <div className={`${style.landmarkSlider}`}>
-        <Swiper
-          slidesPerView={"auto"}
-          spaceBetween={30}
-          speed={1200}
-          navigation={{
-            prevEl,
-            nextEl,
-          }}
-          modules={[Pagination, Navigation]}
-          pagination={{
-            type: "progressbar",
-          }}
-          className="landmark-slider"
-        >
-          {data?.map((item: any, index: number) => (
-            <SwiperSlide className={`${style.landmark__slide}`} key={index}>
-              <div className={style.card}>
-                <div className={style.imgWrapper}>
-                  <Image
-                    src={item?.img}
-                    width={870}
-                    height={666}
-                    alt="img"
-                    className="img-hack"
-                  />
-                </div>
-                <div className={style.contentWrapper}>
-                  <h4 className={`${style.title}`}>{item?.title}</h4>
-                  <Link className={`${style.anchor}`} href={item?.ctaLink}>
-                    {item?.ctaText}
-                  </Link>
-                </div>
-              </div>
-              <Link
-                href={item?.ctaLink}
-                target="_blank"
-                className="fullCoverAnchor"
-              ></Link>
-            </SwiperSlide>
-          ))}
-        </Swiper>
-        <div className={`${style.landmark__nav}`}>
-          <SwiperNavButtons nextFunc={setNextEl} prevFunc={setPrevEl} />
-        </div>
-      </div>
-    </>
+    </div>
   );
 };
 

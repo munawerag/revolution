@@ -13,17 +13,17 @@ import Heading from "../../common/Heading";
 
 const data = [
   {
-    title: "24/7 concierge service",
+    title: "Lorem ipsum dolor",
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore. quat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.",
     img: "/assets/images/home/essentials-1.jpg",
   },
   {
-    title: "Outdoor lounge seating & waterfalls",
+    title: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore. quat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.",
     img: "/assets/images/home/essentials-2.jpg",
   },
   {
-    title: "Outdoor lounge seating & waterfalls",
+    title: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore. quat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.",
     img: "/assets/images/home/essentials-3.jpg",
   },
@@ -38,11 +38,7 @@ const Essentials = () => {
         <div className={style.essentialsTitle}>
           <Heading
             title="Refined Living Essentials"
-            title2="A Lifestyle Of Comfort And Ease Awaits"
-            desc="At Eywa, residents are treated to exceptional 5-star concierge
-            services, providing personalized assistance with reservations, event
-            planning, in-residence dining, and more—transforming everyday living
-            into a seamless blend of luxury and convenience."
+            desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "
           />
         </div>
       </div>

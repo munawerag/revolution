@@ -9,19 +9,23 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import Image from "next/image";
 import SwiperNavButtons from "../../Buttons/SwiperNavButtons";
-const Residencies = () => {
+const Masterpieces = () => {
   const [prevEl, setPrevEl] = useState<HTMLElement | null>(null);
   const [nextEl, setNextEl] = useState<HTMLElement | null>(null);
   return (
     <>
       <div className={`${style.residenciesTitleWrapper}`} id="residencies">
         <div className={`${style.residenciesTitle}`}>
-          <h5 className="primary-col text-uppercase fw-500">
-            WILD LUXURY OF A UNIQUE LIFE EXPERIENCE
-          </h5>
+          <h5 className="primary-col text-uppercase fw-500">Masterpieces</h5>
           <h2 className="h2">
-            Eywa Is A Home Where Well-Being Is Truly The Essence Of Living
+            Picture yourself in a perfect place in which the infinities of time
+            and space
           </h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua the enim
+            ad minim veniam, quis nostrud exercitation ullamco
+          </p>
         </div>
       </div>
       <div className={`${style.residenciesSlider}`}>
@@ -57,9 +61,7 @@ const Residencies = () => {
               className="img-hack"
             />
             <div className={style.textWrapper}>
-              <h5 className={`fw-500 text-uppercase`}>Residencies</h5>
-              <h2 className={`fw-300 ${style.title}`}>Apartments</h2>
-              <p className={`fw-300`}>2,3,4 & 5 Bedrooms</p>
+              <h2 className={`fw-300 ${style.title}`}>Lorem et dolore ma</h2>
             </div>
           </SwiperSlide>
           <SwiperSlide className={`${style.residenciesSlider__slide}`}>
@@ -70,9 +72,9 @@ const Residencies = () => {
               className="img-hack"
             />
             <div className={style.textWrapper}>
-              <h5 className={`fw-500 text-uppercase`}>Residencies</h5>
-              <h2 className={`fw-300 ${style.title}`}>Skyline Collection</h2>
-              <p className={`fw-300`}>2,3 & 4 Bedrooms</p>
+              <h2 className={`fw-300 ${style.title}`}>
+                Consectetur Adipiscing
+              </h2>
             </div>
           </SwiperSlide>
           <SwiperSlide className={`${style.residenciesSlider__slide}`}>
@@ -83,9 +85,7 @@ const Residencies = () => {
               className="img-hack"
             />
             <div className={style.textWrapper}>
-              <h5 className={`fw-500 text-uppercase`}>Residencies</h5>
-              <h2 className={`fw-300 ${style.title}`}>Penthouse</h2>
-              <p className={`fw-300 mb-0`}>Neytiri, Toruk Makto</p>
+              <h2 className={`fw-300 ${style.title}`}>Lorem et dolore ma</h2>
             </div>
           </SwiperSlide>
         </Swiper>
@@ -97,4 +97,4 @@ const Residencies = () => {
   );
 };
 
-export default Residencies;
+export default Masterpieces;

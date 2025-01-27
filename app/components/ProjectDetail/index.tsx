@@ -1,27 +1,21 @@
 import HomeBanner from "./HomeBanner";
-import TrophyForRealCollectors from "./TrophyForRealCollectors";
-import Residencies from "./Residencies";
-import Experience from "./Experience";
-import CrystalPyramid from "./CrystalPyramid";
+import Overview from "./Overview";
+import Masterpieces from "./Masterpieces";
 import Amenities from "./Amenities";
 import Essentials from "./Essentials";
-import Map from "./Map";
 import Landmark from "./Landmark";
-import Enquire from "./Enquire";
+import Ecosystem from "./Ecosystem";
 
 const ProjectDetails = () => {
   return (
     <>
       <HomeBanner />
-      <TrophyForRealCollectors />
-      <Residencies />
-      <Experience />
-      <CrystalPyramid />
+      <Overview />
+      <Masterpieces />
       <Amenities />
       <Essentials />
-      <Map />
+      <Ecosystem />
       <Landmark />
-      <Enquire />
     </>
   );
 };
