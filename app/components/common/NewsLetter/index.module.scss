@@ -1,8 +1,8 @@
 @import "../../../styles/abstract/variable";
 
 .newsLetter {
-  border-bottom: 1px solid var(--color-graycol);
-  background-color: var(--color-whitecol);
+  background: var(--color-whitecol);
+  padding-bottom: 0;
 
   @media #{$desktop} {
     padding-top: 8.75em;
@@ -15,6 +15,9 @@
 }
 
 .row {
+  border-bottom: 1px solid var(--color-graycol);
+  padding-bottom: 4em;
+
   @media #{$ipadpro} {
     gap: 2em 0;
   }
