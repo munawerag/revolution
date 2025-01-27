@@ -61,6 +61,10 @@
         }
         .title {
           margin-bottom: 2em;
+
+          @media #{$mob} {
+            margin-bottom: 0.75em;
+          }
         }
       }
     }
