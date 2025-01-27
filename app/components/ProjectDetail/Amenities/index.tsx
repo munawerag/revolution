@@ -15,23 +15,23 @@ import SvgComp from "../../common/SvgComp";
 
 const data = [
   {
-    title: "Spa Terrace",
-    img: "/assets/images/home/amenities-1.jpg",
+    title: "Lorem Ipsum Dolor",
+    img: "/assets/images/project-detail/amenities-1.jpg",
     ctaLink: "#",
   },
   {
-    title: "Pools & children's playgrounds",
-    img: "/assets/images/home/amenities-2.jpg",
+    title: "Lorem Ipsum Dolor",
+    img: "/assets/images/project-detail/amenities-2.jpg",
     ctaLink: "#",
   },
   {
-    title: "Club House",
-    img: "/assets/images/home/amenities-3.jpg",
+    title: "Lorem Ipsum Dolor",
+    img: "/assets/images/project-detail/amenities-3.jpg",
     ctaLink: "#",
   },
   {
-    title: "Crystal Garden",
-    img: "/assets/images/home/amenities-4.jpg",
+    title: "Lorem Ipsum Dolor",
+    img: "/assets/images/project-detail/amenities-4.jpg",
     ctaLink: "#",
   },
 ];
@@ -44,12 +44,9 @@ const Amenities = () => {
       <div className={`${style.amenitiesTitleWrapper}`} id="amenities">
         <div className={style.amenitiesTitle}>
           <Heading
-            title="Building Amenities"
-            title2="A Harmonious Blend Of Energy And Design"
-            desc="The idea and design of the amenity floor of Eywa is that of a
-          spacious and comfortable home for a large family of all Eywa
-          residents, Apartment No 1, where she ,as a mother, invites each
-          member of her big family to enjoy life and the amenities she offers."
+            // title="Amenities"
+            title2="Amenities"
+            desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "
             hasDesc={true}
           />
         </div>
@@ -96,11 +93,11 @@ const Amenities = () => {
                   className="fullCoverAnchor"
                 ></Link>
               </div>
-              {/* <div className={style.virtual}>
+              <div className={style.virtual}>
                 <Link href={"#1"}>
                   <SvgComp src="/assets/svgs/virtual.svg" />
                 </Link>
-              </div> */}
+              </div>
             </SwiperSlide>
           ))}
         </Swiper>

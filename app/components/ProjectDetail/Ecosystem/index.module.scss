@@ -2,7 +2,7 @@
 .residenciesTitleWrapper {
   position: relative;
   display: block;
-  padding: 10em 0 7.5em 0;
+  padding: 4.75em 0 6.5em 0;
   background-color: #fff;
   @media #{$ipadpro} {
     padding: 5em 0;
@@ -13,7 +13,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: 41.875em;
+  max-width: 44em;
   width: 100%;
   text-align: center;
   margin: 0 auto;
@@ -80,5 +80,22 @@
       right: 50%;
       bottom: 2.5em;
     }
+  }
+}
+
+.virtual {
+  position: absolute;
+  z-index: 10;
+  bottom: 14em;
+  right: 4.5em;
+
+  svg {
+    width: 3.5625em;
+    height: 3.5625em;
+  }
+
+  @media #{$mob} {
+    bottom: 3em;
+    right: 3em;
   }
 }

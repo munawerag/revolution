@@ -1,0 +1,88 @@
+@import "../../../styles/abstract/variable";
+.residenciesTitleWrapper {
+  position: relative;
+  display: block;
+  padding: 4.375em 0 7.125em 0;
+  background-color: #fff;
+  @media #{$ipadpro} {
+    padding: 5em 0;
+  }
+}
+
+.residenciesTitle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 44em;
+  width: 100%;
+  text-align: center;
+  margin: 0 auto;
+  padding: 0 2em;
+
+  h3 {
+    margin-bottom: 1.125em;
+  }
+}
+
+.residenciesSlider {
+  position: relative;
+
+  &__slide {
+    position: relative;
+    width: 100% !important;
+    height: 69em !important;
+    @media #{$ipadpro} {
+      height: 45em !important;
+    }
+    @media #{$mob} {
+      height: 35em !important;
+    }
+    &:before {
+      content: "";
+      background: linear-gradient(
+        180deg,
+        rgba(0, 0, 0, 0) 64.08%,
+        #000000 102.21%
+      );
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+    }
+
+    .textWrapper {
+      position: absolute;
+      left: 4.6875em;
+      bottom: 7.8125em;
+      z-index: 2;
+      height: 6.25em;
+      width: 27em;
+      color: var(--color-whitecol);
+      @media #{$ipad} {
+        left: 3em;
+        bottom: 50%;
+        transform: translateY(50%);
+      }
+      @media #{$mob} {
+        left: 2em;
+        bottom: 50%;
+        transform: translateY(50%);
+      }
+    }
+  }
+
+  &__nav {
+    position: absolute;
+    right: 4.6875em;
+
+    bottom: 7.5em;
+    z-index: 2;
+    @media #{$ipad} {
+      transform: translateX(50%);
+      right: 50%;
+      bottom: 2.5em;
+    }
+  }
+}
