@@ -29,8 +29,8 @@ const ProjectCard = ({
           <Image src={img} width={1080} height={700} alt={title} />
         </div>
         <div className={`${style.contentWrapper}`}>
-          <h3>{title}</h3>
-          <p>{desc}</p>
+          <h3 className="line-clamp-1">{title}</h3>
+          <p className="line-clamp-2">{desc}</p>
           <Link
             href={ctaLink}
             target={target ? target : "_self"}
