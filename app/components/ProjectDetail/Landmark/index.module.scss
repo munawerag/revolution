@@ -1,7 +1,7 @@
 @import "../../../styles/abstract/variable";
 
 .wrapper {
-  padding: 4.4375em;
+  padding: 6.6875em 4.4375em 4.4375em 4.4375em;
   background-color: var(--color-whitecol);
 }
 
@@ -48,4 +48,12 @@
       max-width: 100% !important;
     }
   }
+}
+
+.title {
+  text-align: center;
+}
+
+.titleWrapper {
+  margin-bottom: 6.6875em;
 }

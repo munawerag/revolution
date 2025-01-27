@@ -18,7 +18,7 @@
 .amenitiesTitleWrapper {
   position: relative;
   display: block;
-  padding: 10em 0 7.5em 0;
+  padding: 5.5em 0 7.5em 0;
   background-color: var(--color-whitecol);
   width: 100%;
   @media #{$ipad} {
@@ -31,7 +31,7 @@
 
 .amenitiesTitle {
   width: 100%;
-  max-width: 57em;
+  max-width: 44em;
   margin: 0 auto;
   padding: 0 2em;
 }

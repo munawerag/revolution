@@ -5,6 +5,7 @@ import Amenities from "./Amenities";
 import Essentials from "./Essentials";
 import Landmark from "./Landmark";
 import Ecosystem from "./Ecosystem";
+import SvgComp from "../common/SvgComp";
 
 const ProjectDetails = () => {
   return (
@@ -16,6 +17,10 @@ const ProjectDetails = () => {
       <Essentials />
       <Ecosystem />
       <Landmark />
+
+      <div className="chat-bubble">
+        <SvgComp src="/assets/svgs/chat.svg" />
+      </div>
     </>
   );
 };

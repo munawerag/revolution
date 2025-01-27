@@ -37,7 +37,7 @@ const Essentials = () => {
       <div className={style.essentialsTitleWrapper}>
         <div className={style.essentialsTitle}>
           <Heading
-            title="Refined Living Essentials"
+            title2="Refined Living Essentials"
             desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "
           />
         </div>
@@ -73,7 +73,7 @@ const Essentials = () => {
                   <h4 className={`${style.title} line-clamp-1`}>
                     {item?.title}
                   </h4>
-                  <p className={`line-clamp-6`}>{item?.desc}</p>
+                  <p className={`fw-400 line-clamp-6`}>{item?.desc}</p>
                 </div>
               </div>
             </SwiperSlide>

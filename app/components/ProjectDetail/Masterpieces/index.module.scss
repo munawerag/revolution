@@ -2,7 +2,7 @@
 .residenciesTitleWrapper {
   position: relative;
   display: block;
-  padding: 10em 0 7.5em 0;
+  padding: 4.375em 0 7.125em 0;
   background-color: #fff;
   @media #{$ipadpro} {
     padding: 5em 0;
@@ -13,11 +13,15 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: 41.875em;
+  max-width: 44em;
   width: 100%;
   text-align: center;
   margin: 0 auto;
   padding: 0 2em;
+
+  h3 {
+    margin-bottom: 1.125em;
+  }
 }
 
 .residenciesSlider {

@@ -26,7 +26,9 @@ const projectsData = [
 const Landmark = () => {
   return (
     <div className={style.wrapper}>
-      <h3 className="text-center">Discover Our Landmarks</h3>
+      <div className={`${style.titleWrapper}`}>
+        <h3 className={`${style.title}`}>Discover Our Landmarks</h3>
+      </div>
       <div className={style.projectWrapper}>
         {projectsData?.map((project, index) => (
           <ProjectCard

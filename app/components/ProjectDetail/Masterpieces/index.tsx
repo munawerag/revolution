@@ -16,12 +16,12 @@ const Masterpieces = () => {
     <>
       <div className={`${style.residenciesTitleWrapper}`} id="residencies">
         <div className={`${style.residenciesTitle}`}>
-          <h5 className="primary-col text-uppercase fw-500">Masterpieces</h5>
-          <h2 className="h2">
+          <h5 className="primary-col fw-500 p">Masterpieces</h5>
+          <h3 className="h3 text-capitalize">
             Picture yourself in a perfect place in which the infinities of time
             and space
-          </h2>
-          <p>
+          </h3>
+          <p className="fw-400 mb-0">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua the enim
             ad minim veniam, quis nostrud exercitation ullamco

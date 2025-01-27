@@ -44,8 +44,8 @@ const Amenities = () => {
       <div className={`${style.amenitiesTitleWrapper}`} id="amenities">
         <div className={style.amenitiesTitle}>
           <Heading
-            title="Building Amenities"
-            // title2="A Harmonious Blend Of Energy And Design"
+            // title="Amenities"
+            title2="Amenities"
             desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "
             hasDesc={true}
           />

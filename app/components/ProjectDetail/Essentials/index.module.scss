@@ -2,7 +2,7 @@
 .essentialsTitleWrapper {
   position: relative;
   display: block;
-  padding: 10em 0 7.5em 0;
+  padding: 5.5em 0 7.5em 0;
   background-color: var(--color-graycol2);
   @media #{$ipad} {
     padding: 5em 0;
@@ -14,7 +14,7 @@
 
 .essentialsTitle {
   width: 100%;
-  max-width: 60em;
+  max-width: 44em;
   margin: 0 auto;
   padding: 0 2em;
 }
@@ -60,12 +60,7 @@
           width: 100%;
         }
         .title {
-          color: #212121;
-        }
-
-        .desc {
-          color: #212121;
-          margin-bottom: 0;
+          margin-bottom: 2em;
         }
       }
     }

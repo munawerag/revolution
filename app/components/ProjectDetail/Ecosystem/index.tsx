@@ -11,6 +11,7 @@ import Image from "next/image";
 import SwiperNavButtons from "../../Buttons/SwiperNavButtons";
 import Link from "next/link";
 import SvgComp from "../../common/SvgComp";
+import Heading from "../../common/Heading";
 const Ecosystem = () => {
   const [prevEl, setPrevEl] = useState<HTMLElement | null>(null);
   const [nextEl, setNextEl] = useState<HTMLElement | null>(null);
@@ -18,12 +19,12 @@ const Ecosystem = () => {
     <>
       <div className={`${style.residenciesTitleWrapper}`} id="residencies">
         <div className={`${style.residenciesTitle}`}>
-          <h2 className="h2">Ecosystem</h2>
-          <p>
-            Our objective is to make Villa Milia a place, a personal space where
+          <Heading
+            title2="Ecosystem"
+            desc="Our objective is to make Villa Milia a place, a personal space where
             you can be truly happy, unaffected by the flow of time, where you
-            can contemplate the circle of life.{" "}
-          </p>
+            can contemplate the circle of life."
+          />
         </div>
       </div>
       <div className={`${style.residenciesSlider}`}>

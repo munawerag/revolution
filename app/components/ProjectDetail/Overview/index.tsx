@@ -8,9 +8,9 @@ const Overview = () => {
     <>
       <div className={`${style.realCollectionTitleWrapper}`} id="treeOfLife">
         <div className={`${style.realCollectionTitle}`}>
-          <h5 className="h5 primary-col text-uppercase fw-500">Overview</h5>
-          <h2>Home of Science and Technology</h2>
-          <p>
+          <h5 className={style.subtitle}>Overview</h5>
+          <h3 className={style.title}>Home of Science and Technology</h3>
+          <p className="fw-400">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua the enim
             ad minim veniam, quis nostrud exercitation ullamco
