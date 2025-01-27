@@ -41,7 +41,7 @@ const MainMenu = ({ setMenuActive }: any) => {
       id: 3,
       label: "Our Landmarks",
       submenu: [
-        { label: "Completed Projects", link: "#" },
+        { label: "Completed Projects", link: "/project-list" },
         { label: "Rising Brilliance", link: "#" },
         { label: "Eywa", link: "#" },
       ],
@@ -55,12 +55,19 @@ const MainMenu = ({ setMenuActive }: any) => {
       <div className="main__menu">
         <div className="col-1">
           <div className="menu__logo">
-            <Image
-              src={"/assets/svgs/logo.svg"}
-              width={277}
-              height={88}
-              alt="logo"
-            />
+            <Link
+              href="/"
+              onClick={() => {
+                setMenuActive(false);
+              }}
+            >
+              <Image
+                src={"/assets/svgs/logo.svg"}
+                width={277}
+                height={88}
+                alt="logo"
+              />
+            </Link>
           </div>
 
           <nav className="nav__menu">
@@ -78,16 +85,18 @@ const MainMenu = ({ setMenuActive }: any) => {
                     className={`nav__menu__item ${
                       active === item.id ? "active" : ""
                     } `}
-                    onMouseEnter={() => setActive(item.id)}
-                    onClick={() => {
-                      if (active && active === item.id && isMobile) {
-                        setActive(null);
-                        return;
-                      }
-                      setActive(item.id);
-                    }}
                   >
-                    <div className="menu__label">
+                    <div
+                      className="menu__label"
+                      onMouseEnter={() => setActive(item.id)}
+                      onClick={() => {
+                        if (active && active === item.id && isMobile) {
+                          setActive(null);
+                          return;
+                        }
+                        setActive(item.id);
+                      }}
+                    >
                       {item.label}
                       <SvgComp src="/assets/svgs/arrow-right.svg" />
                     </div>
@@ -99,7 +108,13 @@ const MainMenu = ({ setMenuActive }: any) => {
                               key={subItem.link + i}
                               className="submenu__item"
                             >
-                              <Link href={subItem.link} className="w-uline">
+                              <Link
+                                href={subItem.link}
+                                className="w-uline"
+                                onClick={() => {
+                                  setMenuActive(false);
+                                }}
+                              >
                                 {subItem.label}
                               </Link>
                             </li>

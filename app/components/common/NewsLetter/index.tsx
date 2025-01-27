@@ -10,7 +10,7 @@ const NewsLetter = () => {
             <h3>Subscribe To Our Newsletter</h3>
           </div>
           <div className="col_12 col_lg_6 col_xl_4">
-            <p>
+            <p className="fw-400">
               Register to receive updates about exclusive experiences, events,
               new destinations and more.
             </p>
