@@ -29,7 +29,7 @@ const ProjectCard = ({
           <Image src={img} width={1080} height={700} alt={title} />
         </div>
         <div className={`${style.contentWrapper}`}>
-          <h3 className="line-clamp-1">{title}</h3>
+          <h3 className="line-clamp-1 text-upper">{title}</h3>
           <p className="line-clamp-2">{desc}</p>
           <Link
             href={ctaLink}

@@ -47,7 +47,8 @@ const MainMenu = ({ setMenuActive }: any) => {
       ],
     },
     { id: 4, label: "Our Uniqueness", link: "#" },
-    { id: 5, label: "Contact Us", link: "#" },
+    { id: 5, label: "360 Tour", link: "#" },
+    { id: 6, label: "Contact Us", link: "#" },
   ];
 
   return (

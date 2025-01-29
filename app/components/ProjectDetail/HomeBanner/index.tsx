@@ -18,8 +18,8 @@ const HomeBanner = () => {
         </div>
         <div className={style.homeBanner__descripWrapper}>
           <div className={style.homeBanner__descrip}>
-            <h5 className="h5">22Palms</h5>
-            <h2 className="h2">The Place For Pioneering Tomorrow</h2>
+            <h5 className="h5">22PALMS</h5>
+            <h2 className="h2">The place for pioneering tomorrow</h2>
           </div>
         </div>
       </div>
