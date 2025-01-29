@@ -83,7 +83,7 @@ const Header = () => {
               <PrimaryButton
                 title="Enquire Now"
                 link="/"
-                className="desktop-only"
+                className="desktop-only lg-font"
               />
             </div>
           </div>
