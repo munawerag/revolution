@@ -32,7 +32,7 @@ const Essentials = () => {
       <div className={style.essentialsTitleWrapper}>
         <div className={style.essentialsTitle}>
           <Heading
-            title2="Refined Living Essentials"
+            title2="Refined living essentials"
             desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "
           />
         </div>

@@ -59,11 +59,11 @@ const Ecosystem = () => {
               alt="img"
               className="img-hack"
             />
-            <div className={style.virtual}>
+            {/* <div className={style.virtual}>
               <Link href={"#1"}>
                 <SvgComp src="/assets/svgs/virtual.svg" />
               </Link>
-            </div>
+            </div> */}
           </SwiperSlide>
           <SwiperSlide className={`${style.residenciesSlider__slide}`}>
             <Image
@@ -72,11 +72,11 @@ const Ecosystem = () => {
               alt="img"
               className="img-hack"
             />
-            <div className={style.virtual}>
+            {/* <div className={style.virtual}>
               <Link href={"#1"}>
                 <SvgComp src="/assets/svgs/virtual.svg" />
               </Link>
-            </div>
+            </div> */}
           </SwiperSlide>
           <SwiperSlide className={`${style.residenciesSlider__slide}`}>
             <Image
@@ -85,11 +85,11 @@ const Ecosystem = () => {
               alt="img"
               className="img-hack"
             />
-            <div className={style.virtual}>
+            {/* <div className={style.virtual}>
               <Link href={"#1"}>
                 <SvgComp src="/assets/svgs/virtual.svg" />
               </Link>
-            </div>
+            </div> */}
           </SwiperSlide>
         </Swiper>
         <div className={`${style.residenciesSlider__nav}`}>
