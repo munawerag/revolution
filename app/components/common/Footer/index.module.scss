@@ -1,91 +1,165 @@
-@import '../../../styles/abstract/variable';
+@import "../../../styles/abstract/variable";
 
 .footer {
-    padding: 7.5em 0 0;
-    background: var(--color-whitecol);
+  padding: 7.5em 0 0;
+  background: var(--color-whitecol);
 
-    @media #{$ipad} {
-        padding: 3em 0 0;
+  @media #{$ipad} {
+    padding: 3em 0 0;
+  }
+
+  .logoWrapper {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5em;
+    a {
+      width: 17.4375em;
+      svg {
+        width: 100%;
+      }
     }
-
-    .logoWrapper {
-        display: flex;
-        justify-content: center;
-        margin-bottom: 5em;
-
-        @media #{$mob} {
-            margin-bottom: 2em;
-        }
+    @media #{$mob} {
+      margin-bottom: 2em;
     }
+  }
 }
 
 .row {
-    justify-content: space-between;
+  justify-content: space-between;
 
-    @media #{$ipad} {
-        justify-content: flex-start;
-        gap: 2em 0;
-    }
+  @media #{$ipad} {
+    justify-content: flex-start;
+    gap: 2em 0;
+  }
 
-    @media #{$mob} {
-        gap: 0;
-    }
+  @media #{$mob} {
+    gap: 0;
+  }
 }
 
 .footerWrapper {
-    padding: 0 0 8.75em 0;
+  padding: 0 0 8.75em 0;
 
-    @media #{$ipad} {
-        padding: 0 0 3em 0;
-    }
+  @media #{$ipad} {
+    padding: 0 0 3em 0;
+  }
 
-    @media #{$mob} {
-        padding: 0 0 2em 0;
-    }
+  @media #{$mob} {
+    padding: 0 0 2em 0;
+  }
 }
 
 .bottomWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid var(--color-graycol);
+  padding: 1em 0;
+
+  @media #{$ipad} {
+    justify-content: center;
+    gap: 1em 0;
+  }
+
+  @media #{$mob} {
+    gap: 1em 0;
+    text-align: center;
+  }
+
+  .terms {
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2em;
+    }
+
+    li {
+      margin: 0;
+    }
+  }
+
+  p {
+    color: var(--color-primarycol);
+  }
+
+  a {
+    font-size: 1.125em;
+    color: var(--color-primarycol);
+  }
+
+  .right {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
     align-items: center;
-    border-top: 1px solid var(--color-graycol);
-    padding: 1em 0;
-
-    @media #{$ipad} {
-        justify-content: center;
-        gap: 1em 0;
-    }
-
+    gap: 4.0625em;
     @media #{$mob} {
-        gap: 1em 0;
-        text-align: center;
+      flex-direction: column;
+      gap: 0.5em;
     }
+  }
+}
 
-    .terms {
-        ul {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 2em;
-        }
-
-        li {
-            margin: 0;
-        }
+.footerCardsWrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2.5em;
+  @media #{$ipad} {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  @media #{$mob} {
+    margin-bottom: 0;
+  }
+  .cardItem {
+    position: relative;
+    &:not(:first-child) {
+      padding-left: 6.25em;
+      border-left: 1px solid rgba($color: var(--rgb-primarycol), $alpha: 0.2);
+      @media #{$ipadpro} {
+        padding-left: 2em;
+      }
+      @media #{$ipad} {
+        padding: 0 1.5em;
+      }
     }
-
-    p {
-        color: var(--color-primarycol);
+    &:nth-child(4) {
+      @media #{$tab} and #{$ipad} {
+        border-left: none;
+      }
     }
-
-    a {
-        font-size: 1.125em;
-        color: var(--color-primarycol);
+    &:nth-child(odd) {
+      @media #{$mob} {
+        border-left: none;
+      }
     }
-
-    .right {
-        display: flex;
-        align-items: center;
-        gap: 4.0625em;
+    @media #{$ipad} {
+      width: 33.33%;
+      margin-bottom: 2em;
+      text-align: center;
     }
+    @media #{$mob} {
+      width: 50%;
+    }
+  }
+}
+
+.socialLinks {
+  display: flex;
+  align-items: center;
+  gap: 0.625em;
+  &__item {
+    width: 2.75em;
+    height: 2.75em;
+    border-radius: 50%;
+    border: 1px solid var(--color-primarycol);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    img {
+      width: auto;
+      height: auto;
+      max-width: 50%;
+      max-height: 50%;
+    }
+  }
 }

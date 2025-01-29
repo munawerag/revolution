@@ -9,7 +9,7 @@ const Overview = () => {
       <div className={`${style.realCollectionTitleWrapper}`} id="treeOfLife">
         <div className={`${style.realCollectionTitle}`}>
           <h5 className={style.subtitle}>Overview</h5>
-          <h3 className={style.title}>Home of Science and Technology</h3>
+          <h3 className={style.title}>Home of science and technology</h3>
           <p className="fw-400">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua the enim

@@ -37,7 +37,11 @@ const FooterLinks = ({ data, title }: footerLinksProps) => {
                   <Link
                     href={item.link || "/"}
                     target={item?.link?.target || "_self"}
-                    className="w-uline"
+                    className={`${
+                      item?.type == "button"
+                        ? "primary-anchor white-col"
+                        : "w-uline"
+                    }`}
                   >
                     {item?.title}
                   </Link>

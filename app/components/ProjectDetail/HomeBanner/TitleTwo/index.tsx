@@ -17,16 +17,16 @@ const TitleTwo = () => {
       >
         <div className={style.listItemsWrapper}>
           <div className={style.listItem}>
-            <h5 className={`${style.title1} h1 fw-300`}>7010 sqm</h5>
-            <h2 className={`${style.title2}`}>Offices:</h2>
+            <h5 className={`${style.title1} h1 fw-300`}>7010 sq. m.</h5>
+            <h2 className={`${style.title2} mb-0`}>Offices</h2>
           </div>
           <div className={style.listItem}>
-            <h5 className={`${style.title1} h1 fw-300`}>1001 sqm</h5>
-            <h2 className={`${style.title2}`}>Terrace:</h2>
+            <h5 className={`${style.title1} h1 fw-300`}>1001 sq. m.</h5>
+            <h2 className={`${style.title2} mb-0`}>Terrace</h2>
           </div>
           <div className={style.listItem}>
-            <h5 className={`${style.title1} h1 fw-300`}>58 lots</h5>
-            <h2 className={`${style.title2}`}>Parking:</h2>
+            <h5 className={`${style.title1} h1 fw-300`}>58 Lots</h5>
+            <h2 className={`${style.title2} mb-0`}>Parking</h2>
           </div>
         </div>
       </div>

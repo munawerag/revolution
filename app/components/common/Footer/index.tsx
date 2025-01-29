@@ -2,6 +2,7 @@ import style from "./index.module.scss";
 import SvgComp from "../SvgComp";
 import Link from "next/link";
 import FooterLinks from "./FooterLinks";
+import Image from "next/image";
 
 const data = [
   {
@@ -43,7 +44,7 @@ const data = [
   },
   {
     title: "Contact",
-    items: [{ title: "Contact Us" }],
+    items: [{ title: "Contact Us", type: "button" }],
   },
 ];
 
@@ -51,9 +52,12 @@ const Footer = () => {
   return (
     <div className={style.footer}>
       <div className="container-s">
-        <Link href={"/"} className={`${style.logoWrapper}`}>
-          <SvgComp src="/assets/svgs/footer-logo.svg" />
-        </Link>
+        <div className={style.logoWrapper}>
+          <Link href={"/"}>
+            <SvgComp src="/assets/svgs/footer-logo.svg" />
+          </Link>
+        </div>
+
         <div className={style.footerWrapper}>
           <div className={`custom-row ${style.row}`}>
             {data.map((item: any, index: number) => {
@@ -63,6 +67,28 @@ const Footer = () => {
                 </div>
               );
             })}
+          </div>
+        </div>
+        <div className={style.footerCardsWrapper}>
+          <div className={style.cardItem}>
+            <h3>€270m</h3>
+            <h6 className="mb-0">Largest development</h6>
+          </div>
+          <div className={style.cardItem}>
+            <h3>60</h3>
+            <h6 className="mb-0">Employees</h6>
+          </div>
+          <div className={style.cardItem}>
+            <h3>2.5m sq. ft.</h3>
+            <h6 className="mb-0">Developed</h6>
+          </div>
+          <div className={style.cardItem}>
+            <h3>1m sq. t.</h3>
+            <h6 className="mb-0">Currently in development</h6>
+          </div>
+          <div className={style.cardItem}>
+            <h3>€500–600m</h3>
+            <h6 className="mb-0">Buildings developed total GDV</h6>
           </div>
         </div>
         <div className={style.bottomWrapper}>
@@ -87,7 +113,32 @@ const Footer = () => {
               </ul>
             </div>
             <div className="">
-              <p className="mb-0">Social</p>
+              <div className={style.socialLinks}>
+                <Link href={"/"} className={style.socialLinks__item}>
+                  <Image
+                    src={"/assets/svgs/instagram-primarycol.svg"}
+                    width={16}
+                    height={16}
+                    alt="icon"
+                  />
+                </Link>
+                <Link href={"/"} className={style.socialLinks__item}>
+                  <Image
+                    src={"/assets/svgs/youtube-primarycol.svg"}
+                    width={16}
+                    height={16}
+                    alt="icon"
+                  />
+                </Link>
+                <Link href={"/"} className={style.socialLinks__item}>
+                  <Image
+                    src={"/assets/svgs/linkedin-primarycol.svg"}
+                    width={16}
+                    height={16}
+                    alt="icon"
+                  />
+                </Link>
+              </div>
             </div>
           </div>
         </div>

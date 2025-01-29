@@ -20,7 +20,7 @@ const data = [
     ctaLink: "#",
   },
   {
-    title: "Lorem Ipsum Dolor",
+    title: "Lorem Ipsum",
     img: "/assets/images/project-detail/amenities-2.jpg",
     ctaLink: "#",
   },
@@ -93,11 +93,11 @@ const Amenities = () => {
                   className="fullCoverAnchor"
                 ></Link>
               </div>
-              <div className={style.virtual}>
+              {/* <div className={style.virtual}>
                 <Link href={"#1"}>
                   <SvgComp src="/assets/svgs/virtual.svg" />
                 </Link>
-              </div>
+              </div> */}
             </SwiperSlide>
           ))}
         </Swiper>

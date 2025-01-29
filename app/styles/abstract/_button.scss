@@ -134,11 +134,11 @@ button {
 
 .white-col {
   background: #fff;
-  color: #5a7f70;
-
+  color: #475252;
+  border: 1px solid #475252;
   .primary-anchor-img {
     &::before {
-      background: #5a7f70;
+      background: #475252;
     }
 
     img {

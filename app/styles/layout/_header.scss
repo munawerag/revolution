@@ -231,10 +231,12 @@
     height: 5.75em;
     transition: $transitionSlow;
     border-bottom: 1px solid rgba($color: var(--rgb-graycol), $alpha: 0.5);
-
     &.detailMenu {
       height: 10em;
     }
+  }
+  &.detailMenu {
+    border-bottom: 1px solid rgba(var(--rgb-graycol), 0.5);
   }
 
   .extraMenu {
@@ -249,9 +251,13 @@
       @media #{$mob} {
         gap: 1.5em;
       }
+      li {
+        margin-bottom: 0;
+      }
 
       a {
         font-size: 1.25em;
+        font-weight: 300;
         color: var(--color-primarycol);
       }
     }
