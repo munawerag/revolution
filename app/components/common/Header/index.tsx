@@ -90,22 +90,22 @@ const Header = () => {
           <div className="extraMenu">
             <ul>
               <li>
-                <Link href={"/"} className="w-uline">
+                <Link href={"#treeOfLife"} className="w-uline">
                   Overview
                 </Link>
               </li>
               <li>
-                <Link href={"/"} className="w-uline">
+                <Link href={"#residencies"} className="w-uline">
                   Residences
                 </Link>
               </li>
               <li>
-                <Link href={"/"} className="w-uline">
+                <Link href={"#amenities"} className="w-uline">
                   Amenities
                 </Link>
               </li>
               <li>
-                <Link href={"/"} className="w-uline">
+                <Link href={"#locations"} className="w-uline">
                   Location
                 </Link>
               </li>
