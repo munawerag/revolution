@@ -33,7 +33,7 @@ const projectsData = [
   },
   {
     img: "/assets/images/project-list/project5.jpg",
-    title: "LOFTS&ROSEGOLD",
+    title: "LOFTS AND ROSEGOLD",
     ctaLink: "/project-list/lofts-rosegold",
     ctaTitle: "Discover More",
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua the enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",

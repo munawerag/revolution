@@ -130,6 +130,13 @@ button {
       transition: 0.5s ease;
     }
   }
+  &.lg-font {
+    @media #{$desktop} {
+      span {
+        font-size: 1.25em;
+      }
+    }
+  }
 }
 
 .white-col {
