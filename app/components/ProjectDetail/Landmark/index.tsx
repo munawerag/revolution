@@ -27,7 +27,7 @@ const Landmark = () => {
   return (
     <div className={style.wrapper} id="locations">
       <div className={`${style.titleWrapper}`}>
-        <h3 className={`${style.title}`}>Discover Our Landmarks</h3>
+        <h3 className={`${style.title}`}>Discover our landmarks</h3>
       </div>
       <div className={style.projectWrapper}>
         {projectsData?.map((project, index) => (
