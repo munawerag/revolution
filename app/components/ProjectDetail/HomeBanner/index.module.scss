@@ -36,6 +36,9 @@
     padding: 20.625em 0 10.375em 0;
     background-color: var(--color-whitecol);
     width: 100%;
+    @media #{$ipad} {
+      padding: 13.625em 0 5.375em;
+    }
   }
   &__descrip {
     width: 100%;
