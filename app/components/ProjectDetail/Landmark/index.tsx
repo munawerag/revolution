@@ -25,7 +25,7 @@ const projectsData = [
 
 const Landmark = () => {
   return (
-    <div className={style.wrapper}>
+    <div className={style.wrapper} id="locations">
       <div className={`${style.titleWrapper}`}>
         <h3 className={`${style.title}`}>Discover Our Landmarks</h3>
       </div>
