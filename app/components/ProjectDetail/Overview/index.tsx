@@ -24,7 +24,7 @@ const Overview = () => {
           alt="img"
           className="img-hack"
         />
-        <Link
+        {/* <Link
           href={"https://storage.net-fs.com/hosting/6316408/182/"}
           target="_blank"
         >
@@ -34,7 +34,7 @@ const Overview = () => {
             height={57}
             alt="img"
           />
-        </Link>
+        </Link> */}
       </div>
     </>
   );

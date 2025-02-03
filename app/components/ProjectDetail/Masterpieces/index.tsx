@@ -77,7 +77,7 @@ const Masterpieces = () => {
               </h2>
             </div>
           </SwiperSlide>
-          <SwiperSlide className={`${style.residenciesSlider__slide}`}>
+          {/* <SwiperSlide className={`${style.residenciesSlider__slide}`}>
             <Image
               src={"/assets/images/home/residencies-3.jpg"}
               fill
@@ -87,7 +87,7 @@ const Masterpieces = () => {
             <div className={style.textWrapper}>
               <h2 className={`fw-300 ${style.title}`}>Lorem et dolore ma</h2>
             </div>
-          </SwiperSlide>
+          </SwiperSlide> */}
         </Swiper>
         <div className={`${style.residenciesSlider__nav}`}>
           <SwiperNavButtons nextFunc={setNextEl} prevFunc={setPrevEl} />
