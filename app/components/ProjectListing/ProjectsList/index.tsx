@@ -74,7 +74,7 @@ const projectsData = [
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua the enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
   },
   {
-    img: "/assets/images/project-list/project11.jpg",
+    img: "/assets/images/project-list/project11new.jpg",
     title: "CHOCOLATE",
     ctaLink: "/project-list/chocolate",
     ctaTitle: "Discover More",
