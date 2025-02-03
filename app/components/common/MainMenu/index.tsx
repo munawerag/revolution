@@ -47,10 +47,15 @@ const MainMenu = ({ setMenuActive }: any) => {
       ],
     },
     { id: 4, label: "Our Uniqueness", link: "#" },
-    { id: 5, label: "360 Tour", link: "#" },
-    { id: 6, label: "Contact Us", link: "#" },
-  ];
+    {
+      id: 5,
+      label: "360 Tour",
+      link: "https://formaarch.es/360/RVLC/Peru_v2/index.html",
+      target: "_blank",
+    },
 
+    { id: 6, label: "Contact Us", link: "#", target: null },
+  ];
   return (
     <>
       <div className="main__menu">
@@ -76,7 +81,11 @@ const MainMenu = ({ setMenuActive }: any) => {
               {navigation.map((item) => {
                 return item.link ? (
                   <li key={item.id} className="nav__menu__item">
-                    <Link href={item.link} className="menu__label">
+                    <Link
+                      href={item.link}
+                      className="menu__label"
+                      target={item.target || "_self"}
+                    >
                       {item.label}
                     </Link>
                   </li>

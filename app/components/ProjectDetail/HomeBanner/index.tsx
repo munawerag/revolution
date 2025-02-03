@@ -10,7 +10,7 @@ const HomeBanner = () => {
       <div className={style.homeBanner}>
         <div className={style.homeBanner__video}>
           <video
-            src="/assets/videos/banner.mp4"
+            src="/assets/videos/22palm-office-video.mp4"
             autoPlay
             muted
             loop={true}
