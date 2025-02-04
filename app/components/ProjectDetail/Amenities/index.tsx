@@ -29,11 +29,11 @@ const data = [
     img: "/assets/images/project-detail/amenities-3.jpg",
     ctaLink: "#",
   },
-  {
-    title: "Lorem Ipsum Dolor",
-    img: "/assets/images/project-detail/amenities-4.jpg",
-    ctaLink: "#",
-  },
+  // {
+  //   title: "Lorem Ipsum Dolor",
+  //   img: "/assets/images/project-detail/amenities-4.jpg",
+  //   ctaLink: "#",
+  // },
 ];
 
 const Amenities = () => {
