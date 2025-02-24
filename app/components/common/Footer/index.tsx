@@ -27,9 +27,7 @@ const data = [
   {
     title: "Our Story",
     items: [
-      { title: "Revolution History" },
-      { title: "Values, Vision & Mission" },
-      { title: "Property Stories" },
+      { title: "R.Evolution History" },
       { title: "Awards & Partners" },
       { title: "Our Team" },
     ],
