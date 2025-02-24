@@ -15,17 +15,17 @@ import SvgComp from "../../common/SvgComp";
 
 const data = [
   {
-    title: "Lorem Ipsum Dolor",
+    title: "Lorem ipsum dolor",
     img: "/assets/images/project-detail/amenities-1.jpg",
     ctaLink: "#",
   },
   {
-    title: "Lorem Ipsum",
+    title: "Lorem ipsum",
     img: "/assets/images/project-detail/amenities-2.jpg",
     ctaLink: "#",
   },
   {
-    title: "Lorem Ipsum Dolor",
+    title: "Lorem ipsum dolor",
     img: "/assets/images/project-detail/amenities-3.jpg",
     ctaLink: "#",
   },
@@ -85,7 +85,7 @@ const Amenities = () => {
                   />
                 </div>
                 <div className={style.textWrapper}>
-                  <h4 className="mb-0 text-capitalize">{item?.title}</h4>
+                  <h4 className="mb-0">{item?.title}</h4>
                 </div>
                 <Link
                   href={item?.ctaLink}

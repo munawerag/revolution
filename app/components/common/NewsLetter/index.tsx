@@ -7,7 +7,7 @@ const NewsLetter = () => {
       <div className="container-s">
         <div className={`custom-row ${style.row}`}>
           <div className="col_12 col_lg_6 col_xl_3">
-            <h3>Subscribe To Our Newsletter</h3>
+            <h3>Subscribe to our newsletter</h3>
           </div>
           <div className="col_12 col_lg_6 col_xl_4">
             <p className="fw-400">

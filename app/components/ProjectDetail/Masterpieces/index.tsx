@@ -16,7 +16,7 @@ const Masterpieces = () => {
     <>
       <div className={`${style.residenciesTitleWrapper}`} id="residencies">
         <div className={`${style.residenciesTitle}`}>
-          <h5 className="primary-col fw-500 p">Masterpieces</h5>
+          <h5 className="primary-col fw-500 p">MASTERPIECES</h5>
           <h3 className="h3">
             Picture yourself in a perfect place in which the infinities of time
             and space
