@@ -42,7 +42,7 @@ const MainMenu = ({ setMenuActive }: any) => {
       label: "Our Landmarks",
       submenu: [
         { label: "Completed Projects", link: "/project-list" },
-        { label: "Rising Brilliance", link: "#" },
+        { label: "Rising Projects", link: "#" },
         { label: "Eywa", link: "#" },
       ],
     },
