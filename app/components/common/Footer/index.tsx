@@ -36,7 +36,7 @@ const data = [
     title: "Our Landmarks",
     items: [
       { title: "Completed Projects" },
-      { title: "Rising Brilliance" },
+      { title: "Rising Projects" },
       { title: "Eywa" },
     ],
   },
