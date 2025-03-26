@@ -1,9 +1,10 @@
 $transition: all 0.25s ease-in-out;
 $transitionSlow: all 1.2s ease;
-
 $basefont: "Grotesk";
 
+
 // Media Sizes
+// mobile first approach
 $tab: "(min-width:576px)";
 $tabL: "(min-width:768px)";
 $ipadL: "(min-width:992px)";
@@ -13,6 +14,7 @@ $desktopL: "(min-width:1400px)";
 
 $ipadprolandscape: "(max-width: 1400px) and (min-width: 1300px) and (min-height: 900px)"; // Ipad Pro Only
 
+// desktop approach
 $desktopLS: "(max-width:1399.98px)";
 $ipadpro: "(max-width:1199.98px)";
 $ipad: "(max-width:991.98px)";

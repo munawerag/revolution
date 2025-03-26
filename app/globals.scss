@@ -1,4 +1,3 @@
-@import "../app/styles/main.scss";
 
 :root {
   --color-primarycol: #475252;
@@ -12,4 +11,12 @@
 
   --rgb-primarycol: 71, 82, 82;
   --rgb-graycol: 190, 190, 190;
+  --transition: all 0.25s ease-in-out;
+  --transition-slow: all 1.2s ease;
+
 }
+
+
+@import "../app/styles/main.scss";
+
+

@@ -190,6 +190,20 @@ $fonts-w: (
   }
 }
 
+
+$z-indexes: (
+  "1": 1,
+  "2": 2,
+  "3": 3,
+  "4": 4,
+);
+
+@each $zKey, $zvalue in $z-indexes {
+  .z-#{$zKey} {
+    z-index: $zvalue;
+  }
+}
+
 .fullCoverAnchor {
   &::after {
     content: "";
@@ -230,4 +244,16 @@ $fonts-w: (
     width: 1.25em;
     height: 1.25em;
   }
+}
+
+
+
+
+// transitions
+.transition {
+  transition: var(--transition);
+}
+
+.transition-slow {
+  transition: var(--transition-slow);
 }

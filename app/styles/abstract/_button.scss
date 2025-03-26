@@ -21,6 +21,7 @@ button {
 .uline {
   position: relative;
   text-decoration: none;
+  color: var(--color-primarycol);
 
   &::after {
     content: "";
@@ -73,7 +74,6 @@ button {
   display: flex;
   align-items: center;
   width: max-content;
-  font-size: 1.25em;
   color: #fff;
   background: var(--color-primarycol);
   padding: 0.8125em 2.25em;
@@ -81,6 +81,8 @@ button {
   font-family: inherit;
   font-weight: 400;
   font-size: 1em;
+  transition: var(--transition);
+
 
   span {
     font-size: 1.125em;
@@ -118,6 +120,7 @@ button {
   }
 
   &:hover {
+    background-color: var(--color-secondarycol);
     .primary-anchor-img {
       &::before {
         transform: translate(-50%, -50%) scale(1);
@@ -143,6 +146,9 @@ button {
   background: #fff;
   color: #475252;
   border: 1px solid #475252;
+  &:hover {
+    color: var(--color-whitecol);
+  }
   .primary-anchor-img {
     &::before {
       background: #475252;
@@ -159,7 +165,6 @@ button {
   display: flex;
   align-items: center;
   width: max-content;
-  font-size: 1.125em;
   color: #fff;
   background: var(--color-primarycol);
   padding: 1.0625em 3em;
@@ -167,6 +172,7 @@ button {
   font-family: inherit;
   font-weight: 300;
   font-size: 1em;
+  transition: var(--transition);
 
   span {
     font-size: 1.125em;
@@ -204,6 +210,7 @@ button {
   }
 
   &:hover {
+    background-color: var(--color-secondarycol);
     .primary-anchor-img {
       &::before {
         transform: translate(-50%, -50%) scale(1);

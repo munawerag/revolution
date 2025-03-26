@@ -48,7 +48,7 @@ const data = [
 
 const Footer = () => {
   return (
-    <div className={style.footer}>
+    <footer className={style.footer}>
       <div className="container-s">
         <div className={style.logoWrapper}>
           <Link href={"/"}>
@@ -141,7 +141,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-    </div>
+    </footer>
   );
 };
 

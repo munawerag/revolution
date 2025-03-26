@@ -19,10 +19,12 @@ const Sans = localFont({
     },
   ],
 });
+
 export const metadata: Metadata = {
   title: "Revolution",
   description: "Revolution",
 };
+
 
 export default function RootLayout({
   children,

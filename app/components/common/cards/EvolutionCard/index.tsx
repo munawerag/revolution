@@ -2,7 +2,7 @@ import style from "./index.module.scss";
 import Image from "next/image";
 import Link from "next/link";
 
-export interface ProjectProps {
+export interface EvolutionCardProps {
   img: string;
   subTitle?: string;
   title: string;
@@ -13,7 +13,7 @@ export interface ProjectProps {
   customclass?: string;
 }
 
-const ProjectCard = ({
+const EvolutionCard = ({
   img,
   subTitle,
   title,
@@ -22,7 +22,7 @@ const ProjectCard = ({
   ctaLink,
   target,
   customclass,
-}: ProjectProps) => {
+}: EvolutionCardProps) => {
   return (
     <>
       <div className={`${customclass ? customclass : ""} ${style.card}`}>
@@ -37,8 +37,8 @@ const ProjectCard = ({
         </div>
         <div className={`${style.contentWrapper}`}>
           {subTitle && <span className={`${style.subtitle} text-upper`}>{subTitle}</span>}
-          <h3 className="line-clamp-1 text-upper">{title}</h3>
-          <p className="line-clamp-2">{desc}</p>
+          <h3 className="line-clamp-1">{title}</h3>
+          <p className="p line-clamp-2">{desc}</p>
           {ctaLink && (
             <Link
               href={ctaLink}
@@ -54,4 +54,4 @@ const ProjectCard = ({
   );
 };
 
-export default ProjectCard;
+export default EvolutionCard;

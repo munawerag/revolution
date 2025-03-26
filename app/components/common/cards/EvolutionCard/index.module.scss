@@ -1,4 +1,4 @@
-@import "../../../styles/abstract/variable";
+@import "../../../../styles/abstract/variable";
 
 .card {
   position: relative;
@@ -6,7 +6,7 @@
 
 .imgWrapper {
   width: 100%;
-  height: 43.75em;
+  height: 49.25em;
   position: relative;
   overflow: hidden;
 
@@ -32,13 +32,9 @@
     color: var(--color-primarycol);
   }
 
-  p {
-    max-width: 58%;
+  .p {
+    padding-right: 2em;
     color: var(--color-primarycol);
-
-    @media #{$ipadpro} {
-      max-width: 100% !important;
-    }
   }
 
   .subtitle {
@@ -49,7 +45,6 @@
 
   .anchor {
     font-size: 1.125em;
-    color: var(--color-primarycol);
     text-transform: capitalize;
     padding-bottom: 0.5625em;
     display: inline-block;

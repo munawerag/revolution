@@ -56,6 +56,7 @@ const MainMenu = ({ setMenuActive }: any) => {
 
     { id: 6, label: "Contact Us", link: "#", target: null },
   ];
+
   return (
     <>
       <div className="main__menu">
@@ -67,12 +68,7 @@ const MainMenu = ({ setMenuActive }: any) => {
                 setMenuActive(false);
               }}
             >
-              <Image
-                src={"/assets/svgs/logo.svg"}
-                width={277}
-                height={88}
-                alt="logo"
-              />
+              <Image src={"/assets/svgs/logo.svg"} width={277} height={88} alt="logo" />
             </Link>
           </div>
 
@@ -81,20 +77,14 @@ const MainMenu = ({ setMenuActive }: any) => {
               {navigation.map((item) => {
                 return item.link ? (
                   <li key={item.id} className="nav__menu__item">
-                    <Link
-                      href={item.link}
-                      className="menu__label"
-                      target={item.target || "_self"}
-                    >
+                    <Link href={item.link} className="menu__label" target={item.target || "_self"}>
                       {item.label}
                     </Link>
                   </li>
                 ) : (
                   <li
                     key={item.id}
-                    className={`nav__menu__item ${
-                      active === item.id ? "active" : ""
-                    } `}
+                    className={`nav__menu__item ${active === item.id ? "active" : ""} `}
                   >
                     <div
                       className="menu__label"
@@ -114,10 +104,7 @@ const MainMenu = ({ setMenuActive }: any) => {
                       <ul>
                         {item?.submenu?.map((subItem, i) => {
                           return (
-                            <li
-                              key={subItem.link + i}
-                              className="submenu__item"
-                            >
+                            <li key={subItem.link + i} className="submenu__item">
                               <Link
                                 href={subItem.link}
                                 className="w-uline"
@@ -209,12 +196,7 @@ const MainMenu = ({ setMenuActive }: any) => {
           setLocationsActive(false);
         }}
       >
-        <Image
-          src={"/assets/svgs/cross.svg"}
-          width={19}
-          height={19}
-          alt="close"
-        />
+        <Image src={"/assets/svgs/cross.svg"} width={19} height={19} alt="close" />
       </div>
     </>
   );
