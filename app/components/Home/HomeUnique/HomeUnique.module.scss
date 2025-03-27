@@ -1,8 +1,11 @@
 @import "../../../styles/abstract/variable";
 
-.cards-wrapper {
-  margin-top: 2em;
+
+
+
+.slider-wrapper {
   @media #{$ipadL} {
-    margin-top: 4.6875em;
+    max-width: 68.75em;
+    margin-left: auto;
   }
 }

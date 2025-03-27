@@ -8,7 +8,7 @@ const Template = ({ children }: { children: React.ReactNode }) => {
     // Function to resize fonts based on window width
     const resizeWindow = () => {
       const perc = window.innerWidth / 120;
-      if (window.innerWidth > 1200) {
+      if (window.innerWidth >= 1200) {
         document.body.style.fontSize = `${perc}px`;
       }
     };

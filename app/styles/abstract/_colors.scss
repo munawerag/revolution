@@ -31,6 +31,21 @@
     color: var(--color-successcol);
 }
 
+
+.orange-color {
+    color: var(--color-orangecol);
+}
+
+.amber-color {
+    color: var(--color-ambercol);
+}
+
+.offwhite-color {
+    color: var(--color-offwhitecol);
+}
+
+
+
 // Background color utilities
 .primary-color-bg {
     background-color: var(--color-primarycol);
@@ -64,5 +79,16 @@
     background-color: var(--color-successcol);
 }
 
+.orange-color-bg {
+    background-color: var(--color-orangecol);
+}
+
+.amber-color-bg {
+    background-color: var(--color-ambercol);
+}
+
+.offwhite-color-bg {
+    background-color: var(--color-offwhitecol);
+}
 
 

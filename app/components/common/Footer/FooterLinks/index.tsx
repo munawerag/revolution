@@ -3,7 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
 
-import style from "../FooterLinks/index.module.scss";
+import style from "./FooterLinks.module.scss";
 
 type footerLinksProps = {
   data: any;
@@ -18,15 +18,8 @@ const FooterLinks = ({ data, title }: footerLinksProps) => {
       <div className={style.linksColumn}>
         <div className={style.linksHead} onClick={() => setActive(!active)}>
           <span className={style.title}>{title}</span>
-          <div
-            className={`${style.dropdownArrow} ${active ? style.active : ""}`}
-          >
-            <Image
-              src={"/assets/svgs/footer-arrow.svg"}
-              width={9}
-              height={14}
-              alt="arrow"
-            />
+          <div className={`${style.dropdownArrow} ${active ? style.active : ""}`}>
+            <Image src={"/assets/svgs/footer-arrow.svg"} width={9} height={14} alt="arrow" />
           </div>
         </div>
         <div className={`${style.listWrapper} ${active ? style.active : ""}`}>
@@ -37,14 +30,19 @@ const FooterLinks = ({ data, title }: footerLinksProps) => {
                   <Link
                     href={item.link || "/"}
                     target={item?.link?.target || "_self"}
-                    className={`${
-                      item?.type == "button"
-                        ? "primary-anchor white-col"
-                        : "w-uline"
-                    }`}
+                    className={`${item?.type == "button" ? "primary-anchor white-col" : "w-uline"}`}
                   >
                     {item?.title}
                   </Link>
+                  {item.subitems?.map((subitem: any, index: number) => {
+                    return (
+                      <ul className={`${style["submenuItems"]}`} key={index}>
+                        <li>
+                          <a href="">{subitem?.title}</a>
+                        </li>
+                      </ul>
+                    );
+                  })}
                 </li>
               );
             })}

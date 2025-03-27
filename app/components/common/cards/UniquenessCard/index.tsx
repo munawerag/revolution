@@ -1,8 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
-import style from "./EvolutionCard.module.scss";
+import style from "./UniquenessCard.module.scss";
 
-export interface EvolutionCardProps {
+export interface UniquenessCardProps {
   img: string;
   subTitle?: string;
   title: string;
@@ -15,7 +15,7 @@ export interface EvolutionCardProps {
 
 
 
-const EvolutionCard = ({
+const UniquenessCard = ({
   img,
   subTitle,
   title,
@@ -24,7 +24,7 @@ const EvolutionCard = ({
   ctaLink,
   target,
   customclass,
-}: EvolutionCardProps) => {
+}: UniquenessCardProps) => {
   return (
     <>
       <div className={`${customclass ? customclass : ""} ${style.card}`}>
@@ -56,4 +56,4 @@ const EvolutionCard = ({
   );
 };
 
-export default EvolutionCard;
+export default UniquenessCard;
