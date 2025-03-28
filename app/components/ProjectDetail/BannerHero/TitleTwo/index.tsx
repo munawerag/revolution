@@ -1,6 +1,6 @@
 "use client";
 import { useInView } from "react-intersection-observer";
-import style from "../index.module.scss";
+import style from "../BannerHero.module.scss";
 
 const TitleTwo = () => {
   const { ref, inView } = useInView({
@@ -9,9 +9,9 @@ const TitleTwo = () => {
   });
   return (
     <>
-      <div className={`${style.homeBanner__titleTwoSpace}`} ref={ref}></div>
+      <div className={`${style.banner__titleTwoSpace}`} ref={ref}></div>
       <div
-        className={`${style.homeBanner__titleTwo} ${
+        className={`${style.banner__titleTwo} ${
           inView ? style.active : ""
         }`}
       >

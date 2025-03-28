@@ -10,11 +10,11 @@ type secHeadingProps = {
 
 const SectionHeading = ({ subTitle, title, desc, isCenter }: secHeadingProps) => {
   return (
-    <div className={`${style.titleWrapper} ${isCenter ? style.center : ""}`}>
+    <section className={`${style.titleWrapper} ${isCenter ? style.center : ""}`}>
       {subTitle && <p>{subTitle}</p>}
       {title && <h2>{title}</h2>}
       {desc && <p>{desc}</p>}
-    </div>
+    </section>
   );
 };
 

@@ -105,6 +105,7 @@ const Footer = () => {
               );
             })}
           </div>
+          <Link href="?!" className="primary-anchor white-col">Contact us</Link>
         </div>
 
         <div className={style.footerCardsWrapper}>

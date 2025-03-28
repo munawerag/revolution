@@ -1,7 +1,7 @@
 "use client";
 import { useInView } from "react-intersection-observer";
 
-import style from "../index.module.scss";
+import style from "../BannerHero.module.scss";
 import Image from "next/image";
 
 const TitleOne = () => {
@@ -11,8 +11,8 @@ const TitleOne = () => {
   });
   return (
     <>
-      <div className={style.homeBanner__titleOneSpace} ref={ref} id="overview"></div>
-      <div className={`${style.homeBanner__titleOne} ${inView ? style.active : ""}`}>
+      <div className={style.banner__titleOneSpace} ref={ref} id="overview"></div>
+      <div className={`${style.banner__titleOne} ${inView ? style.active : ""}`}>
         <h5 className={`${style.logo}`}>
           <Image src={"/assets/svgs/banner-logo.svg"} width={216} height={52} alt="logo" />
         </h5>

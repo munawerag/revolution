@@ -185,6 +185,11 @@
     @media #{$mob} {
       width: 50%;
     }
+    h3 {
+      @media #{$mineTab} {
+        line-height: 1;
+      }
+    }
   }
 }
 

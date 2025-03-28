@@ -1,4 +1,3 @@
-import HomeBanner from "./HomeBanner";
 import Overview from "./Overview";
 import Masterpieces from "./Masterpieces";
 import Amenities from "./Amenities";
@@ -6,11 +5,12 @@ import Essentials from "./Essentials";
 import Landmark from "./Landmark";
 import Ecosystem from "./Ecosystem";
 import SvgComp from "../common/SvgComp";
+import BannerHero from "./BannerHero";
 
 const ProjectDetails = () => {
   return (
     <>
-      <HomeBanner />
+      <BannerHero />
       <Overview />
       <Masterpieces />
       <Amenities />
