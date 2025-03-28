@@ -1,0 +1,51 @@
+[
+  {
+    "id": 1,
+    "name": "Alex Zagrebelny",
+    "position": "Chairman and CEO",
+    "image": "/assets/images/our-team/member-1.jpg"
+  },
+  {
+    "id": 2,
+    "name": "John Doe",
+    "position": "CTO",
+    "image": "/assets/images/our-team/member-2.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Jane Smith",
+    "position": "Marketing Director",
+    "image": "/assets/images/our-team/member-3.jpg"
+  },
+  {
+    "id": 4,
+    "name": "David Wilson",
+    "position": "Lead Developer",
+    "image": "/assets/images/our-team/member-4.jpg"
+  },
+  {
+    "id": 5,
+    "name": "Sarah Johnson",
+    "position": "UX Designer",
+    "image": "/assets/images/our-team/member-5.jpg"
+  },
+  {
+    "id": 6,
+    "name": "Michael Brown",
+    "position": "Product Manager",
+    "image": "/assets/images/our-team/member-6.jpg"
+  },
+  {
+    "id": 7,
+    "name": "Michael Brown",
+    "position": "Product Manager",
+    "image": "/assets/images/our-team/member-7.jpg"
+  },
+  {
+    "id": 8,
+    "name": "Michael Brown",
+    "position": "Product Manager",
+    "image": "/assets/images/our-team/member-8.jpg"
+  }
+
+]
