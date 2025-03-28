@@ -1,0 +1,26 @@
+@import "../../../styles/abstract/variable";
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -1.5625em;
+  @media #{$mob} {
+    row-gap: 2em;
+  }
+}
+
+.col {
+  flex: 0 0 36%;
+  width: 36%;
+  padding: 0 1.5625em;
+  @media #{$mob} {
+    flex: 0 0 100%;
+    width: 100%;
+  }
+  &:first-child {
+    @media #{$tab} {
+      flex: 0 0 64%;
+      width: 64%;
+    }
+  }
+}

@@ -44,5 +44,9 @@
 
   input {
     width: 21.5em;
+    @media #{$mob} {
+      width: 100%;
+      padding-bottom: 1.1em;
+    }
   }
 }

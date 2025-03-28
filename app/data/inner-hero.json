@@ -1,0 +1,7 @@
+{
+  "innerBanner": {
+    "desktopImage": "/assets/images/our-story/inner-hero.jpg",
+    "mobileImage": "/assets/images/our-story/inner-hero-mob.jpg",
+    "alt": "Inner Banner"
+  }
+}

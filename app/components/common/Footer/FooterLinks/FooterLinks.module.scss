@@ -1,0 +1,71 @@
+@import "../../../../styles/abstract/variable";
+
+.linksHead {
+  font-size: 1.625em;
+  color: var(--color-primarycol);
+  margin: 0 0 1.2em 0;
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  @media #{$mob} {
+    margin: 0 0 1em;
+    justify-content: space-between;
+  }
+}
+
+.listWrapper {
+  @media #{$mob} {
+    max-height: 0;
+    overflow: hidden;
+    transition: 1s;
+  }
+
+  a {
+    font-size: 1.125em;
+    color: var(--color-primarycol);
+  }
+
+  &.active {
+    @media #{$mob} {
+      max-height: max-content;
+      overflow: hidden;
+      transition: 1s;
+    }
+  }
+
+  > ul {
+    height: 22.875em;
+    column-count: 1;
+    column-gap: 6.25em;
+    @media #{$ipadpro} {
+      column-gap: 0.25em;
+    }
+    @media #{$ipad} {
+      height: auto;
+    }
+  }
+
+  .submenuItems {
+    margin-top: 1em;
+    li {
+      margin-bottom: 0.3em;
+    }
+    a {
+      font-size: 1em;
+      text-transform: uppercase;
+    }
+  }
+}
+
+.dropdownArrow {
+  @media #{$tab} {
+    display: none;
+  }
+
+  transition: 0.25s;
+
+  &.active {
+    transform: rotate(180deg);
+    transition: 0.25s;
+  }
+}

@@ -156,3 +156,29 @@
     }
   }
 }
+
+.homeUniqueness-slider-main {
+  .swiper {
+    padding-bottom: 4em;
+    @media #{$ipadL} {
+      padding-bottom: 9em;
+    }
+    .swiper-pagination {
+      max-width: 46.25em;
+      margin: 0 auto;
+      left: 0;
+      right: 0;
+      top: unset;
+      bottom: 0;
+      @media #{$mineTab} {
+        max-width: 80%;
+      }
+    }
+    .swiper-pagination-progressbar {
+      background: #BEBEBE;
+      .swiper-pagination-progressbar-fill {
+        background: #475252;
+      }
+    }
+  }
+}

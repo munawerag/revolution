@@ -8,18 +8,13 @@ type secHeadingProps = {
   isCenter?: boolean;
 };
 
-const SectionHeading = ({
-  subTitle,
-  title,
-  desc,
-  isCenter,
-}: secHeadingProps) => {
+const SectionHeading = ({ subTitle, title, desc, isCenter }: secHeadingProps) => {
   return (
-    <div className={`${style.titleWrapper} ${isCenter ? style.center : ""}`}>
-      <p>{subTitle}</p>
-      <h2>{title}</h2>
+    <section className={`${style.titleWrapper} ${isCenter ? style.center : ""}`}>
+      {subTitle && <p>{subTitle}</p>}
+      {title && <h2>{title}</h2>}
       {desc && <p>{desc}</p>}
-    </div>
+    </section>
   );
 };
 

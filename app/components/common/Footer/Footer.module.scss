@@ -4,22 +4,17 @@
   padding: 7.5em 0 0;
   background: var(--color-whitecol);
 
-  @media #{$ipad} {
+  @media #{$ipadpro} {
     padding: 3em 0 0;
   }
 
   .logoWrapper {
     display: flex;
     justify-content: center;
-    margin-bottom: 5em;
     a {
-      width: 17.4375em;
       svg {
         width: 100%;
       }
-    }
-    @media #{$mob} {
-      margin-bottom: 2em;
     }
   }
 }
@@ -40,12 +35,27 @@
 .footerWrapper {
   padding: 0 0 8.75em 0;
 
-  @media #{$ipad} {
+  @media #{$ipadpro} {
     padding: 0 0 3em 0;
   }
 
   @media #{$mob} {
     padding: 0 0 2em 0;
+  }
+
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    .col {
+      @media #{$ipad}  {
+        flex: 0 0 33.33333%;
+        width: 33.33333%;
+      }
+      @media #{$mob} {
+        flex: 0 0 100%;
+        width: 100%;
+      }
+    }
   }
 }
 
@@ -55,7 +65,7 @@
   justify-content: space-between;
   align-items: center;
   border-top: 1px solid var(--color-graycol);
-  padding: 1em 0;
+  padding: 1.8em 0 1em;
 
   @media #{$ipad} {
     justify-content: center;
@@ -81,20 +91,55 @@
 
   p {
     color: var(--color-primarycol);
+    @media #{$ipad} {
+      font-size: 1em;
+    }
   }
 
   a {
-    font-size: 1.125em;
     color: var(--color-primarycol);
+  }
+
+  .left {
+    flex: 0 0 33.33333%;
+    @media #{$mob} {
+      flex: 0 0 100%;
+      width: 100%;
+    }
+    
+    .logoWrapper {
+      max-width: 17.375em;
+      @media #{$ipad} {
+        max-width: 9.375em;
+      }
+      @media #{$mob} {
+        margin: 0 auto;
+      }
+    }
+  }
+  .center {
+    flex: 0 0 33.33333%;
+    display: flex;
+    justify-content: center;
+    @media #{$mob} {
+      flex: 0 0 100%;
+      width: 100%;
+    }
   }
 
   .right {
     display: flex;
     align-items: center;
+    justify-content: flex-end;
     gap: 4.0625em;
+    flex: 0 0 33.33333%;
     @media #{$mob} {
       flex-direction: column;
       gap: 0.5em;
+      @media #{$mob} {
+        flex: 0 0 100%;
+        width: 100%;
+      }
     }
   }
 }
@@ -139,6 +184,11 @@
     }
     @media #{$mob} {
       width: 50%;
+    }
+    h3 {
+      @media #{$mineTab} {
+        line-height: 1;
+      }
     }
   }
 }

@@ -1,0 +1,33 @@
+@import "../../../styles/abstract/variable";
+
+.center-paragraph {
+  max-width: 57.875em; // 926px / 16 = 57.875em
+  margin: 0 auto 7.1875em; // 115px / 16 = 7.1875em
+  text-align: center;
+  @media #{$ipadpro} {
+    margin-bottom: 3em;
+  }
+}
+
+.main-cards-wrapper {
+  .custom-row {
+    justify-content: space-between;
+
+    &:not(:last-child) {
+      margin-bottom: 7.5em; // 120px / 16 = 7.5em
+      @media #{$ipadpro} {
+        margin-bottom: 2.5em;
+      }
+    }
+
+    &:nth-child(even) {
+      flex-direction: row-reverse;
+      justify-content: flex-end;
+      .text-content {
+        @media #{$desktop} {
+          margin-left: 9em;
+        }
+      }
+    }
+  }
+}

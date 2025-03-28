@@ -1,0 +1,15 @@
+
+@import "../../../styles/abstract/variable";
+
+
+
+.wrapper {
+  .picture {
+    position: relative;
+    padding-bottom: 39.5833333%;
+    height: 0;
+    @media #{$mineTab} {
+      padding-bottom: 71.583%;
+    }
+  }
+}

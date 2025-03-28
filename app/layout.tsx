@@ -5,24 +5,26 @@ import Footer from "./components/common/Footer";
 import Header from "./components/common/Header";
 import NewsLetter from "./components/common/NewsLetter";
 
-const Sans = localFont({
+const PPRadioGrotesk = localFont({
   src: [
     {
-      path: "../public/assets/fonts/ultralight.ttf",
+      path: "../public/assets/fonts/PPRadioGrotesk-Ultralight.ttf",
       weight: "300",
       style: "normal",
     },
     {
-      path: "../public/assets/fonts/regular.ttf",
+      path: "../public/assets/fonts/PPRadioGrotesk-Regular.ttf",
       weight: "400",
       style: "normal",
     },
   ],
 });
+
 export const metadata: Metadata = {
   title: "Revolution",
   description: "Revolution",
 };
+
 
 export default function RootLayout({
   children,
@@ -31,7 +33,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${Sans.className}`}>
+      <body className={`${PPRadioGrotesk.className}`}>
         <Header />
         {children}
         <NewsLetter />

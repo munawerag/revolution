@@ -1,0 +1,8 @@
+@import "../../../styles/abstract/variable";
+
+.cards-wrapper {
+  margin-top: 2em;
+  @media #{$ipadL} {
+    margin-top: 4.6875em;
+  }
+}

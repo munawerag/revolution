@@ -1,43 +1,53 @@
-import React from "react";
 import style from "./index.module.scss";
 import Image from "next/image";
 import Link from "next/link";
 
-type projectProps = {
+export interface ProjectProps {
   img: string;
+  subTitle?: string;
   title: string;
   desc?: string;
   ctaTitle?: string;
   ctaLink?: any;
   target?: string;
   customclass?: string;
-};
+}
 
 const ProjectCard = ({
   img,
+  subTitle,
   title,
   desc,
   ctaTitle,
   ctaLink,
   target,
   customclass,
-}: projectProps) => {
+}: ProjectProps) => {
   return (
     <>
-      <div className={`${customclass} ${style.card}`}>
-        <div className={style.imgWrapper}>
-          <Image src={img} width={1080} height={700} alt={title} />
+      <div className={`${customclass ? customclass : ""} ${style.card}`}>
+        <div className={`${style.imgWrapper}`}>
+          <Image
+            src={img}
+            alt={title}
+            className="transition-slow"
+            fill
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          />
         </div>
         <div className={`${style.contentWrapper}`}>
+          {subTitle && <span className={`${style.subtitle} text-upper`}>{subTitle}</span>}
           <h3 className="line-clamp-1 text-upper">{title}</h3>
           <p className="line-clamp-2">{desc}</p>
-          <Link
-            href={ctaLink}
-            target={target ? target : "_self"}
-            className={`uline ${style.anchor}`}
-          >
-            {ctaTitle}
-          </Link>
+          {ctaLink && (
+            <Link
+              href={ctaLink}
+              target={target ? target : "_self"}
+              className={`uline ${style.anchor}`}
+            >
+              {ctaTitle}
+            </Link>
+          )}
         </div>
       </div>
     </>

@@ -109,10 +109,10 @@ p,
   }
 
   @media #{$ipadpro} {
-    font-size: 1.25em;
-  }
-
-  @media #{$mob} {
     font-size: 1em;
   }
+
+  // @media #{$mob} {
+  //   font-size: 1em;
+  // }
 }

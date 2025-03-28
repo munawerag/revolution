@@ -7,6 +7,8 @@
 .imgWrapper {
   width: 100%;
   height: 43.75em;
+  position: relative;
+  overflow: hidden;
 
   @media #{$ipadpro} {
     height: 25em;
@@ -39,11 +41,20 @@
     }
   }
 
+  .subtitle {
+    font-size: 1.125em;
+    display: block;
+    margin-bottom: 1em;
+  }
+
   .anchor {
     font-size: 1.125em;
-    color: var(--color-secondarycol);
+    color: var(--color-primarycol);
     text-transform: capitalize;
     padding-bottom: 0.5625em;
     display: inline-block;
   }
 }
+
+
+

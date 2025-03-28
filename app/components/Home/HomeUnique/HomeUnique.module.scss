@@ -1,0 +1,11 @@
+@import "../../../styles/abstract/variable";
+
+
+
+
+.slider-wrapper {
+  @media #{$ipadL} {
+    max-width: 68.75em;
+    margin-left: auto;
+  }
+}

@@ -24,6 +24,9 @@
   @media #{$ipad} {
     height: 7.5em;
   }
+  @media #{$mob} {
+    height: 6.5em;
+  }
 
   .wrapper {
     width: 100%;
@@ -45,6 +48,9 @@
         position: relative;
         top: 1em;
         column-gap: 1.5em;
+      }
+      @media #{$mineTab} {
+        column-gap: 1em;
       }
     }
 
@@ -103,6 +109,9 @@
       @media #{$ipad} {
         top: 1.75em;
         width: 12.3125em;
+      }
+      @media #{$mineTab} {
+        width: 9.313em;
       }
     }
 

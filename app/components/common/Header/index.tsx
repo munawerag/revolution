@@ -14,8 +14,7 @@ const Header = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      const currentScroll =
-        window.pageYOffset || document.documentElement.scrollTop;
+      const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
 
       setLastScrollTop(currentScroll <= 0 ? 0 : currentScroll);
     };
@@ -40,51 +39,36 @@ const Header = () => {
 
   return (
     <>
+    <div className={`slide-menu ${menuActive ? "active" : ""}`}>
+        <MainMenu setMenuActive={setMenuActive} />
+      </div>
+      <div className={`menu-overlay ${menuActive ? "active" : ""}`}></div>
+      
       <header
-        className={`header ${scrolled ? "sticky-header" : ""} ${
-          hasProjectList ? "detailMenu" : ""
-        }`}
+        className={`header ${scrolled ? "sticky-header" : ""} 
+        ${hasProjectList ? "detailMenu" : ""}`}
       >
         <div className="container-s">
           <div className={`wrapper ${scrolled ? "sticky" : ""}`}>
             <div className="left-area">
               <div className="nav-button" onClick={() => setMenuActive(true)}>
                 <div className="menu-icon">
-                  <Image
-                    src={"/assets/svgs/header-nav.svg"}
-                    width={25}
-                    height={17}
-                    alt="img"
-                  />
+                  <Image src={"/assets/svgs/header-nav.svg"} width={25} height={17} alt="img" />
                 </div>
                 <p>Menu</p>
               </div>
               <div className="search">
-                <Image
-                  src={"/assets/svgs/search.svg"}
-                  width={23}
-                  height={23}
-                  alt="logo"
-                />
+                <Image src={"/assets/svgs/search.svg"} width={23} height={23} alt="logo" />
               </div>
             </div>
             <Link href={"/"} className="sticky-logo">
-              <Image
-                src={"/assets/svgs/logo.svg"}
-                width={277}
-                height={88}
-                alt="logo"
-              />
+              <Image src={"/assets/svgs/logo.svg"} width={277} height={88} alt="logo" />
             </Link>
             <div className="langWrapper">
               <div className="lang">
                 <LanguageSelector />
               </div>
-              <PrimaryButton
-                title="Enquire Now"
-                link="/"
-                className="desktop-only lg-font"
-              />
+              <PrimaryButton title="Enquire Now" link="/" className="desktop-only lg-font" />
             </div>
           </div>
           <div className="extraMenu">
@@ -113,10 +97,7 @@ const Header = () => {
           </div>
         </div>
       </header>
-      <div className={`slide-menu ${menuActive ? "active" : ""}`}>
-        <MainMenu setMenuActive={setMenuActive} />
-      </div>
-      <div className={`menu-overlay ${menuActive ? "active" : ""}`}>dsd</div>
+      
     </>
   );
 };
