@@ -1,7 +1,12 @@
+import Commitment from "@/app/components/BlogDetail/Commitment";
+import MainTagLine from "@/app/components/BlogDetail/MainTagLine";
 
 
 export default function Page() {
   return (
-    <main>Blog detail Page</main>
+    <main>
+        <MainTagLine/>
+        <Commitment/>
+    </main>
   )
 }

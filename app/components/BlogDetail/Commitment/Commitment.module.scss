@@ -1,0 +1,27 @@
+.main-wrapper {
+    .custom-row {
+        &:nth-child(even) {
+            flex-direction: row-reverse;
+            
+            .text-cotent {
+                margin-right: 11.125em; // 178px ÷ 16px
+            }
+        }
+        
+        &:not(:last-child) {
+            margin-bottom: 7.5625em; // 121px ÷ 16px
+        }
+        
+        &:nth-child(odd) {
+            .text-cotent {
+                margin-right: 11.125em; // 178px ÷ 16px
+            }
+        }
+    }
+}
+
+.center-description {
+    text-align: center;
+    margin: 0 auto 4.375em; // 70px ÷ 16px
+    max-width: 58.125em;
+}
