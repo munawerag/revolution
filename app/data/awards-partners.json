@@ -1,0 +1,50 @@
+{
+  "heading": {
+    "subTitle": "Awards and Partners",
+    "title": "Lorem ipsum odor amet",
+    "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam."
+  },
+  "awards": [
+    {
+      "image": "/assets/images/awards-partners/partner-1.jpg",
+      "description": "<h3>EYWA TREE OF LIFE</h3><h4>International Property Awards 2023- 2024</h4><p>World's Best Property</p><p>Best Apartment / Condominium Development in the World</p><br/><br/><h4>Arabian Property Awards 2023-2024</h4><p>Best Apartment / Condominium Development in Arabia</p><p>Best Residential High-Rise Development in Arabia</p><p>Best Apartment / Condominium Development Dubai – 5 Stars</p><p>Best Residential High-Rise Development Dubai – 5 Stars</p><p>Residential High-Rise Architecture Dubai</p>",
+      "awardImages": [
+        "/assets/images/awards-partners/award-1.png",
+        "/assets/images/awards-partners/award-1.png",
+        "/assets/images/awards-partners/award-1.png",
+        "/assets/images/awards-partners/award-1.png",
+        "/assets/images/awards-partners/award-1.png",
+        "/assets/images/awards-partners/award-1.png",
+        "/assets/images/awards-partners/award-1.png"
+      ]
+    },
+    {
+      "image": "/assets/images/awards-partners/partner-1.jpg",
+      "description": "<h3>BAC DE RODA</h3><h4>European Property Awards 2023-2024</h4><p>Office Architecture Awards</p><p>Office Development Awards For Spain</p>",
+      "awardImages": [
+        "/assets/images/awards-partners/award-1.png",
+        "/assets/images/awards-partners/award-1.png"
+      ]
+    },
+    {
+      "image": "/assets/images/awards-partners/partner-3.jpg",
+      "description": "<h3>22PALMS</h3><h4>International Property Awards 2023- 2024</h4><p>Office Architecture Awards</p><p>Office Development Awards For Spain</p>",
+      "awardImages": [
+        "/assets/images/awards-partners/award-1.png",
+        "/assets/images/awards-partners/award-1.png",
+        "/assets/images/awards-partners/award-1.png",
+        "/assets/images/awards-partners/award-1.png"
+      ]
+    },
+    {
+      "image": "/assets/images/awards-partners/partner-4.jpg",
+      "description": "<h3>LEGEND</h3><h4>European Property Awards 2023-2024</h4><p>Office Architecture Awards</p><p>Office Development Awards For Spain</p>",
+      "awardImages": [
+        "/assets/images/awards-partners/award-1.png",
+        "/assets/images/awards-partners/award-1.png",
+        "/assets/images/awards-partners/award-1.png"
+      ]
+    }
+
+  ]
+}

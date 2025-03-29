@@ -3,7 +3,6 @@ import Link from "next/link";
 import FooterLinks from "./FooterLinks";
 import Image from "next/image";
 import style from "./Footer.module.scss";
-import { link } from "fs";
 
 const data = [
   {

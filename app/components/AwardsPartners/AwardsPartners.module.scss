@@ -1,0 +1,85 @@
+@import "../../styles/abstract/variable";
+
+.img-wrapper {
+  height: 0;
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 107.816%;
+
+  @media #{$ipad} {
+    margin-bottom: 2em;
+  }
+}
+
+.figures-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2em 0.5em;
+  margin-top: 2.3125em;
+  .item {
+    position: relative;
+    width: 3.875em;
+    height: 12em;
+  }
+}
+
+.text-content {
+  p {
+    margin-bottom: 0.3em;
+  }
+}
+
+.sections-wrapper {
+  .custom-row {
+    justify-content: space-between;
+
+    &:nth-child(odd) {
+      justify-content: flex-start;
+
+      .text-content {
+        padding-left: 0;
+
+        @media #{$desktop} {
+          padding-left: 9.375em;
+        }
+      }
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 3em;
+
+      @media #{$ipadL} {
+        margin-bottom: 7.8125em;
+      }
+    }
+
+    &:nth-child(even) {
+      @media #{$ipadL} {
+        flex-direction: row-reverse;
+      }
+    }
+  }
+}
+
+.data-loading {
+  font-size: 1.125em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.839em;
+  color: var(--color-blackcol);
+  margin-top: 5.556em;
+}
+
+.loading-icon {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

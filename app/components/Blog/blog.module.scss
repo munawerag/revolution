@@ -1,0 +1,51 @@
+@import "../../styles/abstract/variable";
+
+.custom-row {
+  row-gap: 7.5em;
+  @media #{$ipad} {
+    row-gap: 3.5em;
+  }
+  @media #{$mineTab} {
+    row-gap: 2em;
+  }
+}
+
+.blogs-pagination {
+  margin-top: 7.5em; // 120px / 16px = 7.5em
+  @media #{$ipad} {
+    margin-top: 3em;
+  }
+
+  ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5em;
+  }
+
+  li {
+    flex: 0 0 2.0625em; // 33px / 16px = 2.0625em
+    width: 2.0625em; // 33px / 16px = 2.0625em
+    height: 2.0625em; // 33px / 16px = 2.0625em
+    transition: var(--transition);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    color: var(--color-graycol);
+    margin: 0;
+    cursor: pointer;
+
+    &:hover,
+    &.active {
+      background: var(--color-graycol2);
+      color: var(--color-primarycol);
+    }
+
+    &.disabled {
+      cursor: default;
+      opacity: 0.5;
+      pointer-events: none;
+    }
+  }
+}

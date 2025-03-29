@@ -1,0 +1,125 @@
+
+.c_form-field {
+    position: relative;
+    margin: 0 0 2em;
+  
+    &.mb-0 {
+      margin-bottom: 0;
+    }
+  
+    label {
+      font-weight: 400;
+      margin-bottom: 0.833em;
+      display: block;
+      color: #475252;
+      font-family: var(--base-font);
+      font-size: 1em;
+  
+      @media #{$desktop} {
+        font-size: 1.125em;
+      }
+    }
+  
+    &__control {
+      font-size: 1em;
+      font-family: var(--base-font);
+      font-weight: 500;
+      line-height: 1em;
+      display: block;
+      width: 100%;
+      height: 100%;
+      color: var(--color-secondarycol);
+      background-color: transparent;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      padding: 0.9em 1em;
+      transition: $transition;
+      margin-bottom: 1em;
+      border-radius: 0;
+      border: 0;
+      border: 1px solid var(--color-graycol);
+      min-height: 1.5em;
+  
+      
+  
+      &::placeholder {
+        color: var(--color-graycol);
+        opacity: 1;
+        font-weight: inherit;
+      }
+  
+  
+      // &:focus {
+      //   border-color: rgba(var(--black-color), 0.8);
+      // }
+  
+      &[type="number"] {
+  
+        &::-webkit-inner-spin-button,
+        &[type="number"]::-webkit-outer-spin-button {
+          -webkit-appearance: none;
+          margin: 0;
+        }
+      }
+  
+      &:-internal-autofill-selected {
+        background-color: transparent !important;
+      }
+  
+      &:valid+.placeholder {
+        display: none;
+      }
+  
+      &.filled {
+        border-bottom-color: rgba(var(--gray-color), 1);
+      }
+    }
+  
+    select {
+      display: none;
+    }
+  
+    .intl-tel-input {
+      margin-bottom: 1em;
+    }
+  
+    
+  
+    .invalid-feedback {
+      color: #dc3232;
+      font-weight: 400;
+      display: block;
+      font-family: var(--base-font);
+  
+      strong {
+        font-weight: inherit;
+      }
+    }
+  
+    // &--file {
+    //   ::file-selector-button {
+    //     font-family: var(--base-font);
+    //     font-size: inherit;
+    //     letter-spacing: unset;
+    //     cursor: unset;
+    //     margin-inline-end: 5px;
+    //     margin-left: -5.1em;
+    //     opacity: 0;
+    //     height: 0;
+    //     overflow: hidden;
+    //     border: 0;
+    //     background: transparent;
+    //   }
+  
+    //   .icon {
+    //     width: 1.4375em;
+    //     height: 1.375em;
+    //     position: absolute;
+    //     transform: translateY(3.15em);
+    //     top: 0;
+    //     right: 0.9375em;
+    //     pointer-events: none;
+    //   }
+    // }
+  }

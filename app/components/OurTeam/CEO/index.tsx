@@ -50,7 +50,7 @@ export default function CEO({ data }: { data: CEODataProps }) {
               <div className="col_12 col_lg_offset_1 col_lg_4">
                 <div className="text-content">
                   {ceo?.description && (
-                    <div dangerouslySetInnerHTML={{ __html: ceo?.description }} />
+                    <div dangerouslySetInnerHTML={{ __html: ceo?.description || "" }} />
                   )}
                 </div>
               </div>
