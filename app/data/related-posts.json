@@ -1,0 +1,20 @@
+{
+  "title": "Related posts",
+  "posts": [
+    {
+      "img": "/assets/images/blog/blog-1.jpg",
+      "subTitle": "Jan 10, 2025",
+      "title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
+      "ctaLink": "/project-list/22-palms",
+      "ctaTitle": "Discover More"
+    },
+    {
+      "img": "/assets/images/blog/blog-2.jpg",
+      "subTitle": "Feb 15, 2025",
+      "title": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.",
+      "ctaLink": "/project-list/ocean-view",
+      "ctaTitle": "Discover More"
+    }
+    
+  ]
+}

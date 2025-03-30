@@ -1,27 +1,53 @@
+@import "../../../styles/abstract/variable";
+
 .main-wrapper {
-    .custom-row {
-        &:nth-child(even) {
-            flex-direction: row-reverse;
-            
-            .text-cotent {
-                margin-right: 11.125em; // 178px ÷ 16px
-            }
+  .custom-row {
+    &:nth-child(even) {
+      flex-direction: row-reverse;
+
+      .text-cotent {
+        @media #{$tabL} {
+          margin-right: 11.125em; // 178px ÷ 16px
+
         }
-        
-        &:not(:last-child) {
-            margin-bottom: 7.5625em; // 121px ÷ 16px
-        }
-        
-        &:nth-child(odd) {
-            .text-cotent {
-                margin-right: 11.125em; // 178px ÷ 16px
-            }
-        }
+      }
     }
+
+    &:not(:last-child) {
+      margin-bottom: 7.5625em; // 121px ÷ 16px
+      @media #{$ipad} {
+        margin-bottom: 2em;  
+      }
+    }
+
+    &:nth-child(odd) {
+      .text-cotent {
+        @media #{$tabL} {
+          margin-right: 11.125em; // 178px ÷ 16px
+
+        }
+      }
+    }
+  }
+}
+
+.center-img-wrapper {
+  width: 24.5em; /* Match your image width */
+  height: 29.4375em;
+  position: relative;
+  overflow: hidden;
+  margin: 10.75em auto 0;
+  @media #{$ipad} {
+    display: none;
+  }
+
 }
 
 .center-description {
-    text-align: center;
-    margin: 0 auto 4.375em; // 70px ÷ 16px
-    max-width: 58.125em;
+  text-align: center;
+  margin: 4.375em auto 4.375em; // 70px ÷ 16px
+  max-width: 58.125em;
+  @media #{$ipad} {
+    margin: 2.375em auto;
+  }
 }
