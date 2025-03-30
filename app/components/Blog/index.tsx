@@ -23,14 +23,18 @@ interface BlogProps {
 }
 
 export default function Blog({ sectionHeading, blogItems }: BlogProps) {
+  // All hooks must be called at the top level of the component
   const [currentPage, setCurrentPage] = useState(1);
+  
+  // Calculate pagination values outside of any loops or conditions
   const itemsPerPage = 4;
   const totalPages = Math.ceil(blogItems.length / itemsPerPage);
-  
-  // Get current page items
   const indexOfLastItem = currentPage * itemsPerPage;
   const indexOfFirstItem = indexOfLastItem - itemsPerPage;
   const currentItems = blogItems.slice(indexOfFirstItem, indexOfLastItem);
+
+  // Generate page numbers for pagination separately
+  const pageNumbers = Array.from({ length: totalPages }, (_, i) => i + 1);
 
   // Pagination functions
   const handlePageChange = (pageNumber: number) => {
@@ -48,12 +52,6 @@ export default function Blog({ sectionHeading, blogItems }: BlogProps) {
       setCurrentPage(prevPage => prevPage + 1);
     }
   };
-
-  // Generate page numbers for pagination
-  const pageNumbers = [];
-  for (let i = 1; i <= totalPages; i++) {
-    pageNumbers.push(i);
-  }
 
   return (
     <>

@@ -53,7 +53,7 @@ const Header = () => {
             <div className="left-area">
               <div className="nav-button" onClick={() => setMenuActive(true)}>
                 <div className="menu-icon">
-                  <Image src={"/assets/svgs/header-nav.svg"} width={25} height={17} alt="img" />
+                  <Image src={"/assets/svgs/header-nav.svg"} width={26} height={19} alt="img" />
                 </div>
                 <p>Menu</p>
               </div>
@@ -62,7 +62,7 @@ const Header = () => {
               </div>
             </div>
             <Link href={"/"} className="sticky-logo">
-              <Image src={"/assets/svgs/logo.svg"} width={277} height={88} alt="logo" />
+              <Image src={"/assets/svgs/logo.svg"} width={158} height={50} alt="logo" />
             </Link>
             <div className="langWrapper">
               <div className="lang">

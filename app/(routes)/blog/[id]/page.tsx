@@ -5,7 +5,7 @@ import commitmentData from "@/app/data/blog-commitment.json";
 import RelatedPosts from "@/app/components/BlogDetail/RelatedPosts";
 import relatedPostsData from "@/app/data/related-posts.json";
 
-export default function Page({ params }: { params: { id: string } }) {
+export default function Page() {
   return (
     <main>
       <MainTagLine 

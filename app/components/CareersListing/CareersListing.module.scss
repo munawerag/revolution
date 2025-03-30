@@ -5,7 +5,7 @@
   margin: 0 auto 2.875em;
   text-align: center;
   @media #{$desktop} {
-      margin: 0 auto 6.875em;
+    margin: 0 auto 6.875em;
   }
 }
 
@@ -28,9 +28,9 @@
     }
 
     &:not(:last-child) {
-        margin-bottom: 2em;
-        @media #{$desktop} {
-          margin-bottom: 7.5em; /* 120px / 16 = 7.5em */
+      margin-bottom: 2em;
+      @media #{$desktop} {
+        margin-bottom: 7.5em; /* 120px / 16 = 7.5em */
       }
     }
 
@@ -51,11 +51,9 @@
   padding-bottom: 88.30275%;
 }
 
-
 .anchor {
   @media #{$desktop} {
     font-size: 1.125em;
     padding-bottom: 0.5em;
   }
-
 }
