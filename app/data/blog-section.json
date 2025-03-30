@@ -1,0 +1,85 @@
+{
+  "sectionHeading": {
+    "subTitle": "Blogs",
+    "title": "Discover insights on our blogs"
+  },
+  "blogItems": [
+    {
+      "img": "/assets/images/blog/blog-1.jpg",
+      "subTitle": "Jan 10, 2025",
+      "title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
+      "ctaLink": "/project-list/22-palms",
+      "ctaTitle": "Discover More"
+    },
+    {
+      "img": "/assets/images/blog/blog-2.jpg",
+      "subTitle": "Jan 10, 2025",
+      "title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
+      "ctaLink": "/project-list/22-palms",
+      "ctaTitle": "Discover More"
+    },
+    {
+      "img": "/assets/images/blog/blog-3.jpg",
+      "subTitle": "Jan 10, 2025",
+      "title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
+      "ctaLink": "/project-list/22-palms",
+      "ctaTitle": "Discover More"
+    },
+    {
+      "img": "/assets/images/blog/blog-4.jpg",
+      "subTitle": "Jan 10, 2025",
+      "title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
+      "ctaLink": "/project-list/22-palms",
+      "ctaTitle": "Discover More"
+    },
+    {
+      "img": "/assets/images/blog/blog-4.jpg",
+      "subTitle": "Jan 10, 2025",
+      "title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
+      "ctaLink": "/project-list/22-palms",
+      "ctaTitle": "Discover More"
+    },
+    {
+      "img": "/assets/images/blog/blog-3.jpg",
+      "subTitle": "Jan 10, 2025",
+      "title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
+      "ctaLink": "/project-list/22-palms",
+      "ctaTitle": "Discover More"
+    },
+    {
+      "img": "/assets/images/blog/blog-2.jpg",
+      "subTitle": "Jan 10, 2025",
+      "title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
+      "ctaLink": "/project-list/22-palms",
+      "ctaTitle": "Discover More"
+    },
+    {
+      "img": "/assets/images/blog/blog-1.jpg",
+      "subTitle": "Jan 10, 2025",
+      "title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
+      "ctaLink": "/project-list/22-palms",
+      "ctaTitle": "Discover More"
+    },
+    {
+      "img": "/assets/images/blog/blog-1.jpg",
+      "subTitle": "Jan 10, 2025",
+      "title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
+      "ctaLink": "/project-list/22-palms",
+      "ctaTitle": "Discover More"
+    },
+    {
+      "img": "/assets/images/blog/blog-2.jpg",
+      "subTitle": "Jan 10, 2025",
+      "title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
+      "ctaLink": "/project-list/22-palms",
+      "ctaTitle": "Discover More"
+    },
+    {
+      "img": "/assets/images/blog/blog-2.jpg",
+      "subTitle": "Jan 10, 2025",
+      "title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
+      "ctaLink": "/project-list/22-palms",
+      "ctaTitle": "Discover More"
+    }
+  ]
+}

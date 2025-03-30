@@ -72,6 +72,7 @@ button {
   flex-direction: column;
 }
 
+
 .section {
   position: relative;
   padding: 2em 0;
@@ -89,6 +90,27 @@ button {
   }
 }
 
+.section-my {
+  position: relative;
+  margin: 2em 0;
+
+  &.sm {
+    margin: 2em 0;
+  }
+
+  @media #{$tab} {
+    margin: 3em 0;
+  }
+
+  @media #{$desktop} {
+    margin: 4.375em 0;
+  }
+}
+
+
+
+
+
 *::-webkit-scrollbar {
   width: 0.3125em;
 }
@@ -104,4 +126,25 @@ button {
 
 *::-webkit-scrollbar-track {
   background: rgba($color: var(--rgb-primarycol), $alpha: 0.3);
+}
+
+
+.element-lg-left-zero {
+  @media #{$ipadL} {
+    margin-left: -5em;
+  }
+
+  @media #{$desktop} {
+    margin-left: -4.6875em;
+  }
+}
+
+.element-lg-right-zero {
+  @media #{$ipadL} {
+    margin-right: -5em;
+  }
+
+  @media #{$desktop} {
+    margin-right: -4.6875em;
+  }
 }

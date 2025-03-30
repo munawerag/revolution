@@ -1,0 +1,30 @@
+{
+  "heading": {
+    "title": "Contact us"
+  },
+  "contactAddress": {
+    "mainContent": "<h4>R.Evolution Headquarters</h4><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p><p><a href=\"mailto:info@byrevolution.com\">info@byrevolution.com</a></p><p><a href=\"tel:+900 000 0000\">(+900 000 0000)</a></p><p>whatsapp <a href=\"tel:+900 000 0000\">(+900 000 0000)</a></p>",
+    "accordionData": [
+      {
+        "id": 1,
+        "title": "Barcelona",
+        "description": "<p>Carrer del Peru, 178-184, Barcelona, Spain</p><p><a href=\"tel:+34637213062\">(+34637213062)</a></p>"
+      },
+      {
+        "id": 2,
+        "title": "Madrid",
+        "description": "<p>Calle Gran Vía, 123, Madrid, Spain</p><p><a href=\"tel:+34637213062\">(+34637213062)</a></p><p>Additional information about our <strong>Madrid</strong> office can be found <a href=\"#\">here</a>.</p>"
+      },
+      {
+        "id": 3,
+        "title": "Valencia",
+        "description": "<p>Plaça de l'Ajuntament, 1, Valencia, Spain</p><p><a href=\"tel:+34637213062\">(+34637213062)</a></p>"
+      },
+      {
+        "id": 4,
+        "title": "Seville",
+        "description": "<p>Plaza de España, Seville, Spain</p><p><a href=\"tel:+34637213062\">(+34637213062)</a></p>"
+      }
+    ]
+  }
+}

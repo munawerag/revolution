@@ -1,0 +1,11 @@
+
+@import "../../../styles/abstract/variable";
+
+.wrapper-form {
+    padding: 2.8125em 3.8125em;
+    margin-top: 4.375em;
+    @media #{$ipad} {
+        margin-top: 2em;
+        padding: 2.8125em 2em;
+    }
+}

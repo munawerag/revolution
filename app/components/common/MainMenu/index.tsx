@@ -196,7 +196,7 @@ const MainMenu = ({ setMenuActive }: any) => {
           setLocationsActive(false);
         }}
       >
-        <Image src={"/assets/svgs/cross.svg"} width={19} height={19} alt="close" />
+        <Image src={"/assets/svgs/cross.svg"} width={20} height={19} alt="close" />
       </div>
     </>
   );

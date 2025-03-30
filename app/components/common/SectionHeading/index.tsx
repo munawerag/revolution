@@ -2,8 +2,8 @@ import React from "react";
 import style from "./index.module.scss";
 
 type secHeadingProps = {
-  subTitle: string;
-  title: string;
+  subTitle?: string;
+  title?: string;
   desc?: string;
   isCenter?: boolean;
 };
@@ -11,7 +11,7 @@ type secHeadingProps = {
 const SectionHeading = ({ subTitle, title, desc, isCenter }: secHeadingProps) => {
   return (
     <section className={`${style.titleWrapper} ${isCenter ? style.center : ""}`}>
-      {subTitle && <p>{subTitle}</p>}
+      {subTitle && <p className={`${style["sub-title"]}`}>{subTitle}</p>}
       {title && <h2>{title}</h2>}
       {desc && <p>{desc}</p>}
     </section>

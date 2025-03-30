@@ -1,0 +1,40 @@
+@import "../../../styles/abstract/variable";
+
+.team-card {
+  margin-bottom: 2em;
+  @media #{$desktop} {
+    margin-bottom: 5em;
+  }
+}
+
+.team-card__figure {
+  position: relative;
+  height: 0;
+  padding-bottom: 142.857%;
+  overflow: hidden;
+  margin-bottom: 1.875em;
+}
+
+
+.data-loading {
+  font-size: 1.125em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.839em;
+  color: var(--color-blackcol);
+  margin-top: 5.556em;
+}
+
+.loading-icon {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

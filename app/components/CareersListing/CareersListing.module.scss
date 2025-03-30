@@ -1,0 +1,59 @@
+@import "../../styles/abstract/variable";
+
+.center-description {
+  max-width: 58.125em;
+  margin: 0 auto 2.875em;
+  text-align: center;
+  @media #{$desktop} {
+    margin: 0 auto 6.875em;
+  }
+}
+
+.main-wrapper {
+  .custom-row {
+    justify-content: space-between;
+    @media #{$mineTab} {
+      row-gap: 2em;
+    }
+
+    &:nth-child(even) {
+      flex-direction: row-reverse;
+      /*! justify-content: space-between; */
+
+      .text-content {
+        @media #{$desktop} {
+          margin-right: 11.25em; /* 180px / 16 = 11.25em */
+        }
+      }
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 2em;
+      @media #{$desktop} {
+        margin-bottom: 7.5em; /* 120px / 16 = 7.5em */
+      }
+    }
+
+    &:nth-child(2n + 1) {
+      .text-content {
+        @media #{$desktop} {
+          margin-right: 11.25em; /* 180px / 16 = 11.25em */
+        }
+      }
+    }
+  }
+}
+
+.img-wrapper {
+  position: relative;
+  height: 0;
+  overflow: hidden;
+  padding-bottom: 88.30275%;
+}
+
+.anchor {
+  @media #{$desktop} {
+    font-size: 1.125em;
+    padding-bottom: 0.5em;
+  }
+}

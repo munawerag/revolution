@@ -1,0 +1,64 @@
+
+@import "../../../styles/abstract/variable";
+
+
+.main-text-accordion {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-right: 8.5625em;
+  height: 100%;
+  @media #{$ipadpro} {
+    padding-right: 2em;
+  }
+}
+
+.accordion__content {
+  transition: max-height 0.3s ease-out;
+  max-height: 0;
+  overflow: hidden;
+  padding: 0 1em 0 0;
+  opacity: 0;
+
+  &:not([style*="max-height: 0"]) {
+    opacity: 1;
+  }
+}
+
+.accordion__item {
+  .h4 {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5em 0;
+    transition: var(--transition);
+    margin-bottom: 0;
+
+    &::after {
+      content: "";
+      background: url("/assets/svgs/plus.svg") center center no-repeat;
+      width: 0.65384em;
+      height: 0.65384em;
+      transition: var(--transition);
+    }
+    &.active {
+      &::after {
+        transform: rotate(45deg);
+      }
+    }
+  }
+
+  &:not(:last-child) {
+    border-bottom: 1px solid #bebebe;
+    padding-bottom: 0.5625em; /* 9px ÷ 16px = 0.5625em */
+    margin-bottom: 1.6875em; /* 27px ÷ 16px = 1.6875em */
+  }
+}
+
+.img-wrapper {
+  position: relative;
+  height: 0;
+  overflow: hidden;
+  padding-bottom: 115.06849%;
+}

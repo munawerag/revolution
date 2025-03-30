@@ -1,0 +1,17 @@
+
+@import "../../../styles/abstract/variable";
+
+
+.main-wrapper {
+  margin-top: 5.625em;
+  @media #{$ipad}  {
+      margin-top: 2em;
+  }
+}
+
+
+.custom-row {
+    @media #{$ipad} {
+        row-gap: 2em;
+    }
+}
