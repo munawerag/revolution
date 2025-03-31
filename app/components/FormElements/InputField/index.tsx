@@ -12,7 +12,7 @@ const InputField = (props: any) => {
               value={value}
               type={props.type}
               placeholder={props.placeholder}
-              className={`input`}
+              className={`c_form-field__control`}
               onChange={(e) => {
                 onChange(e)
                 props.onChange && props.onChange(e)

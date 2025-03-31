@@ -13,7 +13,7 @@ const TextareaField = (props: any) => {
             rows={props.rows}
             value={value}
             placeholder={props.placeholder}
-            className={`input textArea`}
+            className={`c_form-field__control`}
             onChange={(e) => {
               onChange(e);
               props.onChange && props.onChange(e);

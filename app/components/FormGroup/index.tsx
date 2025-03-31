@@ -10,9 +10,8 @@ const FormGroup = (props: any) => {
   return (
     <>
       {item.type == "input" && (
-        <div
-          className={`form-group ${errors[`${item.name}`] ? "border-red" : ""}`}
-        >
+        <div className={`c_form-field`}>
+          <label>{item?.label}</label>          
           <InputField
             name={item.name}
             control={control}
@@ -27,11 +26,7 @@ const FormGroup = (props: any) => {
         </div>
       )}
       {item.type == "select" && (
-        <div
-          className={`form-group ${
-            errors[`${item.name}`] ? "border-red" : ""
-          } `}
-        >
+        <div className={`c_form-field `}>
           <SelectField
             name={item.name}
             control={control}
@@ -52,11 +47,7 @@ const FormGroup = (props: any) => {
         </div>
       )}
       {item.type == "textarea" && (
-        <div
-          className={`form-group ${
-            errors[`${item.name}`] ? "border-red" : ""
-          } ${item.exclass}`}
-        >
+        <div className={`c_form-field ${item.exclass}`}>
           <TextareaField
             rows={item.rows}
             name={item.name}
