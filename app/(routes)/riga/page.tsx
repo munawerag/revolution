@@ -12,8 +12,8 @@ export default function Page() {
           desc={rigaData.sectionHeading.desc}
           cardData={rigaData.data}
         />
-        <Amenities/>
         <BeautyRiga/>
+        <Amenities/>
     </main>
   )
 }

@@ -44,6 +44,9 @@
     font-size: 1.125em;
     display: block;
     margin-bottom: 1em;
+    @media #{$mineTab} {
+      margin-bottom: 0.5em;
+    }
   }
 
   .anchor {
