@@ -13,30 +13,19 @@ import SwiperNavButtons from "../../Buttons/SwiperNavButtons";
 import Link from "next/link";
 import SvgComp from "../../common/SvgComp";
 
-const data = [
-  {
-    title: "Lorem ipsum dolor",
-    img: "/assets/images/project-detail/amenities-1.jpg",
-    ctaLink: "#",
-  },
-  {
-    title: "Lorem ipsum",
-    img: "/assets/images/project-detail/amenities-2.jpg",
-    ctaLink: "#",
-  },
-  {
-    title: "Lorem ipsum dolor",
-    img: "/assets/images/project-detail/amenities-3.jpg",
-    ctaLink: "#",
-  },
-  // {
-  //   title: "Lorem Ipsum Dolor",
-  //   img: "/assets/images/project-detail/amenities-4.jpg",
-  //   ctaLink: "#",
-  // },
-];
+interface AmenityItem {
+  title: string;
+  img: string;
+  ctaLink: string;
+}
 
-const Amenities = () => {
+interface AmenitiesProps {
+  title?: string;
+  description?: string;
+  items?: AmenityItem[];
+}
+
+const Amenities = ({ title = "", description, items = [] }: AmenitiesProps) => {
   const [prevEl, setPrevEl] = useState<HTMLElement | null>(null);
   const [nextEl, setNextEl] = useState<HTMLElement | null>(null);
   return (
@@ -44,10 +33,9 @@ const Amenities = () => {
       <div className={`${style.amenitiesTitleWrapper}`} id="amenities">
         <div className={style.amenitiesTitle}>
           <Heading
-            // title="Amenities"
-            title2="Amenities"
-            desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "
-            hasDesc={true}
+            title2={title}
+            desc={description}
+            hasDesc={!!description}
           />
         </div>
       </div>
@@ -71,33 +59,26 @@ const Amenities = () => {
             },
           }}
         >
-          {data?.map((item: any, index: number) => (
+          {items?.map((item: AmenityItem, index: number) => (
             <SwiperSlide className={`${style.amenities__slide}`} key={index}>
               <div className={style.card}>
                 <div className={style.imgWrapper}>
                   <Image
-                    src={item?.img}
-                    // width={887}
-                    // height={680}
+                    src={item.img}
                     fill
                     alt="img"
                     className="img-hack"
                   />
                 </div>
                 <div className={style.textWrapper}>
-                  <h4 className="mb-0">{item?.title}</h4>
+                  <h4 className="mb-0">{item.title}</h4>
                 </div>
                 <Link
-                  href={item?.ctaLink}
+                  href={item.ctaLink}
                   target="_blank"
                   className="fullCoverAnchor"
                 ></Link>
               </div>
-              {/* <div className={style.virtual}>
-                <Link href={"#1"}>
-                  <SvgComp src="/assets/svgs/virtual.svg" />
-                </Link>
-              </div> */}
             </SwiperSlide>
           ))}
         </Swiper>

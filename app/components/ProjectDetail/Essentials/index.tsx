@@ -11,32 +11,36 @@ import Image from "next/image";
 import SwiperNavButtons from "../../Buttons/SwiperNavButtons";
 import Heading from "../../common/Heading";
 
-const data = [
-  {
-    title: "Lorem ipsum dolor",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore. quat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.",
-    img: "/assets/images/project-detail/essential-1.jpg",
-  },
-  {
-    title: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore. quat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.",
-    img: "/assets/images/project-detail/essential-2.jpg",
-  },
-];
+interface EssentialItem {
+  title: string;
+  desc: string;
+  img: string;
+}
 
-const Essentials = () => {
+interface EssentialsProps {
+  title?: string;
+  description?: string;
+  items?: EssentialItem[];
+}
+
+
+
+const Essentials = ({ title = "", description, items = [] }: EssentialsProps) => {
   const [prevEl, setPrevEl] = useState<HTMLElement | null>(null);
   const [nextEl, setNextEl] = useState<HTMLElement | null>(null);
   return (
     <>
-      <div className={style.essentialsTitleWrapper}>
-        <div className={style.essentialsTitle}>
-          <Heading
-            title2="Refined living essentials"
-            desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "
-          />
+      {(title || description) && (
+        <div className={style.essentialsTitleWrapper}>
+          <div className={style.essentialsTitle}>
+            <Heading
+              title2={title}
+              desc={description}
+              hasDesc={!!description}
+            />
+          </div>
         </div>
-      </div>
+      )}
       <div className={style.essentialsSlider}>
         <Swiper
           slidesPerView={"auto"}
@@ -52,12 +56,12 @@ const Essentials = () => {
           }}
           className="essentials-slider"
         >
-          {data?.map((item: any, index: number) => (
+          {items && items.length > 0 && items.map((item: EssentialItem, index: number) => (
             <SwiperSlide className={style.essentials__slide} key={index}>
               <div className={style.card}>
                 <div className={style.imgWrapper}>
                   <Image
-                    src={item?.img}
+                    src={item.img}
                     width={600}
                     height={465}
                     alt="img"
@@ -65,10 +69,8 @@ const Essentials = () => {
                   />
                 </div>
                 <div className={style.textWrapper}>
-                  <h4 className={`${style.title} line-clamp-1`}>
-                    {item?.title}
-                  </h4>
-                  <p className={`fw-400 line-clamp-6`}>{item?.desc}</p>
+                  {item.title && <h4 className={`${style.title} line-clamp-1`}>{item.title}</h4>}
+                  {item.desc && <p className={`fw-400 line-clamp-6`}>{item.desc}</p>}
                 </div>
               </div>
             </SwiperSlide>

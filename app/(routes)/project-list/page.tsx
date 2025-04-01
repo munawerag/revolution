@@ -2,21 +2,26 @@ import SectionHeading from "@/app/components/common/SectionHeading";
 import OurUnique from "@/app/components/ProjectListing/OurUnique";
 import ProjectsList from "@/app/components/ProjectListing/ProjectsList";
 import ProjectVideo from "@/app/components/ProjectListing/ProjectVideo";
+import projectListData from "../../data/project-list.json";
 
-const ProjectList = () => {
+const Page = () => {
   return (
     <>
       <SectionHeading
-        subTitle="OUR LANDMARKS"
-        title="Completed Projects"
-        desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam."
-        isCenter={true}
+        subTitle={projectListData?.sectionHeading?.subTitle}
+        title={projectListData?.sectionHeading?.title}
+        desc={projectListData?.sectionHeading?.desc}
+        isCenter={projectListData?.sectionHeading?.isCenter}
       />
-      <ProjectVideo />
-      <ProjectsList />
-      <OurUnique />
+      <ProjectVideo videoSrc={projectListData?.projectVideo?.videoSrc} />
+      <ProjectsList projects={projectListData?.projects} />
+      <OurUnique
+        content={projectListData?.unique?.content}
+        image={projectListData?.unique?.image}
+        link={projectListData?.unique?.link}
+      />
     </>
   );
 };
 
-export default ProjectList;
+export default Page;
