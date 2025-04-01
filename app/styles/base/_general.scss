@@ -52,6 +52,11 @@
   overflow: hidden;
 }
 
+.flex-reverse {
+  flex-direction: row-reverse;
+}
+
+
 .justify-between {
   justify-content: space-between;
 }

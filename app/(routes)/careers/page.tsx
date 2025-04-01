@@ -10,7 +10,7 @@ export default function Page() {
         subTitle={careersData?.sectionHeading?.subTitle}
         title={careersData?.sectionHeading?.title}
         desc={careersData?.sectionHeading?.desc}
-        isCenter={careersData?.sectionHeading?.isCenter}
+        isCenter={true}
       />
       <InnerBanner 
         desktopImage={careersData?.innerBanner?.desktopImage}

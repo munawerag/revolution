@@ -1,0 +1,38 @@
+
+@import "../../../styles/abstract/variable";
+
+
+
+.main-wrapper {
+    .custom-row {
+        &:nth-child(odd) {
+            .text-content {
+                @media #{$desktop} {
+                    margin-left: 9.375em;
+                }
+            }
+        }
+        
+        &:nth-child(even) {
+            flex-direction: row-reverse;
+            justify-content: space-between;
+        }
+        
+        &:not(:last-child) {
+            margin-bottom: 2em;
+            @media #{$desktop} {
+                margin-bottom: 7.5em;
+            }
+        }
+    }
+}
+
+.img-wrapper {
+    position: relative;
+    height: 0;
+    padding-bottom: 104.36781%;
+    overflow: hidden;
+    @media #{$mineTab} {
+        margin-bottom: 2em;
+    }
+}

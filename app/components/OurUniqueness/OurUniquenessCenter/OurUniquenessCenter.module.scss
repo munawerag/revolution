@@ -1,0 +1,10 @@
+@import "../../../styles/abstract/variable";
+
+.center-description {
+  max-width: 58.125em;
+  margin: 0 auto 2.875em;
+  text-align: center;
+  @media #{$desktop} {
+    margin: 0 auto 6.875em;
+  }
+}

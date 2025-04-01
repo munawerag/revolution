@@ -1,15 +1,22 @@
-
-
 @import "../../../styles/abstract/variable";
 
-
 .img-wrapper {
-    position: relative;
-    height: 0;
-    overflow: hidden;
-    padding-bottom: 88.275862%;
-    @media #{$mineTab} {
-        margin-bottom: 2em;
-    }
+  position: relative;
+  height: 0;
+  overflow: hidden;
+  padding-bottom: 88.275862%;
+  @media #{$mineTab} {
+    margin-bottom: 2em;
+  }
+}
 
+.text-content {
+  @media #{$desktop} {
+    padding-left: 4.125em;
+  }
+}
+
+
+.text-content-reverse {
+    padding-left: 0;
 }

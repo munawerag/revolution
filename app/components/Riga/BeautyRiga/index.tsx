@@ -1,15 +1,21 @@
 import Image from "next/image";
 import style from "./BeautyRiga.module.scss";
 
-export default function BeautyRiga() {
+interface BeautyRigaProps {
+  image: string;
+  content: string;
+  reverseLayout?: boolean;
+}
+
+export default function BeautyRiga({ image, content, reverseLayout }: BeautyRigaProps) {
   return (
-    <section className="section gray-color-bg">
+    <section className={`${reverseLayout ? "gray2-color-bg" : "gray-color-bg"} section`}>
       <div className="container-s">
-        <div className="custom-row">
+        <div className={` ${reverseLayout ? "flex-reverse justify-between" : ""}  custom-row`}>
           <div className="col_12 col_md_6">
             <div className={`${style["img-wrapper"]}`}>
               <Image
-                src="/assets/images/riga/beauty-riga.jpg"
+                src={image}
                 alt="riga"
                 fill
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
@@ -17,17 +23,13 @@ export default function BeautyRiga() {
             </div>
           </div>
           <div className="col_12 col_md_5">
-            <div className="text-content">
-              <h3>Architectural beauty of Riga</h3>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-              </p>
-              <p>
-                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proiden
-              </p>
+            <div
+              className={`
+              ${style["text-content"]}
+              ${reverseLayout ? style["text-content-reverse"] : ""}
+               `}
+            >
+              {content && <div dangerouslySetInnerHTML={{ __html: content }} />}
             </div>
           </div>
         </div>
