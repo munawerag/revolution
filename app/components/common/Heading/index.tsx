@@ -11,10 +11,8 @@ type headingProps = {
 const Heading = ({ title, title2, desc, hasDesc }: headingProps) => {
   return (
     <div className={style.titleWrapper}>
-      <h5 className={style.title}>{title}</h5>
-      <h2 className={`${style.title2} ${hasDesc ? style.active : ""}`}>
-        {title2}
-      </h2>
+      {title && <h5 className={style.title}>{title}</h5>}
+      {title2 && <h2 className={`${style.title2} ${hasDesc && style.active}`}>{title2}</h2>}
       {desc && <p className={style.para}>{desc}</p>}
     </div>
   );
