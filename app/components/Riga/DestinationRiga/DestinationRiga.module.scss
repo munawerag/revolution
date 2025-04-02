@@ -1,0 +1,49 @@
+@import "../../../styles/abstract/variable";
+
+.main-grid-wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 7.5em 3.125em;
+  @media #{$ipad} {
+    gap: 1em 2em;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media #{$mineTab} {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .item {
+    &:nth-child(4n) {
+      @media #{$ipadL} {
+        grid-column: span 3;
+      }
+    }
+  }
+}
+
+
+
+
+.data-loading {
+    font-size: 1.125em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.839em;
+    color: var(--color-primarycol);
+    margin-top: 5.556em;
+  }
+  
+  .loading-icon {
+    animation: spin 1s linear infinite;
+  }
+  
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }

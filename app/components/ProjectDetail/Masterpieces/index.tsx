@@ -9,23 +9,29 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import Image from "next/image";
 import SwiperNavButtons from "../../Buttons/SwiperNavButtons";
-const Masterpieces = () => {
+
+interface SlideItem {
+  imagePath: string;
+  title: string;
+}
+
+interface MasterpiecesProps {
+  subtitle?: string;
+  title?: string;
+  description?: string;
+  slides?: SlideItem[];
+}
+
+const Masterpieces = ({ subtitle, title, description, slides = [] }: MasterpiecesProps) => {
   const [prevEl, setPrevEl] = useState<HTMLElement | null>(null);
   const [nextEl, setNextEl] = useState<HTMLElement | null>(null);
   return (
     <>
       <div className={`${style.residenciesTitleWrapper}`} id="residencies">
         <div className={`${style.residenciesTitle}`}>
-          <h5 className="primary-col fw-500 p">MASTERPIECES</h5>
-          <h3 className="h3">
-            Picture yourself in a perfect place in which the infinities of time
-            and space
-          </h3>
-          <p className="fw-400 mb-0">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua the enim
-            ad minim veniam, quis nostrud exercitation ullamco
-          </p>
+          {subtitle && <h5 className="primary-col fw-500 p">{subtitle}</h5>}
+          {title && <h3 className="h3">{title}</h3>}
+          {description && <p className="fw-400 mb-0">{description}</p>}
         </div>
       </div>
       <div className={`${style.residenciesSlider}`}>
@@ -53,41 +59,19 @@ const Masterpieces = () => {
             },
           }}
         >
-          <SwiperSlide className={`${style.residenciesSlider__slide}`}>
-            <Image
-              src={"/assets/images/project-detail/masterpiece-1.jpg"}
-              fill
-              alt="img"
-              className="img-hack"
-            />
-            <div className={style.textWrapper}>
-              <h2 className={`fw-300 ${style.title}`}>Lorem et dolore ma</h2>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide className={`${style.residenciesSlider__slide}`}>
-            <Image
-              src={"/assets/images/project-detail/masterpiece-2.jpg"}
-              fill
-              alt="img"
-              className="img-hack"
-            />
-            <div className={style.textWrapper}>
-              <h2 className={`fw-300 ${style.title}`}>
-                Consectetur Adipiscing
-              </h2>
-            </div>
-          </SwiperSlide>
-          {/* <SwiperSlide className={`${style.residenciesSlider__slide}`}>
-            <Image
-              src={"/assets/images/home/residencies-3.jpg"}
-              fill
-              alt="img"
-              className="img-hack"
-            />
-            <div className={style.textWrapper}>
-              <h2 className={`fw-300 ${style.title}`}>Lorem et dolore ma</h2>
-            </div>
-          </SwiperSlide> */}
+          {slides.map((slide, index) => (
+            <SwiperSlide className={`${style.residenciesSlider__slide}`} key={index}>
+              <Image
+                src={slide.imagePath}
+                fill
+                alt="img"
+                className="img-hack"
+              />
+              <div className={style.textWrapper}>
+                <h2 className={`fw-300 ${style.title}`}>{slide.title}</h2>
+              </div>
+            </SwiperSlide>
+          ))}
         </Swiper>
         <div className={`${style.residenciesSlider__nav}`}>
           <SwiperNavButtons nextFunc={setNextEl} prevFunc={setPrevEl} />

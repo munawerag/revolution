@@ -6,10 +6,10 @@
   background-color: var(--color-whitecol);
 
   @media #{$ipadpro} {
-    padding: 5em 0;
+    padding: 3em 0;
   }
   @media #{$mob} {
-    padding: 3em 0;
+    padding: 2em 0;
   }
 }
 

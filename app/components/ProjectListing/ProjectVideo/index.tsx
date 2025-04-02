@@ -1,15 +1,18 @@
-import React from "react";
 import style from "./index.module.scss";
 
-const ProjectVideo = () => {
+interface ProjectVideoProps {
+  videoSrc: string;
+}
+
+const ProjectVideo = ({ videoSrc }: ProjectVideoProps) => {
   return (
     <>
       <div className={style.projectVideo}>
         <div className={style.projectVideo__video}>
-          <video
-            src="/assets/videos/banner.mp4"
-            autoPlay
-            muted
+          <video 
+            src={videoSrc} 
+            autoPlay 
+            muted 
             loop={true}
           ></video>
         </div>

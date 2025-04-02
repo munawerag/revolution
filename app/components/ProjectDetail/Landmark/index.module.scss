@@ -3,6 +3,9 @@
 .wrapper {
   padding: 6.6875em 4.4375em 4.4375em 4.4375em;
   background-color: var(--color-whitecol);
+  @media #{$ipadpro} {
+    padding: 3em 2em;
+  }
 }
 
 .projectWrapper {
@@ -56,4 +59,7 @@
 
 .titleWrapper {
   margin-bottom: 6.6875em;
+  @media #{$ipadpro} {
+    margin-bottom: 2em;
+  }
 }

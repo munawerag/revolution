@@ -1,0 +1,70 @@
+{
+    "sectionHeading": {
+        "subTitle": "Our Destinations",
+        "title": "Riga",
+        "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam."
+    },
+    "title": "The world of R.Evolution",
+    "data": [
+        {
+            "img": "/assets/images/riga/riga-1.jpg",
+            "subTitle": "Residences",
+            "title": "Uncover remarkable R.Evolution residences",
+            "ctaLink": "/project-list/22-palms",
+            "ctaTitle": "Discover More",
+            "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua the enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+        },
+        {
+            "img": "/assets/images/riga/riga-2.jpg",
+            "subTitle": "Newest Urban Sancuatry",
+            "title": "Lorem ipsum dolor sit amet",
+            "ctaLink": "/project-list/eywa-tree-of-life",
+            "ctaTitle": "Discover More",
+            "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua the enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+        },
+        {
+            "img": "/assets/images/riga/riga-3.jpg",
+            "subTitle": "Newest Urban Sancuatry",
+            "title": "Lorem ipsum dolor sit amet",
+            "ctaLink": "/project-list/eywa-tree-of-life",
+            "ctaTitle": "Discover More",
+            "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua the enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+        },
+        {
+            "img": "/assets/images/riga/riga-4.jpg",
+            "subTitle": "Residences",
+            "title": "Uncover remarkable R.Evolution residences",
+            "ctaLink": "/project-list/22-palms",
+            "ctaTitle": "Discover More",
+            "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua the enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+        },
+        {
+            "img": "/assets/images/riga/riga-5.jpg",
+            "subTitle": "Newest Urban Sancuatry",
+            "title": "Lorem ipsum dolor sit amet",
+            "ctaLink": "/project-list/eywa-tree-of-life",
+            "ctaTitle": "Discover More",
+            "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua the enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+        },
+        {
+            "img": "/assets/images/riga/riga-6.jpg",
+            "subTitle": "Newest Urban Sancuatry",
+            "title": "Lorem ipsum dolor sit amet",
+            "ctaLink": "/project-list/eywa-tree-of-life",
+            "ctaTitle": "Discover More",
+            "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua the enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+        },
+        {
+            "img": "/assets/images/riga/riga-7.jpg",
+            "subTitle": "Newest Urban Sancuatry",
+            "title": "Lorem ipsum dolor sit amet",
+            "ctaLink": "/project-list/eywa-tree-of-life",
+            "ctaTitle": "Discover More",
+            "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua the enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+        }
+    ],
+    "beautyRiga": {
+        "image": "/assets/images/riga/beauty-riga.jpg",
+        "content": "<h3>Architectural beauty of Riga</h3><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p><p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proiden</p>"
+    }
+}

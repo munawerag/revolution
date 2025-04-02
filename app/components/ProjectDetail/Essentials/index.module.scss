@@ -4,11 +4,11 @@
   display: block;
   padding: 5.5em 0 7.5em 0;
   background-color: var(--color-graycol2);
-  @media #{$ipad} {
-    padding: 5em 0;
+  @media #{$ipadpro} {
+    padding: 3em 0;
   }
   @media #{$mob} {
-    padding: 5em 0 3em 0;
+    padding: 2em 0;
   }
 }
 

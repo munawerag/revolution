@@ -3,23 +3,45 @@ import TitleTwo from "./TitleTwo";
 import style from "./BannerHero.module.scss";
 import BannerLogo from "./BannerLogo";
 
-const BannerHero = () => {
+interface BannerHeroData {
+  video?: {
+    src?: string;
+  };
+  description?: {
+    title?: string;
+    subtitle?: string;
+  };
+}
+
+interface BannerHeroProps {
+  bannerData?: BannerHeroData;
+  logoData?: any;
+  titleOneData?: any;
+  titleTwoData?: any;
+}
+
+const BannerHero = ({ bannerData, logoData, titleOneData, titleTwoData }: BannerHeroProps) => {
   return (
     <>
       <div className={style.banner}>
         <div className={style.banner__video}>
-          <video src="/assets/videos/22palm-office-video.mp4" autoPlay muted loop={true}></video>
+          <video 
+            src={bannerData?.video?.src || ""} 
+            autoPlay 
+            muted 
+            loop={true}
+          ></video>
         </div>
         <div className={style.banner__descripWrapper}>
           <div className={style.banner__descrip}>
-            <h5 className="h5">22PALMS</h5>
-            <h2 className="h2">The place for pioneering tomorrow</h2>
+            <h5 className="h5">{bannerData?.description?.title || ""}</h5>
+            <h2 className="h2">{bannerData?.description?.subtitle || ""}</h2>
           </div>
         </div>
       </div>
-      <BannerLogo />
-      <TitleOne />
-      <TitleTwo />
+      <BannerLogo logoData={logoData} />
+      <TitleOne titleOneData={titleOneData} />
+      <TitleTwo titleTwoData={titleTwoData} />
     </>
   );
 };

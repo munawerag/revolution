@@ -1,11 +1,11 @@
 import ProjectDetails from "@/app/components/ProjectDetail";
 
-const ProjectDetailPage = () => {
+const Page = () => {
   return (
-    <div>
+    <main>
       <ProjectDetails />
-    </div>
+    </main>
   );
 };
 
-export default ProjectDetailPage;
+export default Page;

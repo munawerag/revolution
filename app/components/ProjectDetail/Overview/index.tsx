@@ -1,41 +1,29 @@
 "use client";
 import Image from "next/image";
-import Link from "next/link";
 import style from "./index.module.scss";
 
-const Overview = () => {
+interface OverviewProps {
+  subtitle?: string;
+  title?: string;
+  description?: string;
+  imagePath?: string;
+}
+
+const Overview = ({ subtitle, title, description, imagePath }: OverviewProps) => {
   return (
     <>
       <div className={`${style.realCollectionTitleWrapper}`} id="treeOfLife">
         <div className={`${style.realCollectionTitle}`}>
-          <h5 className={style.subtitle}>OVERVIEW</h5>
-          <h3 className={style.title}>Home of science and technology</h3>
-          <p className="fw-400">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua the enim
-            ad minim veniam, quis nostrud exercitation ullamco
-          </p>
+          {subtitle && <h5 className={style.subtitle}>{subtitle}</h5>}
+          {title && <h3 className={style.title}>{title}</h3>}
+          {description && <p className="fw-400">{description}</p>}
         </div>
       </div>
-      <div className={`${style.realCollection__img} `}>
-        <Image
-          src={"/assets/images/project-detail/overview.jpg"}
-          fill
-          alt="img"
-          className="img-hack"
-        />
-        {/* <Link
-          href={"https://storage.net-fs.com/hosting/6316408/182/"}
-          target="_blank"
-        >
-          <Image
-            src={"/assets/images/second-sec-link.png"}
-            width={57}
-            height={57}
-            alt="img"
-          />
-        </Link> */}
-      </div>
+      {imagePath && (
+        <div className={`${style.realCollection__img} `}>
+          <Image src={imagePath} fill alt="img" className="img-hack" />
+        </div>
+      )}
     </>
   );
 };

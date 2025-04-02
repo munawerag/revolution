@@ -1,0 +1,64 @@
+{
+  "vacancies": [
+    {
+      "id": 1,
+      "title": "Senior Project Manager",
+      "location": "Dubai, UAE",
+      "categories": ["Human Resources"]
+    },
+    {
+      "id": 2,
+      "title": "Software Developer",
+      "location": "London, UK",
+      "categories": ["IT", "Development"]
+    },
+    {
+      "id": 3,
+      "title": "Marketing Specialist",
+      "location": "New York, USA",
+      "categories": ["Marketing"]
+    },
+    {
+      "id": 4,
+      "title": "UX Designer",
+      "location": "Berlin, Germany",
+      "categories": ["Design"]
+    },
+    {
+      "id": 5,
+      "title": "Customer Support Specialist",
+      "location": "Singapore",
+      "categories": ["Customer Service"]
+    },
+    {
+      "id": 6,
+      "title": "Financial Analyst",
+      "location": "Toronto, Canada",
+      "categories": ["Finance"]
+    },
+    {
+      "id": 7,
+      "title": "Sales Representative",
+      "location": "Sydney, Australia",
+      "categories": ["Sales"]
+    },
+    {
+      "id": 8,
+      "title": "Content Writer",
+      "location": "Barcelona, Spain",
+      "categories": ["Content", "Marketing"]
+    },
+    {
+      "id": 9,
+      "title": "Data Scientist",
+      "location": "Tokyo, Japan",
+      "categories": ["Data Science", "IT"]
+    },
+    {
+      "id": 10,
+      "title": "Operations Manager",
+      "location": "Paris, France",
+      "categories": ["Operations"]
+    }
+  ]
+}

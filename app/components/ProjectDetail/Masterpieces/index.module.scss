@@ -5,7 +5,10 @@
   padding: 7.125em 0 7.5em 0;
   background-color: #fff;
   @media #{$ipadpro} {
-    padding: 5em 0;
+    padding: 3em 0;
+  }
+  @media #{$mob} {
+    padding: 2em 0;
   }
 }
 
@@ -39,11 +42,7 @@
     }
     &:before {
       content: "";
-      background: linear-gradient(
-        180deg,
-        rgba(0, 0, 0, 0) 64.08%,
-        #000000 102.21%
-      );
+      background: linear-gradient(180deg, rgba(0, 0, 0, 0) 64.08%, #000000 102.21%);
       position: absolute;
       left: 0;
       top: 0;
@@ -62,18 +61,26 @@
       color: var(--color-whitecol);
       display: flex;
       align-items: flex-end;
-      h2 {
-        margin-bottom: 0;
-      }
       @media #{$ipad} {
         left: 3em;
         bottom: 50%;
         transform: translateY(50%);
       }
       @media #{$mob} {
-        left: 2em;
         bottom: 50%;
         transform: translateY(50%);
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        justify-content: center;
+        text-align: center;
+      }
+      h2 {
+        margin-bottom: 0;
+        @media #{$ipad} {
+          background-color: rgba($color: #000000, $alpha: 0.4);
+          padding: 0.1em 0.2em;
+        }
       }
     }
   }

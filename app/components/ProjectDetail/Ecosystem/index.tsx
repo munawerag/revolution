@@ -12,21 +12,37 @@ import SwiperNavButtons from "../../Buttons/SwiperNavButtons";
 import Link from "next/link";
 import SvgComp from "../../common/SvgComp";
 import Heading from "../../common/Heading";
-const Ecosystem = () => {
+
+interface EcosystemSlide {
+  imagePath: string;
+}
+
+interface EcosystemProps {
+  title?: string;
+  description?: string;
+  slides?: EcosystemSlide[];
+}
+
+const Ecosystem = ({ title = "", description, slides = [] }: EcosystemProps) => {
   const [prevEl, setPrevEl] = useState<HTMLElement | null>(null);
   const [nextEl, setNextEl] = useState<HTMLElement | null>(null);
+
+  // Early return if no slides
+  if (!slides.length) {
+    return null;
+  }
+
   return (
     <>
-      <div className={`${style.residenciesTitleWrapper}`} id="residencies">
-        <div className={`${style.residenciesTitle}`}>
-          <Heading
-            title2="Ecosystem"
-            desc="Our objective is to make Villa Milia a place, a personal space where
-            you can be truly happy, unaffected by the flow of time, where you
-            can contemplate the circle of life."
-          />
+      {/* Conditionally render title section */}
+      {title && (
+        <div className={`${style.residenciesTitleWrapper}`} id="residencies">
+          <div className={`${style.residenciesTitle}`}>
+            <Heading title2={title} desc={description} hasDesc={!!description} />
+          </div>
         </div>
-      </div>
+      )}
+
       <div className={`${style.residenciesSlider}`}>
         <Swiper
           slidesPerView={1}
@@ -52,46 +68,15 @@ const Ecosystem = () => {
             },
           }}
         >
-          <SwiperSlide className={`${style.residenciesSlider__slide}`}>
-            <Image
-              src={"/assets/images/project-detail/ecosystem-1.jpg"}
-              fill
-              alt="img"
-              className="img-hack"
-            />
-            {/* <div className={style.virtual}>
-              <Link href={"#1"}>
-                <SvgComp src="/assets/svgs/virtual.svg" />
-              </Link>
-            </div> */}
-          </SwiperSlide>
-          <SwiperSlide className={`${style.residenciesSlider__slide}`}>
-            <Image
-              src={"/assets/images/project-detail/ecosystem-2.jpg"}
-              fill
-              alt="img"
-              className="img-hack"
-            />
-            {/* <div className={style.virtual}>
-              <Link href={"#1"}>
-                <SvgComp src="/assets/svgs/virtual.svg" />
-              </Link>
-            </div> */}
-          </SwiperSlide>
-          <SwiperSlide className={`${style.residenciesSlider__slide}`}>
-            <Image
-              src={"/assets/images/home/residencies-3.jpg"}
-              fill
-              alt="img"
-              className="img-hack"
-            />
-            {/* <div className={style.virtual}>
-              <Link href={"#1"}>
-                <SvgComp src="/assets/svgs/virtual.svg" />
-              </Link>
-            </div> */}
-          </SwiperSlide>
+          {slides.map((slide, index) => (
+            <SwiperSlide className={`${style.residenciesSlider__slide}`} key={index}>
+              {slide?.imagePath && (
+                <Image src={slide?.imagePath} fill alt="img" className="img-hack" />
+              )}
+            </SwiperSlide>
+          ))}
         </Swiper>
+
         <div className={`${style.residenciesSlider__nav}`}>
           <SwiperNavButtons nextFunc={setNextEl} prevFunc={setPrevEl} />
         </div>

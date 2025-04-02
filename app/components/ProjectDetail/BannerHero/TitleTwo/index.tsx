@@ -2,11 +2,25 @@
 import { useInView } from "react-intersection-observer";
 import style from "../BannerHero.module.scss";
 
-const TitleTwo = () => {
+interface TitleTwoData {
+  items?: {
+    title?: string;
+    subtitle?: string;
+  }[];
+}
+
+interface TitleTwoProps {
+  titleTwoData?: TitleTwoData;
+}
+
+const TitleTwo = ({ titleTwoData }: TitleTwoProps) => {
   const { ref, inView } = useInView({
     threshold: 0.5,
     triggerOnce: false,
   });
+
+  const items = titleTwoData?.items || [];
+
   return (
     <>
       <div className={`${style.banner__titleTwoSpace}`} ref={ref}></div>
@@ -16,22 +30,18 @@ const TitleTwo = () => {
         }`}
       >
         <div className={style.listItemsWrapper}>
-          <div className={style.listItem}>
-            <h5 className={`${style.title1} h1 fw-300`}>7010 sq. m.</h5>
-            <h2 className={`${style.title2} mb-0`}>Offices</h2>
-          </div>
-          <div className={style.listItem}>
-            <h5 className={`${style.title1} h1 fw-300`}>1001 sq. m.</h5>
-            <h2 className={`${style.title2} mb-0`}>Terrace</h2>
-          </div>
-          <div className={style.listItem}>
-            <h5 className={`${style.title1} h1 fw-300`}>58 Lots</h5>
-            <h2 className={`${style.title2} mb-0`}>Parking</h2>
-          </div>
+          {items.map((item, index) => (
+            <div className={style.listItem} key={index}>
+              <h5 className={`${style.title1} h1 fw-300`}>{item?.title || ""}</h5>
+              <h2 className={`${style.title2} mb-0`}>{item?.subtitle || ""}</h2>
+            </div>
+          ))}
         </div>
       </div>
     </>
   );
 };
+
+
 
 export default TitleTwo;

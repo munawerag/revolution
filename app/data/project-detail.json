@@ -1,0 +1,131 @@
+{
+  "bannerHero": {
+    "video": {
+      "src": "/assets/videos/22palm-office-video.mp4"
+    },
+    "description": {
+      "title": "22PALMS",
+      "subtitle": "The place for pioneering tomorrow"
+    }
+  },
+  "bannerLogo": {
+    "logo": {
+      "src": "/assets/svgs/banner-logo.svg"
+    }
+  },
+  "titleOne": {
+    "logo": {
+      "src": "/assets/svgs/banner-logo.svg"
+    },
+    "title": "22Palms embodies sustainability by reimagining an existing industrial building",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua the enim ad minim veniam, quis nostrud exercitation ullamco"
+  },
+  "titleTwo": {
+    "items": [
+      {
+        "title": "7010 sq. m.",
+        "subtitle": "Offices"
+      },
+      {
+        "title": "1001 sq. m.",
+        "subtitle": "Terrace"
+      },
+      {
+        "title": "58 Lots",
+        "subtitle": "Parking"
+      }
+    ]
+  },
+  "overview": {
+    "subtitle": "OVERVIEW",
+    "title": "Home of science and technology",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua the enim ad minim veniam, quis nostrud exercitation ullamco",
+    "imagePath": "/assets/images/project-detail/overview.jpg"
+  },
+  "masterpieces": {
+    "subtitle": "MASTERPIECES",
+    "title": "Picture yourself in a perfect place in which the infinities of time and space",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua the enim ad minim veniam, quis nostrud exercitation ullamco",
+    "slides": [
+      {
+        "imagePath": "/assets/images/project-detail/masterpiece-1.jpg",
+        "title": "Lorem et dolore ma"
+      },
+      {
+        "imagePath": "/assets/images/project-detail/masterpiece-2.jpg",
+        "title": "Consectetur Adipiscing"
+      }
+    ]
+  },
+  "amenities": {
+    "title": "Amenities",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "items": [
+      {
+        "title": "Lorem ipsum dolor",
+        "img": "/assets/images/project-detail/amenities-1.jpg",
+        "ctaLink": "#"
+      },
+      {
+        "title": "Lorem ipsum",
+        "img": "/assets/images/project-detail/amenities-2.jpg",
+        "ctaLink": "#"
+      },
+      {
+        "title": "Lorem ipsum dolor",
+        "img": "/assets/images/project-detail/amenities-3.jpg",
+        "ctaLink": "#"
+      }
+    ]
+  },
+  "essentials": {
+    "title2": "Refined living essentials",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "items": [
+      {
+        "title": "Lorem ipsum dolor",
+        "desc": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore. quat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.</p>",
+        "img": "/assets/images/project-detail/essential-1.jpg"
+      },
+      {
+        "title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+        "desc": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore. quat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.</p>",
+        "img": "/assets/images/project-detail/essential-2.jpg"
+      }
+    ]
+  },
+  "ecosystem": {
+    "title": "Ecosystem",
+    "description": "Our objective is to make Villa Milia a place, a personal space where you can be truly happy, unaffected by the flow of time, where you can contemplate the circle of life.",
+    "slides": [
+      {
+        "imagePath": "/assets/images/project-detail/ecosystem-1.jpg"
+      },
+      {
+        "imagePath": "/assets/images/project-detail/ecosystem-2.jpg"
+      },
+      {
+        "imagePath": "/assets/images/home/residencies-3.jpg"
+      }
+    ]
+  },
+  "landmark": {
+    "title": "Discover our landmarks",
+    "projects": [
+      {
+        "img": "/assets/images/project-detail/landmark-1.jpg",
+        "title": "BAC DE RODA",
+        "ctaLink": "/project-list/bac-de-roda",
+        "ctaTitle": "Discover More",
+        "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua the enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut."
+      },
+      {
+        "img": "/assets/images/project-detail/landmark-2.jpg",
+        "title": "CHOCOLATE",
+        "ctaLink": "/project-list/bac-de-roda",
+        "ctaTitle": "Discover More",
+        "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua the enim."
+      }
+    ]
+  }
+}
