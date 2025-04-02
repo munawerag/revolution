@@ -39,7 +39,7 @@ const ProjectDetails = () => {
       />
       
       <Essentials
-        title={projectDetailData?.essentials?.title}
+        title2={projectDetailData?.essentials?.title2}
         description={projectDetailData?.essentials?.description}
         items={projectDetailData?.essentials?.items}
       />

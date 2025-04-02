@@ -4,6 +4,7 @@ import ourUniquenessData from "../../data/our-uniqueness.json";
 import OurUniquenessCenter from "@/app/components/OurUniqueness/OurUniquenessCenter";
 import BeautyRiga from "@/app/components/Riga/BeautyRiga";
 import OurUniquenessPrinciples from "@/app/components/OurUniqueness/OurUniquenessPrinciples";
+import Essentials from "@/app/components/ProjectDetail/Essentials";
 
 export default function Page() {
   return (
@@ -25,6 +26,12 @@ export default function Page() {
         reverseLayout={true}
       />
       <OurUniquenessPrinciples principles={ourUniquenessData?.principles} />
+
+      <Essentials
+        title={ourUniquenessData?.essentials?.title}
+        title2={ourUniquenessData?.essentials?.title2}
+        items={ourUniquenessData?.essentials?.items}
+      />
     </main>
   );
 }

@@ -19,22 +19,22 @@ interface EssentialItem {
 
 interface EssentialsProps {
   title?: string;
+  title2?: string;
   description?: string;
   items?: EssentialItem[];
 }
 
-
-
-const Essentials = ({ title = "", description, items = [] }: EssentialsProps) => {
+const Essentials = ({ title = "", title2 = "", description, items = [] }: EssentialsProps) => {
   const [prevEl, setPrevEl] = useState<HTMLElement | null>(null);
   const [nextEl, setNextEl] = useState<HTMLElement | null>(null);
   return (
     <>
-      {(title || description) && (
+      {(title2 || description) && (
         <div className={style.essentialsTitleWrapper}>
           <div className={style.essentialsTitle}>
             <Heading
-              title2={title}
+              title={title}
+              title2={title2}
               desc={description}
               hasDesc={!!description}
             />
@@ -70,7 +70,7 @@ const Essentials = ({ title = "", description, items = [] }: EssentialsProps) =>
                 </div>
                 <div className={style.textWrapper}>
                   {item.title && <h4 className={`${style.title} line-clamp-1`}>{item.title}</h4>}
-                  {item.desc && <p className={`fw-400 line-clamp-6`}>{item.desc}</p>}
+                  {item.desc && <div className={`fw-400`} dangerouslySetInnerHTML={{ __html: item.desc }}></div>}
                 </div>
               </div>
             </SwiperSlide>
