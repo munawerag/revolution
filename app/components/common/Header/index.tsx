@@ -39,11 +39,11 @@ const Header = () => {
 
   return (
     <>
-    <div className={`slide-menu ${menuActive ? "active" : ""}`}>
+      <div className={`slide-menu ${menuActive ? "active" : ""}`}>
         <MainMenu setMenuActive={setMenuActive} />
       </div>
       <div className={`menu-overlay ${menuActive ? "active" : ""}`}></div>
-      
+
       <header
         className={`header ${scrolled ? "sticky-header" : ""} 
         ${hasProjectList ? "detailMenu" : ""}`}
@@ -97,7 +97,6 @@ const Header = () => {
           </div>
         </div>
       </header>
-      
     </>
   );
 };

@@ -1,0 +1,56 @@
+@import "../../../styles/abstract/variable";
+
+.relevance-select-container {
+  position: relative;
+  min-width: 6.5625em;
+  padding-right: 1em;
+  .arrow-down {
+    position: absolute;
+    right: 0;
+    top: 43%;
+    width: 9px;
+    height: 9px;
+  }
+}
+
+.relevance-select {
+  .react-select__control {
+    border: 0;
+  }
+  .react-select__indicator {
+    display: none;
+  }
+  .react-select__indicator-separator {
+    background-color: transparent;
+  }
+}
+
+.vacancies-search-filter {
+  margin-top: 6em;
+  @media #{$mineTab} {
+    margin-top: 3em;
+  }
+  .react-select__value-container {
+    font-size: 1.125em;
+    font-weight: 300;
+  }
+
+  .c_form-field {
+    &--location {
+      .c_form-field__control {
+        background: url("/assets/svgs/filter-location.svg") left center / auto no-repeat;
+        padding-left: 1.3em;
+      }
+    }
+  }
+
+  .c_form-field__control {
+    font-size: 1.25em;
+    border: 0;
+    border-bottom: 1px solid var(--color-graycol);
+    padding-left: 0;
+    &::placeholder {
+      color: var(--color-primarycol);
+    }
+  }
+}

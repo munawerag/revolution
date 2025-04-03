@@ -1,8 +1,56 @@
 @import "../../../styles/abstract/variable";
 
+
+
+.vacancies-title {
+  padding: 15em 0 0;
+  @media #{$mineTab} {
+    padding: 10em 0 0;
+  }
+}
+
+
+.custom-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: 0 -1.5625em;
+
+  .col_12 {
+    flex: 1 1 auto;
+    width: auto;
+    padding: 0 1.5625em;
+    &:last-child {
+      flex: 0 0 auto;
+    }
+  }
+}
+
+.filter-dropdowns-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3em;
+  align-items: center;
+  margin-bottom: 7.0625em;
+  @media #{$mineTab} {
+    row-gap: 1em;
+    margin-bottom: 3.063em;
+    margin-top: 1em;
+  }
+}
+.filter-title {
+  font-size: 1.125em;
+  display: flex;
+  gap: 0.77777em;
+  font-weight: 300;
+}
+
 .results-row {
   display: flex;
   justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 1em;
+
   .sort-by {
     font-size: 1.125em;
     display: flex;

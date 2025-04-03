@@ -148,3 +148,66 @@ button {
     margin-right: -4.6875em;
   }
 }
+
+
+.text-editor {
+  p {
+    font-weight: 300;
+  }
+}
+
+
+/* Hide original checkbox but keep it accessible */
+.custom-checkbox {
+  font-size: 1.125em;
+  position: relative;
+  padding-left: 1.666666em;
+  cursor: pointer;
+  user-select: none;
+  
+  input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+    
+    &:checked ~ .checkmark {
+      background-color: var(--color-secondarycol);
+      border-color: var(--color-secondarycol);
+      
+      &:after {
+        display: block;
+      }
+    }
+    
+    &:focus ~ .checkmark {
+      box-shadow: 0 0 0 3px var(--color-graycol2);
+    }
+  }
+  
+  .checkmark {
+    position: absolute;
+    top: 2px;
+    left: 0;
+    height: 17px;
+    width: 17px;
+    background-color: transparent;
+    border: 2px solid var(--color-graycol);
+    border-radius: 0;
+    transition: all 0.2s ease;
+    
+    &:after {
+      content: "";
+      position: absolute;
+      display: none;
+      left: 55%;
+      top: 30%;
+      width: 5px;
+      height: 10px;
+      border: solid var(--color-whitecol);
+      border-width: 0 2px 2px 0;
+      transform: translate(-50%, -50%) rotate(45deg);
+    }
+  }
+}

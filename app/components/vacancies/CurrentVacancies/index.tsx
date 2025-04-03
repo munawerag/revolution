@@ -2,8 +2,15 @@
 
 import { useState } from "react";
 import FormButton from "../../Buttons/FormButton";
-import style from "./CurrentVacancies.module.scss";
 import Image from "next/image";
+import Select from "react-select";
+import style from "./CurrentVacancies.module.scss";
+import "./CurrentVacancies.scss";
+
+const options = [
+  { value: "en", label: "Most recent" },
+  { value: "ar", label: "Most relevant" },
+];
 
 interface Vacancy {
   id: number;
@@ -48,20 +55,152 @@ export default function CurrentVacancies({ vacancies }: CurrentVacanciesProps) {
   };
 
   return (
-    <section style={{ marginTop: "15em" }}>
+    <section>
       <div className="container">
+        <div className={`${style["vacancies-title"]}`}>
+          <h2 className="h2 text-center">Current Vacancies</h2>
+        </div>
+
+        <div className="vacancies-search-filter">
+          <div className={`${style["custom-row"]}`}>
+            <div className={`${style["col_12"]}`}>
+              <div className="c_form-field">
+                <input
+                  type="text"
+                  placeholder="Search keyword"
+                  className="c_form-field__control"
+                  value=""
+                />
+              </div>
+            </div>
+            <div className={`${style["col_12"]}`}>
+              <div className="c_form-field c_form-field--location">
+                <input
+                  type="text"
+                  placeholder="Search location"
+                  className="c_form-field__control"
+                  value=""
+                />
+              </div>
+            </div>
+            <div className={`${style["col_12"]}`}>
+              <button>
+                <img
+                  src="/assets/svgs/filter-search.svg"
+                  alt="search icon"
+                  width={23}
+                  height={23}
+                />
+              </button>
+            </div>
+          </div>
+          <div className={`${style["filter-dropdowns-wrapper"]}`}>
+            <div className={`${style["filter-title"]}`}>
+              <span className="filter-icon">
+                <img src="/assets/svgs/filter.svg" alt="filter" width={20} height={15} />
+              </span>
+              <span>Filters</span>
+            </div>
+            <div className="filter-dropdown">
+              <div className="relevance-select-container">
+                <Select
+                  className="relevance-select"
+                  classNamePrefix="react-select"
+                  options={options}
+                  defaultValue={options[0]}
+                  instanceId="language-selector"
+                  onChange={(selectedOption) => {
+                    console.log(selectedOption);
+                  }}
+                  isSearchable={false}
+                />
+                <div className="arrow-down">
+                  <Image
+                    src={"/assets/svgs/arrow-down.svg"}
+                    width={9}
+                    height={9}
+                    alt="arrow down"
+                  />
+                </div>
+              </div>
+            </div>
+            <div className="filter-dropdown">
+              <div className="relevance-select-container">
+                <Select
+                  className="relevance-select"
+                  classNamePrefix="react-select"
+                  options={options}
+                  defaultValue={options[0]}
+                  instanceId="language-selector"
+                  onChange={(selectedOption) => {
+                    console.log(selectedOption);
+                  }}
+                  isSearchable={false}
+                />
+                <div className="arrow-down">
+                  <Image
+                    src={"/assets/svgs/arrow-down.svg"}
+                    width={9}
+                    height={9}
+                    alt="arrow down"
+                  />
+                </div>
+              </div>
+            </div>
+            <div className="filter-dropdown">
+              <div className="relevance-select-container">
+                <Select
+                  className="relevance-select"
+                  classNamePrefix="react-select"
+                  options={options}
+                  defaultValue={options[0]}
+                  instanceId="language-selector"
+                  onChange={(selectedOption) => {
+                    console.log(selectedOption);
+                  }}
+                  isSearchable={false}
+                />
+                <div className="arrow-down">
+                  <Image
+                    src={"/assets/svgs/arrow-down.svg"}
+                    width={9}
+                    height={9}
+                    alt="arrow down"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
         <div className={`${style["results-row"]}`}>
           <div className={`${style["results-col"]}`}>
-            <p>{vacancies.length} Results</p>
+            <p className="fw-300 m-0">{vacancies?.length} Results</p>
           </div>
           <div className={`${style["results-col"]}`}>
             <div className={`${style["sort-by"]}`}>
               <span>sort by</span>
-              <div>
-                <select name="" id="">
-                  <option value="">Most recent</option>
-                  <option value="">Most relevant</option>
-                </select>
+
+              <div className="relevance-select-container">
+                <Select
+                  className="relevance-select"
+                  classNamePrefix="react-select"
+                  options={options}
+                  defaultValue={options[0]}
+                  instanceId="language-selector"
+                  onChange={(selectedOption) => {
+                    console.log(selectedOption);
+                  }}
+                  isSearchable={false}
+                />
+                <div className="arrow-down">
+                  <Image
+                    src={"/assets/svgs/arrow-down.svg"}
+                    width={9}
+                    height={9}
+                    alt="arrow down"
+                  />
+                </div>
               </div>
             </div>
           </div>
@@ -71,18 +210,20 @@ export default function CurrentVacancies({ vacancies }: CurrentVacanciesProps) {
           {currentItems.map((vacancy) => (
             <div key={vacancy.id} className={`${style["panel__row"]}`}>
               <div className={`${style["panel__col"]}`}>
-                <h4 className="h4">{vacancy.title}</h4>
+                <h4 className="h4">{vacancy?.title}</h4>
               </div>
               <div className={`${style["panel__col"]}`}>
                 <p className="location-title">Location:</p>
-                <p className="location-title__value">{vacancy.location}</p>
+                <p className="location-title__value">{vacancy?.location}</p>
               </div>
               <div className={`${style["panel__col"]}`}>
                 <p className="category-title">Categories:</p>
-                <p className="category-title__value">{vacancy.categories.join(", ")}</p>
+                <p className="category-title__value">{vacancy?.categories.join(", ")}</p>
               </div>
               <div className={`${style["panel__col"]}`}>
-                <FormButton title={"Apply Now"} isWhite={false} />
+                <button className={`primary-button`} type="submit">
+                  <span>{"Apply Now"}</span>
+                </button>
               </div>
             </div>
           ))}
