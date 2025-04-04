@@ -4,61 +4,71 @@
       "id": 1,
       "title": "Senior Project Manager",
       "location": "Dubai, UAE",
-      "categories": ["Human Resources"]
+      "categories": ["Human Resources"],
+      "description": "<h3>R.Evolution privacy notice for job candidates</h3><p>We are looking for a Senior Project Manager to lead our team in Dubai. The ideal candidate will have extensive experience in project management and a proven track record of successful project delivery.</p><p>Responsibilities:</p><ul><li>Lead and manage project teams</li><li>Develop project plans and schedules</li><li>Monitor project progress and performance</li><li>Communicate with stakeholders</li></ul><p>Requirements:</p><ul><li>Bachelor's degree in a related field</li><li>5+ years of experience in project management</li><li>Strong leadership and communication skills</li></ul>"
     },
     {
       "id": 2,
       "title": "Software Developer",
       "location": "London, UK",
-      "categories": ["IT", "Development"]
+      "categories": ["IT", "Development"],
+      "description": "<h3>R.Evolution privacy notice for job candidates</h3><p>We are seeking a talented Software Developer to join our team in London. The ideal candidate will have experience in software development and a passion for technology.</p><p>Responsibilities:</p><ul><li>Develop and maintain software applications</li><li>Collaborate with cross-functional teams</li><li>Troubleshoot and debug applications</li></ul><p>Requirements:</p><ul><li>Bachelor's degree in Computer Science or related field</li><li>3+ years of experience in software development</li><li>Proficiency in programming languages such as Java, Python, or C#</li></ul>"
     },
     {
       "id": 3,
       "title": "Marketing Specialist",
       "location": "New York, USA",
-      "categories": ["Marketing"]
+      "categories": ["Marketing"],
+      "description": "<h3>R.Evolution privacy notice for job candidates</h3><p>We are looking for a Marketing Specialist to join our team in New York. The ideal candidate will have experience in digital marketing and a strong understanding of marketing strategies.</p><p>Responsibilities:</p><ul><li>Develop and implement marketing campaigns</li><li>Analyze market trends and customer needs</li><li>Collaborate with sales teams</li></ul><p>Requirements:</p><ul><li>Bachelor's degree in Marketing or related field</li><li>2+ years of experience in marketing</li><li>Strong analytical and communication skills</li></ul>"
     },
     {
       "id": 4,
       "title": "UX Designer",
       "location": "Berlin, Germany",
-      "categories": ["Design"]
+      "categories": ["Design"],
+      "description": "<h3>R.Evolution privacy notice for job candidates</h3><p>We are seeking a creative UX Designer to join our team in Berlin. The ideal candidate will have experience in user experience design and a strong portfolio of design work.</p><p>Responsibilities:</p><ul><li>Conduct user research and usability testing</li><li>Create wireframes and prototypes</li><li>Collaborate with product teams</li></ul><p>Requirements:</p><ul><li>Bachelor's degree in Design or related field</li><li>3+ years of experience in UX design</li><li>Proficiency in design tools such as Sketch, Figma, or Adobe XD</li></ul>"
     },
     {
       "id": 5,
       "title": "Customer Support Specialist",
       "location": "Singapore",
-      "categories": ["Customer Service"]
+      "categories": ["Customer Service"],
+      "description": "<h3>R.Evolution privacy notice for job candidates</h3><p>We are looking for a Customer Support Specialist to join our team in Singapore. The ideal candidate will have experience in customer service and a passion for helping others.</p><p>Responsibilities:</p><ul><li>Provide support to customers via phone, email, and chat</li><li>Resolve customer inquiries and issues</li><li>Document customer interactions</li></ul><p>Requirements:</p><ul><li>Bachelor's degree in a related field</li><li>1+ years of experience in customer service</li><li>Strong communication and problem-solving skills</li></ul>"
     },
     {
       "id": 6,
       "title": "Financial Analyst",
       "location": "Toronto, Canada",
-      "categories": ["Finance"]
+      "categories": ["Finance"],
+      "description": "<h3>R.Evolution privacy notice for job candidates</h3><p>We are seeking a Financial Analyst to join our team in Toronto. The ideal candidate will have experience in financial analysis and a strong understanding of financial principles.</p><p>Responsibilities:</p><ul><li>Analyze financial data and trends</li><li>Prepare financial reports</li><li>Collaborate with finance teams</li></ul><p>Requirements:</p><ul><li>Bachelor's degree in Finance or related field</li><li>2+ years of experience in financial analysis</li><li>Proficiency in Excel and financial modeling</li></ul>"
     },
     {
       "id": 7,
       "title": "Sales Representative",
       "location": "Sydney, Australia",
-      "categories": ["Sales"]
+      "categories": ["Sales"],
+      "description": "<h3>R.Evolution privacy notice for job candidates</h3><p>We are looking for a Sales Representative to join our team in Sydney. The ideal candidate will have experience in sales and a strong understanding of sales strategies.</p><p>Responsibilities:</p><ul><li>Identify and pursue new sales opportunities</li><li>Build and maintain customer relationships</li><li>Achieve sales targets</li></ul><p>Requirements:</p><ul><li>Bachelor's degree in Business or related field</li><li>2+ years of experience in sales</li><li>Strong negotiation and communication skills</li></ul>"
     },
     {
       "id": 8,
       "title": "Content Writer",
       "location": "Barcelona, Spain",
-      "categories": ["Content", "Marketing"]
+      "categories": ["Content", "Marketing"],
+      "description": "<h3>R.Evolution privacy notice for job candidates</h3><p>We are seeking a talented Content Writer to join our team in Barcelona. The ideal candidate will have experience in content writing and a passion for storytelling.</p><p>Responsibilities:</p><ul><li>Create engaging and informative content</li><li>Collaborate with marketing teams</li><li>Optimize content for SEO</li></ul><p>Requirements:</p><ul><li>Bachelor's degree in English, Journalism, or related field</li><li>2+ years of experience in content writing</li><li>Strong writing and editing skills</li></ul>"
     },
     {
       "id": 9,
       "title": "Data Scientist",
       "location": "Tokyo, Japan",
-      "categories": ["Data Science", "IT"]
+      "categories": ["Data Science", "IT"],
+      "description": "<h3>R.Evolution privacy notice for job candidates</h3><p>We are looking for a Data Scientist to join our team in Tokyo. The ideal candidate will have experience in data analysis and a strong understanding of statistical methods.</p><p>Responsibilities:</p><ul><li>Analyze large datasets</li><li>Develop predictive models</li><li>Collaborate with data teams</li></ul><p>Requirements:</p><ul><li>Bachelor's degree in Data Science, Statistics, or related field</li><li>3+ years of experience in data analysis</li><li>Proficiency in programming languages such as Python or R</li></ul>"
     },
     {
       "id": 10,
       "title": "Operations Manager",
       "location": "Paris, France",
-      "categories": ["Operations"]
+      "categories": ["Operations"],
+      "description": "<h3>R.Evolution privacy notice for job candidates</h3><p>We are seeking an Operations Manager to join our team in Paris. The ideal candidate will have experience in operations management and a strong understanding of operational processes.</p><p>Responsibilities:</p><ul><li>Oversee daily operations</li><li>Develop and implement operational strategies</li><li>Collaborate with cross-functional teams</li></ul><p>Requirements:</p><ul><li>Bachelor's degree in Business Administration or related field</li><li>5+ years of experience in operations management</li><li>Strong leadership and problem-solving skills</li></ul>"
     }
   ]
 }

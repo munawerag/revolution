@@ -2,14 +2,17 @@
 
 .title-wrapper {
   max-width: 22.5em;
-  margin: 0 auto 10.0625em;
+  margin: 15em auto 10.0625em;
   @media #{$ipadpro} {
-    margin-bottom: 3em;
+    margin: 15em auto 3em;
+  }
+  @media #{$mineTab} {
+    margin: 10em auto 3em;
   }
   .c_form-field {
     margin-top: 4em;
     @media #{$mineTab} {
-        margin-top: 2em;
+      margin-top: 2em;
     }
   }
 }
@@ -38,3 +41,17 @@
     margin-top: 2em;
   }
 }
+
+
+
+// .unactive-panel {
+//   transition: var(--transition);
+//   transform: translateX(120vw);
+//   background-color: red;
+//   overflow: hidden;
+//   position: absolute;
+//   inset: 0;
+//   &.active {
+//     transform: translateX(0);
+//   }
+// }

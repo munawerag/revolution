@@ -11,7 +11,7 @@ const FormGroup = (props: any) => {
     <>
       {item.type == "input" && (
         <div className={`c_form-field`}>
-          <label>{item?.label}</label>          
+          {item?.label &&  <label>{item?.label}</label> }           
           <InputField
             name={item.name}
             control={control}
@@ -27,6 +27,7 @@ const FormGroup = (props: any) => {
       )}
       {item.type == "select" && (
         <div className={`c_form-field `}>
+          {item?.label &&  <label>{item?.label}</label> }
           <SelectField
             name={item.name}
             control={control}

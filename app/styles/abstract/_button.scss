@@ -224,4 +224,9 @@ button {
       transition: 0.5s ease;
     }
   }
+  &[type="button"][disabled] {
+    pointer-events: none;
+    opacity: 0.4;
+  }
+
 }

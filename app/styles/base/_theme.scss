@@ -72,7 +72,6 @@ button {
   flex-direction: column;
 }
 
-
 .section {
   position: relative;
   padding: 2em 0;
@@ -107,10 +106,6 @@ button {
   }
 }
 
-
-
-
-
 *::-webkit-scrollbar {
   width: 0.3125em;
 }
@@ -127,7 +122,6 @@ button {
 *::-webkit-scrollbar-track {
   background: rgba($color: var(--rgb-primarycol), $alpha: 0.3);
 }
-
 
 .element-lg-left-zero {
   @media #{$ipadL} {
@@ -149,13 +143,11 @@ button {
   }
 }
 
-
 .text-editor {
   p {
     font-weight: 300;
   }
 }
-
 
 /* Hide original checkbox but keep it accessible */
 .custom-checkbox {
@@ -164,28 +156,28 @@ button {
   padding-left: 1.666666em;
   cursor: pointer;
   user-select: none;
-  
+
   input {
     position: absolute;
     opacity: 0;
     cursor: pointer;
     height: 0;
     width: 0;
-    
+
     &:checked ~ .checkmark {
       background-color: var(--color-secondarycol);
       border-color: var(--color-secondarycol);
-      
+
       &:after {
         display: block;
       }
     }
-    
+
     &:focus ~ .checkmark {
       box-shadow: 0 0 0 3px var(--color-graycol2);
     }
   }
-  
+
   .checkmark {
     position: absolute;
     top: 2px;
@@ -196,7 +188,7 @@ button {
     border: 2px solid var(--color-graycol);
     border-radius: 0;
     transition: all 0.2s ease;
-    
+
     &:after {
       content: "";
       position: absolute;
@@ -211,3 +203,7 @@ button {
     }
   }
 }
+
+
+
+

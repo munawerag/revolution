@@ -18,7 +18,7 @@ const SelectField = (props: any) => {
           <Select
             options={props.options}
             components={{DropdownIndicator}}
-            placeholder={props.label}
+            placeholder={props.placeholder}
             onChange={(options) => onChange(options)}
             onBlur={onBlur}
             value={value}
@@ -26,17 +26,14 @@ const SelectField = (props: any) => {
             isDisabled={props.disabled ? true : false}
             isClearable={props.clearable ? true : false}
             isSearchable={props.search ? true : false}
-            className="custom__select"
-            classNamePrefix="custom__select"
+            className="c_form-field c_form-field--select"
+            classNamePrefix="c_form-field"
             styles={{
               control: (val, state) => ({
                 ...val,
-                minHeight: "4em",
-                borderColor: "transparent",
-                borderBottomColor: "var(--color-blackcol)",
-                borderBottomWidth: "2px",
+                borderColor: "var(--color-graycol)",
                 "&:hover": {
-                  borderBottomColor: "var(--color-primarycol)",
+                  borderColor: "var(--color-graycol)",
                 },
               }),
               valueContainer: (vcontain) => ({
@@ -63,7 +60,7 @@ const SelectField = (props: any) => {
                 textTransform: "capitalize",
                 color: state.isFocused
                   ? "var(--color-whitecol)"
-                  : "var(--color-graycol2)",
+                  : "var(--color-secondarycol)",
                 backgroundColor: state.isFocused
                   ? "var(--color-primarycol)"
                   : "var(--color-whitecol)",
