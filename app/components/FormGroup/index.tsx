@@ -4,17 +4,19 @@ import InputField from "../FormElements/InputField";
 import TextareaField from "../FormElements/TextareaField";
 import SelectField from "../FormElements/SelectField";
 import InputPhone from "../FormElements/InputPhone";
+import DateField from "../FormElements/DateField";
+import UploadFile from "../FormElements/uploadFile";
+import RadioGroup from "../FormElements/RadioGroup";
+import style from './formGroup.module.scss';
+import CheckboxGroup from "../FormElements/CheckboxGroup";
 
 const FormGroup = (props: any) => {
   const { item, control, errors } = props;
 
-
-  
-
   return (
     <>
       {item.type == "input" && (
-        <div className={`c_form-field`}>
+        <div className={`c_form-field ${errors[`${item.name}`] ? 'border-red' : ''}`}>
           {item?.label && <label>{item?.label}</label>}
           <InputField
             name={item.name}
@@ -30,7 +32,7 @@ const FormGroup = (props: any) => {
         </div>
       )}
       {item.type == "select" && (
-        <div className={`c_form-field `}>
+        <div className={`c_form-field ${errors[`${item.name}`] ? 'border-red' : ''}`}>
           {item?.label && <label>{item?.label}</label>}
           <SelectField
             name={item.name}
@@ -52,7 +54,7 @@ const FormGroup = (props: any) => {
         </div>
       )}
       {item.type == "textarea" && (
-        <div className={`c_form-field ${item.exclass}`}>
+        <div className={`c_form-field ${item.exclass} ${errors[`${item.name}`] ? 'border-red' : ''}`}>
           <TextareaField
             rows={item.rows}
             name={item.name}
@@ -67,7 +69,7 @@ const FormGroup = (props: any) => {
         </div>
       )}
       {item.type == "tel" && (
-        <div className={`form-group`}>
+        <div className={`c_form-field ${errors[`${item.name}`] ? 'border-red' : ''}`}>
           <InputPhone
             name={item.name}
             init={item.name || ""}
@@ -82,62 +84,86 @@ const FormGroup = (props: any) => {
           )}
         </div>
       )}
-      {item.type == 'checkbox' && (
-        <div className={`form-group`}>
-          <p className={style.labelCheckbox}>{item.label}</p>
-          <div className={item.isInline ? style.inlineCheckbox : ''}>
-            <CheckboxGroup
-              name={parent ? `${parent.name}[${index}].${item.name}` : item.name}
-              init={elem && elem[item.name] ? elem[item.name] : item.name}
-              control={control}
-              options={item.options}
-              label={item.label}
-              bold={item.bold}
-              exclass={item.exclass}
-            />
-          </div>
-          {setValidate(false) == 'error' && <span className="error">{setValidate(true)}</span>}
-        </div>
-      )}
       {item.type == 'upload' && (
-        <div
-          className={`form-group form-group-upload ${
-            setValidate(false) == 'error' ? 'border-red' : ''
-          }`}
-        >
-          <UploadFile
-            themeColor={themeColor}
-            name={parent ? `${parent.name}[${index}].${item.name}` : item.name}
-            init={elem && elem[item.name] ? elem[item.name] : item.name || ''}
-            control={control}
-            placeholder={item.placeholder || ''}
-            class={item.exclass || ''}
-            req={item.req}
-            multiple={item.multiple}
-            setValue={props.setValue}
-          />
-          {setValidate(false) == 'error' && <span className="error">{setValidate(true)}</span>}
-        </div>
+        <>
+          <div
+            className={`form-group form-group-upload ${errors[`${item.name}`] ? 'border-red' : ''
+            }`}
+          >
+            <UploadFile
+              name={item.name}
+              init={item.name || ''}
+              control={control}
+              placeholder={item.placeholder || ''}
+              class={item.exclass || ''}
+              req={item.req}
+              multiple={item.multiple}
+              setValue={props.setValue}
+            />
+            {errors[`${item.name}`] && (
+            <span className="error">{errors[`${item.name}`]?.message}</span>
+          )}
+          </div>
+        </>
+      )}
+      {item.type == 'checkbox' && (
+        <>
+          <div className={`form-group check-box-form-group ${errors[`${item.name}`] ? 'border-red' : ''}`}>
+            <div className={item.isInline ? style.inlineCheckbox : ''}>
+              <CheckboxGroup
+                name={item.name}
+                init={item.name}
+                control={control}
+                options={item.options}
+                label={item.label}
+                bold={item.bold}
+                exclass={item.exclass}
+              />
+            </div>
+            <p className={style.labelCheckbox}>{item.label}</p>
+            {errors[`${item.name}`] && (
+            <span className="error">{errors[`${item.name}`]?.message}</span>
+          )}
+          </div>
+        </>
       )}
       {item.type == 'radio' && (
         <>
           <p className={style.labelCheckbox}>{item.label}</p>
           <div
-            className={`form-group ${
-              parent ? `${parent.name}[${index}].${item.name}` : item.name
-            }  ${style.customRadio}`}
+            className={`form-group ${item.name} ${style.customRadio}`}
           >
             <RadioGroup
-              name={parent ? `${parent.name}[${index}].${item.name}` : item.name}
-              init={elem && elem[item.name] ? elem[item.name] : item.name || ''}
+              name={item.name}
+              init={item.name || ''}
               control={control}
               options={item.options}
               onChange={item.onChange}
               heading={item.heading}
               class={item.customClass ? item.customClass : item.customClass}
             />
-            {/* <p>{item.customValidationClass}</p> */}
-            {setValidate(false) == 'error' && <span className="error">{setValidate(true)}</span>}
+            {errors[`${item.name}`] && (
+            <span className="error">{errors[`${item.name}`]?.message}</span>
+          )}
+          </div>
+        </>
+      )}
+      {item.type == 'date' && (
+        <>
+          <div className={`c_form-field ${errors[`${item.name}`] ? 'border-red' : ''}`}>
+            <DateField
+              name={item.name}
+              init={item.name || ''}
+              control={control}
+              placeholder={item.placeholder || ''}
+              label={item.label}
+              class={item.exclass || ''}
+              onChange={item.onChange}
+              isTime={item.time}
+            />
+           {errors[`${item.name}`] && (
+            <span className="error">{errors[`${item.name}`]?.message}</span>
+          )}
           </div>
         </>
       )}
