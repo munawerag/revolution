@@ -66,11 +66,11 @@ const FormGroup = (props: any) => {
           )}
         </div>
       )}
-      {/* {item.type == "tel" && (
+      {item.type == "tel" && (
         <div className={`form-group`}>
           <InputPhone
-            name={parent ? `${parent.name}[${index}].${item.name}` : item.name}
-            init={elem && elem[item.name] ? elem[item.name] : item.name || ""}
+            name={item.name}
+            init={item.name || ""}
             control={control}
             placeholder={item.placeholder || ""}
             class={item.exclass || ""}
@@ -81,7 +81,7 @@ const FormGroup = (props: any) => {
             <span className="error">{errors[`${item.name}`]?.message}</span>
           )}
         </div>
-      )} */}
+      )}
     </>
   );
 };
