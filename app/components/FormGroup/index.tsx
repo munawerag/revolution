@@ -82,6 +82,65 @@ const FormGroup = (props: any) => {
           )}
         </div>
       )}
+      {item.type == 'checkbox' && (
+        <div className={`form-group`}>
+          <p className={style.labelCheckbox}>{item.label}</p>
+          <div className={item.isInline ? style.inlineCheckbox : ''}>
+            <CheckboxGroup
+              name={parent ? `${parent.name}[${index}].${item.name}` : item.name}
+              init={elem && elem[item.name] ? elem[item.name] : item.name}
+              control={control}
+              options={item.options}
+              label={item.label}
+              bold={item.bold}
+              exclass={item.exclass}
+            />
+          </div>
+          {setValidate(false) == 'error' && <span className="error">{setValidate(true)}</span>}
+        </div>
+      )}
+      {item.type == 'upload' && (
+        <div
+          className={`form-group form-group-upload ${
+            setValidate(false) == 'error' ? 'border-red' : ''
+          }`}
+        >
+          <UploadFile
+            themeColor={themeColor}
+            name={parent ? `${parent.name}[${index}].${item.name}` : item.name}
+            init={elem && elem[item.name] ? elem[item.name] : item.name || ''}
+            control={control}
+            placeholder={item.placeholder || ''}
+            class={item.exclass || ''}
+            req={item.req}
+            multiple={item.multiple}
+            setValue={props.setValue}
+          />
+          {setValidate(false) == 'error' && <span className="error">{setValidate(true)}</span>}
+        </div>
+      )}
+      {item.type == 'radio' && (
+        <>
+          <p className={style.labelCheckbox}>{item.label}</p>
+          <div
+            className={`form-group ${
+              parent ? `${parent.name}[${index}].${item.name}` : item.name
+            }  ${style.customRadio}`}
+          >
+            <RadioGroup
+              name={parent ? `${parent.name}[${index}].${item.name}` : item.name}
+              init={elem && elem[item.name] ? elem[item.name] : item.name || ''}
+              control={control}
+              options={item.options}
+              onChange={item.onChange}
+              heading={item.heading}
+              class={item.customClass ? item.customClass : item.customClass}
+            />
+            {/* <p>{item.customValidationClass}</p> */}
+            {setValidate(false) == 'error' && <span className="error">{setValidate(true)}</span>}
+          </div>
+        </>
+      )}
     </>
   );
 };
