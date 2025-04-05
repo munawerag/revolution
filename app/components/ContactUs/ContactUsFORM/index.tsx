@@ -91,11 +91,11 @@ export default function ContactUsFORM() {
       inputtype: "email",
     },
     {
-      type: "input",
+      type: "tel",
       name: "phone",
       label: "Phone",
       placeholder: "",
-      inputtype: "tel",
+      // inputtype: "tel",
     },
     {
       type: "textarea",
