@@ -21,7 +21,7 @@ const InputPhone = (props: any) => {
                   }}
                   placeholder={props.placeholder}
                   country={props.country}
-                  inputProps={{ className: 'input phone-flag' }}
+                  inputProps={{ className: 'input phone-flag c_form-field__control' }}
                   buttonClass={'flag-button'}
                 />
               </>

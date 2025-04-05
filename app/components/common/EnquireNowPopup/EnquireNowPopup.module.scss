@@ -9,6 +9,9 @@
   overflow-y: auto;
   transition: var(--transition-slow);
   transform: translateX(100vw); // Default hidden state
+  @media #{$mob} {
+    z-index: 9999999;
+  }
   &.active {
     transform: translateX(0); // Visible when active
   }
@@ -24,6 +27,7 @@
 
 .tab-wrapper {
   margin-bottom: 5em; // 80px / 16px = 5em
+  position: relative;
   @media #{$ipad} {
     margin-bottom: 2em;
   }
@@ -33,6 +37,7 @@
     gap: 3.75em; // 60px / 16px = 3.75em
     justify-content: center;
     margin-top: 3em;
+    position: relative;
     @media #{$ipad} {
       margin-top: 2em;
     }
@@ -41,6 +46,29 @@
   li {
     font-size: 1.125em; // 18px / 16px = 1.125em
     cursor: pointer;
+    &.active {
+      color: var(--primary-color);
+      font-weight: 600;
+      border-bottom: 2px solid var(--primary-color); // Optional: Add a visual indicator for active tab
+    }
+  }
+
+  .tab-indicator {
+    position: absolute;
+    height: 2px;
+    background-color: red;
+    bottom: 0;
+    transition: all 0.3s ease;
+  }
+
+  .indicator-form-enquire {
+    width: 37%; /* Adjust based on your actual tab width */
+    left: 0;
+  }
+
+  .indicator-form-visit {
+    width: 37%; /* Adjust based on your actual tab width */
+    left: 50%;
   }
 }
 
@@ -54,5 +82,17 @@
     display: flex;
     justify-content: center;
     margin-bottom: 4em;
+  }
+}
+
+.tab-indicator {
+  position: absolute;
+  width: 10em;
+  height: 2px;
+  background-color: red;
+  bottom: 0;
+  left: 0;
+  .activeTab {
+    background-color: var(--primary-color);
   }
 }

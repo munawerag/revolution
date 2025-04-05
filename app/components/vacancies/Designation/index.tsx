@@ -112,9 +112,9 @@ export default function Designation({ vacancy, onBackClick }: DesignationProps) 
       inputtype: "email",
     },
     {
-      type: "input",
+      type: "tel",
       name: "phone",
-      label: "Phone*",
+      label: "Phone Number*",
       placeholder: "",
       inputtype: "tel",
     },

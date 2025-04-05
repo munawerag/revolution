@@ -122,3 +122,18 @@
     min-height: auto;
   }
 }
+
+
+
+.react-tel-input {
+  .c_form-field__control {
+    padding-left: 3.5em;
+  }
+} 
+
+
+.border-red {
+  .c_form-field__control {
+    border-color: var(--color-dangercol);
+  }
+}

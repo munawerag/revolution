@@ -105,6 +105,26 @@ export default function ContactUsFORM() {
       rows: 11,
       exclass: "",
     },
+    // {
+    //   type: "date",
+    //   name: "date",
+    //   label: "Enter data",
+    //   placeholder: "Date",
+    // },
+    // {
+    //   type: "checkbox",
+    //   name: "checkbox",
+    //   label: "Enter checkbox",
+    //   options: [
+    //     { id: "1", name: "option 1" },
+    //     { id: "2", name: "option 2" },
+    //   ],
+    //   placeholder: "check",
+    // },
+
+
+
+
   ];
 
   const onFormSubmit = async (val: Object) => {

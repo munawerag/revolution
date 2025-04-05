@@ -47,6 +47,9 @@
 
     .nav__menu {
       margin-top: 7.6875em;
+      @media #{$mob} {
+        margin-top: 3.688em;
+      }
 
       &__leftCol {
         width: 22.5625em;
@@ -159,6 +162,9 @@
 
       .additional__links {
         margin-top: 5.1875em;
+        @media #{$mob} {
+          margin-top: 2.188em;
+        }
 
         &__item {
           color: var(--color-primarycol);

@@ -70,6 +70,7 @@ const FormGroup = (props: any) => {
       )}
       {item.type == "tel" && (
         <div className={`c_form-field ${errors[`${item.name}`] ? 'border-red' : ''}`}>
+          {item?.label && <label>{item?.label}</label>}
           <InputPhone
             name={item.name}
             init={item.name || ""}
