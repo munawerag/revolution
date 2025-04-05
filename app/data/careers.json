@@ -8,7 +8,9 @@
     "innerBanner": {
       "desktopImage": "/assets/images/careers/inner-hero.jpg",
       "mobileImage": "/assets/images/careers/inner-hero-mob.jpg",
-      "alt": "Inner Banner"
+      "alt": "Inner Banner",
+      "videoPath": "/assets/videos/optimized-careers.mp4"
+
     },
     "careersListing": {
       "centerDescription": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo sequat. fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est fficia deserunt mollit anim laborum.</p>",

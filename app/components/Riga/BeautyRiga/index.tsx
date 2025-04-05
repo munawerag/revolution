@@ -9,7 +9,7 @@ interface BeautyRigaProps {
 
 export default function BeautyRiga({ image, content, reverseLayout }: BeautyRigaProps) {
   return (
-    <section className={`${reverseLayout ? "gray2-color-bg" : "gray-color-bg"} section`}>
+    <section className={`${reverseLayout ? "gray2-color-bg" : "gray-color-bg-40"} section`}>
       <div className="container-s">
         <div className={` ${reverseLayout ? "flex-reverse justify-between" : ""}  custom-row`}>
           <div className="col_12 col_md_6">

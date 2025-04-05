@@ -34,15 +34,17 @@ const FooterLinks = ({ data, title }: footerLinksProps) => {
                   >
                     {item?.title}
                   </Link>
-                  {item.subitems?.map((subitem: any, index: number) => {
-                    return (
-                      <ul className={`${style["submenuItems"]}`} key={index}>
-                        <li>
-                          <a href="">{subitem?.title}</a>
-                        </li>
-                      </ul>
-                    );
-                  })}
+                  {item.subitems?.length > 0 && (
+                    <ul className={`${style["submenuItems"]}`}>
+                      {item.subitems?.map((subitem: any, index: number) => {
+                        return (
+                          <li key={index}>
+                            <a href="">{subitem?.title}</a>
+                          </li>
+                        );
+                      })}
+                    </ul>
+                  )}
                 </li>
               );
             })}

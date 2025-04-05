@@ -6,8 +6,8 @@
       flex-direction: row-reverse;
 
       .text-cotent {
-        @media #{$tabL} {
-          margin-right: 11.125em; // 178px ÷ 16px
+        @media #{$desktop} {
+          margin-right: 11.125em;
 
         }
       }
@@ -15,6 +15,9 @@
 
     &:not(:last-child) {
       margin-bottom: 7.5625em; // 121px ÷ 16px
+      @media #{$ipadpro} {
+        margin-bottom: 3em;
+      }
       @media #{$ipad} {
         margin-bottom: 2em;  
       }
@@ -22,7 +25,7 @@
 
     &:nth-child(odd) {
       .text-cotent {
-        @media #{$tabL} {
+        @media #{$desktop} {
           margin-right: 11.125em; // 178px ÷ 16px
 
         }
@@ -37,6 +40,9 @@
   position: relative;
   overflow: hidden;
   margin: 10.75em auto 0;
+  @media #{$ipadpro} {
+    margin: 2.75em auto 0;
+  }
   @media #{$ipad} {
     display: none;
   }
@@ -47,7 +53,7 @@
   text-align: center;
   margin: 4.375em auto 4.375em; // 70px ÷ 16px
   max-width: 58.125em;
-  @media #{$ipad} {
+  @media #{$ipadpro} {
     margin: 2.375em auto;
   }
 }

@@ -46,7 +46,7 @@ const MainMenu = ({ setMenuActive }: any) => {
         { label: "Eywa", link: "#" },
       ],
     },
-    { id: 4, label: "Our Uniqueness", link: "#" },
+    { id: 4, label: "Our Uniqueness", link: "/our-uniqueness" },
     {
       id: 5,
       label: "360 Tour",
@@ -54,7 +54,7 @@ const MainMenu = ({ setMenuActive }: any) => {
       target: "_blank",
     },
 
-    { id: 6, label: "Contact Us", link: "#", target: null },
+    { id: 6, label: "Contact Us", link: "/contact-us", target: null },
   ];
 
   return (
@@ -77,7 +77,15 @@ const MainMenu = ({ setMenuActive }: any) => {
               {navigation.map((item) => {
                 return item.link ? (
                   <li key={item.id} className="nav__menu__item">
-                    <Link href={item.link} className="menu__label" target={item.target || "_self"}>
+                    <Link
+                      href={item.link}
+                      className="menu__label"
+                      target={item.target || "_self"}
+                      onClick={() => {
+                        setMenuActive(false);
+                        setLocationsActive(false);
+                      }}
+                    >
                       {item.label}
                     </Link>
                   </li>
@@ -136,7 +144,14 @@ const MainMenu = ({ setMenuActive }: any) => {
                 <nav className="additional__links">
                   <ul className="additional__links__list">
                     <li className="additional__links__item">
-                      <Link href="#" className="w-uline">
+                      <Link
+                        href="/careers"
+                        className="w-uline"
+                        onClick={() => {
+                          setMenuActive(false);
+                          setLocationsActive(false);
+                        }}
+                      >
                         Careers
                       </Link>
                     </li>
@@ -147,7 +162,7 @@ const MainMenu = ({ setMenuActive }: any) => {
                     </li>
 
                     <li className="additional__links__item">
-                      <Link href="#" className="w-uline">
+                      <Link href="/blogs" className="w-uline">
                         Blogs
                       </Link>
                     </li>
@@ -180,10 +195,50 @@ const MainMenu = ({ setMenuActive }: any) => {
             </div>
             <p className="locations__title">Discover R.evolution In...</p>
             <ul className="locations">
-              <li className="locations__item">Barcelona</li>
-              <li className="locations__item">Berlin</li>
-              <li className="locations__item">Dubai</li>
-              <li className="locations__item">Riga</li>
+              <li className="locations__item">
+                <Link
+                  href="/riga"
+                  onClick={() => {
+                    setMenuActive(false);
+                    setLocationsActive(false);
+                  }}
+                >
+                  Barcelona
+                </Link>
+              </li>
+              <li className="locations__item">
+                <Link
+                  href="/riga"
+                  onClick={() => {
+                    setMenuActive(false);
+                    setLocationsActive(false);
+                  }}
+                >
+                  Berlin
+                </Link>
+              </li>
+              <li className="locations__item">
+                <Link
+                  href="/riga"
+                  onClick={() => {
+                    setMenuActive(false);
+                    setLocationsActive(false);
+                  }}
+                >
+                  Dubai
+                </Link>
+              </li>
+              <li className="locations__item">
+                <Link
+                  href="/riga"
+                  onClick={() => {
+                    setMenuActive(false);
+                    setLocationsActive(false);
+                  }}
+                >
+                  Riga
+                </Link>
+              </li>
             </ul>
           </div>
         </div>

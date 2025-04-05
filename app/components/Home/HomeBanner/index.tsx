@@ -7,18 +7,15 @@ const HomeBanner = () => {
     <>
       <section className={style.homeBanner}>
         <div className={style.homeBanner__video}>
-          <video
-            src="/assets/videos/banner.mp4"
-            autoPlay
-            muted
-            loop={true}
-          ></video>
+          <video src="/assets/videos/banner.mp4" autoPlay muted loop={true} />
         </div>
         <div className="container-s">
           <div className={`${style["content"]}`}>
             <span className={`${style.subTitle} text-upper`}>explore</span>
             <h3 className="h3 line-clamp-1">{`A world of one's own`}</h3>
-            <Link href="?!" className={`${style.link} uline`}>Discover More</Link>
+            <Link href="?!" className={`${style.link} uline uline--stretch`}>
+              <span className="uline__title">Discover More</span>
+            </Link>
           </div>
         </div>
         <div className={style.chat}>

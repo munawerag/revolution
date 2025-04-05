@@ -39,7 +39,7 @@ export default function AwardsPartners({ data }: AwardsPartnersProps) {
           <div className={`${style["sections-wrapper"]}`}>
             {awards?.map((award, index) => (
               <div key={index} className={`${style["custom-row"]} custom-row no-gutters`}>
-                <div className="col_12 col_md_9 col_lg_6">
+                <div className="col_12 col_md_12 col_lg_6">
                   <div className={`${style["img-wrapper"]}`}>
                     <Image
                       className="img-hack"

@@ -2,6 +2,9 @@
 
 .wrapper-top {
   padding: 15em 0 1em;
+  @media #{$ipadpro} {
+    padding: 11em 0 0;
+  }
 }
 
 .date {
@@ -11,8 +14,11 @@
 }
 
 .wrapper-right {
-  @media #{$ipadL} {
+  margin-top: 1em;
+  margin-bottom: 2em;
+  @media #{$desktop} {
     margin-top: 10em;
+    margin-bottom: 0;
   }
 }
 
@@ -22,7 +28,7 @@
   margin-bottom: 2em;
   padding-bottom: 47.7551%;
   overflow: hidden;
-  @media #{$ipadL} {
+  @media #{$desktop} {
     margin-bottom: 4.375em; // 70px ÷ 16px
     margin-top: 4.375em; // 70px ÷ 16px
   }
@@ -32,6 +38,9 @@
   text-align: center;
   margin: 0 auto 4.375em; // 70px ÷ 16px
   max-width: 58.125em;
+  @media #{$ipadpro} {
+    margin-bottom: 0;
+  }
   @media #{$ipad} {
     margin: 0 auto 2.375em;
   }

@@ -7,6 +7,9 @@
   height: 14.0625em;
   background: #fff;
   transition: $transitionSlow;
+  @media #{$ipadpro} {
+    height: 10em;
+  }
 
   // border-bottom: 1px solid rgba($color: #bebebef0, $alpha: 0.94);
   &::before {
@@ -101,17 +104,15 @@
       flex-shrink: 0;
       width: 17.3125em;
       transition: $transitionSlow;
-
-      img {
-        width: 100%;
-      }
-
-      @media #{$ipad} {
+      @media #{$ipadpro} {
         top: 1.75em;
         width: 12.3125em;
       }
       @media #{$mineTab} {
         width: 9.313em;
+      }
+      img {
+        width: 100%;
       }
     }
 

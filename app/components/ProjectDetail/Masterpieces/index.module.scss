@@ -61,7 +61,7 @@
       color: var(--color-whitecol);
       display: flex;
       align-items: flex-end;
-      @media #{$ipad} {
+      @media #{$ipadpro} {
         left: 3em;
         bottom: 50%;
         transform: translateY(50%);
