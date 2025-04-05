@@ -6,11 +6,13 @@ import PrimaryButton from "../../Buttons/PrimaryButton";
 import MainMenu from "../MainMenu";
 import LanguageSelector from "./LanguageSelector";
 import { usePathname } from "next/navigation";
+import EnquireNowPopup from "../EnquireNowPopup";
 
 const Header = () => {
   const [menuActive, setMenuActive] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [lastScrollTop, setLastScrollTop] = useState<number>(0);
+  const [popupActive, setPopupActive] = useState(false); // State for popup
 
   useEffect(() => {
     const handleScroll = () => {
@@ -32,17 +34,34 @@ const Header = () => {
     };
   }, [lastScrollTop]);
 
+  useEffect(() => {
+    const htmlElement = document.documentElement;
+    if (menuActive) {
+      htmlElement.classList.add("overflow-hidden");
+    } else {
+      htmlElement.classList.remove("overflow-hidden");
+    }
+  }, [menuActive]);
+
   const pathname = usePathname();
 
   // Check if the pathname contains "/project-list/"
   const hasProjectList = pathname.includes("/project-list/");
 
+  const togglePopup = () => setPopupActive(!popupActive); // Toggle popup function
+
   return (
     <>
       <div className={`slide-menu ${menuActive ? "active" : ""}`}>
-        <MainMenu setMenuActive={setMenuActive} />
+        <MainMenu setMenuActive={setMenuActive} togglePopup={togglePopup} /> {/* Pass togglePopup */}
       </div>
       <div className={`menu-overlay ${menuActive ? "active" : ""}`}></div>
+
+      {/* Enquire now modal */}
+      <EnquireNowPopup
+        className={popupActive ? "active" : ""}
+        onClose={togglePopup} // Pass togglePopup as onClose prop
+      />
 
       <header
         className={`header ${scrolled ? "sticky-header" : ""} 
@@ -68,7 +87,13 @@ const Header = () => {
               <div className="lang">
                 <LanguageSelector />
               </div>
-              <PrimaryButton title="Enquire Now" link="/" className="desktop-only lg-font" />
+              <button
+                className="primary-anchor desktop-only lg-font"
+                id="enquireDesktopOnly"
+                onClick={togglePopup} // Attach toggle function
+              >
+                Enquire Now
+              </button>
             </div>
           </div>
           <div className="extraMenu">

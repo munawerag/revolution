@@ -12,7 +12,6 @@ const data = [
         title: "More Information",
         link: "?!",
       },
-
       { title: "Partners", link: "?!" },
       { title: "Careers", link: "?!" },
       { title: "Blogs", link: "?!" },
@@ -81,8 +80,6 @@ const data = [
       { title: "Eywa", link: "?!" },
     ],
   },
-
-
 ];
 
 // {
@@ -104,7 +101,9 @@ const Footer = () => {
               );
             })}
           </div>
-          <Link href="?!" className="primary-anchor white-col">Contact us</Link>
+          <Link href="?!" className="primary-anchor white-col">
+            Contact us
+          </Link>
         </div>
 
         <div className={style.footerCardsWrapper}>

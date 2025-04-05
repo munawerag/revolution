@@ -4,7 +4,12 @@ import { useEffect, useState } from "react";
 import SvgComp from "@/app/components/common/SvgComp";
 import PrimaryButton from "@/app/components/Buttons/PrimaryButton";
 
-const MainMenu = ({ setMenuActive }: any) => {
+interface MainMenuProps {
+  setMenuActive: (active: boolean) => void;
+  togglePopup: () => void;
+}
+
+const MainMenu = ({ setMenuActive, togglePopup }: MainMenuProps) => {
   const [active, setActive] = useState<number | null>(1);
   const [locationsActive, setLocationsActive] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
@@ -177,11 +182,15 @@ const MainMenu = ({ setMenuActive }: any) => {
             </ul>
           </nav>
 
-          <PrimaryButton
-            title="Enquire Now"
-            link="/"
-            className="mobile-only w-100 justify-center"
-          />
+        
+
+          <button
+            className="primary-anchor mobile-only w-100 justify-center"
+            id="enquireMobileOnly"
+            onClick={togglePopup}
+          >
+            Enquire Now
+          </button>
         </div>
         <div className={`col-2 ${locationsActive ? "isActive" : ""}`}>
           <div className="locations__wrapper">

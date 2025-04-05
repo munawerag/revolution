@@ -1,0 +1,62 @@
+.uploadWrapper {
+  width: 100%;
+  height: 100%;
+  background: var(--color-whitecol);
+  position: relative;
+  border-radius: 0.625em;
+  border: 1px solid rgba(143, 143, 143, 0.2);
+  padding: 0 0.5em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5235em 1.38em;
+
+  input {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+  }
+
+  .fileWrapper {
+    display: flex;
+    align-items: center;
+    column-gap: 1.25em;
+  }
+  .inputWrapper {
+    position: relative;
+    width: 12.5em;
+    input {
+      position: absolute;
+      width: 100%;
+      cursor: pointer;
+    }
+  }
+
+  .btn {
+    padding: 0.5em;
+    background: var(--color-primarycol);
+    text-align: center;
+    border-radius: 10px;
+    margin: 2px 5px 0 0;
+    color: var(--color-whitecol);
+
+    &.blue {
+      background: var(--color-secondarycol);
+    }
+    &.red {
+      background: var(--color-tertiarycol);
+    }
+    &.purple {
+      background: var(--color-quaternarycol);
+    }
+    &.orange {
+      background: var(--color-quinarycol);
+    }
+  }
+  .deletebtn {
+    position: relative;
+    z-index: 2;
+  }
+}
