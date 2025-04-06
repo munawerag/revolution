@@ -156,6 +156,8 @@ button {
   padding-left: 1.666666em;
   cursor: pointer;
   user-select: none;
+  display: flex;
+  align-items: center;
 
   input {
     position: absolute;
@@ -206,4 +208,60 @@ button {
 
 
 
+
+.custom-radio {
+  font-size: 1.125em;
+  position: relative;
+  padding-left: 1.666666em;
+  cursor: pointer;
+  user-select: none;
+  display: flex;
+  align-items: center;
+
+  input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+
+    &:checked ~ .radiomark {
+      background-color: transparent;
+      border-color: var(--color-secondarycol);
+
+      &:after {
+        display: block;
+      }
+    }
+
+    &:focus ~ .radiomark {
+      box-shadow: 0 0 0 3px var(--color-graycol2);
+    }
+  }
+
+  .radiomark {
+    position: absolute;
+    top: 2px;
+    left: 0;
+    height: 17px;
+    width: 17px;
+    background-color: transparent;
+    border: 2px solid var(--color-graycol);
+    border-radius: 50%; /* Make it circular for radio buttons */
+    transition: all 0.2s ease;
+
+    &:after {
+      content: "";
+      position: absolute;
+      display: none;
+      left: 50%;
+      top: 50%;
+      width: 9px;
+      height: 9px;
+      background-color: var(--color-secondarycol);
+      border-radius: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+}
 

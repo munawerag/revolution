@@ -2,7 +2,7 @@ import style from './Checkbox.module.scss';
 
 const RadioButton = (props: any) => {
   return (
-    <label htmlFor={props.index} className={`${style['radio']} ${style[props.class]}`}>
+    <label htmlFor={props.index} className={`${style['radio']} ${style[props.class]} custom-radio`}>
       <div className={`${style['inputWrapper']}`}>
         <input
           ref={props.ref}
@@ -13,8 +13,9 @@ const RadioButton = (props: any) => {
           onChange={() => props.onChange(props.value)}
           value={props.value}
           {...props}
-          className={`${style.radioInput} ${props.classCustom}`}
+          className={`${style.radioInput} ${props.classCustom}  `}
         />
+        <span className='radiomark'></span>
         {props?.label && (
           <p className={props.class === 'customRadio' ? style.radioLabel : style.customLabel}>
             <span className={style.checkboxIcon}></span>

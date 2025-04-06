@@ -22,6 +22,10 @@ export default function EnquireNowPopup({ className = "", onClose }: EnquireNowP
     lastName: "",
     email: "",
     phone: "",
+    checkbox: "",
+    checkbox2: "",
+    radio: "",
+    radio2: "",
   };
 
   // schema for form validation
@@ -57,8 +61,10 @@ export default function EnquireNowPopup({ className = "", onClose }: EnquireNowP
         .max(15, "Maximum 15 digits")
         .typeError("Phone number is required"),
       address: yup.string().required("Address is required"),
-      selectHear: yup.object().required("Please select an option"),
-      selectSource: yup.object().required("Please select an option"),
+      checkbox: yup.object().required("Please select checkbox"),
+      checkbox2: yup.object().required("Please select checkbox"),
+      radio: yup.object().required("Please select radio"),
+      radio2: yup.object().required("Please select radio"),
     })
     .required();
 
@@ -100,6 +106,28 @@ export default function EnquireNowPopup({ className = "", onClose }: EnquireNowP
       placeholder: "",
       inputtype: "tel",
     },
+    {
+      type: "checkbox",
+      name: "checkbox",
+      options: [
+        { id: "checkbox", name: "I would like to receive communications from R.Evolution" },
+      ],
+    },
+    {
+      type: "checkbox",
+      name: "checkbox2",
+      options: [{ id: "checkbox2", name: "I have read and agree to the Privacy Policy." }],
+    },
+    {
+      type: "radio",
+      name: "radio",
+      options: [{ id: "radio", name: "I have read and agree to the Privacy Policy." }],
+    },
+    {
+      type: "radio",
+      name: "radio2",
+      options: [{ id: "radio2", name: "Request email communications" }],
+    },
   ];
 
   const handleTabClick = (tabId: string) => {
@@ -115,7 +143,7 @@ export default function EnquireNowPopup({ className = "", onClose }: EnquireNowP
     <div className={`${style["main-wrapper"]} ${style[className]}`}>
       <div className={`${style["container"]} container`}>
         <div className="title-wrapper">
-          <h2 className="h2">Express your interest</h2>
+          <h2 className="h2 text-center">Express your interest</h2>
           <div className={`${style["tab-wrapper"]}`}>
             <div className={`${style["tab-indicator"]} ${style[`indicator-${activeTab}`]}`}></div>
             <ul>
@@ -145,17 +173,28 @@ export default function EnquireNowPopup({ className = "", onClose }: EnquireNowP
             <div className="custom-row">
               {fields.map((item: any, i: number) => (
                 <Fragment key={i}>
-                  <div className={`col_12 ${item?.name == "address" ? "col_md_12" : " col_md_6"}`}>
+                  {item.name == "radio" ? (
+                    <div className="col_12">
+                      <p className="black-color" style={{ marginTop: "1em" }}>
+                        Please select a preferred mode of contact
+                      </p>
+                    </div>
+                  ) : (
+                    ""
+                  )}
+                  <div className={`col_12 col_md_6`}>
                     <FormGroup control={control} errors={errors} item={item} />
                   </div>
                 </Fragment>
               ))}
             </div>
-            <button className={`primary-button white-col`} type="submit">
-              <span className={`wrapper__text`}>
-                {loading ? <FormLoading /> : <span>{"Submit"}</span>}
-              </span>
-            </button>
+            <div className={`${style["button-wrapper"]}`}>
+              <button className={`primary-button white-col`} type="submit">
+                <span className={`wrapper__text`}>
+                  {loading ? <FormLoading /> : <span>{"Submit"}</span>}
+                </span>
+              </button>
+            </div>
           </form>
           <form
             action=""

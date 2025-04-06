@@ -1,6 +1,6 @@
-import React, { Fragment } from 'react';
-import Checkbox from './Checkbox';
-import { Controller } from 'react-hook-form';
+import React, { Fragment } from "react";
+import Checkbox from "./Checkbox";
+import { Controller } from "react-hook-form";
 
 const CheckboxGroup = (props: any) => {
   return (
