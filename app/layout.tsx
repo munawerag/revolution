@@ -4,6 +4,8 @@ import "./globals.scss";
 import Footer from "./components/common/Footer";
 import Header from "./components/common/Header";
 import NewsLetter from "./components/common/NewsLetter";
+import generalData from "./data/general.json";
+import ChatIcon from "./components/common/ChatIcon";
 
 const PPRadioGrotesk = localFont({
   src: [
@@ -25,7 +27,6 @@ export const metadata: Metadata = {
   description: "Revolution",
 };
 
-
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -34,10 +35,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${PPRadioGrotesk.className}`}>
-        <Header />
+        <Header data={generalData} />
         {children}
-        <NewsLetter />
-        <Footer />
+        <NewsLetter data={generalData.newsLetter} />
+        <Footer data={generalData} />
+        <ChatIcon/>
+
       </body>
     </html>
   );

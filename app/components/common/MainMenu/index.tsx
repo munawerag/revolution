@@ -7,9 +7,37 @@ import PrimaryButton from "@/app/components/Buttons/PrimaryButton";
 interface MainMenuProps {
   setMenuActive: (active: boolean) => void;
   togglePopup: () => void;
+  closePopup?: () => void;
+  logo?: {
+    src?: string;
+  };
+  data?: {
+    navigation?: Array<{
+      id?: number;
+      label?: string;
+      link?: string;
+      target?: string;
+      submenu?: Array<{
+        label?: string;
+        link?: string;
+      }>;
+    }>;
+    additionalLinks?: Array<{
+      label?: string;
+      link?: string;
+    }>;
+    locations?: {
+      title?: string;
+      items?: Array<{
+        label?: string;
+        link?: string;
+      }>;
+    };
+  };
+  enquireNowText?: string;
 }
 
-const MainMenu = ({ setMenuActive, togglePopup }: MainMenuProps) => {
+const MainMenu = ({ setMenuActive, togglePopup, closePopup, logo = {}, data = {}, enquireNowText = "Enquire Now" }: MainMenuProps) => {
   const [active, setActive] = useState<number | null>(1);
   const [locationsActive, setLocationsActive] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
@@ -23,49 +51,11 @@ const MainMenu = ({ setMenuActive, togglePopup }: MainMenuProps) => {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  const navigation = [
-    {
-      id: 1,
-      label: "Our Destination",
-      submenu: [
-        { label: "Destination 1", link: "#" },
-        { label: "Destination 2", link: "#" },
-        { label: "Destination 3", link: "#" },
-      ],
-    },
-    {
-      id: 2,
-      label: "Our Story",
-      submenu: [
-        { label: "Story 1", link: "#" },
-        { label: "Story 2", link: "#" },
-        { label: "Story 3", link: "#" },
-      ],
-    },
-    {
-      id: 3,
-      label: "Our Landmarks",
-      submenu: [
-        { label: "Completed Projects", link: "/project-list" },
-        { label: "Rising Projects", link: "#" },
-        { label: "Eywa", link: "#" },
-      ],
-    },
-    { id: 4, label: "Our Uniqueness", link: "/our-uniqueness" },
-    {
-      id: 5,
-      label: "360 Tour",
-      link: "https://formaarch.es/360/RVLC/Peru_v2/index.html",
-      target: "_blank",
-    },
-
-    { id: 6, label: "Contact Us", link: "/contact-us", target: null },
-  ];
-
   return (
     <>
       <div className="main__menu">
         <div className="col-1">
+          {/* menu logo */}
           <div className="menu__logo">
             <Link
               href="/"
@@ -73,13 +63,19 @@ const MainMenu = ({ setMenuActive, togglePopup }: MainMenuProps) => {
                 setMenuActive(false);
               }}
             >
-              <Image src={"/assets/svgs/logo.svg"} width={277} height={88} alt="logo" />
+              <Image 
+                src={logo?.src || ""} 
+                width={277} 
+                height={88} 
+                alt="logo" 
+              />
             </Link>
           </div>
 
           <nav className="nav__menu">
             <ul className="nav__menu__leftCol">
-              {navigation.map((item) => {
+              {/* main navigation items */}
+              {data?.navigation?.map((item) => {
                 return item.link ? (
                   <li key={item.id} className="nav__menu__item">
                     <Link
@@ -89,6 +85,7 @@ const MainMenu = ({ setMenuActive, togglePopup }: MainMenuProps) => {
                       onClick={() => {
                         setMenuActive(false);
                         setLocationsActive(false);
+                        closePopup && closePopup();
                       }}
                     >
                       {item.label}
@@ -97,29 +94,29 @@ const MainMenu = ({ setMenuActive, togglePopup }: MainMenuProps) => {
                 ) : (
                   <li
                     key={item.id}
-                    className={`nav__menu__item ${active === item.id ? "active" : ""} `}
+                    className={`nav__menu__item ${active === item.id && "active"}`}
                   >
                     <div
                       className="menu__label"
-                      onMouseEnter={() => setActive(item.id)}
+                      onMouseEnter={() => setActive(item.id || null)}
                       onClick={() => {
                         if (active && active === item.id && isMobile) {
                           setActive(null);
                           return;
                         }
-                        setActive(item.id);
+                        setActive(item.id || null);
                       }}
                     >
                       {item.label}
                       <SvgComp src="/assets/svgs/arrow-right.svg" />
                     </div>
-                    <nav className="submenu">
-                      <ul>
-                        {item?.submenu?.map((subItem, i) => {
-                          return (
-                            <li key={subItem.link + i} className="submenu__item">
+                    {item?.submenu && (
+                      <nav className="submenu">
+                        <ul>
+                          {item.submenu.map((subItem, i) => (
+                            <li key={`${subItem.label || "item"}-${i}`} className="submenu__item">
                               <Link
-                                href={subItem.link}
+                                href={subItem.link || "#"}
                                 className="w-uline"
                                 onClick={() => {
                                   setMenuActive(false);
@@ -128,10 +125,10 @@ const MainMenu = ({ setMenuActive, togglePopup }: MainMenuProps) => {
                                 {subItem.label}
                               </Link>
                             </li>
-                          );
-                        })}
-                      </ul>
-                    </nav>
+                          ))}
+                        </ul>
+                      </nav>
+                    )}
                   </li>
                 );
               })}
@@ -148,51 +145,36 @@ const MainMenu = ({ setMenuActive, togglePopup }: MainMenuProps) => {
               <li>
                 <nav className="additional__links">
                   <ul className="additional__links__list">
-                    <li className="additional__links__item">
-                      <Link
-                        href="/careers"
-                        className="w-uline"
-                        onClick={() => {
-                          setMenuActive(false);
-                          setLocationsActive(false);
-                        }}
-                      >
-                        Careers
-                      </Link>
-                    </li>
-                    <li className="additional__links__item">
-                      <Link href="#" className="w-uline">
-                        Properties Names
-                      </Link>
-                    </li>
-
-                    <li className="additional__links__item">
-                      <Link href="/blogs" className="w-uline">
-                        Blogs
-                      </Link>
-                    </li>
-                    <li className="additional__links__item">
-                      <Link href="#" className="w-uline">
-                        Broker Portal
-                      </Link>
-                    </li>
+                    {data?.additionalLinks?.map((link, index) => (
+                      <li key={index} className="additional__links__item">
+                        <Link
+                          href={link.link || "#"}
+                          className="w-uline"
+                          onClick={() => {
+                            setMenuActive(false);
+                            setLocationsActive(false);
+                            closePopup && closePopup();
+                          }}
+                        >
+                          {link.label}
+                        </Link>
+                      </li>
+                    ))}
                   </ul>
                 </nav>
               </li>
             </ul>
           </nav>
 
-        
-
           <button
             className="primary-anchor mobile-only w-100 justify-center"
             id="enquireMobileOnly"
             onClick={togglePopup}
           >
-            Enquire Now
+            {enquireNowText}
           </button>
         </div>
-        <div className={`col-2 ${locationsActive ? "isActive" : ""}`}>
+        <div className={`col-2 ${locationsActive && "isActive"}`}>
           <div className="locations__wrapper">
             <div
               className="back__icon "
@@ -202,52 +184,22 @@ const MainMenu = ({ setMenuActive, togglePopup }: MainMenuProps) => {
             >
               <SvgComp src="/assets/svgs/arrow-right.svg" />
             </div>
-            <p className="locations__title">Discover R.evolution In...</p>
+            <p className="locations__title">{data?.locations?.title || ""}</p>
             <ul className="locations">
-              <li className="locations__item">
-                <Link
-                  href="/riga"
-                  onClick={() => {
-                    setMenuActive(false);
-                    setLocationsActive(false);
-                  }}
-                >
-                  Barcelona
-                </Link>
-              </li>
-              <li className="locations__item">
-                <Link
-                  href="/riga"
-                  onClick={() => {
-                    setMenuActive(false);
-                    setLocationsActive(false);
-                  }}
-                >
-                  Berlin
-                </Link>
-              </li>
-              <li className="locations__item">
-                <Link
-                  href="/riga"
-                  onClick={() => {
-                    setMenuActive(false);
-                    setLocationsActive(false);
-                  }}
-                >
-                  Dubai
-                </Link>
-              </li>
-              <li className="locations__item">
-                <Link
-                  href="/riga"
-                  onClick={() => {
-                    setMenuActive(false);
-                    setLocationsActive(false);
-                  }}
-                >
-                  Riga
-                </Link>
-              </li>
+              {data?.locations?.items?.map((location, index) => (
+                <li key={index} className="locations__item">
+                  <Link
+                    href={location.link || "#"}
+                    onClick={() => {
+                      setMenuActive(false);
+                      setLocationsActive(false);
+                      closePopup && closePopup();
+                    }}
+                  >
+                    {location.label}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
         </div>
@@ -260,7 +212,12 @@ const MainMenu = ({ setMenuActive, togglePopup }: MainMenuProps) => {
           setLocationsActive(false);
         }}
       >
-        <Image src={"/assets/svgs/cross.svg"} width={20} height={19} alt="close" />
+        <Image 
+          src="/assets/svgs/cross.svg" 
+          width={20} 
+          height={19} 
+          alt="close" 
+        />
       </div>
     </>
   );

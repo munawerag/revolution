@@ -47,25 +47,7 @@
     // }
   }
 
-  .chat {
-    background-color: var(--color-whitecol);
-    width: 3.125em;
-    height: 3.125em;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: fixed;
-    bottom: 19.625em;
-    right: 1.5em;
-    z-index: 10;
-    box-shadow: 0 0 15px -3px var(--color-graycol);
-
-    svg {
-      width: 1.25em;
-      height: 1.25em;
-    }
-  }
+  
 }
 
 .content {

@@ -2,25 +2,54 @@ import style from "./index.module.scss";
 import SvgComp from "../../common/SvgComp";
 import Link from "next/link";
 
-const HomeBanner = () => {
+interface HomeBannerProps {
+  data?: {
+    video?: string;
+    content?: {
+      subTitle?: string;
+      title?: string;
+      link?: {
+        url: string;
+        title: string;
+      };
+    };
+  };
+}
+
+const HomeBanner = ({ data }: HomeBannerProps) => {
   return (
     <>
       <section className={style.homeBanner}>
-        <div className={style.homeBanner__video}>
-          <video src="/assets/videos/banner.mp4" autoPlay muted loop={true} />
-        </div>
-        <div className="container-s">
-          <div className={`${style["content"]}`}>
-            <span className={`${style.subTitle} text-upper`}>explore</span>
-            <h3 className="h3 line-clamp-1">{`A world of one's own`}</h3>
-            <Link href="?!" className={`${style.link} uline uline--stretch`}>
-              <span className="uline__title">Discover More</span>
-            </Link>
+        {data?.video && (
+          <div className={style.homeBanner__video}>
+            <video 
+              src={data.video} 
+              autoPlay 
+              muted 
+              loop={true} 
+            />
           </div>
+        )}
+        <div className="container-s">
+          {data?.content && (
+            <div className={`${style["content"]}`}>
+              {data.content.subTitle && (
+                <span className={`${style.subTitle} text-upper`}>{data.content.subTitle}</span>
+              )}
+              {data.content.title && (
+                <h3 className="h3 line-clamp-1">{data.content.title}</h3>
+              )}
+              {data.content.link && (
+                <Link href={data.content.link.url} className={`${style.link} uline uline--stretch`}>
+                  <span className="uline__title">{data.content.link.title}</span>
+                </Link>
+              )}
+            </div>
+          )}
         </div>
-        <div className={style.chat}>
-          <SvgComp src="/assets/svgs/chat.svg" />
-        </div>
+        
+        
+        
       </section>
     </>
   );

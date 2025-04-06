@@ -53,23 +53,23 @@
     }
   }
 
-  .tab-indicator {
-    position: absolute;
-    height: 2px;
-    background-color: red;
-    bottom: 0;
-    transition: all 0.3s ease;
-  }
+  // .tab-indicator {
+  //   position: absolute;
+  //   height: 2px;
+  //   background-color: var(--color-primarycol);
+  //   bottom: 0;
+  //   transition: all 0.3s ease;
+  // }
 
-  .indicator-form-enquire {
-    width: 37%; /* Adjust based on your actual tab width */
-    left: 0;
-  }
+  // .indicator-form-enquire {
+  //   width: 37%; /* Adjust based on your actual tab width */
+  //   left: 0;
+  // }
 
-  .indicator-form-visit {
-    width: 37%; /* Adjust based on your actual tab width */
-    left: 50%;
-  }
+  // .indicator-form-visit {
+  //   width: 37%; /* Adjust based on your actual tab width */
+  //   left: 50%;
+  // }
 }
 
 .back-btn-wrapper {
@@ -85,14 +85,14 @@
   }
 }
 
-.tab-indicator {
-  position: absolute;
-  width: 10em;
-  height: 2px;
-  background-color: red;
-  bottom: 0;
-  left: 0;
-  .activeTab {
-    background-color: var(--primary-color);
-  }
-}
+// .tab-indicator {
+//   position: absolute;
+//   width: 10em;
+//   height: 2px;
+//   background-color: red;
+//   bottom: 0;
+//   left: 0;
+//   .activeTab {
+//     background-color: var(--primary-color);
+//   }
+// }

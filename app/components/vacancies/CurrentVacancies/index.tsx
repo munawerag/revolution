@@ -239,7 +239,7 @@ export default function CurrentVacancies({ vacancies }: CurrentVacanciesProps) {
 
                 <div className={`${style["col_12"]}`}>
                   <button>
-                    <img
+                    <Image
                       src="/assets/svgs/filter-search.svg"
                       alt="search icon"
                       width={23}
@@ -251,7 +251,7 @@ export default function CurrentVacancies({ vacancies }: CurrentVacanciesProps) {
               <div className={`${style["filter-dropdowns-wrapper"]}`}>
                 <div className={`${style["filter-title"]}`}>
                   <span className="filter-icon">
-                    <img src="/assets/svgs/filter.svg" alt="filter" width={20} height={15} />
+                    <Image src="/assets/svgs/filter.svg" alt="filter" width={20} height={15} />
                   </span>
                   <span>Filters</span>
                 </div>

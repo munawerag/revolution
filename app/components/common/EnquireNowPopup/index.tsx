@@ -162,7 +162,7 @@ export default function EnquireNowPopup({ className = "", onClose }: EnquireNowP
             id="form-visit"
             style={{ display: activeTab === "form-visit" ? "block" : "none" }}
           >
-            <h2>form2</h2>
+            <h2 className="h2">Coming Soon</h2>
           </form>
         </div>
       </div>

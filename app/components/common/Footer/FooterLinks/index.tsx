@@ -2,15 +2,27 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
-
 import style from "./FooterLinks.module.scss";
 
-type footerLinksProps = {
-  data: any;
-  title: any;
-};
+interface SubItem {
+  title: string;
+  link?: string;
+}
 
-const FooterLinks = ({ data, title }: footerLinksProps) => {
+interface FooterItem {
+  title: string;
+  link?: string;
+  type?: string;
+  target?: string;
+  subitems?: SubItem[];
+}
+
+interface FooterLinksProps {
+  data: FooterItem[];
+  title: string;
+}
+
+const FooterLinks = ({ data, title }: FooterLinksProps) => {
   const [active, setActive] = useState(false);
 
   return (
@@ -24,22 +36,25 @@ const FooterLinks = ({ data, title }: footerLinksProps) => {
         </div>
         <div className={`${style.listWrapper} ${active ? style.active : ""}`}>
           <ul>
-            {data.map((item: any, index: number) => {
+            {data.map((item, index) => {
+              // Store subitems in a variable with a default empty array
+              const subitems = item.subitems || [];
+              
               return (
                 <li key={index}>
                   <Link
                     href={item.link || "/"}
-                    target={item?.link?.target || "_self"}
+                    target={item?.target || "_self"}
                     className={`${item?.type == "button" ? "primary-anchor white-col" : "w-uline"}`}
                   >
                     {item?.title}
                   </Link>
-                  {item.subitems?.length > 0 && (
+                  {subitems.length > 0 && (
                     <ul className={`${style["submenuItems"]}`}>
-                      {item.subitems?.map((subitem: any, index: number) => {
+                      {subitems.map((subitem, index) => {
                         return (
                           <li key={index}>
-                            <a href="">{subitem?.title}</a>
+                            <a href={subitem.link || ""}>{subitem.title}</a>
                           </li>
                         );
                       })}

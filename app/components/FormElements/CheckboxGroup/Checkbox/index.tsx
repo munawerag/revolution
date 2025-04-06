@@ -20,7 +20,7 @@ const Checkbox = (props: any) => {
                 if (e.target.checked) {
                   props.field.onChange([...currentValue, value]);
                 } else {
-                  props.field.onChange(currentValue?.filter((item) => item !== value));
+                  props.field.onChange(currentValue?.filter((item: string) => item !== value));
                 }
               }}
             />
