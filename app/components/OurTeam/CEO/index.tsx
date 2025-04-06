@@ -32,7 +32,7 @@ export default function CEO({ data }: { data: CEODataProps }) {
         desc={heading?.desc}
         isCenter={true}
       />
-      <section className="">
+      <section className={`${style["ceo-section"]}`}>
         <div className="container-s">
           <div className="wrapper">
             <div className="custom-row align-item-center">
@@ -47,7 +47,7 @@ export default function CEO({ data }: { data: CEODataProps }) {
                   />
                 </div>
               </div>
-              <div className="col_12 col_lg_offset_1 col_lg_4">
+              <div className="col_12 col_lg_6 col_xl_offset_1 col_xl_4">
                 <div className="text-content">
                   {ceo?.description && (
                     <div dangerouslySetInnerHTML={{ __html: ceo?.description || "" }} />

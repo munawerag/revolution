@@ -3,7 +3,7 @@ import style from "./index.module.scss";
 
 type headingProps = {
   title?: string;
-  title2: string;
+  title2?: string;
   desc?: string;
   hasDesc?: boolean;
 };

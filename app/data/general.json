@@ -1,0 +1,291 @@
+{
+  "logo": {
+    "src": "/assets/svgs/logo.svg"
+  },
+  "header": {
+    "menuText": "Menu",
+    "extraMenu": [
+      { "label": "Overview", "link": "#treeOfLife" },
+      { "label": "Residences", "link": "#residencies" },
+      { "label": "Amenities", "link": "#amenities" },
+      { "label": "Location", "link": "#locations" }
+    ]
+  },
+  "mainMenu": {
+    "navigation": [
+      {
+        "id": 1,
+        "label": "Our Destination",
+        "submenu": [
+          { "label": "Destination 1", "link": "#" },
+          { "label": "Destination 2", "link": "#" },
+          { "label": "Destination 3", "link": "#" }
+        ]
+      },
+      {
+        "id": 2,
+        "label": "Our Story",
+        "submenu": [
+          { "label": "Story 1", "link": "#" },
+          { "label": "Story 2", "link": "#" },
+          { "label": "Story 3", "link": "#" }
+        ]
+      },
+      {
+        "id": 3,
+        "label": "Our Landmarks",
+        "submenu": [
+          { "label": "Completed Projects", "link": "/project-list" },
+          { "label": "Rising Projects", "link": "#" },
+          { "label": "Eywa", "link": "#" }
+        ]
+      },
+      { "id": 4, "label": "Our Uniqueness", "link": "/our-uniqueness" },
+      {
+        "id": 5,
+        "label": "360 Tour",
+        "link": "https://formaarch.es/360/RVLC/Peru_v2/index.html",
+        "target": "_blank"
+      },
+      { "id": 6, "label": "Contact Us", "link": "/contact-us" }
+    ],
+    "additionalLinks": [
+      { "label": "Careers", "link": "/careers" },
+      { "label": "Properties Names", "link": "#" },
+      { "label": "Blogs", "link": "/blogs" },
+      { "label": "Broker Portal", "link": "#" }
+    ],
+    "locations": {
+      "title": "Discover R.evolution In...",
+      "items": [
+        { "label": "Barcelona", "link": "/riga" },
+        { "label": "Berlin", "link": "/riga" },
+        { "label": "Dubai", "link": "/riga" },
+        { "label": "Riga", "link": "/riga" }
+      ]
+    }
+  },
+  "enquireNowText": "Enquire Now",
+  "homeBanner": {
+    "video": "/assets/videos/banner.mp4",
+    "content": {
+      "subTitle": "explore",
+      "title": "A world of one's own",
+      "link": {
+        "url": "?!",
+        "title": "Discover More"
+      }
+    }
+  },
+  "homeTwoColumnLayout": {
+    "projectsData": [
+      {
+        "img": "/assets/images/home/residence-1.jpg",
+        "subTitle": "Residences",
+        "title": "Uncover remarkable R.Evolution residences",
+        "ctaLink": "/project-list/22-palms",
+        "ctaTitle": "Discover More",
+        "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua the enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+      },
+      {
+        "img": "/assets/images/home/residence-2.jpg",
+        "subTitle": "Newest Urban Sancuatry",
+        "title": "Lorem ipsum dolor sit amet",
+        "ctaLink": "/project-list/eywa-tree-of-life",
+        "ctaTitle": "Discover More",
+        "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua the enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+      }
+    ]
+  },
+  "homeUniqueness": {
+    "title": "The world of R.Evolution",
+    "description": "In 5 dimensions with 7 senses is our secret ingredient and motto.",
+    "data": [
+      {
+        "img": "/assets/images/home/uniqueness-1.jpg",
+        "subTitle": "Residences",
+        "title": "Uncover remarkable R.Evolution residences",
+        "ctaLink": "/project-list/22-palms",
+        "ctaTitle": "Discover More",
+        "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua the enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+      },
+      {
+        "img": "/assets/images/home/uniqueness-2.jpg",
+        "subTitle": "Newest Urban Sancuatry",
+        "title": "Lorem ipsum dolor sit amet",
+        "ctaLink": "/project-list/eywa-tree-of-life",
+        "ctaTitle": "Discover More",
+        "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua the enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+      },
+      {
+        "img": "/assets/images/home/uniqueness-3.jpg",
+        "subTitle": "Newest Urban Sancuatry",
+        "title": "Lorem ipsum dolor sit amet",
+        "ctaLink": "/project-list/eywa-tree-of-life",
+        "ctaTitle": "Discover More",
+        "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua the enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+      },
+      {
+        "img": "/assets/images/home/uniqueness-2.jpg",
+        "subTitle": "Newest Urban Sancuatry",
+        "title": "Lorem ipsum dolor sit amet",
+        "ctaLink": "/project-list/eywa-tree-of-life",
+        "ctaTitle": "Discover More",
+        "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua the enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+      }
+    ]
+  },
+  "homeThreeColumnLayout": {
+    "title": "The world of R.Evolution",
+    "data": [
+      {
+        "img": "/assets/images/home/residence-11.jpg",
+        "subTitle": "Residences",
+        "title": "Uncover remarkable R.Evolution residences",
+        "ctaLink": "/project-list/22-palms",
+        "ctaTitle": "Discover More",
+        "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua the enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+      },
+      {
+        "img": "/assets/images/home/residence-2.jpg",
+        "subTitle": "Newest Urban Sancuatry",
+        "title": "Lorem ipsum dolor sit amet",
+        "ctaLink": "/project-list/eywa-tree-of-life",
+        "ctaTitle": "Discover More",
+        "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua the enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+      },
+      {
+        "img": "/assets/images/home/residence-3.jpg",
+        "subTitle": "Newest Urban Sancuatry",
+        "title": "Lorem ipsum dolor sit amet",
+        "ctaLink": "/project-list/eywa-tree-of-life",
+        "ctaTitle": "Discover More",
+        "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua the enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+      }
+    ]
+  },
+  "footer": {
+    "sections": [
+      {
+        "title": "More Information",
+        "items": [
+          { "title": "Our Uniqueness", "link": "?!" },
+          { "title": "Partners", "link": "?!" },
+          { "title": "Careers", "link": "?!" },
+          { "title": "Blogs", "link": "?!" },
+          { "title": "Privacy Policies", "link": "?!" },
+          { "title": "Cookie Policy", "link": "?!" },
+          { "title": "Legal Notice", "link": "?!" },
+          { "title": "Digital Accessibility", "link": "?!" },
+          { "title": "Cookies Settings", "link": "?!" }
+        ]
+      },
+      {
+        "title": "Our Destinations",
+        "items": [
+          {
+            "title": "Barcelona",
+            "link": "?!",
+            "subitems": [
+              { "title": "Bac de roda", "link": "?!" },
+              { "title": "22 Palms", "link": "?!" }
+            ]
+          },
+          {
+            "title": "Berlin",
+            "link": "?!",
+            "subitems": [
+              { "title": "Lorem ipsum", "link": "?!" },
+              { "title": "Lorem ipsum", "link": "?!" }
+            ]
+          },
+          {
+            "title": "Dubai",
+            "link": "?!",
+            "subitems": [
+              { "title": "Eywa tree of life", "link": "?!" },
+              { "title": "Eywa the way of water", "link": "?!" }
+            ]
+          },
+          {
+            "title": "Riga",
+            "link": "?!",
+            "subitems": [
+              { "title": "City zen", "link": "?!" },
+              { "title": "Lofts & rosegold", "link": "?!" },
+              { "title": "Hoft", "link": "?!" },
+              { "title": "Thompson terraces", "link": "?!" },
+              { "title": "Chocolate", "link": "?!" },
+              { "title": "Tal residence", "link": "?!" },
+              { "title": "Philosophers residence", "link": "?!" }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Our Story",
+        "items": [
+          { "title": "R.Evolution History", "link": "?!" },
+          { "title": "Awards & Partners", "link": "?!" },
+          { "title": "Our Team", "link": "?!" }
+        ]
+      },
+      {
+        "title": "Our Landmarks",
+        "items": [
+          { "title": "Completed Projects", "link": "?!" },
+          { "title": "Rising Projects", "link": "?!" },
+          { "title": "Eywa", "link": "?!" }
+        ]
+      }
+    ],
+    "contactLink": {
+      "title": "Contact us",
+      "link": "?!"
+    },
+    "companyProgress": [
+      {
+        "value": "€270m",
+        "description": "Largest development"
+      },
+      {
+        "value": "60",
+        "description": "Employees"
+      },
+      {
+        "value": "2.5m sq. ft.",
+        "description": "Developed"
+      },
+      {
+        "value": "1m sq. t.",
+        "description": "Currently in development"
+      },
+      {
+        "value": "€500–600m",
+        "description": "Buildings developed total GDV"
+      }
+    ],
+    "socialLinks": [
+      {
+        "icon": "/assets/svgs/instagram-primarycol.svg",
+        "link": "/"
+      },
+      {
+        "icon": "/assets/svgs/youtube-primarycol.svg",
+        "link": "/"
+      },
+      {
+        "icon": "/assets/svgs/linkedin-primarycol.svg",
+        "link": "/"
+      }
+    ],
+    "copyright": "© 2025 RVL REAL ESTATE L.L.C. . All Rights Reserved. Web by DG"
+  },
+  "newsLetter": {
+    "enabled": true,
+    "title": "Subscribe to our newsletter",
+    "description": "Register to receive updates about exclusive experiences, events, new destinations and more.",
+    "placeholder": "Enter your email",
+    "buttonText": "Subscribe"
+  }
+}

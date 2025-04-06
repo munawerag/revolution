@@ -23,12 +23,7 @@ const LanguageSelector = () => {
         isSearchable={false}
       />
       <div className="arrow-down">
-        <Image
-          src={"/assets/svgs/arrow-down.svg"}
-          width={6}
-          height={9}
-          alt="arrow down"
-        />
+        <Image src={"/assets/svgs/arrow-down.svg"} width={6} height={9} alt="arrow down" />
       </div>
     </div>
   );

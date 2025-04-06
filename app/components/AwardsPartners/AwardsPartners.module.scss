@@ -37,8 +37,9 @@
       justify-content: flex-start;
 
       .text-content {
-        padding-left: 0;
-
+        @media #{$ipadL} {
+          padding-left: 2em;
+        }
         @media #{$desktop} {
           padding-left: 9.375em;
         }
@@ -47,8 +48,7 @@
 
     &:not(:last-child) {
       margin-bottom: 3em;
-
-      @media #{$ipadL} {
+      @media #{$desktop} {
         margin-bottom: 7.8125em;
       }
     }

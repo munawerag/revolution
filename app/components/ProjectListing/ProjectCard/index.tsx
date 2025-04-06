@@ -43,9 +43,9 @@ const ProjectCard = ({
             <Link
               href={ctaLink}
               target={target ? target : "_self"}
-              className={`uline ${style.anchor}`}
+              className={`uline uline--stretch ${style.anchor}`}
             >
-              {ctaTitle}
+              <span className="uline__title">{ctaTitle}</span>
             </Link>
           )}
         </div>

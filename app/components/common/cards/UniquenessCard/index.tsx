@@ -13,8 +13,6 @@ export interface UniquenessCardProps {
   customclass?: string;
 }
 
-
-
 const UniquenessCard = ({
   img,
   subTitle,
@@ -28,7 +26,7 @@ const UniquenessCard = ({
   return (
     <>
       <div className={`${customclass ? customclass : ""} ${style.card}`}>
-        <div className={`${style.imgWrapper}`}>
+        <div className={`${style.imgWrapper} img-wrapper`}>
           <Image
             src={img}
             alt={title}
@@ -45,9 +43,9 @@ const UniquenessCard = ({
             <Link
               href={ctaLink}
               target={target ? target : "_self"}
-              className={`uline ${style.anchor}`}
+              className={`uline uline--stretch ${style.anchor}`}
             >
-              {ctaTitle}
+              <span className="uline__title">{ctaTitle}</span>
             </Link>
           )}
         </div>

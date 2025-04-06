@@ -1,0 +1,88 @@
+// @import '../../../../assets/abstract/variable';
+
+// .radio {
+//   .customLabel {
+//     font-size: 1em;
+//     padding: 0.625em 0.9375em;
+//     border-radius: 0.375em;
+//     background: var(--color-whitecol);
+//     margin: 0 0.625em 0.625em 0;
+//     color: var(--color-blackcol);
+//     text-transform: capitalize;
+//     cursor: pointer;
+//     transition: $transition;
+//   }
+
+//   &:last-child {
+//     .customLabel {
+//       margin: 0;
+//     }
+//   }
+
+//   input {
+//     display: none;
+//     appearance: none;
+//     border: 1px solid var(--color-whitecol);
+//     width: 1em;
+//     aspect-ratio: 1;
+//     border-radius: var(--radii-full);
+
+//     &:checked + .customLabel {
+//       background-color: var(--color-primarycol);
+//       border-color: var(--color-primarycol);
+//       color: var(--color-whitecol);
+//     }
+//   }
+// }
+
+// .customRadio {
+//   display: flex;
+//   align-items: center;
+//   font-weight: 400;
+//   margin-right: 1.25em;
+
+//   .radioLabel {
+//     display: flex;
+//     align-items: center;
+//     margin: 0;
+//   }
+
+//   input {
+//     display: none;
+
+//     &:checked {
+//       + .radioLabel {
+//         .checkboxIcon {
+//           background: var(--color-blackcol);
+//           border: 0.3125em solid var(--color-primarycol);
+//         }
+//       }
+//     }
+
+//     &:hover {
+//       + .radioLabel {
+//         .checkboxIcon {
+//           border-color: rgba(var(--color-bordercol), 1);
+//         }
+//       }
+//     }
+//   }
+// }
+
+// .checkboxIcon {
+//   width: 1.0625em;
+//   margin-right: 0.720625em;
+//   height: 1.0625em;
+//   display: block;
+//   border-radius: 100%;
+//   border: 2px solid rgba(var(--color-bordercol), 0.4);
+//   transition: $transition;
+//   transform: translateY(-2px);
+// }
+
+// html[lang='ar'] {
+//   .checkboxIcon {
+//     margin-right: 0;
+//     margin-left: 0.720625em;
+//   }
+// }

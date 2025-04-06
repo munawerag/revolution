@@ -4,10 +4,13 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    padding: 15em 0 9.25em 0;
+    padding: 15em 0 8em 0;
 
-    @media #{$mob} {
-        padding: 15em 0 3em 0;
+    @media #{$ipadpro} {
+        padding: 11em 0 2em;
+    }
+    @media #{$mineTab} {
+        padding: 8em 0 2em;
     }
 
     .sub-title {
@@ -20,7 +23,7 @@
     }
 
     h2 {
-        margin-bottom: 1.527em;
+        margin-bottom: 1em;
     }
 
     &.center {

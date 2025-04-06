@@ -5,10 +5,10 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 import { PhoneRegex } from "../../../utilities/utility";
 import FormLoading from "../../FormLoading";
-
-import FormButton from "../../Buttons/FormButton";
 import style from "./ContactUsForm.module.scss";
 import { Fragment, useState } from "react";
+
+
 
 export default function ContactUsFORM() {
   const [loading, setLoading] = useState(false);
@@ -91,11 +91,11 @@ export default function ContactUsFORM() {
       inputtype: "email",
     },
     {
-      type: "input",
+      type: "tel",
       name: "phone",
       label: "Phone",
       placeholder: "",
-      inputtype: "tel",
+      // inputtype: "tel",
     },
     {
       type: "textarea",
@@ -105,6 +105,26 @@ export default function ContactUsFORM() {
       rows: 11,
       exclass: "",
     },
+    // {
+    //   type: "date",
+    //   name: "date",
+    //   label: "Enter data",
+    //   placeholder: "Date",
+    // },
+    // {
+    //   type: "checkbox",
+    //   name: "checkbox",
+    //   label: "Enter checkbox",
+    //   options: [
+    //     { id: "1", name: "option 1" },
+    //     { id: "2", name: "option 2" },
+    //   ],
+    //   placeholder: "check",
+    // },
+
+
+
+
   ];
 
   const onFormSubmit = async (val: Object) => {

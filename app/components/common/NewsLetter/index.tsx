@@ -1,18 +1,32 @@
 import FormButton from "../../Buttons/FormButton";
 import style from "./index.module.scss";
 
-const NewsLetter = () => {
+interface NewsLetterProps {
+  data?: {
+    enabled?: boolean;
+    title?: string;
+    description?: string;
+    placeholder?: string;
+    buttonText?: string;
+  };
+}
+
+const NewsLetter = ({ data }: NewsLetterProps) => {
+  // If data is not provided or enabled is explicitly set to false, don't render
+  if (!data || data.enabled === false) {
+    return null;
+  }
+
   return (
     <section className={`section ${style.newsLetter}`}>
       <div className="container-s">
-        <div className={`custom-row ${style.row}`}>
+        <div className={`${style.row} custom-row no-gutters`}>
           <div className="col_12 col_lg_6 col_xl_3">
-            <h3>Subscribe to our newsletter</h3>
+            <h3>{data.title || ""}</h3>
           </div>
           <div className="col_12 col_lg_6 col_xl_4">
             <p className="fw-400">
-              Register to receive updates about exclusive experiences, events,
-              new destinations and more.
+              {data.description || ""}
             </p>
           </div>
           <div className="col_12 col_xl_5">
@@ -20,10 +34,10 @@ const NewsLetter = () => {
               <input
                 defaultValue=""
                 type="email"
-                placeholder="Enter your email"
+                placeholder={data.placeholder || ""}
                 className={`input`}
               />
-              <FormButton title="Subscribe" />
+              <FormButton title={data.buttonText || ""} />
             </div>
           </div>
         </div>

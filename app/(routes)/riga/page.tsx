@@ -6,17 +6,18 @@ import rigaData from "@/app/data/riga.json";
 export default function Page() {
   return (
     <main>
-      <DestinationRiga 
+      <DestinationRiga
         subTitle={rigaData?.sectionHeading?.subTitle}
         title={rigaData?.sectionHeading?.title}
         desc={rigaData?.sectionHeading?.desc}
         cardData={rigaData?.data}
       />
-      <BeautyRiga
-        image={rigaData?.beautyRiga?.image}
-        content={rigaData?.beautyRiga?.content}
+      <BeautyRiga image={rigaData?.beautyRiga?.image} content={rigaData?.beautyRiga?.content} />
+      <Amenities
+        title={rigaData?.amenities?.title}
+        description={rigaData?.amenities?.description}
+        items={rigaData?.amenities?.items}
       />
-      <Amenities/>
     </main>
-  )
+  );
 }

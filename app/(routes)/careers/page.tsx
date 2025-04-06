@@ -16,6 +16,7 @@ export default function Page() {
         desktopImage={careersData?.innerBanner?.desktopImage}
         mobileImage={careersData?.innerBanner?.mobileImage}
         alt={careersData?.innerBanner?.alt}
+        VideoUrl={careersData?.innerBanner?.videoPath}
       />
       <CareersListing data={careersData?.careersListing} />
     </main>

@@ -16,7 +16,7 @@ export default function RelatedPosts({ relatedPosts }: RelatedPostsProps) {
             <div className={`${style["main-wrapper"]}`}>
                 <div className={`${style["custom-row"]} custom-row`}>
                     {relatedPosts.posts.map((post, index) => (
-                        <div className="col_12 col_lg_6" key={index}>
+                        <div className="col_12 col_md_6" key={index}>
                             <BlogCard
                                 img={post?.img}
                                 subTitle={post?.subTitle}

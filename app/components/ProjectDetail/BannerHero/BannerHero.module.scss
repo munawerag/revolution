@@ -61,7 +61,7 @@
   &__logo {
     color: var(--color-whitecol);
     position: fixed;
-    top: 55%;
+    top: 65%;
     left: 50%;
     transform: translate(-50%, -50%);
     opacity: 0;
@@ -74,24 +74,24 @@
     max-width: 37.875em;
     text-align: center;
     margin: 0 auto;
-    @media #{$ipadpro} {
-      top: 50%;
-    }
-    @media #{$ipad} {
-      top: 55%;
-      padding: 0 2em;
-    }
+    // @media #{$ipadpro} {
+    //   top: 50%;
+    // }
+    // @media #{$ipad} {
+    //   top: 55%;
+    //   padding: 0 2em;
+    // }
     &.active {
       opacity: 1;
       pointer-events: auto;
       transition: $transition;
-      top: 50%;
-      @media #{$ipadpro} {
-        top: 45%;
-      }
-      @media #{$ipad} {
-        top: 50%;
-      }
+      top: 55%;
+      // @media #{$ipadpro} {
+      //   top: 45%;
+      // }
+      // @media #{$ipad} {
+      //   top: 50%;
+      // }
     }
 
     .logo {
@@ -109,7 +109,7 @@
   &__titleOne {
     color: var(--color-whitecol);
     position: fixed;
-    top: 55%;
+    top: 65%;
     left: 50%;
     transform: translate(-50%, -50%);
     opacity: 0;
@@ -122,24 +122,24 @@
     max-width: 39.875em;
     text-align: center;
     margin: 0 auto;
-    @media #{$ipadpro} {
-      top: 50%;
-    }
-    @media #{$ipad} {
-      top: 55%;
-      padding: 0 2em;
-    }
+    // @media #{$ipadpro} {
+    //   top: 50%;
+    // }
+    // @media #{$ipad} {
+    //   top: 55%;
+    //   padding: 0 2em;
+    // }
     &.active {
       opacity: 1;
       pointer-events: auto;
       transition: $transition;
-      top: 50%;
-      @media #{$ipadpro} {
-        top: 45%;
-      }
-      @media #{$ipad} {
-        top: 50%;
-      }
+      top: 55%;
+      // @media #{$ipadpro} {
+      //   top: 45%;
+      // }
+      // @media #{$ipad} {
+      //   top: 50%;
+      // }
     }
     .logo {
       width: 13.5em;
@@ -160,7 +160,7 @@
   &__titleTwo {
     position: fixed;
     color: var(--color-whitecol);
-    top: 55%;
+    top: 65%;
     left: 50%;
     transform: translate(-50%, -50%);
     opacity: 0;
@@ -172,23 +172,23 @@
     text-align: center;
     margin: 0 auto;
     width: 100%;
-    @media #{$ipadpro} {
-      top: 50%;
-    }
-    @media #{$ipad} {
-      top: 55%;
-    }
+    // @media #{$ipadpro} {
+    //   top: 50%;
+    // }
+    // @media #{$ipad} {
+    //   top: 55%;
+    // }
     &.active {
       opacity: 1;
       pointer-events: auto;
-      top: 50%;
+      top: 55%;
       transition: $transition;
-      @media #{$ipadpro} {
-        top: 45%;
-      }
-      @media #{$ipad} {
-        top: 50%;
-      }
+      // @media #{$ipadpro} {
+      //   top: 45%;
+      // }
+      // @media #{$ipad} {
+      //   top: 50%;
+      // }
     }
 
     .listItemsWrapper {

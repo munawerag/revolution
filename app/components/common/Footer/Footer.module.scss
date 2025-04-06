@@ -1,7 +1,7 @@
 @import "../../../styles/abstract/variable";
 
 .footer {
-  padding: 7.5em 0 0;
+  padding: 3.5em 0 0;
   background: var(--color-whitecol);
 
   @media #{$ipadpro} {
@@ -47,7 +47,7 @@
     display: flex;
     flex-wrap: wrap;
     .col {
-      @media #{$ipad}  {
+      @media #{$ipad} {
         flex: 0 0 33.33333%;
         width: 33.33333%;
       }
@@ -106,7 +106,7 @@
       flex: 0 0 100%;
       width: 100%;
     }
-    
+
     .logoWrapper {
       max-width: 17.375em;
       @media #{$ipad} {
@@ -166,6 +166,9 @@
       @media #{$ipad} {
         padding: 0 1.5em;
       }
+      @media #{$mob} {
+        padding: 0 0.3em;
+      }
     }
     &:nth-child(4) {
       @media #{$tab} and #{$ipad} {
@@ -205,11 +208,30 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
+    &:hover {
+      @media #{$desktop} {
+        &::before {
+          transform: scale(0.9);
+        }
+      }
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: var(--color-ambercol);
+      border-radius: inherit;
+      transition: var(--transition-slow);
+      transform: scale(0);
+    }
     img {
       width: auto;
       height: auto;
       max-width: 50%;
       max-height: 50%;
+      position: relative;
+      z-index: 1;
     }
   }
 }

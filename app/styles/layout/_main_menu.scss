@@ -37,6 +37,9 @@
 
     .menu__logo {
       width: 17.375em;
+      @media #{$mob} {
+        width: 9.375em;
+      }
       img {
         width: 100%;
       }
@@ -44,6 +47,9 @@
 
     .nav__menu {
       margin-top: 7.6875em;
+      @media #{$mob} {
+        margin-top: 3.688em;
+      }
 
       &__leftCol {
         width: 22.5625em;
@@ -55,12 +61,14 @@
         @media #{$ipadpro} {
           width: 100%;
           border-right: 0;
+          overflow-y: auto;
+          overflow-x: hidden;
+          height: 45em;
         }
 
         @media #{$mob} {
           width: 100%;
           height: calc(100vh - 236px);
-          overflow-y: auto;
         }
       }
 
@@ -90,6 +98,9 @@
           padding-right: 0;
           padding-bottom: 0;
           margin-bottom: 2.5em;
+        }
+        @media #{$mob} {
+          margin-bottom: 1em;
         }
       }
 
@@ -151,6 +162,9 @@
 
       .additional__links {
         margin-top: 5.1875em;
+        @media #{$mob} {
+          margin-top: 2.188em;
+        }
 
         &__item {
           color: var(--color-primarycol);
@@ -169,7 +183,6 @@
     @media #{$ipad} {
       padding: 2em;
       height: 100%;
-      overflow-y: auto;
     }
   }
 
@@ -192,12 +205,20 @@
         color: var(--color-primarycol);
       }
       &__item {
-        color: var(--color-primarycol);
-        padding: 0.8125em;
         font-size: 1.125em;
         font-weight: 400;
         text-align: center;
         border: 1px solid var(--color-graycol);
+        a {
+          color: var(--color-primarycol);
+          padding: 0.8125em;
+          display: block;
+          transition: var(--transition);
+          &:hover {
+            background-color: var(--color-primarycol);
+            color: var(--color-whitecol);
+          }
+        }
       }
     }
 

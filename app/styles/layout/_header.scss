@@ -5,21 +5,27 @@
   left: 0;
   z-index: 99999;
   height: 14.0625em;
-  background: #fff;
+  background: transparent;
   transition: $transitionSlow;
+  @media #{$ipadpro} {
+    height: 10em;
+  }
+  @media #{$ipad} {
+    background-color: var(--color-whitecol);
+  }
 
   // border-bottom: 1px solid rgba($color: #bebebef0, $alpha: 0.94);
-  &::before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    background: #fff;
-    transition: $transitionSlow;
-    transition-delay: 1s;
-  }
+  // &::before {
+  //   content: "";
+  //   position: absolute;
+  //   width: 100%;
+  //   height: 100%;
+  //   top: 0;
+  //   left: 0;
+  //   background: #fff;
+  //   transition: $transitionSlow;
+  //   transition-delay: 1s;
+  // }
 
   @media #{$ipad} {
     height: 7.5em;
@@ -101,17 +107,15 @@
       flex-shrink: 0;
       width: 17.3125em;
       transition: $transitionSlow;
-
-      img {
-        width: 100%;
-      }
-
-      @media #{$ipad} {
+      @media #{$ipadpro} {
         top: 1.75em;
         width: 12.3125em;
       }
       @media #{$mineTab} {
         width: 9.313em;
+      }
+      img {
+        width: 100%;
       }
     }
 
@@ -144,6 +148,7 @@
         font-size: 1.25em;
         font-weight: 200;
         border-radius: 0;
+        background-color: transparent;
 
         &.css-t3ipsp-control {
           box-shadow: none;
@@ -240,6 +245,7 @@
     height: 5.75em;
     transition: $transitionSlow;
     border-bottom: 1px solid rgba($color: var(--rgb-graycol), $alpha: 0.5);
+    background-color: var(--color-whitecol);
     &.detailMenu {
       height: 10em;
     }

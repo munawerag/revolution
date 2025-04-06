@@ -8,12 +8,15 @@
   align-items: center;
   gap: 0.5em;
   @media #{$mob} {
-    margin: 0 0 1em;
+    margin: 0 0 0.7em;
     justify-content: space-between;
   }
 }
 
 .listWrapper {
+  @media #{$tabL} {
+    margin-bottom: 2em;
+  }
   @media #{$mob} {
     max-height: 0;
     overflow: hidden;
@@ -35,24 +38,28 @@
 
   > ul {
     height: 22.875em;
-    column-count: 1;
-    column-gap: 6.25em;
-    @media #{$ipadpro} {
-      column-gap: 0.25em;
-    }
+    column-count: 2;
+    column-fill: auto;
     @media #{$ipad} {
+      column-count: 1;
       height: auto;
     }
   }
 
   .submenuItems {
     margin-top: 1em;
+    margin-bottom: 2em;
+
     li {
-      margin-bottom: 0.3em;
+      margin-bottom: 0.8em;
     }
     a {
-      font-size: 1em;
+      font-size: 1.125em;
       text-transform: uppercase;
+      transition: var(--transition);
+      &:hover {
+        color: var(--color-secondarycol);
+      }
     }
   }
 }

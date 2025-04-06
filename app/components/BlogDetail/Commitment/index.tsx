@@ -40,7 +40,7 @@ export default function Commitment({ commitmentData }: CommitmentProps) {
       <div className="container-s">
         <div className={`${style["main-wrapper"]}`}>
           <div className={`${style["custom-row"]} custom-row justify-between`}>
-            <div className="col_12 col_lg_5">
+            <div className="col_12 col_lg_6 col_xl_5">
               <div className={`${style["text-cotent"]}`}>
                 <h3>{heading}</h3>
                 <div dangerouslySetInnerHTML={{ __html: firstSection?.content ?? "" }} />
@@ -58,7 +58,7 @@ export default function Commitment({ commitmentData }: CommitmentProps) {
             </div>
           </div>
           <div className={`${style["custom-row"]} custom-row justify-between`}>
-            <div className="col_12 col_lg_5">
+            <div className="col_12 col_lg_6 col_xl_5">
               <div className={`${style["text-cotent"]}`}>
                 <div dangerouslySetInnerHTML={{ __html: secondSection.content }} />
 

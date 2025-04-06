@@ -1,0 +1,129 @@
+@import "../../../styles/abstract/variable";
+
+.title-wrapper {
+  max-width: 22.5em;
+  margin: 15em auto 10.0625em;
+  @media #{$ipadpro} {
+    margin: 15em auto 3em;
+  }
+  @media #{$mineTab} {
+    margin: 10em auto 2em;
+  }
+}
+
+.back-btn-wrapper {
+  position: absolute;
+  top: 0;
+  left: 3.9%;
+  @media #{$mineTab} {
+    position: static;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.location {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  gap: 1.25em;
+  margin-top: 3em;
+  @media #{$mineTab} {
+    margin-top: 2em;
+  }
+
+  &-title {
+    font-size: 1.25em;
+  }
+}
+
+.form-main-wrapper {
+  padding: 4.0625em 3.8125em;
+  margin-top: 7.125em;
+  @media #{$mineTab} {
+    padding: 2em;
+    margin-top: 2em;
+  }
+}
+
+.profile-text-content {
+  p {
+    margin-bottom: 0;
+    font-weight: 300;
+  }
+}
+
+.cv-title {
+  margin-bottom: 1.5em;
+}
+
+.information-form {
+  > .h4 {
+    margin-bottom: 1.5em;
+  }
+}
+
+.choose-file-wrapper__inner {
+  position: relative;
+  margin-bottom: 4.0625em;
+  max-width: 34.625em;
+  padding: 2.5em 1.375em;
+  border: 1px dashed var(--color-graycol);
+  .icon {
+    width: 2em;
+    margin-bottom: 1.5em;
+  }
+  .drag-drop-file {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .select-file {
+    text-decoration: underline;
+  }
+}
+
+.choose-file-wrapper {
+  //   &__inner {
+  //     display: flex;
+  //     align-items: center;
+  //     gap: 1em;
+  //     border: 1px solid var(--color-graycol2);
+  //     padding: 0.75em 1em;
+  //     border-radius: 0.5em;
+  //     background-color: var(--color-whitecol);
+  //     cursor: pointer;
+  //   }
+
+  .custom-file-label {
+    // flex-grow: 1;
+    // font-size: 1em;
+    // color: var(--color-graycol);
+    // overflow: hidden;
+    // text-overflow: ellipsis;
+    // white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  .custom-file-input {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+  }
+}
+
+// .unactive-panel {
+//   transition: var(--transition);
+//   transform: translateX(120vw);
+//   background-color: red;
+//   overflow: hidden;
+//   position: absolute;
+//   inset: 0;
+//   &.active {
+//     transform: translateX(0);
+//   }
+// }

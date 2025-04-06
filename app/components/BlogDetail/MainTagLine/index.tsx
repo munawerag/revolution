@@ -21,13 +21,13 @@ export default function MainTagLine({
       <div className="container">
         <div className={`${style["wrapper-top"]}`}>
           <div className="custom-row no-gutters justify-between">
-            <div className="col_12 col_lg_5">
+            <div className="col_12 col_xl_5">
               <div className="wrapper-left">
                 <span className={`${style["date"]}`}>{date}</span>
                 <h2 className="h2">{title}</h2>
               </div>
             </div>
-            <div className="col_12 col_lg_4">
+            <div className="col_12 col_xl_4">
               {intro && (
                 <div
                   className={`${style["wrapper-right"]}`}
