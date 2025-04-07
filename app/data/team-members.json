@@ -1,51 +1,66 @@
-[
-  {
-    "id": 1,
-    "name": "Aleksandrs Sihmans",
-    "position": "Chief Investment Officer",
-    "image": "/assets/images/our-team/member-1.jpg"
+{
+  "template": "our-team",
+  "ceoMessage": {
+    "heading": {
+      "subTitle": "Our Team",
+      "title": "Lorem ipsum odor amet",
+      "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam."
+    },
+    "ceo": {
+      "name": "Alex Zagrebelny",
+      "title": "Chairman and CEO",
+      "image": "/assets/images/our-team/ceo.jpg",
+      "description": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua the enim ad minim veniam, quis nostrud exercitation ullamco. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip eaboris nisi ut aliquipx ea commodo consequat.</p><p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua the enim ad minim veniam, quis nostrud exercitation ullamco.</p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p><p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip eaboris nisi ut aliquipx ea commodo consequat.</p>"
+    }
   },
-  {
-    "id": 2,
-    "name": "Waleed Al Hudhud",
-    "position": "COO",
-    "image": "/assets/images/our-team/member-2.jpg"
-  },
-  {
-    "id": 3,
-    "name": "Izak Voster",
-    "position": "Director of Finance",
-    "image": "/assets/images/our-team/member-3.jpg"
-  },
-  {
-    "id": 4,
-    "name": "Monica Chikhani",
-    "position": "Chief Marketing Officer",
-    "image": "/assets/images/our-team/member-4.jpg"
-  },
-  {
-    "id": 5,
-    "name": "Nehal Ahmed",
-    "position": "Director of development and Design",
-    "image": "/assets/images/our-team/member-5.jpg"
-  },
-  {
-    "id": 6,
-    "name": "Khaled Rashad",
-    "position": "Director Costs, Contracts and Procurement",
-    "image": "/assets/images/our-team/member-6.jpg"
-  },
-  {
-    "id": 7,
-    "name": "Majd Sabbagh",
-    "position": "Director of Interiors",
-    "image": "/assets/images/our-team/member-7.jpg"
-  },
-  {
-    "id": 8,
-    "name": "Armando Caballero",
-    "position": "Manager - Procurement and Fitout",
-    "image": "/assets/images/our-team/member-8.jpg"
-  }
-
-]
+  "teamMembers": [
+    {
+      "id": 1,
+      "name": "Aleksandrs Sihmans",
+      "position": "Chief Investment Officer",
+      "image": "/assets/images/our-team/member-1.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Waleed Al Hudhud",
+      "position": "COO",
+      "image": "/assets/images/our-team/member-2.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Izak Voster",
+      "position": "Director of Finance",
+      "image": "/assets/images/our-team/member-3.jpg"
+    },
+    {
+      "id": 4,
+      "name": "Monica Chikhani",
+      "position": "Chief Marketing Officer",
+      "image": "/assets/images/our-team/member-4.jpg"
+    },
+    {
+      "id": 5,
+      "name": "Nehal Ahmed",
+      "position": "Director of development and Design",
+      "image": "/assets/images/our-team/member-5.jpg"
+    },
+    {
+      "id": 6,
+      "name": "Khaled Rashad",
+      "position": "Director Costs, Contracts and Procurement",
+      "image": "/assets/images/our-team/member-6.jpg"
+    },
+    {
+      "id": 7,
+      "name": "Majd Sabbagh",
+      "position": "Director of Interiors",
+      "image": "/assets/images/our-team/member-7.jpg"
+    },
+    {
+      "id": 8,
+      "name": "Armando Caballero",
+      "position": "Manager - Procurement and Fitout",
+      "image": "/assets/images/our-team/member-8.jpg"
+    }
+  ]
+}

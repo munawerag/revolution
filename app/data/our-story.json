@@ -1,4 +1,9 @@
 {
+  "template": "our-story",
+  "innerBanner": {
+    "desktopImage": "/assets/images/our-story/inner-hero.jpg",
+    "mobileImage": "/assets/images/our-story/inner-hero-mob.jpg"
+  },
   "missionVision": {
     "introText": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua the enim ad minim veniam, quis nostrud exercitation ullamco. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
     "sections": [
@@ -19,5 +24,10 @@
         "height": 938
       }
     ]
+  },
+  "sectionHeading": {
+    "subTitle": "Our Story",
+    "title": "R.Evolution history",
+    "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam."
   }
 }

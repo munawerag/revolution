@@ -1,11 +1,16 @@
+
 import CareersListing from "@/app/components/CareersListing";
 import InnerBanner from "@/app/components/common/InnerBanner";
 import SectionHeading from "@/app/components/common/SectionHeading";
-import careersData from "@/app/data/careers.json";
 
-export default function Page() {
+
+
+
+export default function Careers({page}: any) {
+  const careersData = page?.careersData || page;
+  
   return (
-    <main>
+    <>
       <SectionHeading
         subTitle={careersData?.sectionHeading?.subTitle}
         title={careersData?.sectionHeading?.title}
@@ -19,6 +24,6 @@ export default function Page() {
         VideoUrl={careersData?.innerBanner?.videoPath}
       />
       <CareersListing data={careersData?.careersListing} />
-    </main>
+    </>
   );
 }
