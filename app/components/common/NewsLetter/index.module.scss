@@ -33,6 +33,7 @@
   justify-content: flex-end;
   gap: 3em;
   flex-wrap: wrap;
+  align-items: center;
 
   @media #{$ipadpro} {
     justify-content: center;
@@ -44,9 +45,17 @@
 
   input {
     width: 21.5em;
+    margin: 0;
+    border-color: transparent;
+    border-bottom-color: var(--color-graycol);
     @media #{$mob} {
       width: 100%;
       padding-bottom: 1.1em;
     }
   }
+
+  .c_form-field {
+    margin: 0;
+  }
+
 }

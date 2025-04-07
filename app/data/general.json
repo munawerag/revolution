@@ -282,10 +282,8 @@
     "copyright": "© 2025 RVL REAL ESTATE L.L.C. . All Rights Reserved. Web by DG"
   },
   "newsLetter": {
-    "enabled": true,
     "title": "Subscribe to our newsletter",
     "description": "Register to receive updates about exclusive experiences, events, new destinations and more.",
-    "placeholder": "Enter your email",
     "buttonText": "Subscribe"
   }
 }

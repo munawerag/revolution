@@ -16,19 +16,26 @@ const FormGroup = (props: any) => {
   return (
     <>
       {item.type == "input" && (
-        <div className={`c_form-field ${errors[`${item.name}`] ? "border-red" : ""}`}>
+        <div
+          className={`c_form-field ${item?.subscribeClass ? "m-0" : ""} ${
+            errors[`${item.name}`] ? "border-red" : ""
+          }`}
+        >
           {item?.label && <label>{item?.label}</label>}
           <InputField
             name={item.name}
             control={control}
             placeholder={item.placeholder || ""}
             type={item.inputtype || ""}
-            class={item.exclass || ""}
+            className={item.exclass || ""}
             req={item.req}
           />
-          {errors[`${item.name}`] && (
-            <span className="error">{errors[`${item.name}`]?.message}</span>
-          )}
+
+          {item?.subscribeClass
+            ? ""
+            : errors[`${item.name}`] && (
+                <span className="error">{errors[`${item.name}`]?.message}</span>
+              )}
         </div>
       )}
       {item.type == "select" && (
@@ -62,7 +69,7 @@ const FormGroup = (props: any) => {
             name={item.name}
             control={control}
             placeholder={item.placeholder || ""}
-            class={item.exclass || ""}
+            className={item.exclass || ""}
             req={item.req}
           />
           {errors[`${item.name}`] && (
@@ -78,7 +85,7 @@ const FormGroup = (props: any) => {
             init={item.name || ""}
             control={control}
             placeholder={item.placeholder || ""}
-            class={item.exclass || ""}
+            className={item.exclass || ""}
             country={item.country}
           />
 
@@ -97,7 +104,7 @@ const FormGroup = (props: any) => {
               init={item.name || ""}
               control={control}
               placeholder={item.placeholder || ""}
-              class={item.exclass || ""}
+              className={item.exclass || ""}
               req={item.req}
               multiple={item.multiple}
               setValue={props.setValue}
@@ -144,7 +151,7 @@ const FormGroup = (props: any) => {
               options={item.options}
               onChange={item.onChange}
               heading={item.heading}
-              class={item.customClass ? item.customClass : item.customClass}
+              className={item.customClass ? item.customClass : item.customClass}
             />
             <div>
               {errors[`${item.name}`] && (
@@ -163,7 +170,7 @@ const FormGroup = (props: any) => {
               control={control}
               placeholder={item.placeholder || ""}
               label={item.label}
-              class={item.exclass || ""}
+              className={item.exclass || ""}
               onChange={item.onChange}
               isTime={item.time}
             />

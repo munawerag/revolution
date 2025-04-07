@@ -18,7 +18,7 @@ const RadioGroup = (props: any) => {
                 {...prop}
                 value={option.id}
                 label={option.name}
-                class={props.class}
+                className={props.class}
                 id={index}
                 onChange={(e: any) => {
                   onChange(e);

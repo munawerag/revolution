@@ -18,28 +18,25 @@ interface CareersListingProps {
   };
 }
 
-export default function CareersListing({ data } : CareersListingProps) {
+export default function CareersListing({ data }: CareersListingProps) {
   return (
     <section className="section">
       <div className="container-s">
-        {
-            data?.centerDescription && (
-                <div className={`${style["center-description"]}`}
-                  dangerouslySetInnerHTML={{ __html: data?.centerDescription ?? "" }}
-                />
-            )
-        }
+        {data?.centerDescription && (
+          <div
+            className={`${style["center-description"]}`}
+            dangerouslySetInnerHTML={{ __html: data?.centerDescription ?? "" }}
+          />
+        )}
         <div className={`${style["main-wrapper"]}`}>
           {data?.sections?.map((section, index) => (
             <div key={index} className={`${style["custom-row"]} custom-row`}>
               <div className="col_12 col_md_5">
                 <div className={`${style["text-content"]}`}>
                   <h3>{section?.title}</h3>
-                  {
-                    section?.content && (
-                        <div dangerouslySetInnerHTML={{ __html: section?.content ?? "" }} />
-                    )
-                  }
+                  {section?.content && (
+                    <div dangerouslySetInnerHTML={{ __html: section?.content ?? "" }} />
+                  )}
                   {section?.ctaTitle && section?.ctaLink && (
                     <div>
                       <Link
@@ -47,7 +44,7 @@ export default function CareersListing({ data } : CareersListingProps) {
                         target={section?.ctaTarget ?? "_self"}
                         className={`uline ${style.anchor}`}
                       >
-                        {section?.ctaTitle}
+                        <span className="uline__title">{section?.ctaTitle}</span>
                       </Link>
                     </div>
                   )}
