@@ -25,7 +25,7 @@ const OurUnique = ({ content, image, link }: OurUniqueProps) => {
               <div className={style.contentWrapper}>
                 {content && <div dangerouslySetInnerHTML={{ __html: content }} />}
                 <Link href={link.url} target="_self" className={`uline ${style.anchor}`}>
-                  {link?.text}
+                  <span className="uline__title">{link?.text}</span>
                 </Link>
               </div>
             </div>
