@@ -17,19 +17,17 @@
         "id": 1,
         "label": "Our Destination",
         "submenu": [
-          { "label": "Destination 1", "link": "#" },
-          { "label": "Destination 2", "link": "#" },
-          { "label": "Destination 3", "link": "#" }
+          { "label": "Barcelona", "link": "/riga" },
+          { "label": "Berlin", "link": "/riga" },
+          { "label": "Dubai", "link": "/riga" },
+          { "label": "Riga", "link": "/riga" }
         ]
       },
       {
         "id": 2,
         "label": "Our Story",
-        "submenu": [
-          { "label": "Story 1", "link": "#" },
-          { "label": "Story 2", "link": "#" },
-          { "label": "Story 3", "link": "#" }
-        ]
+        "link": "/our-story"
+
       },
       {
         "id": 3,

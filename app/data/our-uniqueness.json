@@ -33,12 +33,10 @@
     "title2": "Turning dreams into realty",
     "items": [
       {
-        "title": "Lorem ipsum dolor",
         "desc": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore. quat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.</p><br><p>- Lorem ipsum</p> ",
         "img": "/assets/images/project-detail/essential-1.jpg"
       },
       {
-        "title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
         "desc": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore. quat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.</p><br><p>- Lorem ipsum</p> ",
         "img": "/assets/images/project-detail/essential-2.jpg"
       }

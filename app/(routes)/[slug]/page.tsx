@@ -1,6 +1,6 @@
 import React from "react";
 // import { Metadata } from "next";
-// import NotFound from "@/app/not-found";
+import NotFound from "@/app/not-found";
 
 // import { apiFetch } from "@/app/functions/ApiResource";
 import Careers from "@/app/containers/careers";
@@ -13,12 +13,9 @@ import ourUniquenessData from "../../data/our-uniqueness.json";
 import rigaData from "@/app/data/riga.json";
 import vacanciesData from "../../data/vacancies.json";
 import blogSectionData from "@/app/data/blog-section.json";
-
-
-
+import projectListData from "../../data/project-list.json";
 
 import AwardsAndPartners from "@/app/containers/awards-and-partners";
-
 import ContactUs from "@/app/containers/contact-us";
 import OurStory from "@/app/containers/our-story";
 import OurTeam from "@/app/containers/our-team";
@@ -26,21 +23,11 @@ import OurUniqueness from "@/app/containers/our-uniqueness";
 import Riga from "@/app/containers/riga";
 import Vacancies from "@/app/containers/vacancies";
 import Blogs from "@/app/containers/blogs";
+import ProjectList from "@/app/containers/project-list";
 
-
-
-
-
-const TemplatePage = async ({ params }: { params?: { slug: string } }) => {
-  
-  if (!params) {
-    console.error("Error: params is undefined");
-    return <div>Error: Missing parameters</div>;
-  }
-
-  const { slug } = params;
-
-  // console.log("check", slug);
+const TemplatePage = async ({ params }: { params: Promise<{ slug: string }> }) => {
+  const resolvedParams = await params;
+  const slug = resolvedParams?.slug || "";
 
   return (
     <>
@@ -66,14 +53,16 @@ const TemplatePage = async ({ params }: { params?: { slug: string } }) => {
                 return <Vacancies page={vacanciesData} />;
               case "blogs":
                 return <Blogs page={blogSectionData} />;
-
+              case "project-list":
+                return <ProjectList page={projectListData} />;
               default:
-              // return <NotFound />;
+                return <NotFound />;
             }
           })()
         ) : (
-          <></>
-          // <NotFound />
+          <>
+            <NotFound />
+          </>
         )}
       </main>
     </>

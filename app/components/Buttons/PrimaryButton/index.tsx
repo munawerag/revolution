@@ -9,19 +9,11 @@ interface PrimaryButtonProps {
   className?: string;
 }
 
-const PrimaryButton = ({
-  title,
-  link,
-  isWhite,
-  target,
-  className,
-}: PrimaryButtonProps) => {
+const PrimaryButton = ({ title, link, isWhite, target, className }: PrimaryButtonProps) => {
   return (
     <Link
-      className={`primary-anchor ${isWhite ? "white-col" : ""} ${
-        className || ""
-      }`}
-      href={link}
+      className={`primary-anchor ${isWhite ? "white-col" : ""} ${className || ""}`}
+      href={link ? link : "/"}
       target={target ? target : "_self"}
     >
       <span>{title}</span>

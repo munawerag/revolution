@@ -6,7 +6,7 @@ export default function BlogsDetail({ page }: { page: any }) {
   
   const blogDetailData = page?.blogDetailData || page;
   
-  console.log("page details", blogDetailData);
+  // console.log("page details", blogDetailData);
 
 
   return (

@@ -2,9 +2,14 @@ import SectionHeading from "@/app/components/common/SectionHeading";
 import OurUnique from "@/app/components/ProjectListing/OurUnique";
 import ProjectsList from "@/app/components/ProjectListing/ProjectsList";
 import ProjectVideo from "@/app/components/ProjectListing/ProjectVideo";
-import projectListData from "../../data/project-list.json";
 
-const Page = () => {
+
+
+
+const ProjectList = ({page}: {page: any}) => {
+  const projectListData = page?.projectListData || page;
+
+  
   return (
     <>
       <SectionHeading
@@ -24,4 +29,4 @@ const Page = () => {
   );
 };
 
-export default Page;
+export default ProjectList;

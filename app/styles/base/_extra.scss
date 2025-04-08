@@ -1,0 +1,27 @@
+.main__wrapper {
+  position: fixed;
+  inset: 0;
+  z-index: 999;
+  background-color: var(--color-offwhitecol);
+
+  .notFound__wrapper {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 38.5em;
+    margin: auto;
+    text-align: center;
+
+    h6 {
+      font-size: 2em;
+      font-weight: 600;
+    }
+
+    h2 {
+      font-size: 5em;
+      margin: 0 0 0.3em 0;
+    }
+  }
+}
