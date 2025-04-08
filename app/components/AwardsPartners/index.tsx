@@ -5,6 +5,7 @@ import style from "./AwardsPartners.module.scss";
 // TypeScript interface for AwardsPartners
 interface Award {
   image: string;
+  title: string; // New dedicated field for title
   description: string;
   awardImages: string[];
 }
@@ -52,14 +53,24 @@ export default function AwardsPartners({ data }: AwardsPartnersProps) {
                 </div>
                 <div className="col_12 col_lg_5">
                   <div className={`${style["text-content"]}`}>
-                    <div dangerouslySetInnerHTML={{ __html: award?.description || "" }}></div>
-                      <div className={`${style["figures-wrapper"]}`}>
-                        {award?.awardImages?.map((image, imageIndex) => (
-                          <div key={imageIndex} className={`${style["item"]}`}>
-                            <Image src={image || ""} alt="awards" fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
-                          </div>
-                        ))}
-                      </div>
+                    <h3>{award?.title || ""}</h3>
+
+                    {award?.description && (
+                      <div dangerouslySetInnerHTML={{ __html: award?.description || "" }}></div>
+                    )}
+
+                    <div className={`${style["figures-wrapper"]}`}>
+                      {award?.awardImages?.map((image, imageIndex) => (
+                        <div key={imageIndex} className={`${style["item"]}`}>
+                          <Image
+                            src={image || ""}
+                            alt="awards"
+                            fill
+                            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                          />
+                        </div>
+                      ))}
+                    </div>
                   </div>
                 </div>
               </div>

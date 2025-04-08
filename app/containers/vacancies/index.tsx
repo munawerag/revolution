@@ -1,10 +1,11 @@
 import CurrentVacancies from "@/app/components/vacancies/CurrentVacancies";
-import vacanciesData from "../../data/vacancies.json";
 
-export default function Page() {
+export default function Vacancies({ page }: { page: any }) {
+  const vacanciesData  = page?.vacanciesData || page;
+
   return (
-    <main>
+    <>
       <CurrentVacancies vacancies={vacanciesData?.vacancies} />
-    </main>
+    </>
   );
 }

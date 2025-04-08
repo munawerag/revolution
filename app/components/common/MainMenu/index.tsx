@@ -37,7 +37,14 @@ interface MainMenuProps {
   enquireNowText?: string;
 }
 
-const MainMenu = ({ setMenuActive, togglePopup, closePopup, logo = {}, data = {}, enquireNowText = "Enquire Now" }: MainMenuProps) => {
+const MainMenu = ({
+  setMenuActive,
+  togglePopup,
+  closePopup,
+  logo = {},
+  data = {},
+  enquireNowText = "Enquire Now",
+}: MainMenuProps) => {
   const [active, setActive] = useState<number | null>(1);
   const [locationsActive, setLocationsActive] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
@@ -63,12 +70,7 @@ const MainMenu = ({ setMenuActive, togglePopup, closePopup, logo = {}, data = {}
                 setMenuActive(false);
               }}
             >
-              <Image 
-                src={logo?.src || ""} 
-                width={277} 
-                height={88} 
-                alt="logo" 
-              />
+              <Image src={logo?.src || ""} width={277} height={88} alt="logo" />
             </Link>
           </div>
 
@@ -92,10 +94,7 @@ const MainMenu = ({ setMenuActive, togglePopup, closePopup, logo = {}, data = {}
                     </Link>
                   </li>
                 ) : (
-                  <li
-                    key={item.id}
-                    className={`nav__menu__item ${active === item.id && "active"}`}
-                  >
+                  <li key={item.id} className={`nav__menu__item ${active === item.id && "active"}`}>
                     <div
                       className="menu__label"
                       onMouseEnter={() => setActive(item.id || null)}
@@ -212,12 +211,7 @@ const MainMenu = ({ setMenuActive, togglePopup, closePopup, logo = {}, data = {}
           setLocationsActive(false);
         }}
       >
-        <Image 
-          src="/assets/svgs/cross.svg" 
-          width={20} 
-          height={19} 
-          alt="close" 
-        />
+        <Image src="/assets/svgs/cross.svg" width={20} height={19} alt="close" />
       </div>
     </>
   );

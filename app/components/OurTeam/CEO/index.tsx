@@ -49,6 +49,8 @@ export default function CEO({ data }: { data: CEODataProps }) {
               </div>
               <div className="col_12 col_lg_6 col_xl_offset_1 col_xl_4">
                 <div className="text-content">
+                  <h4>{ceo?.name}</h4>
+                  <p>{ceo?.title}</p>
                   {ceo?.description && (
                     <div dangerouslySetInnerHTML={{ __html: ceo?.description || "" }} />
                   )}

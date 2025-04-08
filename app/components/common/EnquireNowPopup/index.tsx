@@ -121,11 +121,12 @@ export default function EnquireNowPopup({ className = "", onClose }: EnquireNowP
     {
       type: "radio",
       name: "radio",
-      options: [{ id: "radio", name: "I have read and agree to the Privacy Policy." }],
+      heading: "Please select a preferred mode of contact",
+      options: [{ id: "radio", name: "Request a phone call back" }],
     },
     {
       type: "radio",
-      name: "radio2",
+      name: "radio",
       options: [{ id: "radio2", name: "Request email communications" }],
     },
   ];
@@ -173,7 +174,7 @@ export default function EnquireNowPopup({ className = "", onClose }: EnquireNowP
             <div className="custom-row">
               {fields.map((item: any, i: number) => (
                 <Fragment key={i}>
-                  {item.name == "radio" ? (
+                  {item.heading ? (
                     <div className="col_12">
                       <p className="black-color" style={{ marginTop: "1em" }}>
                         Please select a preferred mode of contact
