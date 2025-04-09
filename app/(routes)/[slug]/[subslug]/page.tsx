@@ -26,7 +26,7 @@ export default async function TemplateInnerPage({
           {"rest_success" == "rest_success" ? (
             (() => {
               switch (subslug) {
-                case "blogs-detail":
+                case "blog-1":
                   return <BlogsDetail page={blogDetailData} />;
                 case "22-palms":
                   return <ProjectListDetail page={projectDetailData} />;

@@ -9,17 +9,10 @@
 
 .imgWrapper {
   width: 100%;
-  height: 49.25em;
   position: relative;
   overflow: hidden;
-
-  @media #{$ipadpro} {
-    height: 40em;
-  }
-
-  @media #{$ipad} {
-    height: 30em;
-  }
+  padding-bottom: 138.4885%;
+  height: 0;
 
   img {
     width: 100%;

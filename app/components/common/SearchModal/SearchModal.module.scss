@@ -1,0 +1,75 @@
+@import "../../../styles/abstract/variable";
+
+.search-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 99999999;
+    transform: translateY(-120vh);
+    transition: $transition;
+    width: 100vw;
+    height: 100vh;
+    background: var(--color-offwhitecol);
+    font-family: $basefont;
+  
+    &.active-search-modal {
+      transform: translateY(0);
+      transition: $transitionSlow;
+    }
+  
+    &__logo {
+      display: block;
+      width: 9.875em;
+      margin: 0 auto 2em;
+
+    }
+  
+    &__close {
+      position: absolute;
+      width: 1.875em;
+      height: 1.875em;
+      top: 2em;
+      right: 2em;
+      cursor: pointer;
+      transition: $transition;
+  
+      &:hover {
+        transform: rotate(180deg);
+      }
+    }
+  
+    &__wrapper {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 70%;
+      @media #{$mineTab} {
+          width: 90%;
+      }
+  
+      .c_form-field__control {
+        border-color: var(--color-whitecol);
+        color: var(--color-whitecol);
+        padding-right: 12em;
+        @media #{$mob} {
+          padding-right: 7em;
+        }
+  
+        &::placeholder {
+          color: var(--color-whitecol);
+        }
+      }
+  
+      .btnn {
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+        height: 100%;
+  
+        &:hover {
+          border-color: var(--color-whitecol);
+        }
+      }
+    }
+  }

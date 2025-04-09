@@ -26,17 +26,21 @@ export default function HomeUnique({ title, description, data }: HomeUniqueProps
               </div>
             </div>
           )}
-          
+
           <div className="col_12 col_lg_8">
             {data && data.length > 0 && (
               <div className={`${style["slider-wrapper"]} homeUniqueness-slider-main`}>
                 <Swiper
                   modules={[Pagination]}
-                  spaceBetween={50}
+                  spaceBetween={30}
                   slidesPerView={1}
                   breakpoints={{
-                    640: { slidesPerView: 2 },
-                    992: { slidesPerView: 2.5 },
+                    576: { slidesPerView: 2 },
+                    992: { slidesPerView: 1.5 },
+                    1200: { 
+                      slidesPerView: 2.5,
+                      spaceBetween: 50,
+                     },
                   }}
                   pagination={{
                     type: "progressbar",

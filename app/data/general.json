@@ -34,8 +34,8 @@
         "label": "Our Landmarks",
         "submenu": [
           { "label": "Completed Projects", "link": "/project-list" },
-          { "label": "Rising Projects", "link": "#" },
-          { "label": "Eywa", "link": "#" }
+          { "label": "Rising Projects", "link": "/project-list" },
+          { "label": "Eywa", "link": "/project-list" }
         ]
       },
       { "id": 4, "label": "Our Uniqueness", "link": "/our-uniqueness" },
@@ -49,7 +49,6 @@
     ],
     "additionalLinks": [
       { "label": "Careers", "link": "/careers" },
-      { "label": "Properties Names", "link": "#" },
       { "label": "Blogs", "link": "/blogs" },
       { "label": "Broker Portal", "link": "#" }
     ],
@@ -167,10 +166,10 @@
       {
         "title": "More Information",
         "items": [
-          { "title": "Our Uniqueness", "link": "?!" },
-          { "title": "Partners", "link": "?!" },
-          { "title": "Careers", "link": "?!" },
-          { "title": "Blogs", "link": "?!" },
+          { "title": "Our Uniqueness", "link": "/our-uniqueness" },
+          { "title": "Partners", "link": "/awards-and-partners" },
+          { "title": "Careers", "link": "/careers" },
+          { "title": "Blogs", "link": "/blogs" },
           { "title": "Privacy Policies", "link": "?!" },
           { "title": "Cookie Policy", "link": "?!" },
           { "title": "Legal Notice", "link": "?!" },
@@ -183,39 +182,39 @@
         "items": [
           {
             "title": "Barcelona",
-            "link": "?!",
+            "link": "/riga",
             "subitems": [
-              { "title": "Bac de roda", "link": "?!" },
-              { "title": "22 Palms", "link": "?!" }
+              { "title": "Bac de roda", "link": "/riga" },
+              { "title": "22 Palms", "link": "/riga" }
             ]
           },
           {
             "title": "Berlin",
-            "link": "?!",
+            "link": "/riga",
             "subitems": [
-              { "title": "Lorem ipsum", "link": "?!" },
-              { "title": "Lorem ipsum", "link": "?!" }
+              { "title": "Lorem ipsum", "link": "/riga" },
+              { "title": "Lorem ipsum", "link": "/riga" }
             ]
           },
           {
             "title": "Dubai",
-            "link": "?!",
+            "link": "/riga",
             "subitems": [
-              { "title": "Eywa tree of life", "link": "?!" },
-              { "title": "Eywa the way of water", "link": "?!" }
+              { "title": "Eywa tree of life", "link": "/riga" },
+              { "title": "Eywa the way of water", "link": "/riga" }
             ]
           },
           {
             "title": "Riga",
-            "link": "?!",
+            "link": "/riga",
             "subitems": [
-              { "title": "City zen", "link": "?!" },
-              { "title": "Lofts & rosegold", "link": "?!" },
-              { "title": "Hoft", "link": "?!" },
-              { "title": "Thompson terraces", "link": "?!" },
-              { "title": "Chocolate", "link": "?!" },
-              { "title": "Tal residence", "link": "?!" },
-              { "title": "Philosophers residence", "link": "?!" }
+              { "title": "City zen", "link": "/riga" },
+              { "title": "Lofts & rosegold", "link": "/riga" },
+              { "title": "Hoft", "link": "/riga" },
+              { "title": "Thompson terraces", "link": "/riga" },
+              { "title": "Chocolate", "link": "/riga" },
+              { "title": "Tal residence", "link": "/riga" },
+              { "title": "Philosophers residence", "link": "/riga" }
             ]
           }
         ]
@@ -224,8 +223,8 @@
         "title": "Our Story",
         "items": [
           { "title": "R.Evolution History", "link": "?!" },
-          { "title": "Awards & Partners", "link": "?!" },
-          { "title": "Our Team", "link": "?!" }
+          { "title": "Awards & Partners", "link": "/awards-and-partners" },
+          { "title": "Our Team", "link": "/our-team" }
         ]
       },
       {
@@ -239,7 +238,7 @@
     ],
     "contactLink": {
       "title": "Contact us",
-      "link": "?!"
+      "link": "/contact-us"
     },
     "companyProgress": [
       {

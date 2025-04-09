@@ -5,7 +5,7 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 import { PhoneRegex } from "../../../utilities/utility";
 import FormLoading from "../../FormLoading";
-import { Fragment, useState } from "react";
+import { Fragment, useState, useEffect } from "react";
 import style from "./EnquireNowPopup.module.scss";
 
 interface EnquireNowPopupProps {
@@ -15,7 +15,13 @@ interface EnquireNowPopupProps {
 
 export default function EnquireNowPopup({ className = "", onClose }: EnquireNowPopupProps) {
   const [loading, setLoading] = useState(false);
-  const [activeTab, setActiveTab] = useState("form-enquire"); // State for active tab
+  const [activeTab, setActiveTab] = useState("form-enquire");
+  const [mounted, setMounted] = useState(false);
+
+  // Use useEffect to mark when component is mounted on client
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   const initFormFields = {
     name: "",
@@ -132,13 +138,41 @@ export default function EnquireNowPopup({ className = "", onClose }: EnquireNowP
   ];
 
   const handleTabClick = (tabId: string) => {
-    setActiveTab(tabId); // Update active tab
+    setActiveTab(tabId);
   };
 
   const onFormSubmit = async (val: Object) => {
     console.log(val);
     setLoading(true);
   };
+
+  // If not mounted yet, return a placeholder with the same structure but no interactivity
+  if (!mounted) {
+    return (
+      <div className={`${style["main-wrapper"]} ${style[className]}`}>
+        <div className={`${style["container"]} container`}>
+          <div className="title-wrapper">
+            <h2 className="h2 text-center">Express your interest</h2>
+            <div className={`${style["tab-wrapper"]}`}>
+              <div className={`${style["tab-indicator"]} ${style[`indicator-form-enquire`]}`}></div>
+              <ul>
+                <li data-id="form-enquire" className={style["active"]}>
+                  Enquire now
+                </li>
+                <li data-id="form-visit">Schedule a visit</li>
+              </ul>
+            </div>
+          </div>
+          <div className="form-wrapper">
+            {/* Placeholder content with no interactive elements */}
+          </div>
+        </div>
+        <div className={`${style["back-btn-wrapper"]}`}>
+          <button className="primary-anchor white-col small-size">Back</button>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className={`${style["main-wrapper"]} ${style[className]}`}>
@@ -207,7 +241,7 @@ export default function EnquireNowPopup({ className = "", onClose }: EnquireNowP
         </div>
       </div>
       <div className={`${style["back-btn-wrapper"]}`}>
-        <button className="primary-anchor white-col" onClick={onClose}>
+        <button className="primary-anchor white-col small-size" onClick={onClose}>
           Back
         </button>
       </div>

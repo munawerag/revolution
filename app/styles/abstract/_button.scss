@@ -152,6 +152,11 @@ button {
       transition: 0.5s ease;
     }
   }
+
+  &.small-size {
+    padding: 0.4em 1em;
+  }
+
   &.lg-font {
     @media #{$desktop} {
       span {

@@ -7,6 +7,7 @@ import MainMenu from "../MainMenu";
 import LanguageSelector from "./LanguageSelector";
 import { usePathname } from "next/navigation";
 import EnquireNowPopup from "../EnquireNowPopup";
+import SearchModal from "../SearchModal";
 
 interface HeaderProps {
   data?: {
@@ -30,6 +31,7 @@ const Header = ({ data = {} }: HeaderProps) => {
   const [scrolled, setScrolled] = useState(false);
   const [lastScrollTop, setLastScrollTop] = useState<number>(0);
   const [popupActive, setPopupActive] = useState(false); // State for popup
+  const [searchModalOpen, setSearchModalOpen] = useState(false); // State for search modal
 
   useEffect(() => {
     const handleScroll = () => {
@@ -53,18 +55,19 @@ const Header = ({ data = {} }: HeaderProps) => {
 
   useEffect(() => {
     const htmlElement = document.documentElement;
-    if (menuActive) {
+    if (menuActive || searchModalOpen) {
       htmlElement.classList.add("overflow-hidden");
     } else {
       htmlElement.classList.remove("overflow-hidden");
     }
-  }, [menuActive]);
+  }, [menuActive, searchModalOpen]);
 
   const pathname = usePathname();
 
   // Check if the pathname contains "/project-list/"
   const hasProjectList = pathname.includes("/project-list/");
   const togglePopup = () => setPopupActive(!popupActive); // Toggle popup function
+  const toggleSearchModal = () => setSearchModalOpen(!searchModalOpen); // Toggle search modal
 
   const { logo, header, mainMenu, enquireNowText } = data;
 
@@ -89,6 +92,12 @@ const Header = ({ data = {} }: HeaderProps) => {
         onClose={togglePopup} // Pass togglePopup as onClose prop
       />
 
+      {/* Search Modal */}
+      <SearchModal 
+        isOpen={searchModalOpen} 
+        onClose={() => setSearchModalOpen(false)} 
+      />
+
       <header
         className={`header ${scrolled && "sticky-header"} 
         ${hasProjectList && "detailMenu"}`}
@@ -110,7 +119,7 @@ const Header = ({ data = {} }: HeaderProps) => {
                 <p>{header?.menuText || "Menu"}</p>
               </div>
               {/* search icon */}
-              <div className="search">
+              <div className="search" onClick={toggleSearchModal}>
                 <Image 
                   src="/assets/svgs/search.svg" 
                   width={23} 

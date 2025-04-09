@@ -3,6 +3,8 @@
 .wrapper {
   padding: 6.6875em 4.4375em 4.4375em 4.4375em;
   background-color: var(--color-whitecol);
+  scroll-margin-top: 7em;
+  
   @media #{$ipadpro} {
     padding: 3em 2em;
   }

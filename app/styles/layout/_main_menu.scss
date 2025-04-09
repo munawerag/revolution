@@ -47,8 +47,9 @@
 
     .nav__menu {
       margin-top: 7.6875em;
-      @media #{$mob} {
+      @media #{$mineTab} {
         margin-top: 3.688em;
+        padding-bottom: 3em;
       }
 
       &__leftCol {
@@ -63,12 +64,8 @@
           border-right: 0;
           overflow-y: auto;
           overflow-x: hidden;
-          height: 45em;
-        }
-
-        @media #{$mob} {
-          width: 100%;
-          height: calc(100vh - 236px);
+          height: calc(100vh - 17em);
+          padding-bottom: 0;
         }
       }
 
