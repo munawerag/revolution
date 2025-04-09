@@ -51,7 +51,7 @@ export default function AwardsPartners({ data }: AwardsPartnersProps) {
                     />
                   </div>
                 </div>
-                <div className="col_12 col_lg_5">
+                <div className="col_12 col_lg_6 col_xl_5">
                   <div className={`${style["text-content"]}`}>
                     <h3>{award?.title || ""}</h3>
 

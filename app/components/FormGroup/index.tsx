@@ -17,9 +17,9 @@ const FormGroup = (props: any) => {
     <>
       {item.type == "input" && (
         <div
-          className={`c_form-field ${item?.subscribeClass ? "m-0" : ""} ${
-            errors[`${item.name}`] ? "border-red" : ""
-          }`}
+          className={`c_form-field 
+            ${item?.subscribeClass ?  style.fullInput : ""} 
+            ${errors[`${item.name}`] ? "border-red" : ""}`}
         >
           {item?.label && <label>{item?.label}</label>}
           <InputField

@@ -1,7 +1,6 @@
 "use client";
 import Link from "next/link";
 import Image from "next/image";
-import { useState } from "react";
 import style from "./FooterLinks.module.scss";
 
 interface SubItem {
@@ -20,26 +19,26 @@ interface FooterItem {
 interface FooterLinksProps {
   data: FooterItem[];
   title: string;
+  isActive?: boolean;
+  onToggle?: () => void;
 }
 
-const FooterLinks = ({ data, title }: FooterLinksProps) => {
-  const [active, setActive] = useState(false);
-
+const FooterLinks = ({ data, title, isActive = false, onToggle }: FooterLinksProps) => {
   return (
     <div className={style.footerLinksWrapper}>
       <div className={style.linksColumn}>
-        <div className={style.linksHead} onClick={() => setActive(!active)}>
+        <div className={style.linksHead} onClick={onToggle}>
           <span className={style.title}>{title}</span>
-          <div className={`${style.dropdownArrow} ${active ? style.active : ""}`}>
+          <div className={`${style.dropdownArrow} ${isActive ? style.active : ""}`}>
             <Image src={"/assets/svgs/footer-arrow.svg"} width={9} height={14} alt="arrow" />
           </div>
         </div>
-        <div className={`${style.listWrapper} ${active ? style.active : ""}`}>
+        <div className={`${style.listWrapper} ${isActive ? style.active : ""}`}>
           <ul>
             {data.map((item, index) => {
               // Store subitems in a variable with a default empty array
               const subitems = item.subitems || [];
-              
+
               return (
                 <li key={index}>
                   <Link

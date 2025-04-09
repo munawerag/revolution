@@ -1,5 +1,5 @@
 {
-  "template": "blogs-detail",
+  "template": "blog-1",
   "relatedPosts": {
     "title": "Related posts",
     "posts": [
@@ -14,7 +14,7 @@
         "img": "/assets/images/blog/blog-2.jpg",
         "subTitle": "Feb 15, 2025",
         "title": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.",
-        "ctaLink": "/blogs/blog-2",
+        "ctaLink": "/blogs/blog-1",
         "ctaTitle": "Read More"
       }
     ]

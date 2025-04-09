@@ -1,8 +1,11 @@
+"use client"
+
 import SvgComp from "../SvgComp";
 import Link from "next/link";
 import FooterLinks from "./FooterLinks";
 import Image from "next/image";
 import style from "./Footer.module.scss";
+import { useState } from "react";
 
 interface SubItem {
   title: string;
@@ -53,6 +56,12 @@ interface FooterProps {
 }
 
 const Footer = ({ data }: FooterProps) => {
+  const [activeAccordion, setActiveAccordion] = useState<number | null>(null);
+
+  const handleAccordionToggle = (index: number) => {
+    setActiveAccordion(activeAccordion === index ? null : index);
+  };
+
   return (
     <footer className={style.footer}>
       <div className="container-s">
@@ -61,7 +70,12 @@ const Footer = ({ data }: FooterProps) => {
             {data.footer.sections.map((item: FooterSection, index: number) => {
               return (
                 <div className={`${style["col"]}`} key={index}>
-                  <FooterLinks data={item?.items} title={item?.title} />
+                  <FooterLinks 
+                    data={item?.items} 
+                    title={item?.title} 
+                    isActive={activeAccordion === index}
+                    onToggle={() => handleAccordionToggle(index)}
+                  />
                 </div>
               );
             })}
@@ -95,12 +109,7 @@ const Footer = ({ data }: FooterProps) => {
               <div className={style.socialLinks}>
                 {data.footer.socialLinks.map((item: SocialLink, index: number) => (
                   <Link href={item.link} className={style.socialLinks__item} key={index}>
-                    <Image
-                      src={item.icon}
-                      width={16}
-                      height={16}
-                      alt="icon"
-                    />
+                    <SvgComp src={item.icon} />
                   </Link>
                 ))}
               </div>

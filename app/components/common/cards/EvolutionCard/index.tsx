@@ -11,6 +11,7 @@ export interface EvolutionCardProps {
   ctaLink?: any;
   target?: string;
   customclass?: string;
+  customClassImgWrapper?: string;
 }
 
 const EvolutionCard = ({
@@ -22,11 +23,16 @@ const EvolutionCard = ({
   ctaLink,
   target,
   customclass,
+  customClassImgWrapper,
 }: EvolutionCardProps) => {
+  // console.log(customclass)
+
   return (
     <>
       <div className={`${customclass ? customclass : ""} ${style.card}`}>
-        <div className={`${style.imgWrapper}`}>
+        <div
+          className={`${style.imgWrapper} ${customClassImgWrapper ? customClassImgWrapper : ""}  `}
+        >
           <Image
             src={img}
             alt={title}
@@ -37,7 +43,7 @@ const EvolutionCard = ({
         </div>
         <div className={`${style.contentWrapper}`}>
           {subTitle && <span className={`${style.subtitle} text-upper`}>{subTitle}</span>}
-          <h3 className="line-clamp-1">{title}</h3>
+          <h3 className="">{title}</h3>
           <p className="p line-clamp-2">{desc}</p>
           {ctaLink && (
             <Link

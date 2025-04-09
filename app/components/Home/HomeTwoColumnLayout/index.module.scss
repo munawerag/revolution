@@ -3,22 +3,38 @@
 .row {
   display: flex;
   flex-wrap: wrap;
-  margin: 0 -1.5625em;
+  @media #{$tabL} {
+    margin: 0 -1em;
+  }
+  @media #{desktop} {
+    margin: 0 -1.5625em;
+  }
+
   @media #{$mob} {
     row-gap: 2em;
   }
 }
 
 .col {
-  flex: 0 0 36%;
-  width: 36%;
-  padding: 0 1.5625em;
-  @media #{$mob} {
-    flex: 0 0 100%;
-    width: 100%;
+  flex: 0 0 100%;
+  width: 100%;
+  @media #{$tabL} {
+    flex: 0 0 40%;
+    width: 40%;
+    padding: 0 1em;
   }
+  @media #{$desktop} {
+    flex: 0 0 36%;
+    width: 36%;
+    padding: 0 1.5625em;
+  }
+
   &:first-child {
-    @media #{$tab} {
+    @media #{$tabL} {
+      flex: 0 0 60%;
+      width: 60%;
+    }
+    @media #{$desktop} {
       flex: 0 0 64%;
       width: 64%;
     }

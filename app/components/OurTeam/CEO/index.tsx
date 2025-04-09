@@ -34,27 +34,25 @@ export default function CEO({ data }: { data: CEODataProps }) {
       />
       <section className={`${style["ceo-section"]}`}>
         <div className="container-s">
-          <div className="wrapper">
-            <div className="custom-row align-item-center">
-              <div className="col_12 col_lg_6">
-                <div className={`${style["img-wrapper"]}`}>
-                  <Image
-                    src={ceo?.image}
-                    alt={ceo?.name}
-                    fill
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                    className="img-hack"
-                  />
-                </div>
+          <div className="custom-row align-item-center">
+            <div className="col_12 col_lg_6">
+              <div className={`${style["img-wrapper"]}`}>
+                <Image
+                  src={ceo?.image}
+                  alt={ceo?.name}
+                  fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  className="img-hack"
+                />
               </div>
-              <div className="col_12 col_lg_6 col_xl_offset_1 col_xl_4">
-                <div className="text-content">
-                  <h4>{ceo?.name}</h4>
-                  <p>{ceo?.title}</p>
-                  {ceo?.description && (
-                    <div dangerouslySetInnerHTML={{ __html: ceo?.description || "" }} />
-                  )}
-                </div>
+            </div>
+            <div className="col_12 col_lg_6 col_xl_offset_1 col_xl_4">
+              <div className="text-content">
+                <h4>{ceo?.name}</h4>
+                <p>{ceo?.title}</p>
+                {ceo?.description && (
+                  <div dangerouslySetInnerHTML={{ __html: ceo?.description || "" }} />
+                )}
               </div>
             </div>
           </div>

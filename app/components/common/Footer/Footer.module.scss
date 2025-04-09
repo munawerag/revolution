@@ -214,24 +214,31 @@
         &::before {
           transform: scale(0.9);
         }
+        path {
+          fill: var(--color-graycol2);
+        }
       }
     }
     &::before {
       content: "";
       position: absolute;
       inset: 0;
-      background: var(--color-ambercol);
+      background: var(--color-secondarycol);
       border-radius: inherit;
       transition: var(--transition-slow);
       transform: scale(0);
     }
-    img {
+    img,
+    svg {
       width: auto;
       height: auto;
       max-width: 50%;
       max-height: 50%;
       position: relative;
       z-index: 1;
+    }
+    path {
+      transition: var(--transition-slow);
     }
   }
 }

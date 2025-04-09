@@ -9,7 +9,7 @@
     background: rgba($color: #bebebe, $alpha: 0.2) !important;
 
     @media #{$mob} {
-      max-width: 10em !important;
+      max-width: 100% !important;
     }
     .swiper-pagination-progressbar-fill {
       background: rgba($color: #d9d9d9, $alpha: 1) !important;
@@ -62,7 +62,7 @@
       bottom: 4em !important;
     }
     @media #{$mob} {
-      max-width: 10em !important;
+      max-width: 100% !important;
       bottom: 5em !important;
     }
     .swiper-pagination-progressbar-fill {
@@ -107,7 +107,7 @@
       max-width: 20em !important;
     }
     @media #{$mob} {
-      max-width: 10em !important;
+      max-width: 100% !important;
       bottom: 5em !important;
     }
     .swiper-pagination-progressbar-fill {

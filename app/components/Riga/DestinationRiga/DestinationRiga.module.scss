@@ -18,6 +18,10 @@
       @media #{$ipadL} {
         grid-column: span 3;
       }
+
+      .imgWrapper {
+        padding-bottom: 36.158192%;
+      }
     }
   }
 }
@@ -47,3 +51,6 @@
       transform: rotate(360deg);
     }
   }
+
+
+  
