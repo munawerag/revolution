@@ -36,7 +36,7 @@ export default function HomeUnique({ title, description, data }: HomeUniqueProps
                   slidesPerView={1}
                   breakpoints={{
                     576: { slidesPerView: 2 },
-                    992: { slidesPerView: 1.5 },
+                    992: { slidesPerView: 2.5 },
                     1200: { 
                       slidesPerView: 2.5,
                       spaceBetween: 50,

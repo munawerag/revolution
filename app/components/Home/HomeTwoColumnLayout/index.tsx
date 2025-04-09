@@ -22,7 +22,7 @@ export default function HomeTwoColumnLayout({ projectsData }: HomeTwoColumnLayou
                   ctaLink={project?.ctaLink}
                   ctaTitle={project?.ctaTitle}
                   desc={project?.desc}
-                  customclass={style.customProjectCard}
+                  customclass={style.twocolumnLayoutCard}
                 />
               </div>
             ))}

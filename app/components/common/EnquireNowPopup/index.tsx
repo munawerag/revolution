@@ -110,6 +110,7 @@ export default function EnquireNowPopup({ className = "", onClose }: EnquireNowP
       name: "phone",
       label: "Phone Number*",
       placeholder: "",
+      country: "ae",
       inputtype: "tel",
     },
     {

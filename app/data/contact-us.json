@@ -4,7 +4,11 @@
     "title": "Contact us"
   },
   "contactAddress": {
-    "mainContent": "<h4>R.Evolution Headquarters</h4><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p><p><a href=\"mailto:info@byrevolution.com\">info@byrevolution.com</a></p><p><a href=\"tel:+900 000 0000\">(+900 000 0000)</a></p><p>whatsapp <a href=\"tel:+900 000 0000\">(+900 000 0000)</a></p>",
+    "title": "R.Evolution Headquarters",
+    "mainContent": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>",
+    "email": "info@byrevolution.com",
+    "phone": "+900 000 0000",
+    "whatsapp": "+900 000 0000",
     "accordionData": [
       {
         "id": 1,
