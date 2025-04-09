@@ -18,7 +18,11 @@ interface ContactAddressProps {
     title?: string;
   };
   contactAddress?: {
+    title?: string;
     mainContent?: string;
+    email?: string;
+    phone?: string;
+    whatsapp?: string;
     accordionData?: AccordionItem[];
   };
 }
@@ -94,7 +98,21 @@ export default function ContactAddress({ heading, contactAddress }: ContactAddre
             <div className="col_12 col_md_5">
               <div className={`${style["main-text-accordion"]}`}>
                 <div className="text-content">
-                  <div dangerouslySetInnerHTML={{ __html: contactAddress?.mainContent || "" }} />
+                  <h4>{contactAddress?.title || "R.Evolution Headquarters"}</h4>
+                  {contactAddress?.mainContent && (
+                    <div dangerouslySetInnerHTML={{ __html: contactAddress?.mainContent || "" }} />
+                  )}
+
+                  <p>
+                    <a href={`mailto:${contactAddress?.email}`}>{contactAddress?.email}</a>
+                  </p>
+                  <p>
+                    <a href={`tel:${contactAddress?.phone}`}>({contactAddress?.phone})</a>
+                  </p>
+                  <p>
+                    whatsapp{" "}
+                    <a href={`tel:${contactAddress?.whatsapp}`}>({contactAddress?.whatsapp})</a>
+                  </p>
                 </div>
                 <div className={`${style["accordion"]} accordion `}>
                   {contactAddress?.accordionData?.map((item) => (

@@ -96,6 +96,7 @@ export default function ContactUsFORM() {
       label: "Phone",
       placeholder: "",
       // inputtype: "tel",
+      country:"ae"
     },
     {
       type: "textarea",

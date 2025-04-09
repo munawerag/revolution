@@ -117,6 +117,7 @@ export default function Designation({ vacancy, onBackClick }: DesignationProps) 
       label: "Phone Number*",
       placeholder: "",
       inputtype: "tel",
+      country:"ae"
     },
     {
       type: "input",
