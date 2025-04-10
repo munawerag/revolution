@@ -80,7 +80,7 @@ const Footer = ({ data }: FooterProps) => {
               );
             })}
           </div>
-          <Link href={data.footer.contactLink.link} className="primary-anchor white-col">
+          <Link href={data.footer.contactLink.link} className="primary-anchor white-col font-18">
             {data.footer.contactLink.title}
           </Link>
         </div>

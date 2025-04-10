@@ -34,7 +34,7 @@ const BannerHero = ({ bannerData, logoData, titleOneData, titleTwoData }: Banner
         </div>
         <div className={style.banner__descripWrapper}>
           <div className={style.banner__descrip}>
-            <h5 className="h5">{bannerData?.description?.title || ""}</h5>
+            <h5 className={`${style.h5} h5`}>{bannerData?.description?.title || ""}</h5>
             <h2 className="h2">{bannerData?.description?.subtitle || ""}</h2>
           </div>
         </div>

@@ -1,0 +1,34 @@
+@import "../../../styles/abstract/variable";
+
+.panel {
+  max-width: 50em;
+}
+
+.palms-slider-wrapper {
+  position: relative;
+  
+}
+
+
+.imgWrapper {
+  padding-bottom: 124.23698%;
+}
+
+.palm__nav {
+  position: absolute;
+  right: 4.6875em;
+  bottom: 6.5em;
+  z-index: 2;
+  @media #{$ipad} {
+    bottom: 3em !important;
+  }
+  @media #{$mob} {
+    left: 50% !important;
+    transform: translateX(-50%);
+    right: auto;
+    bottom: 1em !important;
+  }
+  img {
+    filter: invert(1);
+  }
+}

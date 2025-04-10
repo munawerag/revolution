@@ -28,7 +28,10 @@ export default function MissionVission({ missionVision = {} }: MissionVissionPro
               <div className="col_12 col_md_5 col_lg_4">
                 <div className={`${style["text-content"]}`}>
                   <h3 className="">{section?.title}</h3>
-                  <p>{section?.description}</p>
+
+                  {section?.description && (
+                    <div dangerouslySetInnerHTML={{ __html: section?.description }} />
+                  )}
                 </div>
               </div>
               <div className="col_12 col_md_6">

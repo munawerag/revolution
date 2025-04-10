@@ -29,7 +29,7 @@ const Masterpieces = ({ subtitle, title, description, slides = [] }: Masterpiece
     <>
       <div className={`${style.residenciesTitleWrapper}`} id="residencies">
         <div className={`${style.residenciesTitle}`}>
-          {subtitle && <h5 className="primary-col fw-500 p">{subtitle}</h5>}
+          {subtitle && <h5 className="primary-col  p">{subtitle}</h5>}
           {title && <h3 className="h3">{title}</h3>}
           {description && <p className="fw-400 mb-0">{description}</p>}
         </div>
@@ -68,7 +68,7 @@ const Masterpieces = ({ subtitle, title, description, slides = [] }: Masterpiece
                 className="img-hack"
               />
               <div className={style.textWrapper}>
-                <h2 className={`fw-300 ${style.title}`}>{slide.title}</h2>
+                <h2 className={`h3 ${style.title}`}>{slide.title}</h2>
               </div>
             </SwiperSlide>
           ))}

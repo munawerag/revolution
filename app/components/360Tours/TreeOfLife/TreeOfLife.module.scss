@@ -1,0 +1,41 @@
+@import "../../../styles/abstract/variable";
+
+.panel {
+  max-width: 50em;
+}
+
+.tree-of-life-slider-wrapper {
+  position: relative;
+  .slide-item {
+    &:nth-child(odd) {
+      width: 55.4375em;
+    }
+    &:nth-child(even) {
+      width: 32.6875em;
+    }
+  }
+}
+
+.imgWapper {
+  height: 36.8125em;
+  padding-bottom: 0;
+}
+
+.treeoflife__nav {
+  position: absolute;
+  right: 4.6875em;
+  bottom: 6.5em;
+  z-index: 2;
+  @media #{$ipad} {
+    bottom: 3em !important;
+  }
+  @media #{$mob} {
+    left: 50% !important;
+    transform: translateX(-50%);
+    right: auto;
+    bottom: 1em !important;
+  }
+  img {
+    filter: invert(1);
+  }
+}

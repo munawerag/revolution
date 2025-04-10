@@ -18,7 +18,7 @@ const FormGroup = (props: any) => {
       {item.type == "input" && (
         <div
           className={`c_form-field 
-            ${item?.subscribeClass ?  style.fullInput : ""} 
+            ${item?.subscribeClass ? style.fullInput : ""} 
             ${errors[`${item.name}`] ? "border-red" : ""}`}
         >
           {item?.label && <label>{item?.label}</label>}
@@ -64,6 +64,7 @@ const FormGroup = (props: any) => {
         <div
           className={`c_form-field ${item.exclass} ${errors[`${item.name}`] ? "border-red" : ""}`}
         >
+          {item?.label && <label>{item?.label}</label>}
           <TextareaField
             rows={item.rows}
             name={item.name}

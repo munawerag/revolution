@@ -71,6 +71,40 @@
   }
 }
 
+.tree-of-life-slider,
+.palms-slider,
+.lofts-slider {
+  &.swiper {
+    padding-bottom: 11.75em;
+    @media #{$ipad} {
+      padding-bottom: 7.5em;
+    }
+    @media #{$mob} {
+      padding-bottom: 9em;
+    }
+  }
+
+  .swiper-pagination {
+    width: 35.625em !important;
+    bottom: 7.8125em !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    z-index: 1 !important;
+    top: auto !important;
+    background: rgba($color: #bebebe, $alpha: 0.2) !important;
+    @media #{$ipad} {
+      bottom: 4em !important;
+    }
+    @media #{$mob} {
+      max-width: 100% !important;
+      bottom: 5em !important;
+    }
+    .swiper-pagination-progressbar-fill {
+      background: rgba($color: #000000, $alpha: 1) !important;
+    }
+  }
+}
+
 .essentials-slider {
   &.swiper {
     padding-bottom: 11.75em;

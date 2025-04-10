@@ -26,7 +26,7 @@ export default function ContactUsFORM() {
     .object({
       name: yup
         .string()
-        .required("Name is required")
+        .required("First Name is required")
         .matches(/^[A-Za-z ]*$/, {
           message: "Please enter only letters",
           excludeEmptyString: true,

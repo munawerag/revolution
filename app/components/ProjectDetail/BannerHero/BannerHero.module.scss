@@ -46,6 +46,10 @@
     padding: 0 2em;
     margin: 0 auto;
     text-align: center;
+    .h5 {
+      font-size: 1.125em;
+
+    }
   }
   &__badge {
     position: absolute;
@@ -232,7 +236,7 @@
 
         .title2 {
           color: var(--color-whitecol);
-          font-weight: 300;
+          font-weight: 200;
           font-size: 1.125em;
         }
       }

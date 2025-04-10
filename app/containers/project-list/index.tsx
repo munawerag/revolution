@@ -16,7 +16,7 @@ const ProjectList = ({page}: {page: any}) => {
         subTitle={projectListData?.sectionHeading?.subTitle}
         title={projectListData?.sectionHeading?.title}
         desc={projectListData?.sectionHeading?.desc}
-        isCenter={projectListData?.sectionHeading?.isCenter}
+        isCenter={true}
       />
       <ProjectVideo videoSrc={projectListData?.projectVideo?.videoSrc} />
       <ProjectsList projects={projectListData?.projects} />
