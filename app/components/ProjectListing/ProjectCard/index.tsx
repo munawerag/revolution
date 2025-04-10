@@ -11,6 +11,7 @@ export interface ProjectProps {
   ctaLink?: any;
   target?: string;
   customclass?: string;
+  customImgWrapper?: string;
 }
 
 const ProjectCard = ({
@@ -22,11 +23,12 @@ const ProjectCard = ({
   ctaLink,
   target,
   customclass,
+  customImgWrapper,
 }: ProjectProps) => {
   return (
     <>
       <div className={`${customclass ? customclass : ""} ${style.card}`}>
-        <div className={`${style.imgWrapper}`}>
+        <div className={`${style.imgWrapper} ${customImgWrapper ? customImgWrapper : ""}`}>
           <Image
             src={img}
             alt={title}

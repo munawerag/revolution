@@ -37,7 +37,7 @@ const UniquenessCard = ({
         </div>
         <div className={`${style.contentWrapper}`}>
           {subTitle && <span className={`${style.subtitle} text-upper`}>{subTitle}</span>}
-          <h3 className="line-clamp-1">{title}</h3>
+          <h4 className="h4">{title}</h4>
           <p className="p line-clamp-2">{desc}</p>
           {ctaLink && (
             <Link

@@ -26,6 +26,11 @@
 
   &:nth-child(5n + 1) {
     width: 100%;
+    .imgWrapper {
+      @media #{$desktop} {
+        height: 40em;
+      }
+    }
   }
 
   &:nth-child(5n + 2) {

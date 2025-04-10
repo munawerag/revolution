@@ -32,11 +32,7 @@ const Amenities = ({ title = "", description, items = [] }: AmenitiesProps) => {
     <section className={style.section}>
       <div className={`${style.amenitiesTitleWrapper}`} id="amenities">
         <div className={style.amenitiesTitle}>
-          <Heading
-            title2={title}
-            desc={description}
-            hasDesc={!!description}
-          />
+          <Heading title2={title} desc={description} hasDesc={!!description} />
         </div>
       </div>
       <div className={`${style.amenitiesSlider}`}>
@@ -63,21 +59,12 @@ const Amenities = ({ title = "", description, items = [] }: AmenitiesProps) => {
             <SwiperSlide className={`${style.amenities__slide}`} key={index}>
               <div className={style.card}>
                 <div className={style.imgWrapper}>
-                  <Image
-                    src={item.img}
-                    fill
-                    alt="img"
-                    className="img-hack"
-                  />
+                  <Image src={item.img} fill alt="img" className="img-hack" />
                 </div>
                 <div className={style.textWrapper}>
                   <h4 className="mb-0">{item.title}</h4>
                 </div>
-                <Link
-                  href={item.ctaLink}
-                  target="_blank"
-                  className="fullCoverAnchor"
-                ></Link>
+                <Link href={item.ctaLink} target="_blank" className="fullCoverAnchor"></Link>
               </div>
             </SwiperSlide>
           ))}

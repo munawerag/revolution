@@ -30,6 +30,7 @@ const ProjectsList = ({ projects }: ProjectsListProps) => {
                   ctaTitle={project?.ctaTitle}
                   desc={project?.desc}
                   customclass={style.customProjectCard}
+                  customImgWrapper={style.imgWrapper}
                 />
               ))}
           </div>

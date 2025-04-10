@@ -17,10 +17,11 @@
   @media #{$tabL} {
     margin-bottom: 2em;
   }
+  
+  // Only apply collapsible behavior on mobile
   @media #{$mob} {
-    max-height: 0;
     overflow: hidden;
-    transition: 1s;
+    transition: max-height 0.5s ease-out;
   }
 
   a {
@@ -30,9 +31,7 @@
 
   &.active {
     @media #{$mob} {
-      max-height: max-content;
       overflow: hidden;
-      transition: 1s;
     }
   }
 
@@ -67,6 +66,12 @@
 .dropdownArrow {
   @media #{$tab} {
     display: none;
+  }
+  
+  // Only show on mobile
+  display: none;
+  @media (max-width: 576px) {
+    display: block;
   }
 
   transition: 0.25s;

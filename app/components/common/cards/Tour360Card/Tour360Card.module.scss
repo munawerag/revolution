@@ -1,0 +1,26 @@
+.figure {
+  position: relative;
+  height: 0;
+  padding-bottom: 112.6195%;
+  overflow: hidden;
+}
+
+.footer-panel {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  border-left: 1px solid #a2a2a299;
+  border-right: 1px solid #a2a2a299;
+  border-bottom: 1px solid #a2a2a299;
+  padding: 1.25em 1.6875em;
+  background: var(--color-whitecol);
+}
+
+.icon {
+  flex: 0 0 3em;
+  width: 2.8125em;
+  height: 2.8125em;
+  position: relative;
+  cursor: pointer;
+}

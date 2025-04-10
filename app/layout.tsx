@@ -11,7 +11,7 @@ const PPRadioGrotesk = localFont({
   src: [
     {
       path: "../public/assets/fonts/PPRadioGrotesk-Ultralight.ttf",
-      weight: "300",
+      weight: "200",
       style: "normal",
     },
     {

@@ -6,7 +6,7 @@
   @media #{$tabL} {
     margin: 0 -1em;
   }
-  @media #{desktop} {
+  @media #{$desktop} {
     margin: 0 -1.5625em;
   }
 
@@ -24,8 +24,8 @@
     padding: 0 1em;
   }
   @media #{$desktop} {
-    flex: 0 0 36%;
-    width: 36%;
+    flex: 0 0 37.9%;
+    width: 37.9%;
     padding: 0 1.5625em;
   }
 
@@ -35,8 +35,8 @@
       width: 60%;
     }
     @media #{$desktop} {
-      flex: 0 0 64%;
-      width: 64%;
+      flex: 0 0 62.1%;
+      width: 62.1%;
     }
   }
 }

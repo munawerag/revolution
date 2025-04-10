@@ -35,7 +35,7 @@ export default function AwardsPartners({ data }: AwardsPartnersProps) {
         isCenter={true}
       />
 
-      <section className="section">
+      <section className="section p-t-0">
         <div className="container-s">
           <div className={`${style["sections-wrapper"]}`}>
             {awards?.map((award, index) => (

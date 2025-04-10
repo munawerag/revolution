@@ -14,6 +14,8 @@ import rigaData from "@/app/data/riga.json";
 import vacanciesData from "../../data/vacancies.json";
 import blogSectionData from "@/app/data/blog-section.json";
 import projectListData from "../../data/project-list.json";
+import tour360Data from "../../data/360-tour.json";
+
 
 import AwardsAndPartners from "@/app/containers/awards-and-partners";
 import ContactUs from "@/app/containers/contact-us";
@@ -24,6 +26,7 @@ import Riga from "@/app/containers/riga";
 import Vacancies from "@/app/containers/vacancies";
 import Blogs from "@/app/containers/blogs";
 import ProjectList from "@/app/containers/project-list";
+import Tour360 from "@/app/containers/360-tour";
 
 const TemplatePage = async ({ params }: { params: Promise<{ slug: string }> }) => {
   const resolvedParams = await params;
@@ -55,6 +58,9 @@ const TemplatePage = async ({ params }: { params: Promise<{ slug: string }> }) =
                 return <Blogs page={blogSectionData} />;
               case "project-list":
                 return <ProjectList page={projectListData} />;
+              case "360-tour":
+                return <Tour360 page={tour360Data} />;
+
               default:
                 return <NotFound />;
             }
