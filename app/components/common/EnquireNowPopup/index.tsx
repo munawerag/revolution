@@ -5,7 +5,7 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 import { PhoneRegex } from "../../../utilities/utility";
 import FormLoading from "../../FormLoading";
-import { Fragment, useState, useEffect } from "react";
+import { Fragment, useState, useEffect, useRef } from "react";
 import style from "./EnquireNowPopup.module.scss";
 
 interface EnquireNowPopupProps {
@@ -18,10 +18,32 @@ export default function EnquireNowPopup({ className = "", onClose }: EnquireNowP
   const [activeTab, setActiveTab] = useState("form-enquire");
   const [mounted, setMounted] = useState(false);
 
+  // Add refs for tab elements
+  const enquireTabRef = useRef<HTMLLIElement>(null);
+  const visitTabRef = useRef<HTMLLIElement>(null);
+  const indicatorRef = useRef<HTMLDivElement>(null);
+
   // Use useEffect to mark when component is mounted on client
   useEffect(() => {
     setMounted(true);
   }, []);
+
+  // Add effect to update indicator width and position
+  useEffect(() => {
+    if (mounted && indicatorRef.current) {
+      const activeTabRef = activeTab === "form-enquire" ? enquireTabRef : visitTabRef;
+
+      if (activeTabRef.current) {
+        // Get the width and position of the active tab
+        const tabRect = activeTabRef.current.getBoundingClientRect();
+        const parentLeft = activeTabRef.current.parentElement?.getBoundingClientRect().left || 0;
+
+        // Set the indicator width and position
+        indicatorRef.current.style.width = `${tabRect.width}px`;
+        indicatorRef.current.style.left = `${tabRect.left - parentLeft}px`;
+      }
+    }
+  }, [activeTab, mounted]);
 
   const initFormFields = {
     name: "",
@@ -155,7 +177,7 @@ export default function EnquireNowPopup({ className = "", onClose }: EnquireNowP
           <div className="title-wrapper">
             <h2 className="h2 text-center">Express your interest</h2>
             <div className={`${style["tab-wrapper"]}`}>
-              <div className={`${style["tab-indicator"]} ${style[`indicator-form-enquire`]}`}></div>
+              <div className={`${style["tab-indicator"]}`}></div>
               <ul>
                 <li data-id="form-enquire" className={style["active"]}>
                   Enquire now
@@ -181,9 +203,13 @@ export default function EnquireNowPopup({ className = "", onClose }: EnquireNowP
         <div className="title-wrapper">
           <h2 className="h2 text-center">Express your interest</h2>
           <div className={`${style["tab-wrapper"]}`}>
-            <div className={`${style["tab-indicator"]} ${style[`indicator-${activeTab}`]}`}></div>
+            <div 
+              ref={indicatorRef}
+              className={`${style["tab-indicator"]}`}
+            ></div>
             <ul>
               <li
+                ref={enquireTabRef}
                 data-id="form-enquire"
                 className={`${activeTab === "form-enquire" ? style["active"] : ""}`}
                 onClick={() => handleTabClick("form-enquire")}
@@ -191,6 +217,7 @@ export default function EnquireNowPopup({ className = "", onClose }: EnquireNowP
                 Enquire now
               </li>
               <li
+                ref={visitTabRef}
                 data-id="form-visit"
                 className={`${activeTab === "form-visit" ? style["active"] : ""}`}
                 onClick={() => handleTabClick("form-visit")}

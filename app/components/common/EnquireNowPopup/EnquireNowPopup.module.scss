@@ -49,29 +49,18 @@
     font-size: 1.125em; // 18px / 16px = 1.125em
     cursor: pointer;
     &.active {
-      color: var(--primary-color);
       font-weight: 600;
-      border-bottom: 2px solid var(--primary-color); // Optional: Add a visual indicator for active tab
     }
   }
 
-  // .tab-indicator {
-  //   position: absolute;
-  //   height: 2px;
-  //   background-color: var(--color-primarycol);
-  //   bottom: 0;
-  //   transition: all 0.3s ease;
-  // }
-
-  // .indicator-form-enquire {
-  //   width: 37%; /* Adjust based on your actual tab width */
-  //   left: 0;
-  // }
-
-  // .indicator-form-visit {
-  //   width: 37%; /* Adjust based on your actual tab width */
-  //   left: 50%;
-  // }
+  .tab-indicator {
+    position: absolute;
+    height: 2px;
+    background-color: var(--color-primarycol);
+    bottom: 0;
+    transition: all 0.3s ease;
+    /* Dynamic width will be set via JavaScript */
+  }
 }
 
 .back-btn-wrapper {
@@ -86,18 +75,6 @@
     margin-bottom: 4em;
   }
 }
-
-// .tab-indicator {
-//   position: absolute;
-//   width: 10em;
-//   height: 2px;
-//   background-color: red;
-//   bottom: 0;
-//   left: 0;
-//   .activeTab {
-//     background-color: var(--primary-color);
-//   }
-// }
 
 .button-wrapper {
   margin-top: 1em;
