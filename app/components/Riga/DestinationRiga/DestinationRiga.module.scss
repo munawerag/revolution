@@ -24,6 +24,11 @@
       }
     }
   }
+  .rigaCard {
+    h3 {
+      text-transform: uppercase;
+    }
+  }
 }
 
 
@@ -37,6 +42,9 @@
     gap: 0.839em;
     color: var(--color-primarycol);
     margin-top: 5.556em;
+    @media #{$mineTab} {
+      margin-top: 2em;
+    }
   }
   
   .loading-icon {

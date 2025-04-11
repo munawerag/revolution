@@ -17,9 +17,9 @@
   .react-select__control {
     border: 0;
   }
-  .react-select__indicator {
-    display: none;
-  }
+  // .react-select__indicator {
+  //   display: none;
+  // }
   .react-select__indicator-separator {
     background-color: transparent;
   }
@@ -52,5 +52,11 @@
     &::placeholder {
       color: var(--color-primarycol);
     }
+  }
+}
+
+.react-select__control {
+  .react-select__dropdown-indicator {
+    color: var(--color-primarycol);
   }
 }

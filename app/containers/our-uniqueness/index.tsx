@@ -23,6 +23,7 @@ export default function OurUniqueness({ page }: any) {
       <OurUniquenessCenter centerDescription={ourUniquenessData?.centerDescription} />
       <BeautyRiga
         image={ourUniquenessData?.beautyRiga?.image}
+        heading={ourUniquenessData?.beautyRiga?.heading}
         content={ourUniquenessData?.beautyRiga?.content}
         reverseLayout={true}
       />

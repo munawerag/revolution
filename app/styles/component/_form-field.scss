@@ -20,9 +20,9 @@
   }
 
   &__control {
-    font-size: 18px;
+    font-size: 1.125em;
     font-family: var(--base-font);
-    font-weight: 400;
+    font-weight: 200;
     line-height: 1em;
     display: block;
     width: 100%;
@@ -41,7 +41,7 @@
     min-height: 1.5em;
 
     &::placeholder {
-      color: var(--color-graycol);
+      color: var(--color-primarycol);
       opacity: 1;
       font-weight: inherit;
     }
@@ -123,14 +123,11 @@
   }
 }
 
-
-
 .react-tel-input {
   .c_form-field__control {
     padding-left: 3.5em;
   }
-} 
-
+}
 
 .border-red {
   .c_form-field__control {
@@ -138,4 +135,27 @@
   }
 }
 
+.c_form-field__control {
+  .c_form-field__value-container {
+    font-size: 1em;
+  }
+}
 
+.vacancies-search-filter,
+.relevance-select-container {
+  .react-select {
+    &__option {
+      &--is-focused,
+      &:active,
+      &:hover {
+        color: var(--color-blackcol);
+        background-color: rgba($color: var(--rgb-primarycol), $alpha: 0.25);
+      }
+    }
+
+    &__option--is-selected {
+      color: var(--color-whitecol);
+      background-color: var(--color-primarycol);
+    }
+  }
+}

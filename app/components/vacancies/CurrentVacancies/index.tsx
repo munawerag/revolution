@@ -36,7 +36,6 @@ const categoriesOptions = [
   { value: "CustomerSupport", label: "Customer Support" },
 ];
 
-
 const positionTypeOptions = [
   { value: "default", label: "Position Type" },
   { value: "FullTime", label: "Full Time" },
@@ -46,10 +45,6 @@ const positionTypeOptions = [
   { value: "Temporary", label: "Temporary" },
   { value: "Freelance", label: "Freelance" },
 ];
-
-
-
-
 
 interface Vacancy {
   id: number;
@@ -195,10 +190,10 @@ export default function CurrentVacancies({ vacancies }: CurrentVacanciesProps) {
 
   return (
     <section className="relative">
-      <div className="container">
-        {selectedVacancy ? (
-          <CandidatesPolicies vacancy={selectedVacancy} onBackClick={handleBackClick} />
-        ) : (
+      {selectedVacancy ? (
+        <CandidatesPolicies vacancy={selectedVacancy} onBackClick={handleBackClick} />
+      ) : (
+        <div className="container">
           <>
             <div className={`${style["vacancies-title"]}`}>
               <h2 className="h2 text-center">Current Vacancies</h2>
@@ -208,34 +203,11 @@ export default function CurrentVacancies({ vacancies }: CurrentVacanciesProps) {
               <div className={`${style["custom-row"]}`}>
                 {fields.map((item: any, i: number) => (
                   <Fragment key={i}>
-                    <div
-                      className={`${style["col_12"]}`}
-                    >
+                    <div className={`${style["col_12"]}`}>
                       <FormGroup control={control} errors={errors} item={item} />
                     </div>
                   </Fragment>
                 ))}
-
-                {/* <div className={`${style["col_12"]}`}>
-                  <div className="c_form-field">
-                    <input
-                      type="text"
-                      placeholder="Search keyword"
-                      className="c_form-field__control"
-                      value=""
-                    />
-                  </div>
-                </div>
-                <div className={`${style["col_12"]}`}>
-                  <div className="c_form-field c_form-field--location">
-                    <input
-                      type="text"
-                      placeholder="Search location"
-                      className="c_form-field__control"
-                      value=""
-                    />
-                  </div>
-                </div> */}
 
                 <div className={`${style["col_12"]}`}>
                   <button>
@@ -268,14 +240,14 @@ export default function CurrentVacancies({ vacancies }: CurrentVacanciesProps) {
                       }}
                       isSearchable={false}
                     />
-                    <div className="arrow-down">
+                    {/* <div className="arrow-down">
                       <Image
                         src={"/assets/svgs/arrow-down.svg"}
                         width={9}
                         height={9}
                         alt="arrow down"
                       />
-                    </div>
+                    </div> */}
                   </div>
                 </div>
                 <div className="filter-dropdown">
@@ -291,14 +263,14 @@ export default function CurrentVacancies({ vacancies }: CurrentVacanciesProps) {
                       }}
                       isSearchable={false}
                     />
-                    <div className="arrow-down">
+                    {/* <div className="arrow-down">
                       <Image
                         src={"/assets/svgs/arrow-down.svg"}
                         width={9}
                         height={9}
                         alt="arrow down"
                       />
-                    </div>
+                    </div> */}
                   </div>
                 </div>
                 <div className="filter-dropdown">
@@ -314,14 +286,14 @@ export default function CurrentVacancies({ vacancies }: CurrentVacanciesProps) {
                       }}
                       isSearchable={false}
                     />
-                    <div className="arrow-down">
+                    {/* <div className="arrow-down">
                       <Image
                         src={"/assets/svgs/arrow-down.svg"}
                         width={9}
                         height={9}
                         alt="arrow down"
                       />
-                    </div>
+                    </div> */}
                   </div>
                 </div>
               </div>
@@ -329,11 +301,11 @@ export default function CurrentVacancies({ vacancies }: CurrentVacanciesProps) {
 
             <div className={`${style["results-row"]}`}>
               <div className={`${style["results-col"]}`}>
-                <p className="fw-300 m-0">{vacancies?.length} Results</p>
+                <p className="fw-200 m-0">{vacancies?.length} Results</p>
               </div>
               <div className={`${style["results-col"]}`}>
                 <div className={`${style["sort-by"]}`}>
-                  <span>sort by</span>
+                  <span>Sort by</span>
 
                   <div className="relevance-select-container">
                     <Select
@@ -347,14 +319,14 @@ export default function CurrentVacancies({ vacancies }: CurrentVacanciesProps) {
                       }}
                       isSearchable={false}
                     />
-                    <div className="arrow-down">
+                    {/* <div className="arrow-down">
                       <Image
                         src={"/assets/svgs/arrow-down.svg"}
                         width={9}
                         height={9}
                         alt="arrow down"
                       />
-                    </div>
+                    </div> */}
                   </div>
                 </div>
               </div>
@@ -420,8 +392,10 @@ export default function CurrentVacancies({ vacancies }: CurrentVacanciesProps) {
               </ul>
             </div>
           </>
-        )}
-      </div>
+        </div>
+      )}
+      {/* <div className="container">
+      </div> */}
     </section>
   );
 }

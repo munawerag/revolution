@@ -200,7 +200,7 @@ export default function EnquireNowPopup({ className = "", onClose }: EnquireNowP
             </ul>
           </div>
         </div>
-        <div className="form-wrapper">
+        <div className={`${style["form-wrapper"]}`}>
           <form
             onSubmit={handleSubmit(onFormSubmit)}
             id="form-enquire"

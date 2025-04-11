@@ -99,7 +99,13 @@
 //   }
 // }
 
-
 .button-wrapper {
   margin-top: 1em;
+}
+
+.form-wrapper {
+  height: 30.25em;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 0 1.2em;
 }

@@ -71,7 +71,7 @@ export default function CandidatesPolicies({ vacancy, onBackClick }: CandidatesP
           </div>
         </div>
         <div className={`${style["back-btn-wrapper"]}`}>
-          <button className="primary-anchor white-col" onClick={onBackClick}>
+          <button className="primary-anchor white-col small-size" onClick={onBackClick}>
             Back
           </button>
         </div>

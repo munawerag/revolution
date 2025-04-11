@@ -14,19 +14,18 @@ export default function DestinationRiga({ subTitle, title, desc, cardData }: Des
   return (
     <>
       <SectionHeading subTitle={subTitle} title={title} desc={desc} isCenter={true} />
-      <section className="section">
+      <section className="section p-t-0">
         <div className="container-s">
           <div className={`${style["main-grid-wrapper"]}`}>
             {cardData?.map((project, index) => (
               <div className={`${style["item"]}`} key={index}>
                 <EvolutionCard
                   img={project?.img}
-                  subTitle={project?.subTitle}
                   title={project?.title}
                   ctaLink={project?.ctaLink}
                   ctaTitle={project?.ctaTitle}
                   desc={project?.desc}
-                  customclass={style.threecolumnLayoutCard}
+                  customclass={style.rigaCard}
                   customClassImgWrapper={style.imgWrapper}
                 />
               </div>

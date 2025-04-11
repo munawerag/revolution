@@ -85,6 +85,7 @@ export default function Commitment({ commitmentData }: CommitmentProps) {
             </div>
           </div>
         </div>
+        
         <div className={`${style["center-description"]}`}>
           {centerDescription && (
             <div dangerouslySetInnerHTML={{ __html: centerDescription || "" }} />
