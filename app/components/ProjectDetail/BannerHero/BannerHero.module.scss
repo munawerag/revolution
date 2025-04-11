@@ -48,7 +48,6 @@
     text-align: center;
     .h5 {
       font-size: 1.125em;
-
     }
   }
   &__badge {
@@ -144,6 +143,9 @@
       // @media #{$ipad} {
       //   top: 50%;
       // }
+      @media #{$mineTab} {
+        padding: 0 1em;
+      }
     }
     .logo {
       width: 13.5em;
@@ -154,6 +156,12 @@
     }
     .title1 {
       text-transform: uppercase;
+    }
+    .title2 {
+      @media #{$mineTab} {
+        font-size: 1.5em;
+        line-height: 1.18;
+      }
     }
   }
 
@@ -232,6 +240,9 @@
           font-weight: 400;
           color: var(--color-whitecol);
           margin-bottom: 0;
+          @media #{$mineTab} {
+            font-size: 2.25em;
+          }
         }
 
         .title2 {

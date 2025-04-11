@@ -47,7 +47,7 @@ export default function Designation({ vacancy, onBackClick }: DesignationProps) 
     .object({
       name: yup
         .string()
-        .required("Name is required")
+        .required("First Name is required")
         .matches(/^[A-Za-z ]*$/, {
           message: "Please enter only letters",
           excludeEmptyString: true,
@@ -76,7 +76,7 @@ export default function Designation({ vacancy, onBackClick }: DesignationProps) 
         .typeError("Phone number is required"),
       address: yup.string().required("Address is required"),
       selectHear: yup.object().required("Please select an option"),
-      selectSource: yup.object().required("Please select an option"),
+      // selectSource: yup.object().required("Please select an option"),
     })
     .required();
 
