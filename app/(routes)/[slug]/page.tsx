@@ -16,7 +16,6 @@ import blogSectionData from "@/app/data/blog-section.json";
 import projectListData from "../../data/project-list.json";
 import tour360Data from "../../data/360-tour.json";
 
-
 import AwardsAndPartners from "@/app/containers/awards-and-partners";
 import ContactUs from "@/app/containers/contact-us";
 import OurStory from "@/app/containers/our-story";
@@ -27,6 +26,7 @@ import Vacancies from "@/app/containers/vacancies";
 import Blogs from "@/app/containers/blogs";
 import ProjectList from "@/app/containers/project-list";
 import Tour360 from "@/app/containers/360-tour";
+import Search from "@/app/components/search";
 
 const TemplatePage = async ({ params }: { params: Promise<{ slug: string }> }) => {
   const resolvedParams = await params;
@@ -60,7 +60,8 @@ const TemplatePage = async ({ params }: { params: Promise<{ slug: string }> }) =
                 return <ProjectList page={projectListData} />;
               case "360-tour":
                 return <Tour360 page={tour360Data} />;
-
+              case "search":
+                return <Search />;
               default:
                 return <NotFound />;
             }

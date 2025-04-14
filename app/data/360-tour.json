@@ -3,5 +3,79 @@
   "sectionHeading": {
     "subTitle": "360 Tour",
     "title": "Explore Our State-of-the-Art Facilities in Immersive 360° View"
+  },
+  "treeOfLife": {
+    "heading": "EYWA TREE OF LIFE",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua the enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut.",
+    "cards": [
+      {
+        "figureUrl": "/assets/images/360-tour/tree-1.jpg",
+        "title": "Living Room"
+      },
+      {
+        "figureUrl": "/assets/images/360-tour/tree-2.jpg",
+        "title": "Living Room"
+      },
+      {
+        "figureUrl": "/assets/images/360-tour/tree-3.jpg",
+        "title": "Living Room"
+      },
+      {
+        "figureUrl": "/assets/images/360-tour/tree-1.jpg",
+        "title": "Living Room"
+      },
+      {
+        "figureUrl": "/assets/images/360-tour/tree-1.jpg",
+        "title": "Living Room"
+      }
+    ]
+  },
+  "palms": {
+    "heading": "22PALMS",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua the enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut.",
+    "cards": [
+      {
+        "figureUrl": "/assets/images/360-tour/palm-1.jpg",
+        "title": "Living Room"
+      },
+      {
+        "figureUrl": "/assets/images/360-tour/palm-2.jpg",
+        "title": "Living Room"
+      },
+      {
+        "figureUrl": "/assets/images/360-tour/palm-3.jpg",
+        "title": "Living Room"
+      },
+      {
+        "figureUrl": "/assets/images/360-tour/palm-1.jpg",
+        "title": "Living Room"
+      },
+      {
+        "figureUrl": "/assets/images/360-tour/palm-2.jpg",
+        "title": "Living Room"
+      }
+    ]
+  },
+  "lofts": {
+    "heading": "THE LOFTS",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua the enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut.",
+    "cards": [
+      {
+        "figureUrl": "/assets/images/360-tour/loft-1.jpg",
+        "title": "Living Room"
+      },
+      {
+        "figureUrl": "/assets/images/360-tour/loft-2.jpg",
+        "title": "Bedroom"
+      },
+      {
+        "figureUrl": "/assets/images/360-tour/loft-3.jpg",
+        "title": "Kitchen"
+      },
+      {
+        "figureUrl": "/assets/images/360-tour/loft-4.jpg",
+        "title": "Bathroom"
+      }
+    ]
   }
 }

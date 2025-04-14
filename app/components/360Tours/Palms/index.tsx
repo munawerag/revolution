@@ -11,75 +11,83 @@ import style from "./TreeOfLife.module.scss";
 import SwiperNavButtons from "../../Buttons/SwiperNavButtons";
 import { useState } from "react";
 
-type PalmsProps = {
-  cards: Tour360CardProps[];
+type PalmsData = {
+  heading?: string;
+  description?: string;
+  cards?: Tour360CardProps[];
 };
 
-export default function Palms({ cards }: PalmsProps) {
+type PalmsProps = {
+  data?: PalmsData;
+};
+
+export default function Palms({ data }: PalmsProps) {
   const [prevEl, setPrevEl] = useState<HTMLElement | null>(null);
   const [nextEl, setNextEl] = useState<HTMLElement | null>(null);
 
-  // Using hardcoded array instead of the cards prop
-  const hardcodedCards = [
-    {
-      figureUrl: "/assets/images/360-tour/palm-1.jpg",
-      title: "Living Room",
-    },
-    {
-      figureUrl: "/assets/images/360-tour/palm-2.jpg",
-      title: "Living Room",
-    },
-    {
-      figureUrl: "/assets/images/360-tour/palm-3.jpg",
-      title: "Living Room",
-    },
-    {
-      figureUrl: "/assets/images/360-tour/palm-1.jpg",
-      title: "Living Room",
-    },
-    {
-      figureUrl: "/assets/images/360-tour/palm-2.jpg",
-      title: "Living Room",
-    },
-  ];
+  // Use data from props without default fallback
+  const cards = data?.cards || [];
+  const heading = data?.heading || "22PALMS";
+  const description = data?.description || "No description available";
+
+  // Error handling - if no cards available, don't render the section
+  if (!cards.length) {
+    return null;
+  }
 
   return (
-    <section className="section gray2-color-bg">
+    <section className="section gray2-color-bg p-b-0">
       <div className="container-s">
         <div className={`${style["panel"]}`}>
-          <h2 className="h3">22PALMS</h2>
-          <p className="p">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua the enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut.
-          </p>
+          <h2 className="h3">{heading}</h2>
+          <p className="p">{description}</p>
         </div>
         <div className={`${style["palms-slider-wrapper"]} element-lg-right-zero`}>
-          <Swiper
-            speed={1200}
-            slidesPerView={3.11}
-            spaceBetween={50}
-            navigation={{
-              prevEl,
-              nextEl,
-            }}
-            modules={[Pagination, Navigation]}
-            pagination={{
-              type: "progressbar",
-            }}
-            className="palms-slider"
-          >
-            {hardcodedCards.map((card: Tour360CardProps, index: number) => (
-              <SwiperSlide key={index} className={`${style["slide-item"]}`}>
-                <Tour360Card
-                  figureUrl={card.figureUrl}
-                  title={card.title}
-                  figureClassName={style.imgWrapper}
-                />
-              </SwiperSlide>
-            ))}
-          </Swiper>
-          <div className={`${style.palm__nav}`}>
-            <SwiperNavButtons nextFunc={setNextEl} prevFunc={setPrevEl} />
-          </div>
+          {cards.length > 0 && (
+            <>
+              <Swiper
+                speed={1200}
+                slidesPerView={1.11}
+                spaceBetween={15}
+                navigation={{
+                  prevEl,
+                  nextEl,
+                }}
+                modules={[Pagination, Navigation]}
+                pagination={{
+                  type: "progressbar",
+                }}
+                breakpoints={{
+                  768: {
+                    spaceBetween: 20,
+                    slidesPerView: 2.5,
+                  },
+                  992: {
+                    spaceBetween: 30,
+                    slidesPerView: 2.9,
+                  },
+                  1200: {
+                    spaceBetween: 50,
+                    slidesPerView: 3.11,
+                  },
+                }}
+                className="palms-slider"
+              >
+                {cards.map((card: Tour360CardProps, index: number) => (
+                  <SwiperSlide key={index} className={`${style["slide-item"]}`}>
+                    <Tour360Card
+                      figureUrl={card.figureUrl}
+                      title={card.title}
+                      figureClassName={style.imgWrapper}
+                    />
+                  </SwiperSlide>
+                ))}
+              </Swiper>
+              <div className={`${style.palm__nav}`}>
+                <SwiperNavButtons nextFunc={setNextEl} prevFunc={setPrevEl} />
+              </div>
+            </>
+          )}
         </div>
       </div>
     </section>
