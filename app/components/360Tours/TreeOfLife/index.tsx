@@ -11,77 +11,80 @@ import style from "./TreeOfLife.module.scss";
 import SwiperNavButtons from "../../Buttons/SwiperNavButtons";
 import { useState } from "react";
 
-type TreeOfLifeProps = {
-  cards: Tour360CardProps[];
+type TreeOfLifeData = {
+  heading?: string;
+  description?: string;
+  cards?: Tour360CardProps[];
 };
 
-export default function TreeOfLife({ cards }: TreeOfLifeProps) {
+type TreeOfLifeProps = {
+  data?: TreeOfLifeData;
+};
+
+export default function TreeOfLife({ data }: TreeOfLifeProps) {
   const [prevEl, setPrevEl] = useState<HTMLElement | null>(null);
   const [nextEl, setNextEl] = useState<HTMLElement | null>(null);
 
-  // Using hardcoded array instead of the cards prop
-  const hardcodedCards = [
-    {
-      figureUrl: "/assets/images/360-tour/tree-1.jpg",
-      title: "Living Room",
-    },
-    {
-      figureUrl: "/assets/images/360-tour/tree-2.jpg",
-      title: "Living Room",
-    },
-    {
-      figureUrl: "/assets/images/360-tour/tree-3.jpg",
-      title: "Living Room",
-    },
-    {
-      figureUrl: "/assets/images/360-tour/tree-1.jpg",
-      title: "Living Room",
-    },
-    {
-      figureUrl: "/assets/images/360-tour/tree-1.jpg",
-      title: "Living Room",
-    },
-  ];
+  // Use data from props without default fallback
+  const cards = data?.cards || [];
+  const heading = data?.heading || "EYWA TREE OF LIFE";
+  const description = data?.description || "No description available";
+
+  // Error handling - if no cards available, don't render the section
+  if (!cards.length) {
+    return null;
+  }
 
   return (
-    <section className="section">
+    <section className="section p-t-0">
       <div className="container-s">
         <div className={`${style["panel"]}`}>
-          <h2 className="h3">EYWA TREE OF LIFE</h2>
-          <p className="p">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-            incididunt ut labore et dolore magna aliqua the enim ad minim veniam, quis nostrud
-            exercitation ullamco laboris nisi ut.
-          </p>
+          <h2 className="h3">{heading}</h2>
+          <p className="p">{description}</p>
         </div>
         <div className={`${style["tree-of-life-slider-wrapper"]} element-lg-right-zero`}>
-          <Swiper
-          speed={1200}
-            slidesPerView={"auto"}
-            spaceBetween={52}
-            navigation={{
-              prevEl,
-              nextEl,
-            }}
-            modules={[Pagination, Navigation]}
-            pagination={{
-              type: "progressbar",
-            }}
-            className="tree-of-life-slider"
-          >
-            {hardcodedCards.map((card: Tour360CardProps, index: number) => (
-              <SwiperSlide key={index} className={`${style["slide-item"]}`}>
-                <Tour360Card
-                  figureUrl={card.figureUrl}
-                  title={card.title}
-                  figureClassName={style.imgWapper}
-                />
-              </SwiperSlide>
-            ))}
-          </Swiper>
-          <div className={`${style.treeoflife__nav}`}>
-            <SwiperNavButtons nextFunc={setNextEl} prevFunc={setPrevEl} />
-          </div>
+          {cards.length > 0 && (
+            <>
+              <Swiper
+                speed={1200}
+                slidesPerView={"auto"}
+                spaceBetween={15}
+                navigation={{
+                  prevEl,
+                  nextEl,
+                }}
+                modules={[Pagination, Navigation]}
+                pagination={{
+                  type: "progressbar",
+                }}
+                breakpoints={{
+                  768: {
+                    spaceBetween: 20,
+                  },
+                  992: {
+                    spaceBetween: 30,
+                  },
+                  1200: {
+                    spaceBetween: 52,
+                  },
+                }}
+                className="tree-of-life-slider"
+              >
+                {cards.map((card: Tour360CardProps, index: number) => (
+                  <SwiperSlide key={index} className={`${style["slide-item"]}`}>
+                    <Tour360Card
+                      figureUrl={card.figureUrl}
+                      title={card.title}
+                      figureClassName={style.imgWapper}
+                    />
+                  </SwiperSlide>
+                ))}
+              </Swiper>
+              <div className={`${style.treeoflife__nav}`}>
+                <SwiperNavButtons nextFunc={setNextEl} prevFunc={setPrevEl} />
+              </div>
+            </>
+          )}
         </div>
       </div>
     </section>

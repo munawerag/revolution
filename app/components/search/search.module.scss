@@ -1,0 +1,221 @@
+@import "../../styles/abstract/variable";
+
+.search-inner-hero {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-whitecol);
+  padding: 12em 0 0;
+  @media #{$mineTab} {
+    padding: 7em 0 0;
+  }
+
+  // &::before {
+  //   content: "";
+  //   position: absolute;
+  //   width: 100%;
+  //   height: 100%;
+  //   z-index: 2;
+  //   top: 0;
+  //   left: 0;
+  //   opacity: 0.12;
+  //   background: linear-gradient(to bottom, #181818 20.97%, #747474 44.6%);
+  //   mix-blend-mode: color-burn;
+  //   pointer-events: none;
+  // }
+  // &::after {
+  //   content: "";
+  //   position: absolute;
+  //   inset: 0;
+  //   background: #000;
+  //   z-index: 3;
+  //   opacity: 0.4;
+  //   pointer-events: none;
+  // }
+
+  &__figure {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 1;
+  }
+  picture {
+    height: 100%;
+  }
+  &__main-wrapper {
+    position: relative;
+    z-index: 4;
+    text-align: center;
+    flex: 0 1 73.125em;
+    @media #{$ipadpro} {
+      flex-basis: 90%;
+      width: 90%;
+    }
+    @media #{$mineTab} {
+      flex-basis: 95%;
+      width: 95%;
+    }
+
+    .search-inner-hero__form {
+      display: flex;
+      align-items: center;
+      position: relative;
+      border-radius: 1.25em;
+      overflow: hidden;
+      margin-bottom: 6em;
+
+      &__reset {
+        position: absolute;
+        right: 13%;
+        width: 1.875em;
+        height: 1.875em;
+        top: 50%;
+        transform: translateY(-50%);
+        overflow: hidden;
+        background: url("/assets/svgs/search-cross.svg") center/contain no-repeat;
+        @media #{$ipad} {
+          right: 18%;
+        }
+        @media #{$mineTab} {
+          right: 36%;
+          width: 1.5em;
+          height: 1.5em;
+        }
+
+        input {
+          font-size: 2em;
+          opacity: 0;
+          cursor: pointer;
+        }
+      }
+      &__btnn {
+        position: absolute;
+        z-index: 1;
+        right: 0;
+        height: 100%;
+      }
+      button {
+        height: 100%;
+        border: transparent;
+        border-radius: 0;
+      }
+    }
+
+    .c_form-field {
+      flex: 0 0 100%;
+      width: 100%;
+      background: var(--color-graycol2);
+      margin: 0;
+      &::before {
+        content: "";
+        position: absolute;
+        background: url("/assets/svgs/search.svg") center/contain no-repeat;
+        width: 1.3125em;
+        height: 1.375em;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 1.0625em;
+      }
+      &__control {
+        display: block;
+        font-size: 1.375em;
+        font-weight: 400;
+        // color: var(--color-whitecol);
+        padding: 0.8em 14em 0.8em 2.2727em;
+        margin: 0;
+        border: 0;
+        background-color: transparent;
+        
+        @media #{$mineTab} {
+          font-size: 1em;
+          padding-left: 3em;
+          padding-right: 10.2em;
+        }
+      }
+    }
+  }
+}
+
+.search-result__top-result-left-side {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 6em;
+  flex: 0 0 70%;
+  @media #{$ipad} {
+    flex-basis: 55%;
+  }
+  @media #{$mineTab} {
+    flex-basis: 100%;
+    margin-bottom: 2em;
+  }
+
+  a {
+    font-size: 1.875em;
+    font-weight: 700;
+    line-height: 1.3;
+    color: var(--color-primarycol);
+    margin-bottom: 0.6em;
+    transition: $transition;
+    &:hover {
+      color: var(--color-secondarycol);
+    }
+  }
+  .result-in-seconds {
+    font-size: 1.25em;
+    font-weight: 400;
+    color: var(--color-graycol);
+  }
+}
+
+.search-result__top-result-right-side {
+  display: flex;
+  align-items: baseline;
+  gap: 1.75em;
+  @media #{$mineTab} {
+    margin-bottom: 3em;
+  }
+  .c_form-field {
+    margin: 0;
+  }
+}
+
+.search-result__top-result {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.search-result__list-items {
+  > ul {
+    list-style: none;
+    padding: 0;
+    > li:not(:last-child) {
+      border-bottom: 1px solid #646464;
+      margin-bottom: 4em;
+    }
+    a {
+      font-size: 1.5em;
+      color: var(--color-primarycol);
+      font-weight: 700;
+      margin-bottom: 0.5em;
+      display: block;
+      transition: $transition;
+      line-height: 1.3;
+      &:hover {
+        color: var(--color-secondarycol);
+      }
+    }
+  }
+
+  p {
+    // font-size: 1em;
+    color: var(--color-graycol);
+    @media #{$tabL} {
+      padding-right: 6em;
+    }
+  }
+}

@@ -4,8 +4,7 @@ import TreeOfLife from "@/app/components/360Tours/TreeOfLife";
 import SectionHeading from "@/app/components/common/SectionHeading";
 
 export default function Tour360({page}: {page: any}) {
-    const tour360Data = page?.tour360Data || page;
-
+  const tour360Data = page?.tour360Data || page;
 
   return (
     <>
@@ -15,10 +14,9 @@ export default function Tour360({page}: {page: any}) {
         desc={tour360Data?.sectionHeading?.desc}
         isCenter={true}
       />
-      {/* <TreeOfLife/>
-      <Palms/>
-      <Lofts/> */}
-
+      <TreeOfLife data={tour360Data?.treeOfLife} />
+      <Palms data={tour360Data?.palms} />
+      <Lofts data={tour360Data?.lofts} />
     </>
   );
 }

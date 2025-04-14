@@ -94,9 +94,11 @@
     background: rgba($color: #bebebe, $alpha: 0.2) !important;
     @media #{$ipad} {
       bottom: 4em !important;
+      width: 21.625em !important;
     }
     @media #{$mob} {
       max-width: 100% !important;
+      width: 100% !important;
       bottom: 5em !important;
     }
     .swiper-pagination-progressbar-fill {
