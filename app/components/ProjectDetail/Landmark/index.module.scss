@@ -8,6 +8,9 @@
   @media #{$ipadpro} {
     padding: 3em 2em;
   }
+  @media #{$mineTab} {
+    scroll-margin-top: 10em;
+  }
 }
 
 .projectWrapper {

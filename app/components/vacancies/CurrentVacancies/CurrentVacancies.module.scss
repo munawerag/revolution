@@ -1,14 +1,11 @@
 @import "../../../styles/abstract/variable";
 
-
-
 .vacancies-title {
   padding: 15em 0 0;
   @media #{$mineTab} {
     padding: 10em 0 0;
   }
 }
-
 
 .custom-row {
   display: flex;
@@ -64,6 +61,10 @@
 
 .panel {
   padding: 4.375em 3.75em 3.75em;
+  @media #{$ipad} {
+    padding: 4.375em 2em 3.75em;
+  }
+
   @media #{$mineTab} {
     padding: 2em;
   }
@@ -90,6 +91,10 @@
     flex: 0 0 21.6666%;
     width: 21.6666%;
     padding-right: 1em;
+    @media #{$ipad} {
+      flex: 0 0 20%;
+      width: 20%;
+    }
     @media #{$mineTab} {
       flex: 0 0 50%;
       width: 50%;
@@ -110,7 +115,7 @@
       flex: 0 0 auto;
       width: auto;
       padding-right: 0;
-      @media #{$ipad} {
+      @media #{$mineTab} {
         flex: 0 0 100%;
         width: 100%;
         display: flex;

@@ -203,10 +203,7 @@ export default function EnquireNowPopup({ className = "", onClose }: EnquireNowP
         <div className="title-wrapper">
           <h2 className="h2 text-center">Express your interest</h2>
           <div className={`${style["tab-wrapper"]}`}>
-            <div 
-              ref={indicatorRef}
-              className={`${style["tab-indicator"]}`}
-            ></div>
+            <div ref={indicatorRef} className={`${style["tab-indicator"]}`}></div>
             <ul>
               <li
                 ref={enquireTabRef}

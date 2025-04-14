@@ -9,8 +9,9 @@
   @media #{$ipadpro} {
     padding: 3em 0;
   }
-  @media #{$mob} {
+  @media #{$mineTab} {
     padding: 2em 0;
+    scroll-margin-top: 10em;
   }
 }
 
