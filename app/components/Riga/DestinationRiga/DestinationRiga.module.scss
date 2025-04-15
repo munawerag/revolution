@@ -20,7 +20,9 @@
       }
 
       .imgWrapper {
-        padding-bottom: 138.489%;
+        @media #{$ipadL} {
+          padding-bottom: 36.158192%;
+        }
       }
     }
   }
