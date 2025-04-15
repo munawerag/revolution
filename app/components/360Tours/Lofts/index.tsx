@@ -67,8 +67,8 @@ export default function Lofts({ data }: LoftsProps) {
                     slidesPerView: 2.9,
                   },
                   1200: {
-                    spaceBetween: 52,
-                    slidesPerView: 3.3,
+                    spaceBetween: 50,
+                    slidesPerView: 3.11,
                   },
                 }}
                 className="lofts-slider"
