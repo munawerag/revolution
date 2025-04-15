@@ -47,7 +47,7 @@ export default function TreeOfLife({ data }: TreeOfLifeProps) {
             <>
               <Swiper
                 speed={1200}
-                slidesPerView={"auto"}
+                slidesPerView={1.11}
                 spaceBetween={15}
                 navigation={{
                   prevEl,
@@ -60,12 +60,15 @@ export default function TreeOfLife({ data }: TreeOfLifeProps) {
                 breakpoints={{
                   768: {
                     spaceBetween: 20,
+                    slidesPerView: 2.5,
                   },
                   992: {
                     spaceBetween: 30,
+                    slidesPerView: 2.9,
                   },
                   1200: {
-                    spaceBetween: 52,
+                    spaceBetween: 50,
+                    slidesPerView: 3.11,
                   },
                 }}
                 className="tree-of-life-slider"
