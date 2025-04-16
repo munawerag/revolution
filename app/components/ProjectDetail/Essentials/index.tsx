@@ -12,9 +12,10 @@ import SwiperNavButtons from "../../Buttons/SwiperNavButtons";
 import Heading from "../../common/Heading";
 
 interface EssentialItem {
-  title: string;
+  title?: string;
   desc: string;
   img: string;
+  author?: string;
 }
 
 interface EssentialsProps {
@@ -71,6 +72,7 @@ const Essentials = ({ title = "", title2 = "", description, items = [] }: Essent
                 <div className={style.textWrapper}>
                   {item.title && <h4 className={`${style.title} line-clamp-1`}>{item.title}</h4>}
                   {item.desc && <div className={`fw-400`} dangerouslySetInnerHTML={{ __html: item.desc }}></div>}
+                  {item.author && <p className="lg-font">- {item.author}</p>}
                 </div>
               </div>
             </SwiperSlide>

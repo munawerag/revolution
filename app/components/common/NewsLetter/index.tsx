@@ -1,6 +1,5 @@
 "use client";
 import FormButton from "../../Buttons/FormButton";
-import style from "./index.module.scss";
 import { useForm } from "react-hook-form";
 import FormGroup from "../../FormGroup";
 import { yupResolver } from "@hookform/resolvers/yup";
@@ -9,6 +8,9 @@ import { PhoneRegex } from "../../../utilities/utility";
 import FormLoading from "../../FormLoading";
 import { Fragment, useState } from "react";
 import { subscribe } from "diagnostics_channel";
+import style from "./index.module.scss";
+
+
 
 interface NewsLetterProps {
   data?: {
@@ -63,7 +65,7 @@ const NewsLetter = ({ data }: NewsLetterProps) => {
   }
 
   return (
-    <section className={`section ${style.newsLetter}`}>
+    <section className={`${style.newsLetter}`}>
       <div className="container-s">
         <div className={`${style.row} custom-row no-gutters`}>
           <div className="col_12 col_lg_6 col_xl_3">

@@ -44,7 +44,10 @@
     margin: 2.75em auto 0;
   }
   @media #{$ipad} {
-    display: none;
+    margin-bottom: 2em;
+  }
+  @media #{$mineTab} {
+    width: 100%;
   }
 
 }

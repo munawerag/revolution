@@ -2,16 +2,14 @@
 
 .main-wrapper {
   position: fixed;
-  z-index: 99999;
-  background: #fefefe;
+  background: var(--color-offwhitecol);
   inset: 0;
   height: 100vh;
   overflow-y: auto;
   transition: var(--transition-slow);
   transform: translateX(100vw); // Default hidden state
-  @media #{$mob} {
-    z-index: 9999999;
-  }
+  z-index: 9999999;
+
   &.active {
     transform: translateX(0); // Visible when active
   }
@@ -22,9 +20,9 @@
   flex-direction: column;
   justify-content: center;
   padding-top: 8%;
-  @media #{$tab} {
-    height: 100%;
-  }
+  height: 100%;
+  // @media #{$tab} {
+  // }
 }
 
 .tab-wrapper {
@@ -65,14 +63,14 @@
 
 .back-btn-wrapper {
   position: absolute;
-  top: 25%;
+  top: 7%;
   left: 3.9%;
   @media #{$mineTab} {
-    position: static;
-    margin-top: 2em;
-    display: flex;
-    justify-content: center;
-    margin-bottom: 4em;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    text-align: center;
+    top: 5%;
   }
 }
 

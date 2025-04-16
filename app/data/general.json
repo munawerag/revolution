@@ -26,7 +26,11 @@
       {
         "id": 2,
         "label": "Our Story",
-        "link": "/our-story"
+        "submenu": [
+          { "label": "R.Evolution History", "link": "/our-story" },
+          { "label": "Awards & Partners", "link": "/awards-and-partners" },
+          { "label": "Our Team", "link": "/our-team" }
+        ]
 
       },
       {

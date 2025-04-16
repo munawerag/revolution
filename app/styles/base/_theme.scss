@@ -244,8 +244,8 @@ button {
     position: absolute;
     top: 2px;
     left: 0;
-    height: 17px;
-    width: 17px;
+    height: 18px;
+    width: 18px;
     background-color: transparent;
     border: 2px solid var(--color-graycol);
     border-radius: 50%; /* Make it circular for radio buttons */
@@ -257,11 +257,11 @@ button {
       display: none;
       left: 50%;
       top: 50%;
-      width: 9px;
-      height: 9px;
+      width: 8px;
+      height: 8px;
       background-color: var(--color-secondarycol);
       border-radius: 50%;
-      transform: translate(-55%, -55%);
+      transform: translate(-50%, -50%);
     }
   }
 }

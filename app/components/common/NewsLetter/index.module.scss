@@ -3,6 +3,7 @@
 .newsLetter {
   background: var(--color-whitecol);
   padding-bottom: 0;
+  padding-top: 2em;
 
   @media #{$desktop} {
     padding-top: 8.75em;
@@ -57,5 +58,4 @@
   .c_form-field {
     margin: 0;
   }
-
 }

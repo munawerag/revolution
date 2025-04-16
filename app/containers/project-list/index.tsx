@@ -3,13 +3,9 @@ import OurUnique from "@/app/components/ProjectListing/OurUnique";
 import ProjectsList from "@/app/components/ProjectListing/ProjectsList";
 import ProjectVideo from "@/app/components/ProjectListing/ProjectVideo";
 
-
-
-
-const ProjectList = ({page}: {page: any}) => {
+const ProjectList = ({ page }: { page: any }) => {
   const projectListData = page?.projectListData || page;
 
-  
   return (
     <>
       <SectionHeading

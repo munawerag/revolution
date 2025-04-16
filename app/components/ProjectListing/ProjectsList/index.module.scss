@@ -19,13 +19,12 @@
   @media #{$ipadpro} {
     width: calc(50% - 1em) !important;
   }
-
   @media #{$mob} {
     width: 100% !important;
   }
 
   &:nth-child(5n + 1) {
-    width: 100%;
+    width: 100% !important;
     .imgWrapper {
       @media #{$desktop} {
         height: 40em;
