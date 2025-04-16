@@ -39,8 +39,7 @@ export default function RootLayout({
         {children}
         <NewsLetter data={generalData.newsLetter} />
         <Footer data={generalData} />
-        <ChatIcon/>
-
+        <ChatIcon />
       </body>
     </html>
   );

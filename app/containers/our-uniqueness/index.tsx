@@ -34,6 +34,7 @@ export default function OurUniqueness({ page }: any) {
         title2={ourUniquenessData?.essentials?.title2}
         items={ourUniquenessData?.essentials?.items}
       />
+      
     </>
   );
 }

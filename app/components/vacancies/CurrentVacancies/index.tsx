@@ -227,7 +227,7 @@ export default function CurrentVacancies({ vacancies }: CurrentVacanciesProps) {
                   </span>
                   <span>Filters</span>
                 </div>
-                <div className="filter-dropdown">
+                <div className={`${style["filter-dropdown"]}`}>
                   <div className="relevance-select-container">
                     <Select
                       className="relevance-select"
@@ -250,7 +250,7 @@ export default function CurrentVacancies({ vacancies }: CurrentVacanciesProps) {
                     </div> */}
                   </div>
                 </div>
-                <div className="filter-dropdown">
+                <div className={`${style["filter-dropdown"]}`}>
                   <div className="relevance-select-container">
                     <Select
                       className="relevance-select"
@@ -273,7 +273,7 @@ export default function CurrentVacancies({ vacancies }: CurrentVacanciesProps) {
                     </div> */}
                   </div>
                 </div>
-                <div className="filter-dropdown">
+                <div className={`${style["filter-dropdown"]}`}>
                   <div className="relevance-select-container">
                     <Select
                       className="relevance-select"

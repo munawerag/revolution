@@ -204,8 +204,14 @@
       transition: var(--transition-slow);
     }
     .swiper-slide-active {
-      .img-wrapper {
-        opacity: 0.6;
+      
+    }
+
+    .swiper-slide-next {
+      & ~ .swiper-slide {
+        .img-wrapper {
+          opacity: 0.6;
+        }
       }
     }
 
