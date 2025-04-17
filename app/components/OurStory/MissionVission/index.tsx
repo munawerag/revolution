@@ -25,7 +25,7 @@ export default function MissionVission({ missionVision = {} }: MissionVissionPro
         <div className={`${style["main-cards-wrapper"]}`}>
           {sections?.map((section: any, index: number) => (
             <div key={index} className={`${style["custom-row"]} custom-row`}>
-              <div className="col_12 col_md_5 col_lg_4">
+              <div className={`col_12 col_md_5 ${style.col_12} `}>
                 <div className={`${style["text-content"]}`}>
                   <h3 className="">{section?.title}</h3>
 
