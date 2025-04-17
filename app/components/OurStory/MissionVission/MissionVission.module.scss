@@ -29,5 +29,14 @@
         }
       }
     }
+
+    .col_12 {
+      &:nth-child(odd) {
+        @media #{$desktop} {
+          padding-right: 9em;
+        }
+      }
+    }
+
   }
 }
